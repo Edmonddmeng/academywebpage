@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import PageBanner from '../components/PageBanner'
+import { bannerFor } from '../content/banners'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
@@ -32,7 +33,8 @@ export default function Contact() {
       <PageBanner
         eyebrow="Admission"
         title="Inquire"
-        intro="Tell us about your student and we’ll be in touch about admission, visits, and athletics."
+        intro="Tell us about your athlete and we’ll be in touch about admission, visits, and training."
+        image={bannerFor('admission')}
       />
       <section className="mx-auto max-w-2xl px-6 py-20">
         <form onSubmit={handleSubmit} className="space-y-6">

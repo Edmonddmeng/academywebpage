@@ -3,6 +3,7 @@ import PageBanner from '../components/PageBanner'
 import { ArrowRight } from '../components/icons'
 import { ButtonLink, Eyebrow } from '../components/ui'
 import { linkPath, navSections } from '../content/navigation'
+import { bannerFor } from '../content/banners'
 
 export default function PlaceholderPage() {
   const params = useParams()
@@ -25,13 +26,13 @@ export default function PlaceholderPage() {
   if (!page) {
     return (
       <>
-        <PageBanner title={section.label} intro={section.blurb} />
-        <section className="mx-auto grid max-w-7xl gap-px bg-sand px-0 sm:grid-cols-2 lg:grid-cols-3">
+        <PageBanner title={section.label} intro={section.blurb} image={bannerFor(section.slug)} />
+        <section className="mx-auto grid max-w-7xl gap-1.5 px-6 py-16 sm:grid-cols-2 sm:px-10 lg:grid-cols-3 lg:px-14">
           {section.links.map((link) => (
             <Link
               key={link.slug}
               to={linkPath(section, link)}
-              className="group flex items-center justify-between bg-ivory px-8 py-10 transition-colors hover:bg-white"
+              className="group flex items-center justify-between border border-dotted border-ink/45 px-8 py-10 transition-colors hover:bg-white"
             >
               <span className="font-serif text-3xl">{link.label}</span>
               <ArrowRight className="h-6 w-6 text-brass transition-transform group-hover:translate-x-1" />
@@ -44,7 +45,7 @@ export default function PlaceholderPage() {
 
   return (
     <>
-      <PageBanner eyebrow={section.label} title={page.label} />
+      <PageBanner eyebrow={section.label} title={page.label} image={bannerFor(section.slug)} />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[260px_1fr] lg:px-14">
         <nav aria-label={`${section.label} pages`}>
           <Eyebrow>{section.label}</Eyebrow>

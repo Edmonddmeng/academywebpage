@@ -1,18 +1,59 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
-export function Eyebrow({ children, className = '' }: { children: ReactNode; className?: string }) {
+// `onDark` swaps to the brighter gold, which stays legible on the deep green grounds.
+export function Eyebrow({
+  children,
+  className = '',
+  onDark = false,
+}: {
+  children: ReactNode
+  className?: string
+  onDark?: boolean
+}) {
   return (
-    <p className={`text-xs font-semibold tracking-[0.28em] text-brass uppercase ${className}`}>
+    <p
+      className={`font-condensed text-[15px] font-semibold tracking-[0.24em] uppercase ${
+        onDark ? 'text-gold' : 'text-brass'
+      } ${className}`}
+    >
       {children}
     </p>
   )
 }
 
 const buttonStyles = {
-  solid: 'bg-ink text-white hover:bg-brass',
+  solid: 'bg-ink text-white hover:bg-ink-soft',
+  gold: 'bg-gold text-ink hover:bg-white',
   outline: 'border border-ink text-ink hover:bg-ink hover:text-white',
   'outline-light': 'border-2 border-white text-white hover:bg-white hover:text-ink',
+}
+
+export function ImagePlaceholder({
+  label,
+  className = '',
+  tone = 'light',
+}: {
+  label: string
+  className?: string
+  tone?: 'light' | 'dark'
+}) {
+  const toneClass =
+    tone === 'dark'
+      ? 'border-white/25 bg-ink-soft/40 text-white/60'
+      : 'border-ink/25 bg-sand text-ink/50'
+
+  return (
+    <div
+      role="img"
+      aria-label={`Placeholder image: ${label}`}
+      className={`relative overflow-hidden border border-dashed ${toneClass} ${className}`}
+    >
+      <span className="absolute bottom-3 left-4 text-[11px] font-semibold tracking-[0.2em] uppercase">
+        {label}
+      </span>
+    </div>
+  )
 }
 
 export function ButtonLink({
@@ -31,32 +72,5 @@ export function ButtonLink({
     >
       {children}
     </Link>
-  )
-}
-
-export function ImagePlaceholder({
-  label,
-  className = '',
-  tone = 'light',
-}: {
-  label: string
-  className?: string
-  tone?: 'light' | 'dark'
-}) {
-  const toneClass =
-    tone === 'dark'
-      ? 'bg-linear-to-br from-ink-soft to-[#0b172b] text-white/45'
-      : 'bg-linear-to-br from-sand to-[#d6cdbb] text-ink/45'
-
-  return (
-    <div
-      role="img"
-      aria-label={`Placeholder image: ${label}`}
-      className={`relative overflow-hidden ${toneClass} ${className}`}
-    >
-      <span className="absolute bottom-3 left-4 text-[11px] font-semibold tracking-[0.2em] uppercase">
-        {label}
-      </span>
-    </div>
   )
 }

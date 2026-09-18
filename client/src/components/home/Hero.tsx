@@ -1,40 +1,70 @@
 import { ButtonLink } from '../ui'
 import { site } from '../../content/site'
 
+// Structural facts only — true by design, not projected outcomes.
+const stats = [
+  { value: '4', label: 'Sports' },
+  { value: '8', label: 'Programs' },
+  { value: '2', label: 'Campuses' },
+  { value: '12', label: 'Months training' },
+  { value: '5:1', label: 'Staff per athlete' },
+]
+
 export default function Hero() {
   return (
-    <section className="relative flex h-svh min-h-[640px] items-center overflow-hidden bg-ink text-white">
+    <section className="relative flex min-h-svh flex-col overflow-hidden bg-ink text-white">
       <img
         src="/images/hero.avif"
-        alt="Rowers on the water at sunset beneath a palm-lined shore and mountains"
+        alt=""
+        aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
         fetchPriority="high"
       />
       {/* Scrims keep the white header and headline legible over the bright sky and water. */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/45 via-black/10 to-black/45" />
-      <div className="absolute inset-0 bg-linear-to-r from-black/45 via-black/15 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-ink/70 via-ink/25 to-ink/90" />
+      <div className="absolute inset-0 bg-linear-to-r from-ink/80 via-ink/30 to-transparent" />
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-6 pt-24 sm:px-10 lg:px-[10%]">
-        <h1 className="max-w-4xl font-serif text-[2.6rem] leading-[1.02] font-normal tracking-[-0.01em] sm:text-7xl lg:text-8xl">
-          Scholars first.
-          <br />
-          Athletes every day.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-balance text-white/85 sm:text-xl">{site.tagline}</p>
-        <div className="mt-10">
-          <ButtonLink to="/about/why-our-school" variant="outline-light">
-            Why {site.name}
-          </ButtonLink>
+      <div className="relative flex flex-1 items-center px-6 pt-32 pb-16 sm:px-10 lg:px-14">
+        <div className="mx-auto w-full max-w-7xl">
+          <p className="font-condensed text-[15px] font-semibold tracking-[0.24em] text-gold uppercase">
+            Ice Hockey · Golf · Tennis · Lacrosse
+          </p>
+          <h1 className="mt-6 max-w-4xl font-serif text-[2.7rem] leading-[1.03] font-normal sm:text-7xl lg:text-8xl">
+            Student-athletes,
+            <br />
+            trained like professionals.
+          </h1>
+          <p className="mt-7 max-w-2xl text-lg text-balance text-white/85 sm:text-xl">
+            {site.tagline}
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <ButtonLink to="/admission/how-to-apply" variant="gold">
+              Apply to JMC
+            </ButtonLink>
+            <ButtonLink to="/about/academy-overview" variant="outline-light">
+              Why JMC
+            </ButtonLink>
+          </div>
         </div>
       </div>
 
-      <a
-        href="#at-a-glance"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-[11px] tracking-[0.3em] text-white/75 uppercase transition-colors hover:text-white sm:flex"
-      >
-        Explore
-        <span className="h-10 w-px bg-white/60" />
-      </a>
+      <div className="relative border-t border-white/20 bg-ink/45 backdrop-blur-sm">
+        <dl className="mx-auto grid max-w-7xl grid-cols-2 divide-white/15 px-6 sm:grid-cols-3 sm:px-10 lg:grid-cols-5 lg:divide-x lg:px-14">
+          {stats.map((stat) => (
+            <div key={stat.label} className="px-2 py-6 text-center lg:py-8">
+              <dt className="sr-only">{stat.label}</dt>
+              <dd>
+                <span className="block font-serif text-4xl leading-none text-gold lg:text-5xl">
+                  {stat.value}
+                </span>
+                <span className="mt-2 block font-condensed text-[14px] font-semibold tracking-[0.18em] text-white/80 uppercase">
+                  {stat.label}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </section>
   )
 }

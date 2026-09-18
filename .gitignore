@@ -5,3 +5,10 @@ dist/
 !.env.example
 .DS_Store
 *.log
+client/dist/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.avif
+!client/public/images/**

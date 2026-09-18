@@ -37,9 +37,10 @@ export default function SiteHeader({ onOpenMenu, onOpenSearch, pageTone = 'dark'
         }`}
       >
         <Link to="/" className="flex items-center gap-3" aria-label={`${site.name} home`}>
-          <Logo className="h-9 w-auto opacity-85" />
-          <span className="font-serif text-xl tracking-[0.14em] uppercase sm:text-2xl">
-            {site.name}
+          <Logo className="h-9 w-auto opacity-90" />
+          <span className="font-serif text-lg tracking-[0.1em] uppercase sm:text-2xl">
+            <span className="sm:hidden">{site.shortName}</span>
+            <span className="hidden sm:inline">{site.name}</span>
           </span>
         </Link>
 

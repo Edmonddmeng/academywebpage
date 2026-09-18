@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { site } from '../content/site'
 
-const heading = 'mb-5 text-xs font-semibold tracking-[0.28em] text-brass uppercase'
+const heading =
+  'mb-5 font-condensed text-[15px] font-semibold tracking-[0.24em] text-gold uppercase'
 
 export default function Footer() {
   return (
@@ -11,22 +12,27 @@ export default function Footer() {
         <div>
           <Link to="/" className="flex items-center gap-3 text-white">
             <Logo className="h-11 w-auto" />
-            <span className="font-serif text-2xl tracking-[0.14em] uppercase">{site.name}</span>
+            <span className="font-serif text-xl tracking-[0.1em] uppercase">{site.name}</span>
           </Link>
           <p className="mt-6 max-w-sm text-sm leading-relaxed">{site.description}</p>
         </div>
 
         <div>
-          <h2 className={heading}>Visit Us</h2>
-          <address className="text-sm leading-relaxed not-italic">
-            {site.address.map((line) => (
-              <div key={line}>{line}</div>
+          <h2 className={heading}>Campuses</h2>
+          <ul className="space-y-4 text-sm leading-relaxed">
+            {site.campuses.map((campus) => (
+              <li key={campus.name}>
+                <span className="block text-white">{campus.name}</span>
+                <span className="block">{campus.city}</span>
+              </li>
             ))}
-            <div className="mt-3">{site.phone}</div>
+          </ul>
+          <div className="mt-4 text-sm">
+            <div>{site.phone}</div>
             <a href={`mailto:${site.email}`} className="hover:text-white">
               {site.email}
             </a>
-          </address>
+          </div>
         </div>
 
         <div>

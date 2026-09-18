@@ -1,7 +1,16 @@
 import type { ReactNode } from 'react'
-import { ButtonLink, ImagePlaceholder } from '../ui'
+import { ButtonLink } from '../ui'
 import type { Sport } from '../../content/sports'
 import type { SportTab } from '../../content/sportTabs'
+
+// "Strength & Conditioning Coach" -> "SCC"; stands in for a headshot until staff are announced.
+const roleInitials = (role: string) =>
+  role
+    .split(' ')
+    .filter((word) => /^[A-Za-z]/.test(word))
+    .map((word) => word[0])
+    .join('')
+    .slice(0, 3)
 
 function Lead({ children }: { children: ReactNode }) {
   return <p className="max-w-4xl text-lg leading-relaxed text-ink/75">{children}</p>
@@ -80,12 +89,16 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
             Every {sport.title} athlete is developed by a full coaching team, not a single coach.
             Staff biographies will be published as appointments are announced.
           </Lead>
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
             {sport.staff.map((role) => (
-              <li key={role}>
-                <ImagePlaceholder label="Portrait" className="aspect-[4/5]" />
-                <p className="mt-4 font-serif text-2xl">To be announced</p>
-                <p className="mt-1 text-xs font-semibold tracking-[0.2em] text-brass uppercase">{role}</p>
+              <li key={role} className="flex items-center gap-5 border border-dotted border-ink/45 p-6">
+                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
+                  {roleInitials(role)}
+                </span>
+                <div>
+                  <p className="font-serif text-2xl">To be announced</p>
+                  <p className="mt-1 text-xs font-semibold tracking-[0.2em] text-brass uppercase">{role}</p>
+                </div>
               </li>
             ))}
           </ul>
@@ -142,9 +155,27 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
       return (
         <div className="space-y-12">
           <Lead>{sport.venue.text}</Lead>
-          <div className="grid gap-8 md:grid-cols-2 md:gap-12">
-            {sport.venue.images.map((label) => (
-              <ImagePlaceholder key={label} label={label} className="aspect-[3/2]" />
+          <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
+            {sport.venue.features.map((feature, i) => (
+              <li key={feature} className="border border-dotted border-ink/45 px-6 py-8">
+                <span className="font-serif text-3xl text-brass">{String(i + 1).padStart(2, '0')}</span>
+                <p className="mt-4 font-condensed text-[17px] font-semibold tracking-wide text-ink uppercase">
+                  {feature}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div
+            className={`grid gap-8 md:gap-12 ${sport.venue.gallery.length > 1 ? 'md:grid-cols-2' : ''}`}
+          >
+            {sport.venue.gallery.map((photo) => (
+              <img
+                key={photo.src}
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className="aspect-[3/2] w-full object-cover"
+              />
             ))}
           </div>
         </div>
@@ -168,7 +199,7 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
               'Nutrition support',
             ]}
           />
-          <ButtonLink to="/athletics/strength-and-conditioning" variant="outline">
+          <ButtonLink to="/athletic/strength-and-conditioning" variant="outline">
             Strength & Conditioning
           </ButtonLink>
         </div>
@@ -178,8 +209,8 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
       return (
         <div className="space-y-10">
           <Lead>{sport.recruiting}</Lead>
-          <ButtonLink to="/college-counseling/athlete-recruiting" variant="outline">
-            Athlete Recruiting
+          <ButtonLink to="/counseling/college-recruiting" variant="outline">
+            College Recruiting
           </ButtonLink>
         </div>
       )

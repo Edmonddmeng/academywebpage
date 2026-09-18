@@ -1,13 +1,43 @@
-// Placeholder school details — replace once the official name, address, and accounts exist.
 export const site = {
-  name: 'School Name',
+  name: 'JMC Sports Academy',
+  shortName: 'JMC',
   tagline:
-    'A college-preparatory boarding and day school for scholar-athletes.',
+    'Year-round training, school, and college recruiting for serious student-athletes in Southern California.',
   description:
-    'A highly selective college-preparatory boarding and day school combining New England–style academics, year-round elite athletics, professional athlete development, and personalized college counseling.',
-  address: ['Street Address', 'Orange County, California'],
+    'JMC Sports Academy develops student-athletes in ice hockey, golf, tennis, and lacrosse across two Southern California campuses, combining elite training, college-preparatory academics, and a dedicated recruiting team.',
+  // PLACEHOLDER contact details — replace with real numbers and addresses before launch.
   phone: '(000) 000-0000',
-  email: 'admission@example.com',
+  email: 'admission@jmcsportsacademy.com',
+  campuses: [
+    {
+      name: 'Irvine Campus',
+      city: 'Irvine, California',
+      region: 'Orange County',
+      partner: 'Capistrano Valley Christian School',
+      image: '/images/hockey-sticks.jpg',
+      imageAlt: 'Sticks resting against the boards at the rink',
+      focus: 'Ice hockey, lacrosse, and tennis',
+      points: [
+        'Year-round ice and turf training',
+        'Academics with our Orange County partner school',
+        'Minutes from the Orange County coast',
+      ],
+    },
+    {
+      name: 'San Diego Campus',
+      city: 'San Diego, California',
+      region: 'San Diego County',
+      partner: 'Maranatha Christian School',
+      image: '/images/golf-course-aerial.jpg',
+      imageAlt: 'Aerial view of a coastal golf course along the Pacific',
+      focus: 'Golf, tennis, and lacrosse',
+      points: [
+        'Championship coastal course access',
+        'Academics with our San Diego partner school',
+        'Twelve months of outdoor training weather',
+      ],
+    },
+  ],
   social: [
     { label: 'Instagram', href: '#' },
     { label: 'Facebook', href: '#' },
@@ -15,11 +45,10 @@ export const site = {
     { label: 'YouTube', href: '#' },
   ],
   footerLinks: [
-    { label: 'School Calendar', to: '/parents/school-calendar' },
-    { label: 'Our Campus', to: '/about/campus' },
-    { label: 'Parent Portal', to: '/parents/parent-portal' },
+    { label: 'Our Campuses', to: '/about/campuses' },
+    { label: 'Athletic Programs', to: '/athletic' },
     { label: 'Tuition & Fees', to: '/admission/tuition-and-fees' },
+    { label: 'Apply to JMC', to: '/admission/how-to-apply' },
     { label: 'Contact Us', to: '/contact' },
-    { label: 'Privacy Policy', to: '/privacy-policy' },
   ],
 }

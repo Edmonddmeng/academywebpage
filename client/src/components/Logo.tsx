@@ -1,5 +1,5 @@
-// Placeholder crest drawn in currentColor so it stays transparent over any background.
-// Replace with the official school logo once it exists.
+// Placeholder JMC crest drawn in currentColor so it sits on any background.
+// Replace with the official logo once it exists.
 export default function Logo({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 48 56" className={className} fill="none" aria-hidden="true">
@@ -8,15 +8,18 @@ export default function Logo({ className = '' }: { className?: string }) {
         stroke="currentColor"
         strokeWidth="2.5"
       />
-      <path d="M12 31l12-10 12 10" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-      <path
-        d="M12 40l12-10 12 10"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinejoin="round"
-        opacity="0.55"
-      />
-      <circle cx="24" cy="13" r="2.75" fill="currentColor" />
+      <text
+        x="24"
+        y="30"
+        textAnchor="middle"
+        fontFamily="Times New Roman, Times, serif"
+        fontSize="15"
+        letterSpacing="0.5"
+        fill="currentColor"
+      >
+        JMC
+      </text>
+      <path d="M13 37h22" stroke="currentColor" strokeWidth="2" />
     </svg>
   )
 }

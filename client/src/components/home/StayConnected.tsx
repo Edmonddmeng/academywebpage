@@ -1,30 +1,26 @@
-import { Eyebrow, ImagePlaceholder } from '../ui'
+import { Eyebrow } from '../ui'
 import { site } from '../../content/site'
 
 export default function StayConnected() {
   return (
-    <section className="bg-white px-6 py-20 sm:px-10 lg:px-14">
-      <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <Eyebrow>Follow Along</Eyebrow>
-            <h2 className="mt-4 font-serif text-4xl">Stay Connected</h2>
-          </div>
-          <ul className="flex flex-wrap gap-6 text-sm font-semibold tracking-[0.18em] uppercase">
-            {site.social.map((link) => (
-              <li key={link.label}>
-                <a href={link.href} className="transition-colors hover:text-brass">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+    <section className="bg-white px-6 py-16 sm:px-10 lg:px-14">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div>
+          <Eyebrow>Follow Along</Eyebrow>
+          <h2 className="mt-3 font-serif text-4xl">Stay Connected</h2>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {[1, 2, 3, 4].map((n) => (
-            <ImagePlaceholder key={n} label="Social post" className="aspect-square" />
+        <ul className="flex flex-wrap gap-3">
+          {site.social.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                className="inline-block border border-ink/20 px-5 py-3 text-sm font-semibold tracking-[0.18em] uppercase transition-colors hover:border-brass hover:text-brass"
+              >
+                {link.label}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

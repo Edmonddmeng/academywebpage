@@ -1,15 +1,17 @@
-export type SportKind = 'golf' | 'ice-hockey' | 'lacrosse'
+export type SportKind = 'ice-hockey' | 'golf' | 'tennis' | 'lacrosse'
 
 type Session = { day: string; morning: string; afternoon: string }
 
 type KindDetails = {
   sport: string
+  campus: string
   scheduleTab: string
   opponentColumn: string
+  hero: { src: string; alt: string }
   intro: (title: string) => string
   detail: string
-  // PLACEHOLDER venue copy: confirm facility details once the campus and partners are final.
-  venue: { text: string; images: [string, string] }
+  // PLACEHOLDER venue copy: confirm facility details once partner venues are final.
+  venue: { text: string; features: string[]; gallery: { src: string; alt: string }[] }
   staff: string[]
   rosterColumns: string[]
   focus: string[]
@@ -27,15 +29,23 @@ export type Sport = KindDetails & {
 const kinds: Record<SportKind, KindDetails> = {
   'ice-hockey': {
     sport: 'Ice Hockey',
+    campus: 'Irvine Campus',
     scheduleTab: 'Schedule',
     opponentColumn: 'Opponent',
+    hero: {
+      src: '/images/hockey-action.jpg',
+      alt: 'A hockey player driving with the puck on open ice',
+    },
     intro: (title) =>
-      `${title} is built for players who aim to compete at the highest levels of prep and college hockey without compromising their education. Players train on the ice all year under a full professional coaching staff, with individualized development plans for skating, skills, hockey sense, and physical preparation.`,
+      `${title} is built for players who intend to compete at the highest levels of junior and college hockey. Players are on the ice all year under a full professional coaching staff, with individual development plans for skating, skills, hockey sense, and physical preparation.`,
     detail:
-      'Daily ice sessions are paired with strength and conditioning, video analysis, and recovery work led by our sports performance team. A competitive schedule, combined with our 5-to-1 college counseling model, gives every player a clear path to the next level.',
+      'Daily ice sessions are paired with strength and conditioning, video analysis, and recovery work led by our performance team. A high-tier club and showcase schedule, combined with our 5-to-1 counseling model, gives every player a clear route to the next level.',
     venue: {
-      text: 'Our players practice and compete at a dedicated home rink with team locker rooms, a video room, and direct access to strength training and sports medicine. Year-round ice time means development never pauses for an off-season.',
-      images: ['Home rink', 'Team locker room'],
+      text: 'Players train and compete at a dedicated home rink with team locker rooms, a video room, and direct access to strength training and sports medicine. Year-round ice means development never pauses for an off-season.',
+      features: ['Home rink', 'Team locker rooms', 'Video room', 'Strength & sports medicine'],
+      gallery: [
+        { src: '/images/hockey-sticks.jpg', alt: 'Sticks resting against the boards at the rink' },
+      ],
     },
     staff: [
       'Head Coach',
@@ -64,19 +74,28 @@ const kinds: Record<SportKind, KindDetails> = {
       { day: 'Sunday', morning: 'Rest', afternoon: 'Rest' },
     ],
     recruiting:
-      'Every player is supported by an athlete recruiter, coach, education consultant, student assistant, and family advisor who together build a recruiting plan, prepare game film, lead outreach to college coaches, and guide families through NCAA rules and offers.',
+      'Every player is supported by an athlete recruiter, coach, academic advisor, student assistant, and family advisor who together build a recruiting plan, prepare game film, lead outreach to college and junior coaches, and guide families through NCAA rules and offers.',
   },
+
   golf: {
     sport: 'Golf',
+    campus: 'San Diego Campus',
     scheduleTab: 'Tournaments',
     opponentColumn: 'Tournament',
+    hero: {
+      src: '/images/golf-course-aerial.jpg',
+      alt: 'Aerial view of a coastal golf course along the Pacific',
+    },
     intro: (title) =>
-      `${title} develops complete players for top junior, prep, and college competition. Golfers train year-round in Southern California’s ideal climate, with individualized plans covering full swing, short game, course management, and the mental game.`,
+      `${title} develops complete players for top junior, amateur, and college competition. Golfers train year-round in San Diego's ideal climate, on individual plans covering full swing, short game, course management, and the mental game.`,
     detail:
       'Practice combines technology-assisted swing analysis, on-course play, and dedicated short-game work, supported by strength, mobility, and nutrition programs designed for golfers. A competitive tournament schedule and our 5-to-1 counseling model help each player build a college golf résumé.',
     venue: {
-      text: 'Golfers practice and play at courses near campus, with access to full practice ranges, short-game areas, and indoor swing analysis. Southern California weather allows outdoor training in every month of the year.',
-      images: ['Home course', 'Short game practice area'],
+      text: 'Golfers practice and play at championship courses near campus, with full practice ranges, short-game areas, and indoor swing analysis. Southern California weather allows outdoor training in every month of the year.',
+      features: ['Practice range', 'Short-game areas', 'Indoor swing analysis', 'On-course play'],
+      gallery: [
+        { src: '/images/golf-course-hole.jpg', alt: 'A green on a clifftop course above the ocean at sunset' },
+      ],
     },
     staff: [
       'Head Coach',
@@ -105,19 +124,77 @@ const kinds: Record<SportKind, KindDetails> = {
       { day: 'Sunday', morning: 'Rest', afternoon: 'Rest' },
     ],
     recruiting:
-      'Every golfer is supported by an athlete recruiter, coach, education consultant, student assistant, and family advisor who together plan tournament exposure, prepare swing video and scoring records, lead outreach to college coaches, and guide families through NCAA rules and offers.',
+      'Every golfer is supported by an athlete recruiter, coach, academic advisor, student assistant, and family advisor who together plan tournament exposure, prepare swing video and scoring records, lead outreach to college coaches, and guide families through NCAA rules and offers.',
   },
+
+  tennis: {
+    sport: 'Tennis',
+    campus: 'Both campuses',
+    scheduleTab: 'Tournaments',
+    opponentColumn: 'Tournament',
+    hero: {
+      src: '/images/location-regional.jpg',
+      alt: 'Southern California coastline at sunset near the academy courts',
+    },
+    intro: (title) =>
+      `${title} trains players for national junior competition and college tennis. Athletes work on court every day of the week on individual plans covering technique, patterns of play, movement, and match strategy.`,
+    detail:
+      'On-court blocks are paired with movement training, strength work, and video review from our performance team. A USTA and ITF tournament schedule, combined with our 5-to-1 counseling model, keeps every player visible to college coaches and climbing the rankings.',
+    venue: {
+      text: 'Players train on hard courts at both campuses, with ball machines, video capture, and a fitness area beside the courts. Southern California weather means outdoor court time all twelve months of the year.',
+      features: ['Hard courts', 'Video capture', 'Ball machines & drilling', 'Court-side fitness'],
+      gallery: [],
+    },
+    staff: [
+      'Head Coach',
+      'Assistant Coach',
+      'Hitting Coach',
+      'Movement & Footwork Coach',
+      'Mental Performance Coach',
+      'Strength & Conditioning Coach',
+    ],
+    rosterColumns: ['Name', 'Grade', 'Plays', 'UTR', 'Hometown'],
+    focus: [
+      'Stroke technique',
+      'Patterns of play',
+      'Serve & return',
+      'Movement & footwork',
+      'Match strategy & video',
+      'Tennis-specific fitness',
+    ],
+    week: [
+      { day: 'Monday', morning: 'Strength training', afternoon: 'Technical court block' },
+      { day: 'Tuesday', morning: 'Movement & footwork', afternoon: 'Live-ball drilling' },
+      { day: 'Wednesday', morning: 'Strength training', afternoon: 'Serve & return blocks' },
+      { day: 'Thursday', morning: 'Mobility & recovery', afternoon: 'Match play & video' },
+      { day: 'Friday', morning: 'Activation', afternoon: 'Practice sets or travel' },
+      { day: 'Saturday', morning: 'Tournament play', afternoon: 'Recovery' },
+      { day: 'Sunday', morning: 'Rest', afternoon: 'Rest' },
+    ],
+    recruiting:
+      'Every player is supported by an athlete recruiter, coach, academic advisor, student assistant, and family advisor who together plan the tournament calendar, track UTR and results, prepare match video, lead outreach to college coaches, and guide families through NCAA rules and offers.',
+  },
+
   lacrosse: {
     sport: 'Lacrosse',
+    campus: 'Both campuses',
     scheduleTab: 'Schedule',
     opponentColumn: 'Opponent',
+    hero: {
+      src: '/images/lacrosse-field.jpg',
+      alt: 'A lacrosse stick resting on a turf field at sunset',
+    },
     intro: (title) =>
-      `${title} gives players a year-round path to elite prep and college lacrosse. Athletes develop stick skills, lacrosse IQ, and athleticism under a full coaching staff, with individualized plans for every position.`,
+      `${title} gives players a year-round path to elite club, high school, and college lacrosse. Athletes develop stick skills, lacrosse IQ, and athleticism under a full coaching staff, with individual plans for every position.`,
     detail:
-      'Field sessions are complemented by film study, speed and agility work, and strength training from our sports performance team. Fall and summer showcase play, a competitive spring schedule, and our 5-to-1 counseling model keep players visible to college coaches.',
+      'Field sessions are complemented by film study, speed and agility work, and strength training from our performance team. Fall and summer showcase play, a competitive spring schedule, and our 5-to-1 counseling model keep players visible to college coaches.',
     venue: {
-      text: 'Our teams train and compete on a full-size turf field, supported by indoor training space for speed, agility, and wall-ball work, with strength training and sports medicine close by.',
-      images: ['Game field', 'Training facility'],
+      text: 'Our teams train and compete on full-size turf fields, supported by indoor training space for speed, agility, and wall-ball work, with strength training and sports medicine close by.',
+      features: ['Full-size turf field', 'Indoor speed & agility space', 'Wall-ball area', 'Strength & sports medicine'],
+      gallery: [
+        { src: '/images/lacrosse-action.jpg', alt: 'A lacrosse player carrying the ball upfield' },
+        { src: '/images/lacrosse-scoop.jpg', alt: 'A player scooping a ground ball at speed' },
+      ],
     },
     staff: [
       'Head Coach',
@@ -145,7 +222,7 @@ const kinds: Record<SportKind, KindDetails> = {
       { day: 'Sunday', morning: 'Rest', afternoon: 'Rest' },
     ],
     recruiting:
-      'Every player is supported by an athlete recruiter, coach, education consultant, student assistant, and family advisor who together plan showcase exposure, prepare highlight film, lead outreach to college coaches, and guide families through NCAA rules and offers.',
+      'Every player is supported by an athlete recruiter, coach, academic advisor, student assistant, and family advisor who together plan showcase exposure, prepare highlight film, lead outreach to college coaches, and guide families through NCAA rules and offers.',
   },
 }
 
@@ -162,14 +239,12 @@ const makeSport = (team: Sport['team'], kind: SportKind): Sport => {
   }
 }
 
-export const sports: Sport[] = [
-  makeSport('Boys', 'golf'),
-  makeSport('Girls', 'golf'),
-  makeSport('Boys', 'ice-hockey'),
-  makeSport('Girls', 'ice-hockey'),
-  makeSport('Boys', 'lacrosse'),
-  makeSport('Girls', 'lacrosse'),
-]
+export const sportKinds: SportKind[] = ['ice-hockey', 'golf', 'tennis', 'lacrosse']
+
+export const sports: Sport[] = sportKinds.flatMap((kind) => [
+  makeSport('Boys', kind),
+  makeSport('Girls', kind),
+])
 
 export const isSportPath = (pathname: string) =>
-  sports.some((sport) => pathname === `/athletics/${sport.slug}`)
+  sports.some((sport) => pathname === `/athletic/${sport.slug}`)
