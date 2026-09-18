@@ -37,11 +37,11 @@ const kinds: Record<SportKind, KindDetails> = {
       alt: 'A hockey player driving with the puck on open ice',
     },
     intro: (title) =>
-      `${title} is built for players who intend to compete at the highest levels of junior and college hockey. Players are on the ice all year under a full professional coaching staff, with individual development plans for skating, skills, hockey sense, and physical preparation.`,
+      `${title} is built for players who intend to compete at the highest levels of junior and college hockey. Players are on the ice through the season under a full professional coaching staff, with individual development plans for skating, skills, hockey sense, and physical preparation.`,
     detail:
       'Daily ice sessions are paired with strength and conditioning, video analysis, and recovery work led by our performance team. A high-tier club and showcase schedule, combined with our 5-to-1 counseling model, gives every player a clear route to the next level.',
     venue: {
-      text: 'Players train and compete at a dedicated home rink with team locker rooms, a video room, and direct access to strength training and sports medicine. Year-round ice means development never pauses for an off-season.',
+      text: 'Players train and compete at a dedicated home rink with team locker rooms, a video room, and direct access to strength training and sports medicine.',
       features: ['Home rink', 'Team locker rooms', 'Video room', 'Strength & sports medicine'],
       gallery: [
         { src: '/images/hockey-sticks.jpg', alt: 'Sticks resting against the boards at the rink' },
@@ -87,11 +87,11 @@ const kinds: Record<SportKind, KindDetails> = {
       alt: 'Aerial view of a coastal golf course along the Pacific',
     },
     intro: (title) =>
-      `${title} develops complete players for top junior, amateur, and college competition. Golfers train year-round in San Diego's ideal climate, on individual plans covering full swing, short game, course management, and the mental game.`,
+      `${title} develops complete players for top junior, amateur, and college competition. Golfers train through the season in San Diego's ideal climate, on individual plans covering full swing, short game, course management, and the mental game.`,
     detail:
       'Practice combines technology-assisted swing analysis, on-course play, and dedicated short-game work, supported by strength, mobility, and nutrition programs designed for golfers. A competitive tournament schedule and our 5-to-1 counseling model help each player build a college golf résumé.',
     venue: {
-      text: 'Golfers practice and play at championship courses near campus, with full practice ranges, short-game areas, and indoor swing analysis. Southern California weather allows outdoor training in every month of the year.',
+      text: 'Golfers practice and play at championship courses near campus, with full practice ranges, short-game areas, and indoor swing analysis. Southern California weather supports outdoor training for most of the season.',
       features: ['Practice range', 'Short-game areas', 'Indoor swing analysis', 'On-course play'],
       gallery: [
         { src: '/images/golf-course-hole.jpg', alt: 'A green on a clifftop course above the ocean at sunset' },
@@ -141,7 +141,7 @@ const kinds: Record<SportKind, KindDetails> = {
     detail:
       'On-court blocks are paired with movement training, strength work, and video review from our performance team. A USTA and ITF tournament schedule, combined with our 5-to-1 counseling model, keeps every player visible to college coaches and climbing the rankings.',
     venue: {
-      text: 'Players train on hard courts at both campuses, with ball machines, video capture, and a fitness area beside the courts. Southern California weather means outdoor court time all twelve months of the year.',
+      text: 'Players train on hard courts at both campuses, with ball machines, video capture, and a fitness area beside the courts. Southern California weather supports outdoor court time for most of the season.',
       features: ['Hard courts', 'Video capture', 'Ball machines & drilling', 'Court-side fitness'],
       gallery: [],
     },
@@ -185,7 +185,7 @@ const kinds: Record<SportKind, KindDetails> = {
       alt: 'A lacrosse stick resting on a turf field at sunset',
     },
     intro: (title) =>
-      `${title} gives players a year-round path to elite club, high school, and college lacrosse. Athletes develop stick skills, lacrosse IQ, and athleticism under a full coaching staff, with individual plans for every position.`,
+      `${title} gives players a season-long path to elite club, high school, and college lacrosse. Athletes develop stick skills, lacrosse IQ, and athleticism under a full coaching staff, with individual plans for every position.`,
     detail:
       'Field sessions are complemented by film study, speed and agility work, and strength training from our performance team. Fall and summer showcase play, a competitive spring schedule, and our 5-to-1 counseling model keep players visible to college coaches.',
     venue: {

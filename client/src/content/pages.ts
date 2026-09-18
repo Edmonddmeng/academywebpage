@@ -47,14 +47,14 @@ export const pageContent: Record<string, PageContent> = {
   // ABOUT
   'about/academy-overview': {
     intro:
-      'A year-round sports academy across two Southern California campuses, built for athletes who intend to play in college and beyond.',
+      'A season-long sports academy across two Southern California campuses, built for athletes who intend to play in college and beyond.',
     blocks: [
       {
         type: 'prose',
         heading: 'One schedule. One standard.',
         paragraphs: [
           'JMC is not a school with a strong athletic program, and not a club team that happens to offer classes. The academy is built around a single daily schedule that puts elite training, school, recovery, and recruiting in the same place, run by the same staff, toward the same goal.',
-          'Athletes train all year in ice hockey, golf, tennis, or lacrosse, live with their teammates, take classes through our partner schools, and work with a five-person team that guides them to the right college program.',
+          'Athletes train through the season in ice hockey, golf, tennis, or lacrosse, live with their teammates, take college-preparatory classes taught by our own faculty, and work with a five-person team that guides them to the right college program.',
         ],
       },
       {
@@ -102,7 +102,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'stats',
         items: [
           { value: '4', label: 'Sports, boys and girls' },
-          { value: '8', label: 'Year-round programs' },
+          { value: '8', label: 'Season-long programs' },
           { value: '2', label: 'Southern California campuses' },
           { value: '5:1', label: 'Professionals per athlete' },
         ],
@@ -112,8 +112,8 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'What sets us apart',
         items: [
           {
-            title: 'No off-season',
-            text: 'Training is planned across the full calendar year, not squeezed into one season.',
+            title: 'Structured training blocks',
+            text: 'Training is planned in deliberate phases across the season, not left to chance.',
           },
           {
             title: 'Everyone lives here',
@@ -160,12 +160,12 @@ export const pageContent: Record<string, PageContent> = {
   },
 
   'about/campuses': {
-    intro: 'Two Southern California campuses — Irvine and San Diego — each paired with an academic partner school.',
+    intro: 'Two Southern California campuses — Irvine and San Diego — each with its own college-preparatory academic program.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          'JMC trains on two campuses, chosen for their venues and their climate. Athletes live, train, and recover on campus; classes are taught by our academic partner schools, so students earn an accredited college-preparatory diploma while training at a professional standard.',
+          'JMC trains on two campuses, chosen for their venues and their climate. Athletes live, train, and recover on campus; classes are taught by JMC faculty, so students earn a rigorous college-preparatory diploma while training at a professional standard.',
           'Both campuses share the same daily structure, the same performance staff standards, and the same 5-to-1 counseling model. Which campus an athlete joins depends mainly on their sport.',
         ],
       },
@@ -173,7 +173,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'features',
         heading: 'Irvine Campus — Orange County',
         items: [
-          { title: 'Academic partner', text: 'Capistrano Valley Christian School.' },
+          { title: 'Academic program', text: 'Small, discussion-based classes taught by JMC faculty.' },
           { title: 'Primary sports', text: 'Ice hockey, lacrosse, and tennis.' },
           { title: 'Training venues', text: 'Home rink, full-size turf field, and hard courts.' },
           { title: 'Performance center', text: 'Strength, conditioning, and testing space for daily use.' },
@@ -185,7 +185,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'features',
         heading: 'San Diego Campus',
         items: [
-          { title: 'Academic partner', text: 'Maranatha Christian School.' },
+          { title: 'Academic program', text: 'Small, discussion-based classes taught by JMC faculty.' },
           { title: 'Primary sports', text: 'Golf, tennis, and lacrosse.' },
           { title: 'Training venues', text: 'Championship coastal course access, hard courts, and turf field.' },
           { title: 'Performance center', text: 'Strength, conditioning, and recovery alongside sports medicine.' },
@@ -197,8 +197,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'image',
         src: '/images/academic-seminar.jpg',
         alt: 'A teacher and students working closely in a seminar-style classroom',
-        caption:
-          'Academics on both campuses — small, discussion-based classes taught by our partner schools',
+        caption: 'Academics on both campuses — small, discussion-based classes taught by JMC faculty',
       },
       {
         type: 'gallery',
@@ -207,7 +206,7 @@ export const pageContent: Record<string, PageContent> = {
           {
             src: '/images/hockey-sticks.jpg',
             alt: 'Sticks resting against the boards at the rink',
-            caption: 'Irvine — year-round ice',
+            caption: 'Irvine — the home rink',
           },
           {
             src: '/images/golf-course-aerial.jpg',
@@ -220,8 +219,8 @@ export const pageContent: Record<string, PageContent> = {
         type: 'stats',
         items: [
           { value: '2', label: 'Campuses' },
-          { value: '2', label: 'Academic partner schools' },
-          { value: '12 months', label: 'Of outdoor training weather' },
+          { value: '1', label: 'Academic program across both campuses' },
+          { value: '4', label: 'Sports across both campuses' },
         ],
       },
       visitCta,
@@ -250,7 +249,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Approved courses only',
-            text: 'We work with our partner schools to confirm that the courses athletes take appear on the school’s approved course list.',
+            text: 'We confirm every course we teach appears on the NCAA-approved course list.',
           },
           {
             title: 'Termly eligibility review',
@@ -519,7 +518,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           { title: 'Physical examination', text: 'A sports physical dated within the window required for the training year.' },
           { title: 'Medical history', text: 'Injury history, conditions, and prior surgeries for the medical team.' },
-          { title: 'Immunisation records', text: 'Records as required by our partner schools and state rules.' },
+          { title: 'Immunisation records', text: 'Records as required by state and school health rules.' },
           { title: 'Consent to treat', text: 'Authorisation for treatment and emergency care.' },
           { title: 'Insurance details', text: 'Coverage information, including international policies.' },
           { title: 'Emergency contacts', text: 'Parents, guardians, and a local contact where applicable.' },
@@ -593,7 +592,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'features',
         heading: 'Where our athletes train',
         items: [
-          { title: 'Ice rink', text: 'Year-round ice for practices, skills sessions, and games.' },
+          { title: 'Ice rink', text: 'Refrigerated ice for practices, skills sessions, and games.' },
           { title: 'Golf practice & course access', text: 'Range, short-game areas, and regular on-course play.' },
           { title: 'Turf field', text: 'Full-size field for lacrosse training and competition.' },
           { title: 'Performance center', text: 'Strength equipment, testing, and speed and agility space.' },
@@ -606,7 +605,7 @@ export const pageContent: Record<string, PageContent> = {
 
   // PERFORMANCE
   'athletic/training-model': {
-    intro: 'There is no off-season. Training is planned across the whole year.',
+    intro: 'Training is planned in deliberate phases across the season.',
     blocks: [
       {
         type: 'prose',

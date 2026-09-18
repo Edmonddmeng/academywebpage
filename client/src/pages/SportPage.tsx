@@ -48,7 +48,7 @@ export default function SportPage({ sport }: { sport: Sport }) {
             <SportSymbol kind={sport.kind} className="h-20 w-20 text-ink" />
           </Reveal>
           {[
-            { value: '12', suffix: ' months', label: 'Of year-round training' },
+            { value: String(sport.focus.length), suffix: '', label: 'Training focus areas' },
             { value: String(sport.staff.length), suffix: '', label: 'Coaches & specialists' },
             { value: '5:1', suffix: '', label: 'College support model' },
           ].map((fact, i) => (

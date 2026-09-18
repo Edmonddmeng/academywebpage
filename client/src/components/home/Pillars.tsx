@@ -133,8 +133,8 @@ export function AcademicPillar() {
     <Panel
       index="01"
       label="Academic"
-      title="An accredited diploma, and eligibility that is never a surprise"
-      lead="JMC athletes earn a college-preparatory diploma through our academic partner schools — Capistrano Valley Christian School in Irvine and Maranatha Christian School in San Diego — on a schedule built around training, competition, and travel."
+      title="A rigorous diploma, built on inquiry, not a fixed pace"
+      lead="JMC athletes earn a college-preparatory diploma through our own academic program: small classes built on inquiry, critical thinking, and mastery of the material, on a schedule built around training, competition, and travel."
       to="/academic/ncaa-eligibility"
       linkLabel="NCAA Eligibility"
       tone="dark"
@@ -142,7 +142,7 @@ export function AcademicPillar() {
       <div className="grid gap-1.5 sm:grid-cols-2">
         <Tile tone="dark" k="Core-course planning" v="Course selection is built against NCAA core-course rules from the first term, not the last." />
         <Tile tone="dark" k="Termly review" v="Grades, credits, and eligibility status are reviewed every term by advisor and recruiter together." />
-        <Tile tone="dark" k="Approved courses" v="We confirm with partner schools that every course sits on the approved course list." />
+        <Tile tone="dark" k="Approved courses" v="Every course we teach sits on the NCAA-approved course list." />
         <Tile tone="dark" k="Eligibility Center" v="Registration, transcripts, and test scores handled and submitted on time." />
         <Tile tone="dark" k="Testing & applications" v="SAT and AP preparation timed so competition travel never collides with an exam." />
         <Tile tone="dark" k="One shared record" v="Advisor, coach, recruiter, and family all work from the same up-to-date file." />
@@ -156,8 +156,8 @@ export function AthleticPillar() {
     <Panel
       index="02"
       label="Athletic Development"
-      title="Year-round development under professional coaching"
-      lead="Eight programs across four sports, each led by a full coaching staff rather than a single coach. Training runs in planned blocks across the whole calendar year, supported by strength, conditioning, and recovery specialists."
+      title="Season-long development under professional coaching"
+      lead="Eight programs across four sports, each led by a full coaching staff rather than a single coach. Training runs in planned blocks across the season, supported by strength, conditioning, and recovery specialists."
       to="/athletic"
       linkLabel="Explore Athletics"
       tone="light"

@@ -8,7 +8,7 @@ const stats = [
   { value: '4', label: 'Sports' },
   { value: '8', label: 'Programs' },
   { value: '2', label: 'Campuses' },
-  { value: '12', label: 'Months training' },
+  { value: '6-12', label: 'Grades served' },
   { value: '5:1', label: 'Staff per athlete' },
 ]
 

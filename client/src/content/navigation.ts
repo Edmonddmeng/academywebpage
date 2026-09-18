@@ -31,7 +31,7 @@ export const navSections: NavSection[] = [
   {
     label: 'Academic',
     slug: 'academic',
-    blurb: 'College-preparatory school with our partner schools, scheduled around training.',
+    blurb: 'Our own college-preparatory academic program, scheduled around training.',
     links: [
       { label: 'Middle School', slug: 'middle-school' },
       { label: 'Upper School', slug: 'upper-school' },
@@ -43,7 +43,7 @@ export const navSections: NavSection[] = [
   {
     label: 'Athletic',
     slug: 'athletic',
-    blurb: 'Eight year-round programs in ice hockey, golf, tennis, and lacrosse.',
+    blurb: 'Eight season-long programs in ice hockey, golf, tennis, and lacrosse.',
     links: [
       { label: 'Boys Ice Hockey', slug: 'boys-ice-hockey' },
       { label: 'Girls Ice Hockey', slug: 'girls-ice-hockey' },

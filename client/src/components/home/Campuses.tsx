@@ -14,9 +14,9 @@ export default function Campuses() {
             Two campuses. One standard.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/80">
-            JMC trains in Irvine and San Diego, each paired with an accredited academic partner
-            school. Both campuses run the same daily structure and the same performance standards —
-            which campus an athlete joins depends mainly on their sport.
+            JMC trains in Irvine and San Diego, each running its own college-preparatory academic
+            program on campus. Both campuses share the same daily structure and the same
+            performance standards — which campus an athlete joins depends mainly on their sport.
           </p>
         </Reveal>
 
@@ -43,12 +43,6 @@ export default function Campuses() {
                 <p className="mt-2 text-white/70">{campus.city}</p>
 
                 <dl className="mt-7 border-t border-white/20">
-                  <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-white/20 py-4">
-                    <dt className="w-36 font-condensed text-[14px] font-semibold tracking-[0.18em] text-gold uppercase">
-                      Partner school
-                    </dt>
-                    <dd className="flex-1 text-white/85">{campus.partner}</dd>
-                  </div>
                   <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-white/20 py-4">
                     <dt className="w-36 font-condensed text-[14px] font-semibold tracking-[0.18em] text-gold uppercase">
                       Sports

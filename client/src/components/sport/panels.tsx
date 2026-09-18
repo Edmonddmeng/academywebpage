@@ -111,7 +111,7 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
           <div className="space-y-8">
             <PanelHeading>Training philosophy</PanelHeading>
             <Lead>
-              There is no off-season. Training is planned across the full year, balancing skill
+              Training is planned across the season, balancing skill
               development, competition, strength, and recovery around each athlete’s academic
               schedule and Athlete Performance Profile.
             </Lead>
