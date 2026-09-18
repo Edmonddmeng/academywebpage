@@ -51,6 +51,16 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-b from-black/65 via-black/15 to-black/80" />
       <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/25 to-transparent" />
 
+      {/* Thin inset frame around the photo, echoing a traditional campus-portrait treatment. */}
+      <div className="pointer-events-none absolute inset-6 border border-white/25 sm:inset-10 lg:inset-14" />
+      <a
+        href="#at-a-glance"
+        className="absolute right-10 bottom-10 z-10 hidden items-center gap-3 font-condensed text-[13px] font-semibold tracking-[0.3em] text-white/80 uppercase transition-colors hover:text-gold sm:flex lg:right-14"
+      >
+        Explore
+        <span aria-hidden="true">↓</span>
+      </a>
+
       <div className="relative flex flex-1 items-center px-6 pt-32 pb-16 sm:px-10 lg:px-14">
         <div className="mx-auto w-full max-w-7xl">
           <p className="font-condensed text-[15px] font-semibold tracking-[0.24em] text-gold uppercase">

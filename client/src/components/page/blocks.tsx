@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { ButtonLink } from '../ui'
 import type { Block } from '../../content/pages'
 
@@ -280,27 +279,4 @@ export function PageBlock({ block }: { block: Block }) {
         </aside>
       )
   }
-}
-
-export function SectionFooterNav({
-  label,
-  links,
-}: {
-  label: string
-  links: { label: string; to: string }[]
-}) {
-  return (
-    <section className="border-t border-ink/15 pt-10">
-      <p className="text-xs font-semibold tracking-[0.28em] text-brass uppercase">More in {label}</p>
-      <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
-        {links.map((link) => (
-          <li key={link.to}>
-            <Link to={link.to} className="font-serif text-2xl transition-colors hover:text-brass">
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )
 }

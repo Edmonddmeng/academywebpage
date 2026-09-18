@@ -1,7 +1,8 @@
-import { Link, NavLink, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import PageBanner from '../components/PageBanner'
 import { ArrowRight } from '../components/icons'
-import { ButtonLink, Eyebrow } from '../components/ui'
+import { ButtonLink } from '../components/ui'
+import SectionSidebar from '../components/page/SectionSidebar'
 import { linkPath, navSections } from '../content/navigation'
 import { bannerFor } from '../content/banners'
 
@@ -47,27 +48,7 @@ export default function PlaceholderPage() {
     <>
       <PageBanner eyebrow={section.label} title={page.label} image={bannerFor(section.slug)} />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[260px_1fr] lg:px-14">
-        <nav aria-label={`${section.label} pages`}>
-          <Eyebrow>{section.label}</Eyebrow>
-          <ul className="mt-5 border-l border-sand">
-            {section.links.map((link) => (
-              <li key={link.slug}>
-                <NavLink
-                  to={linkPath(section, link)}
-                  className={({ isActive }) =>
-                    `-ml-px block border-l-2 py-2 pl-4 transition-colors ${
-                      isActive
-                        ? 'border-brass font-semibold text-ink'
-                        : 'border-transparent text-ink/60 hover:text-ink'
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <SectionSidebar section={section} />
         <div>
           <p className="font-serif text-3xl text-ink/80">This page is coming soon.</p>
           <p className="mt-4 max-w-xl text-ink/60">
