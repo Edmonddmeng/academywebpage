@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '../icons'
-import { Eyebrow, ImagePlaceholder } from '../ui'
+import { Eyebrow } from '../ui'
+import Reveal from '../Reveal'
 import { site } from '../../content/site'
 
 export default function Campuses() {
   return (
     <section className="bg-ink px-6 py-20 text-white sm:px-10 sm:py-28 lg:px-14">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
+        <Reveal as="div" className="max-w-3xl">
           <Eyebrow onDark>Our Campuses</Eyebrow>
           <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">
             Two campuses. One standard.
@@ -17,17 +18,24 @@ export default function Campuses() {
             school. Both campuses run the same daily structure and the same performance standards —
             which campus an athlete joins depends mainly on their sport.
           </p>
-        </div>
+        </Reveal>
 
         <ul className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-8">
-          {site.campuses.map((campus) => (
-            <li key={campus.name} className="border border-white/20 bg-white/5">
-              <img
-                src={campus.image}
-                alt={campus.imageAlt}
-                loading="lazy"
-                className="aspect-[16/9] w-full object-cover"
-              />
+          {site.campuses.map((campus, i) => (
+            <Reveal
+              as="li"
+              key={campus.name}
+              delay={i * 120}
+              className="group border border-white/20 bg-white/5 transition-colors duration-300 hover:border-gold/50"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={campus.image}
+                  alt={campus.imageAlt}
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+              </div>
 
               <div className="p-7 sm:p-9">
                 <Eyebrow onDark>{campus.region}</Eyebrow>
@@ -60,13 +68,19 @@ export default function Campuses() {
                   ))}
                 </ul>
 
-                <ImagePlaceholder
-                  tone="dark"
-                  label={`${campus.partner} campus`}
-                  className="mt-7 aspect-[3/2]"
-                />
+                <div className="mt-7 overflow-hidden">
+                  <img
+                    src="/images/academic-seminar.jpg"
+                    alt="Students and a teacher working closely in a seminar-style classroom"
+                    loading="lazy"
+                    className="aspect-[3/2] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                </div>
+                <p className="mt-3 font-condensed text-[13px] font-semibold tracking-[0.18em] text-white/50 uppercase">
+                  Academics at JMC
+                </p>
               </div>
-            </li>
+            </Reveal>
           ))}
         </ul>
 

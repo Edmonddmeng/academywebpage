@@ -1,4 +1,5 @@
 import PageBanner from '../components/PageBanner'
+import Reveal from '../components/Reveal'
 import { PageBlock, SectionFooterNav } from '../components/page/blocks'
 import { linkPath, type NavLink, type NavSection } from '../content/navigation'
 import { bannerFor } from '../content/banners'
@@ -29,9 +30,13 @@ export default function StandardPage({
       <div className="bg-ivory pb-24">
         <div className="mx-auto flex max-w-7xl flex-col gap-16 px-6 py-20 sm:px-10 sm:gap-20 lg:px-14">
           {content.blocks.map((block, i) => (
-            <PageBlock key={i} block={block} />
+            <Reveal key={i} delay={Math.min(i, 3) * 70}>
+              <PageBlock block={block} />
+            </Reveal>
           ))}
-          <SectionFooterNav label={section.label} links={siblings} />
+          <Reveal>
+            <SectionFooterNav label={section.label} links={siblings} />
+          </Reveal>
         </div>
       </div>
     </>

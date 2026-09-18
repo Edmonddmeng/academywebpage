@@ -4,6 +4,7 @@ import SiteHeader from './SiteHeader'
 import MenuOverlay from './MenuOverlay'
 import SearchOverlay from './SearchOverlay'
 import Footer from './Footer'
+import ScrollProgress from './ScrollProgress'
 import { isSportPath } from '../content/sports'
 
 type Overlay = 'menu' | 'search' | null
@@ -33,6 +34,7 @@ export default function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <ScrollProgress />
       <SiteHeader
         onOpenMenu={() => setOverlay('menu')}
         onOpenSearch={() => setOverlay('search')}

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '../icons'
 import { Eyebrow } from '../ui'
+import Reveal from '../Reveal'
 import { SportSymbol } from '../symbols'
 import { sportKinds, sports } from '../../content/sports'
 
@@ -42,7 +43,7 @@ function Panel({
         </div>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
-          <div>
+          <Reveal>
             <h2 className="font-serif text-4xl leading-tight sm:text-5xl">{title}</h2>
             <p className={`mt-6 text-lg leading-relaxed ${dark ? 'text-white/80' : 'text-ink/75'}`}>
               {lead}
@@ -56,8 +57,8 @@ function Panel({
               {linkLabel}
               <ArrowRight className="h-5 w-5" />
             </Link>
-          </div>
-          <div>{children}</div>
+          </Reveal>
+          <Reveal delay={150}>{children}</Reveal>
         </div>
       </div>
     </section>
@@ -112,7 +113,7 @@ function Steps({ items, tone }: { items: { title: string; text: string }[]; tone
 export function PillarsIntro() {
   return (
     <section className="bg-white px-6 py-20 sm:px-10 sm:py-24 lg:px-14">
-      <div className="mx-auto max-w-4xl text-center">
+      <Reveal as="div" className="mx-auto max-w-4xl text-center">
         <Eyebrow className="justify-center">The JMC Student-Athlete</Eyebrow>
         <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">
           Four things we are accountable for
@@ -122,7 +123,7 @@ export function PillarsIntro() {
           departments passing an athlete between them. They are one plan, reviewed together, for one
           athlete at a time.
         </p>
-      </div>
+      </Reveal>
     </section>
   )
 }
@@ -162,13 +163,13 @@ export function AthleticPillar() {
       tone="light"
     >
       <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-4">
-        {sportKinds.map((kind) => {
+        {sportKinds.map((kind, i) => {
           const sport = sports.find((s) => s.kind === kind)!
           return (
-            <li key={kind}>
+            <Reveal as="li" key={kind} delay={i * 70}>
               <Link
                 to={`/athletic/boys-${kind}`}
-                className="flex h-full flex-col items-center justify-center gap-3 border border-ink/20 bg-white p-6 text-center transition-colors hover:border-brass"
+                className="flex h-full flex-col items-center justify-center gap-3 border border-ink/20 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brass hover:shadow-[0_10px_24px_-12px_rgba(18,61,40,0.35)]"
               >
                 <SportSymbol kind={kind} className="h-11 w-11 text-brass" />
                 <span className="font-serif text-xl leading-tight">{sport.sport}</span>
@@ -176,7 +177,7 @@ export function AthleticPillar() {
                   Boys · Girls
                 </span>
               </Link>
-            </li>
+            </Reveal>
           )
         })}
       </ul>

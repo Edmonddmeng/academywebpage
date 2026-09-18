@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Eyebrow } from '../ui'
+import Reveal from '../Reveal'
 
 const actions = [
   { label: 'Apply to JMC', to: '/admission/how-to-apply' },
@@ -19,7 +20,7 @@ export default function AdmissionCta() {
         loading="lazy"
       />
       <div className="absolute inset-0 bg-linear-to-b from-ink/70 to-ink/90" />
-      <div className="relative mx-auto max-w-5xl text-center">
+      <Reveal as="div" className="relative mx-auto max-w-5xl text-center">
         <Eyebrow onDark className="mx-auto">
           Admission
         </Eyebrow>
@@ -35,7 +36,7 @@ export default function AdmissionCta() {
             <li key={action.to}>
               <Link
                 to={action.to}
-                className={`block px-4 py-5 font-condensed text-[16px] font-semibold tracking-[0.16em] uppercase transition-colors ${
+                className={`block px-4 py-5 font-condensed text-[16px] font-semibold tracking-[0.16em] uppercase transition-all duration-300 hover:-translate-y-0.5 ${
                   i === 0
                     ? 'bg-gold text-ink hover:bg-white'
                     : 'border border-white/35 text-white hover:bg-white hover:text-ink'
@@ -46,7 +47,7 @@ export default function AdmissionCta() {
             </li>
           ))}
         </ul>
-      </div>
+      </Reveal>
     </section>
   )
 }

@@ -1,6 +1,8 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { SportSymbol } from '../components/symbols'
 import { SportPanel } from '../components/sport/panels'
+import Reveal from '../components/Reveal'
+import CountUp from '../components/CountUp'
 import { sportTabs, tabLabel, type SportTab } from '../content/sportTabs'
 import type { Sport } from '../content/sports'
 
@@ -30,30 +32,38 @@ export default function SportPage({ sport }: { sport: Sport }) {
           {sport.intro(sport.title)}
         </p>
 
-        <img
-          src={sport.hero.src}
-          alt={sport.hero.alt}
-          className="mt-14 aspect-[16/9] w-full object-cover"
-        />
+        <Reveal>
+          <img
+            src={sport.hero.src}
+            alt={sport.hero.alt}
+            className="mt-14 aspect-[16/9] w-full object-cover"
+          />
+        </Reveal>
 
         <div className="mt-6 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex items-center justify-center border border-dotted border-ink/45 px-6 py-10">
+          <Reveal
+            delay={0}
+            className="flex items-center justify-center border border-dotted border-ink/45 px-6 py-10"
+          >
             <SportSymbol kind={sport.kind} className="h-20 w-20 text-ink" />
-          </div>
+          </Reveal>
           {[
-            { value: '12 months', label: 'Of year-round training' },
-            { value: String(sport.staff.length), label: 'Coaches & specialists' },
-            { value: '5:1', label: 'College support model' },
-          ].map((fact) => (
-            <div
+            { value: '12', suffix: ' months', label: 'Of year-round training' },
+            { value: String(sport.staff.length), suffix: '', label: 'Coaches & specialists' },
+            { value: '5:1', suffix: '', label: 'College support model' },
+          ].map((fact, i) => (
+            <Reveal
               key={fact.label}
+              delay={(i + 1) * 90}
               className="flex flex-col items-center justify-center border border-dotted border-ink/45 px-6 py-10 text-center"
             >
-              <p className="font-serif text-5xl leading-none text-ink">{fact.value}</p>
+              <p className="font-serif text-5xl leading-none text-ink">
+                <CountUp value={`${fact.value}${fact.suffix}`} />
+              </p>
               <p className="mt-3 font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
                 {fact.label}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -101,9 +111,16 @@ export default function SportPage({ sport }: { sport: Sport }) {
           </div>
         </div>
 
-        <div id={`panel-${active}`} role="tabpanel" aria-labelledby={`tab-${active}`} className="pt-10">
+        <Reveal
+          key={active}
+          as="div"
+          id={`panel-${active}`}
+          role="tabpanel"
+          aria-labelledby={`tab-${active}`}
+          className="pt-10"
+        >
           <SportPanel sport={sport} tab={active} />
-        </div>
+        </Reveal>
       </div>
     </div>
   )

@@ -1,10 +1,14 @@
 import { Eyebrow } from '../ui'
+import Reveal from '../Reveal'
 import { site } from '../../content/site'
 
 export default function StayConnected() {
   return (
     <section className="bg-white px-6 py-16 sm:px-10 lg:px-14">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      <Reveal
+        as="div"
+        className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between"
+      >
         <div>
           <Eyebrow>Follow Along</Eyebrow>
           <h2 className="mt-3 font-serif text-4xl">Stay Connected</h2>
@@ -21,7 +25,7 @@ export default function StayConnected() {
             </li>
           ))}
         </ul>
-      </div>
+      </Reveal>
     </section>
   )
 }

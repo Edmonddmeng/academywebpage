@@ -206,6 +206,13 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'image',
+        src: '/images/academic-seminar.jpg',
+        alt: 'A teacher and students working closely in a seminar-style classroom',
+        caption:
+          'Academics on both campuses — small, discussion-based classes taught by our partner schools',
+      },
+      {
         type: 'gallery',
         heading: 'Where we train',
         items: [

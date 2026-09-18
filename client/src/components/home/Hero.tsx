@@ -1,4 +1,6 @@
+import { useEffect, useRef } from 'react'
 import { ButtonLink } from '../ui'
+import CountUp from '../CountUp'
 import { site } from '../../content/site'
 
 // Structural facts only — true by design, not projected outcomes.
@@ -11,13 +13,37 @@ const stats = [
 ]
 
 export default function Hero() {
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let raf = 0
+    const onScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => {
+        // Capped so the image never scrolls far enough to expose its scaled-up edge.
+        const offset = Math.min(window.scrollY * 0.25, 80)
+        if (imgRef.current) {
+          imgRef.current.style.transform = `translateY(${offset}px) scale(1.08)`
+        }
+      })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      cancelAnimationFrame(raf)
+    }
+  }, [])
+
   return (
     <section className="relative flex min-h-svh flex-col overflow-hidden bg-ink text-white">
       <img
+        ref={imgRef}
         src="/images/hero.avif"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
+        style={{ transform: 'translateY(0px) scale(1.08)' }}
+        className="absolute inset-0 h-full w-full object-cover will-change-transform"
         fetchPriority="high"
       />
       {/* Scrims keep the white header and headline legible over the bright sky and water. */}
@@ -55,7 +81,7 @@ export default function Hero() {
               <dt className="sr-only">{stat.label}</dt>
               <dd>
                 <span className="block font-serif text-4xl leading-none text-gold lg:text-5xl">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </span>
                 <span className="mt-2 block font-condensed text-[14px] font-semibold tracking-[0.18em] text-white/80 uppercase">
                   {stat.label}
