@@ -1345,12 +1345,13 @@ export const pageContent: Record<string, PageContent> = {
 
   // ADMISSION
   'admission/how-to-apply': {
-    intro: 'Rolling admission, with an athletic and academic review for every applicant.',
+    intro: 'Rolling admission, with an athletic and academic review for every applicant — no ISEE or SSAT required.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          'We admit athletes throughout the year rather than on a single deadline, because athletic calendars do not line up with school ones. Spaces in each program are limited, so earlier applications have more options.',
+          'We admit athletes throughout the year rather than against a single deadline, because athletic calendars do not line up with school ones. Spaces in each program are limited, so earlier applications have more options.',
+          'Our review looks at the whole athlete: academic record, character, and where they stand in their sport. We do not require the ISEE or SSAT that most independent schools ask for — a coach’s evaluation of film and, where possible, live play tells us more about a prospective JMC athlete than a standardized admission test does.',
         ],
       },
       {
@@ -1361,14 +1362,30 @@ export const pageContent: Record<string, PageContent> = {
           { title: 'Visit or meet', text: 'Come to campus during training, or meet the staff online if travel is difficult.' },
           { title: 'Apply', text: 'Submit the application with school records, and athletic history and video.' },
           { title: 'Athletic evaluation', text: 'Coaches evaluate film and, where possible, see the athlete train or compete.' },
-          { title: 'Academic review & interview', text: 'Transcript review and a conversation with the athlete and family.' },
+          { title: 'Interview', text: 'A conversation with the athlete and family, in person or by video.' },
           { title: 'Decision & enrollment', text: 'Decisions are issued as reviews complete, followed by enrollment and arrival planning.' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'What the application includes',
+        items: [
+          { title: 'Application form', text: 'Athlete and family information, sport, position, and target grade year.' },
+          { title: 'Parent statement', text: 'A short statement from the family on goals for the athlete, academically and athletically.' },
+          { title: 'Student statement', text: 'In the athlete’s own words: their sport, their goals, and why JMC.' },
+          { title: 'Transcript request', text: 'Academic records sent directly from the athlete’s current school.' },
+          { title: 'Teacher comment', text: 'A brief comment from a current teacher or counselor.' },
+          { title: 'Athletic history & video', text: 'Competition record, current team or club, and recent film — coaches will advise what to send.' },
         ],
       },
       {
         type: 'faq',
         heading: 'Common questions',
         items: [
+          {
+            q: 'Do you require the ISEE or SSAT?',
+            a: 'No. Unlike most independent schools, JMC does not require standardized admission testing. Academic review is based on transcripts, teacher comments, and the interview.',
+          },
           {
             q: 'When should we apply?',
             a: 'Any time. Because admission is rolling, the practical deadline is when a program fills for the year.',
