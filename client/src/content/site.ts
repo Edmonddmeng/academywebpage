@@ -5,6 +5,8 @@ export const site = {
     'Season-long training, school, and college recruiting for serious student-athletes in Southern California.',
   description:
     'JMC Sports Academy develops student-athletes in ice hockey, golf, tennis, and lacrosse across two Southern California campuses, combining elite training, college-preparatory academics, and a dedicated recruiting team.',
+  // Short identity line for the footer, matching how independent schools state grade range + type + region in one line.
+  identity: 'A College-Preparatory Boarding Sports Academy for Grades 6–12 in Southern California',
   // PLACEHOLDER contact details — replace with real numbers and addresses before launch.
   phone: '(000) 000-0000',
   email: 'admission@jmcsportsacademy.com',

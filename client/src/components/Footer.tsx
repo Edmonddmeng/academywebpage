@@ -63,17 +63,22 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
-          <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+        <div className="mx-auto max-w-7xl px-6 py-8 sm:px-10 lg:px-14">
+          <p className="font-condensed text-[15px] font-semibold tracking-[0.05em] text-white/80 sm:text-base">
+            {site.identity}
           </p>
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="self-start tracking-[0.2em] uppercase hover:text-white sm:self-auto"
-          >
-            Back to top ↑
-          </button>
+          <div className="mt-5 flex flex-col gap-4 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {new Date().getFullYear()} {site.name}. All rights reserved.
+            </p>
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="self-start tracking-[0.2em] uppercase hover:text-white sm:self-auto"
+            >
+              Back to top ↑
+            </button>
+          </div>
         </div>
       </div>
     </footer>

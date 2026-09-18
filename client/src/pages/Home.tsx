@@ -1,14 +1,12 @@
 import Hero from '../components/home/Hero'
 import AtAGlance from '../components/home/AtAGlance'
-import {
-  AcademicPillar,
-  AthleticPillar,
-  PillarsIntro,
-  RecruitingPillar,
-  StudentLifePillar,
-} from '../components/home/Pillars'
+import MissionBand from '../components/home/MissionBand'
+import AcademicSplit from '../components/home/AcademicSplit'
+import AthleticShowcase from '../components/home/AthleticShowcase'
+import RecruitingStat from '../components/home/RecruitingStat'
+import StudentLifeGallery from '../components/home/StudentLifeGallery'
 import Campuses from '../components/home/Campuses'
-import Experience from '../components/home/Experience'
+import NewsEvents from '../components/home/NewsEvents'
 import AdmissionCta from '../components/home/AdmissionCta'
 import StayConnected from '../components/home/StayConnected'
 
@@ -17,13 +15,13 @@ export default function Home() {
     <>
       <Hero />
       <AtAGlance />
-      <PillarsIntro />
-      <AcademicPillar />
-      <AthleticPillar />
-      <RecruitingPillar />
-      <StudentLifePillar />
+      <MissionBand />
+      <AcademicSplit />
+      <AthleticShowcase />
+      <RecruitingStat />
+      <StudentLifeGallery />
       <Campuses />
-      <Experience />
+      <NewsEvents />
       <AdmissionCta />
       <StayConnected />
     </>

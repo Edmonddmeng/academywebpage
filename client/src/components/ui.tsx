@@ -33,10 +33,13 @@ export function ImagePlaceholder({
   label,
   className = '',
   tone = 'light',
+  kind = 'image',
 }: {
   label: string
   className?: string
   tone?: 'light' | 'dark'
+  /** 'video' adds a play-button mark so the slot reads as reserved for footage, not a photo. */
+  kind?: 'image' | 'video'
 }) {
   const toneClass =
     tone === 'dark'
@@ -46,9 +49,17 @@ export function ImagePlaceholder({
   return (
     <div
       role="img"
-      aria-label={`Placeholder image: ${label}`}
-      className={`relative overflow-hidden border border-dashed ${toneClass} ${className}`}
+      aria-label={`Placeholder ${kind}: ${label}`}
+      className={`relative flex items-center justify-center overflow-hidden border border-dashed ${toneClass} ${className}`}
     >
+      {kind === 'video' && (
+        <span
+          aria-hidden="true"
+          className="grid h-14 w-14 place-items-center rounded-full border-2 border-current"
+        >
+          <span className="ml-1 h-0 w-0 border-y-8 border-l-[12px] border-y-transparent border-l-current" />
+        </span>
+      )}
       <span className="absolute bottom-3 left-4 text-[11px] font-semibold tracking-[0.2em] uppercase">
         {label}
       </span>
