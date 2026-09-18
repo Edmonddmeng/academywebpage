@@ -58,52 +58,6 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'stats',
-        items: [
-          { value: '4', label: 'Sports, boys and girls' },
-          { value: '8', label: 'Year-round programs' },
-          { value: '2', label: 'Southern California campuses' },
-          { value: '5:1', label: 'Professionals per athlete' },
-        ],
-      },
-      {
-        type: 'features',
-        heading: 'What sets us apart',
-        items: [
-          {
-            title: 'No off-season',
-            text: 'Training is planned across the full calendar year, not squeezed into one season.',
-          },
-          {
-            title: 'Everyone lives here',
-            text: 'A single residential community means training, meals, study, and recovery all happen on schedule.',
-          },
-          {
-            title: 'Professional performance staff',
-            text: 'Strength, conditioning, nutrition, and recovery specialists, not a traditional PE program.',
-          },
-          {
-            title: 'Academics that fit training',
-            text: 'Small classes and study hours scheduled around daily sessions, competition, and travel.',
-          },
-          {
-            title: '5-to-1 recruiting',
-            text: 'Five professionals guide each athlete from first highlight film to signing day.',
-          },
-          {
-            title: 'Small by design',
-            text: 'Enrollment is capped so every athlete is known by the staff responsible for their development.',
-          },
-        ],
-      },
-      visitCta,
-    ],
-  },
-
-  'about/mission-and-vision': {
-    intro: 'Why the academy exists, and what we are building toward.',
-    blocks: [
-      {
         type: 'prose',
         heading: 'Our mission',
         paragraphs: [
@@ -144,21 +98,54 @@ export const pageContent: Record<string, PageContent> = {
           'To become the place families choose when an athlete is serious: a campus where the training, the coaching, the academics, and the recruiting guidance all meet a standard that holds up next to any program in the country.',
         ],
       },
-    ],
-  },
-
-  'about/leadership': {
-    intro: 'The people accountable for training, academics, residential life, and recruiting.',
-    blocks: [
+      {
+        type: 'stats',
+        items: [
+          { value: '4', label: 'Sports, boys and girls' },
+          { value: '8', label: 'Year-round programs' },
+          { value: '2', label: 'Southern California campuses' },
+          { value: '5:1', label: 'Professionals per athlete' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'What sets us apart',
+        items: [
+          {
+            title: 'No off-season',
+            text: 'Training is planned across the full calendar year, not squeezed into one season.',
+          },
+          {
+            title: 'Everyone lives here',
+            text: 'A single residential community means training, meals, study, and recovery all happen on schedule.',
+          },
+          {
+            title: 'Professional performance staff',
+            text: 'Strength, conditioning, nutrition, and recovery specialists, not a traditional PE program.',
+          },
+          {
+            title: 'Academics that fit training',
+            text: 'Small classes and study hours scheduled around daily sessions, competition, and travel.',
+          },
+          {
+            title: '5-to-1 recruiting',
+            text: 'Five professionals guide each athlete from first highlight film to signing day.',
+          },
+          {
+            title: 'Small by design',
+            text: 'Enrollment is capped so every athlete is known by the staff responsible for their development.',
+          },
+        ],
+      },
       {
         type: 'prose',
+        heading: 'Leadership',
         paragraphs: [
           'The academy is led by a small team with clear ownership. Each leader below is responsible for one part of the athlete’s day, and together they review every athlete’s progress across training, school, health, and recruiting.',
         ],
       },
       {
         type: 'features',
-        heading: 'Leadership team',
         items: [
           { title: 'Head of Academy', text: 'To be announced. Overall leadership, culture, and standards.' },
           { title: 'Director of Athletics', text: 'To be announced. Coaching staffs, competition, and program standards.' },
@@ -168,6 +155,7 @@ export const pageContent: Record<string, PageContent> = {
           { title: 'Director of Residential Life', text: 'To be announced. Residence halls, daily routine, and student wellbeing.' },
         ],
       },
+      visitCta,
     ],
   },
 
@@ -1344,7 +1332,7 @@ export const pageContent: Record<string, PageContent> = {
   },
 
   // ADMISSION
-  'admission/how-to-apply': {
+  'admission/overview': {
     intro: 'Rolling admission, with an athletic and academic review for every applicant — no ISEE or SSAT required.',
     blocks: [
       {

@@ -14,8 +14,6 @@ export const navSections: NavSection[] = [
     blurb: 'Who we are, what we believe, and the two campuses we train on.',
     links: [
       { label: 'Academy Overview', slug: 'academy-overview' },
-      { label: 'Mission & Vision', slug: 'mission-and-vision' },
-      { label: 'Leadership', slug: 'leadership' },
       { label: 'Campuses', slug: 'campuses' },
     ],
   },
@@ -24,7 +22,7 @@ export const navSections: NavSection[] = [
     slug: 'admission',
     blurb: 'Rolling admission for athletes from across the country and around the world.',
     links: [
-      { label: 'How to Apply', slug: 'how-to-apply' },
+      { label: 'Admission Overview', slug: 'overview' },
       { label: 'Visit', slug: 'visit' },
       { label: 'International Athletes', slug: 'international-athletes' },
       { label: 'Tuition & Fees', slug: 'tuition-and-fees' },
@@ -100,11 +98,11 @@ export const navSections: NavSection[] = [
 export const utilityLinks = [
   { label: 'Inquire', to: '/contact' },
   { label: 'Visit', to: '/admission/visit' },
-  { label: 'Apply', to: '/admission/how-to-apply' },
+  { label: 'Apply', to: '/admission/overview' },
 ]
 
 export const quickLinks = [
-  { label: 'Apply to JMC', to: '/admission/how-to-apply' },
+  { label: 'Apply to JMC', to: '/admission/overview' },
   { label: 'Schedule a Visit', to: '/admission/visit' },
   { label: 'Tuition & Fees', to: '/admission/tuition-and-fees' },
   { label: 'Our Campuses', to: '/about/campuses' },

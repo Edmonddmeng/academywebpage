@@ -65,7 +65,7 @@ export default function Hero() {
             {site.tagline}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink to="/admission/how-to-apply" variant="gold">
+            <ButtonLink to="/admission/overview" variant="gold">
               Apply to JMC
             </ButtonLink>
             <ButtonLink to="/about/academy-overview" variant="outline-light">

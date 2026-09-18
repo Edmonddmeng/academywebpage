@@ -3,7 +3,7 @@ import { Eyebrow } from '../ui'
 import Reveal from '../Reveal'
 
 const actions = [
-  { label: 'Apply to JMC', to: '/admission/how-to-apply' },
+  { label: 'Apply to JMC', to: '/admission/overview' },
   { label: 'Inquire', to: '/contact' },
   { label: 'Visit', to: '/admission/visit' },
   { label: 'Tuition & Fees', to: '/admission/tuition-and-fees' },

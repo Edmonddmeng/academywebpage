@@ -48,7 +48,7 @@ export const site = {
     { label: 'Our Campuses', to: '/about/campuses' },
     { label: 'Athletic Programs', to: '/athletic' },
     { label: 'Tuition & Fees', to: '/admission/tuition-and-fees' },
-    { label: 'Apply to JMC', to: '/admission/how-to-apply' },
+    { label: 'Apply to JMC', to: '/admission/overview' },
     { label: 'Contact Us', to: '/contact' },
   ],
 }
