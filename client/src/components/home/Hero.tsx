@@ -46,9 +46,10 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover will-change-transform"
         fetchPriority="high"
       />
-      {/* Scrims keep the white header and headline legible over the bright sky and water. */}
-      <div className="absolute inset-0 bg-linear-to-b from-ink/70 via-ink/25 to-ink/90" />
-      <div className="absolute inset-0 bg-linear-to-r from-ink/80 via-ink/30 to-transparent" />
+      {/* Neutral (not brand-green) scrims keep the white header and headline legible
+          without tinting the photo's true colors. */}
+      <div className="absolute inset-0 bg-linear-to-b from-black/65 via-black/15 to-black/80" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/25 to-transparent" />
 
       <div className="relative flex flex-1 items-center px-6 pt-32 pb-16 sm:px-10 lg:px-14">
         <div className="mx-auto w-full max-w-7xl">

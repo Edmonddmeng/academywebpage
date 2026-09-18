@@ -1,4 +1,5 @@
 import Hero from '../components/home/Hero'
+import AtAGlance from '../components/home/AtAGlance'
 import {
   AcademicPillar,
   AthleticPillar,
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AtAGlance />
       <PillarsIntro />
       <AcademicPillar />
       <AthleticPillar />
