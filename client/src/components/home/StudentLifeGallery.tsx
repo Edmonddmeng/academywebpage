@@ -4,7 +4,12 @@ import { Eyebrow, ImagePlaceholder } from '../ui'
 import Reveal from '../Reveal'
 
 const slots = [
-  { label: 'Residence Life', kind: 'image' as const, to: '/student-life/residence-life' },
+  {
+    label: 'Residence Life',
+    kind: 'video' as const,
+    src: '/videos/residence-life.mp4',
+    to: '/student-life/residence-life',
+  },
   {
     label: 'Campus Life',
     kind: 'video' as const,

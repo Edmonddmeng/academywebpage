@@ -1,11 +1,25 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '../icons'
-import { Eyebrow, ImagePlaceholder } from '../ui'
+import { Eyebrow } from '../ui'
 import Reveal from '../Reveal'
 
 // Categories, not invented dates — JMC has no events or stories posted yet, so this
 // shows the shape the section will hold rather than fabricating specific instances.
-const eventKinds = ['Tryouts', 'Showcases & Combines', 'Family Weekend', 'Signing Day']
+// Each links to the page that actually covers it.
+const eventKinds = [
+  { label: 'Tryouts', text: 'Athletic evaluation as part of admission.', to: '/admission/overview' },
+  {
+    label: 'Showcases & Combines',
+    text: 'Where our athletes get seen by college coaches.',
+    to: '/counseling/college-recruiting',
+  },
+  {
+    label: 'Family Weekend',
+    text: 'Campus life beyond training and school.',
+    to: '/student-life/activities-and-service',
+  },
+  { label: 'Signing Day', text: 'Where commitments will be announced.', to: '/counseling/commitments' },
+]
 
 export default function NewsEvents() {
   return (
@@ -14,14 +28,20 @@ export default function NewsEvents() {
         <Reveal as="div">
           <Eyebrow>Upcoming Events</Eyebrow>
           <ol className="mt-6 border-t border-ink/15">
-            {eventKinds.map((kind) => (
-              <li key={kind} className="flex items-center gap-4 border-b border-ink/15 py-4">
-                <span className="flex h-12 w-12 shrink-0 flex-col items-center justify-center border border-ink/25 text-center leading-none">
-                  <span className="font-condensed text-[10px] font-semibold tracking-wide text-brass uppercase">
-                    TBD
+            {eventKinds.map((event) => (
+              <li key={event.label} className="border-b border-ink/15">
+                <Link to={event.to} className="group flex items-center gap-4 py-4">
+                  <span className="flex h-12 w-12 shrink-0 flex-col items-center justify-center border border-ink/25 text-center leading-none transition-colors group-hover:border-brass">
+                    <span className="font-condensed text-[10px] font-semibold tracking-wide text-brass uppercase">
+                      TBD
+                    </span>
                   </span>
-                </span>
-                <span className="font-serif text-lg text-ink">{kind}</span>
+                  <span className="flex-1">
+                    <span className="block font-serif text-lg text-ink">{event.label}</span>
+                    <span className="block text-sm text-ink/60">{event.text}</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-ink/30 transition-transform group-hover:translate-x-1 group-hover:text-brass" />
+                </Link>
               </li>
             ))}
           </ol>
@@ -38,7 +58,12 @@ export default function NewsEvents() {
         <Reveal as="div" delay={120}>
           <Eyebrow>Latest News</Eyebrow>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            <ImagePlaceholder label="First story from campus" className="aspect-[4/3]" />
+            <img
+              src="/images/lacrosse-action.jpg"
+              alt="A lacrosse player carrying the ball upfield"
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
             <div className="flex flex-col justify-center">
               <p className="font-condensed text-[13px] font-semibold tracking-[0.18em] text-ink/50 uppercase">
                 Coming soon
