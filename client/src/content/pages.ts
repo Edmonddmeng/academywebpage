@@ -75,7 +75,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'split',
         heading: 'A letter before you apply',
-        image: { placeholder: 'Jonathan Reyes, Head of Program' },
+        image: { src: '/images/jonathan-reyes.jpg', alt: 'Jonathan Reyes, Head of Program' },
         paragraphs: [
           'I spent eleven seasons on the bench before I ever stood in front of a classroom, and both jobs taught me the same lesson: a kid who is only pushed in one direction eventually breaks in the other.',
         ],

@@ -3,7 +3,7 @@ import { ArrowRight } from '../icons'
 import { Eyebrow } from '../ui'
 import Reveal from '../Reveal'
 
-const tags = ['Small classes', 'NCAA-aligned', 'Mastery-paced']
+const tags = ['Up to 20 AP Courses', 'Small classes', 'Honors in every department', 'NCAA-aligned']
 
 // A full-bleed photo/text split — the section's image is the point, not a paragraph.
 export default function AcademicSplit() {
@@ -27,7 +27,10 @@ export default function AcademicSplit() {
           A diploma built on inquiry
         </h2>
         <p className="mt-5 max-w-md text-lg text-white/80">
-          College-preparatory academics, scheduled around training.
+          A fully rigorous college-preparatory curriculum — honors coursework in every
+          department, up to 20 Advanced Placement courses, and a workload that matches
+          any top academic high school in the country — scheduled around training, not
+          around it.
         </p>
 
         <ul className="mt-7 flex flex-wrap gap-2">
