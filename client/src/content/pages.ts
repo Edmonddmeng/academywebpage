@@ -822,7 +822,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'split',
         heading: 'Rigor with a reason',
-        image: { placeholder: 'Upper School Seminar' },
+        image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
         paragraphs: [
           'By the time an athlete reaches Grade 9 at JMC, the habits are in place and the standard rises again. Upper School classes run like small seminars, not lectures: students are expected to arrive prepared, argue a position, and defend it in writing.',
           'We would rather graduate an athlete who thinks clearly under pressure than one who simply accumulated credits. Course selection is planned with NCAA eligibility requirements in view from the first term, so no athlete arrives at their final year to discover a missing requirement.',
@@ -840,7 +840,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'split',
         heading: 'Every athlete, known by name',
         reverse: true,
-        image: { placeholder: 'Upper School Classroom' },
+        image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
         paragraphs: [
           'A full course load stays manageable because no class is large enough to hide in. Teachers know which students are traveling for a tournament next Thursday, which ones are chasing an advanced science requirement, and which ones need a different kind of push entirely.',
         ],
@@ -928,7 +928,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'split',
         heading: 'Where the habits are built',
-        image: { placeholder: 'Middle School Classroom' },
+        image: { src: '/images/middle-school-classroom.jpg', alt: 'Middle School students working in class' },
         paragraphs: [
           'Twelve and thirteen-year-olds are not small versions of eighteen-year-olds. They need more structure, not less — clear routines, direct instruction in how to study, and adults who notice quickly when something is off.',
           'Middle School athletes are training seriously for the first time, often while living away from home for the first time. Those years decide whether an athlete arrives in the Upper School able to carry a heavy course load, or spends four years catching up.',
@@ -996,7 +996,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'split',
         heading: 'Living and learning together',
         reverse: true,
-        image: { placeholder: 'Middle School Study Hall' },
+        image: { src: '/images/middle-school-classroom.jpg', alt: 'Middle School students working in class' },
         paragraphs: [
           'Academics do not stop at the classroom door. Evening study hall runs in residence, supervised by the same staff who oversee training and daily life, so a Middle School student is never more than a few steps from someone who can help with a hard problem set.',
         ],

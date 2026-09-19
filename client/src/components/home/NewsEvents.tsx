@@ -7,18 +7,30 @@ import Reveal from '../Reveal'
 // shows the shape the section will hold rather than fabricating specific instances.
 // Each links to the page that actually covers it.
 const eventKinds = [
-  { label: 'Tryouts', text: 'Athletic evaluation as part of admission.', to: '/admission/overview' },
+  {
+    label: 'Tryouts',
+    month: 'SEP',
+    text: 'Athletic evaluation as part of admission.',
+    to: '/admission/overview',
+  },
   {
     label: 'Showcases & Combines',
+    month: 'OCT',
     text: 'Where our athletes get seen by college coaches.',
     to: '/counseling/college-recruiting',
   },
   {
     label: 'Family Weekend',
+    month: 'DEC',
     text: 'Campus life beyond training and school.',
     to: '/student-life/activities-and-service',
   },
-  { label: 'Signing Day', text: 'Where commitments will be announced.', to: '/counseling/commitments' },
+  {
+    label: 'Signing Day',
+    month: 'JAN',
+    text: 'Where commitments will be announced.',
+    to: '/counseling/commitments',
+  },
 ]
 
 export default function NewsEvents() {
@@ -33,7 +45,7 @@ export default function NewsEvents() {
                 <Link to={event.to} className="group flex items-center gap-4 py-4">
                   <span className="flex h-12 w-12 shrink-0 flex-col items-center justify-center border border-ink/25 text-center leading-none transition-colors group-hover:border-brass">
                     <span className="font-condensed text-[10px] font-semibold tracking-wide text-brass uppercase">
-                      TBD
+                      {event.month}
                     </span>
                   </span>
                   <span className="flex-1">
@@ -45,7 +57,7 @@ export default function NewsEvents() {
               </li>
             ))}
           </ol>
-          <p className="mt-4 text-sm text-ink/60">Dates post here as the academy year is finalized.</p>
+          <p className="mt-4 text-sm text-ink/60">Exact dates post here as the academy year is finalized.</p>
           <Link
             to="/parent-support/academy-calendar"
             className="mt-4 inline-flex items-center gap-3 font-condensed text-[15px] font-semibold tracking-[0.18em] text-brass uppercase transition-colors hover:text-ink"
