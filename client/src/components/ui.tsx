@@ -41,16 +41,18 @@ export function ImagePlaceholder({
   /** 'video' adds a play-button mark so the slot reads as reserved for footage, not a photo. */
   kind?: 'image' | 'video'
 }) {
+  // Border does the work of reading as "placeholder" — bg-sand alone is too close
+  // to the page's ivory background to register, especially at a glance or scaled down.
   const toneClass =
     tone === 'dark'
-      ? 'border-white/25 bg-ink-soft/40 text-white/60'
-      : 'border-ink/25 bg-sand text-ink/50'
+      ? 'border-white/40 bg-ink-soft/40 text-white/60'
+      : 'border-ink/40 bg-sand text-ink/50'
 
   return (
     <div
       role="img"
       aria-label={`Placeholder ${kind}: ${label}`}
-      className={`relative flex items-center justify-center overflow-hidden border border-dashed ${toneClass} ${className}`}
+      className={`relative flex items-center justify-center overflow-hidden border-2 border-dashed ${toneClass} ${className}`}
     >
       {kind === 'video' && (
         <span

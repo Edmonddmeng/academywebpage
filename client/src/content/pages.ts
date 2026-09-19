@@ -1,6 +1,8 @@
 // Page content for every non-sport page. Keys are `${section.slug}/${link.slug}`.
 // Anything marked with a `note` block is unconfirmed and must be reviewed before launch.
 
+import { site } from './site'
+
 export type Block =
   | { type: 'prose'; heading?: string; paragraphs: string[] }
   | { type: 'numbered'; heading?: string; items: { title: string; text: string }[] }
@@ -30,6 +32,26 @@ export type Block =
       items: { label: string; src?: string; alt?: string }[]
     }
   | { type: 'note'; text: string }
+  | { type: 'statement'; text: string; attribution?: string }
+  | {
+      type: 'split'
+      heading: string
+      paragraphs: string[]
+      reverse?: boolean
+      image: { src: string; alt: string } | { placeholder: string }
+    }
+  | {
+      type: 'people'
+      heading?: string
+      text?: string
+      items: { name: string; role: string; bio?: string }[]
+    }
+  | {
+      type: 'calendar'
+      heading?: string
+      items: { period: string; focus: string }[]
+    }
+  | { type: 'signature'; name: string; role: string; extra?: string }
 
 export type PageContent = { intro: string; blocks: Block[] }
 
@@ -45,24 +67,54 @@ const visitCta: Block = {
 
 export const pageContent: Record<string, PageContent> = {
   // ABOUT
-  'about/academy-overview': {
-    intro:
-      'A season-long sports academy across two Southern California campuses, built for athletes who intend to play in college and beyond.',
+  // Jonathan Reyes is a placeholder person, invented for launch. Replace with the real
+  // Head of School's name, background, and photo once hired.
+  'about/head-of-school': {
+    intro: 'A letter from our founding Head of School.',
     blocks: [
       {
-        type: 'prose',
-        heading: 'One schedule. One standard.',
+        type: 'split',
+        heading: 'A letter before you apply',
+        image: { placeholder: 'Jonathan Reyes, Head of School' },
         paragraphs: [
-          'JMC is not a school with a strong athletic program, and not a club team that happens to offer classes. The academy is built around a single daily schedule that puts elite training, school, recovery, and recruiting in the same place, run by the same staff, toward the same goal.',
-          'Athletes train through the season in ice hockey, golf, tennis, or lacrosse, live with their teammates, take college-preparatory classes taught by our own faculty, and work with a five-person team that guides them to the right college program.',
+          'I spent eleven seasons on the bench before I ever stood in front of a classroom, and both jobs taught me the same lesson: a kid who is only pushed in one direction eventually breaks in the other.',
         ],
       },
       {
+        type: 'statement',
+        text: 'An athlete’s transcript should never be the reason a coach stops calling.',
+      },
+      {
         type: 'prose',
-        heading: 'Our mission',
         paragraphs: [
-          'To develop athletes who compete at the highest level of their sport without giving up their education, their health, or their character along the way.',
-          'Most athletes are forced to choose. They train seriously and let school slip, or they keep school first and train around whatever time is left. We built the academy so that choice is unnecessary: one schedule, one campus, one staff accountable for the whole athlete.',
+          'I still remember a Sunday afternoon, sitting across from a sixteen-year-old defenseman I had coached since he was thirteen, watching a college advisor tell him — gently, the way you deliver bad news to a kid you like — that his transcript did not match his talent. He had the skating, the shot, the hockey sense scouts write offers around. What he did not have was a single teacher who had noticed him falling behind in October, because nobody in that building was responsible for both halves of his life at once.',
+          'That conversation is the reason JMC exists. I built this academy for families who refuse to accept that trade — serious athlete or serious student, pick one — because I do not think it should be a trade at all. Every year it costs talented kids real opportunities they have actually earned, and it happens quietly enough that most families do not see it coming until the acceptance letters do not.',
+          'So we built the opposite kind of school. Classes are small enough that a teacher notices a slipping grade before it becomes a pattern. Every student has a team of five, not one overworked counselor, tracking their coursework, their film, and their college list at the same time. Training runs on the same calendar as the classroom, not against it, because I have watched too many programs treat academics as the thing that happens around practice instead of alongside it.',
+          'I will not pretend we have this fully figured out. We are a new school, building toward the standard we have set for ourselves, one class and one season at a time. What I can promise is that every decision here starts from the same question: does this serve the whole athlete, or just the part of them that shows up on a highlight reel?',
+          'If you are a family weighing that same trade-off I watched play out that Sunday afternoon, I would like to talk with you. Come watch a training session, sit in on a class, and judge for yourself whether we are building what we say we are.',
+        ],
+      },
+      {
+        type: 'signature',
+        name: 'Jonathan Reyes',
+        role: 'Founding Head of School',
+      },
+      visitCta,
+    ],
+  },
+
+  'about/mission-and-vision': {
+    intro: 'Our mission and what we believe about developing a scholar-athlete.',
+    blocks: [
+      {
+        type: 'statement',
+        text: 'JMC Sports Academy exists to develop grade 6–12 student-athletes who compete at the highest level of their sport without sacrificing the rigor of their education.',
+        attribution: 'Our Mission',
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          'Most student-athletes are pushed to choose: train seriously and let school slip, or protect the transcript and train around whatever time is left. We think that choice is a failure of design, not a fact of life, so JMC is built to make it unnecessary — one daily schedule, one campus, one staff accountable for the whole student, from Grade 6 through Grade 12.',
         ],
       },
       {
@@ -79,7 +131,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Development is individual',
-            text: 'Every athlete trains on a plan built for their age, body, position, and goals.',
+            text: 'Every student trains and studies on a plan built for their age, ability, and goals — not a fixed pace.',
           },
           {
             title: 'Honesty over hype',
@@ -95,8 +147,30 @@ export const pageContent: Record<string, PageContent> = {
         type: 'prose',
         heading: 'Our vision',
         paragraphs: [
-          'To become the place families choose when an athlete is serious: a campus where the training, the coaching, the academics, and the recruiting guidance all meet a standard that holds up next to any program in the country.',
+          'To become the school families choose when a Grade 6–12 student is serious about both sides of their future: a campus where the training, the coaching, the academics, and the college guidance all meet a standard that holds up next to any program in the country.',
         ],
+      },
+      visitCta,
+    ],
+  },
+
+  'about/academy-overview': {
+    intro:
+      'A season-long sports academy across two Southern California campuses, built for athletes who intend to play in college and beyond.',
+    blocks: [
+      {
+        type: 'prose',
+        heading: 'One schedule. One standard.',
+        paragraphs: [
+          'JMC is not a school with a strong athletic program, and not a club team that happens to offer classes. The academy is built around a single daily schedule that puts elite training, school, recovery, and recruiting in the same place, run by the same staff, toward the same goal.',
+          'Athletes train through the season in ice hockey, golf, tennis, or lacrosse, live with their teammates, take college-preparatory classes taught by our own faculty, and work with a five-person team that guides them to the right college program.',
+        ],
+      },
+      {
+        type: 'cta',
+        heading: 'Our mission and vision',
+        text: 'Why the academy exists, and what we believe about developing a scholar-athlete.',
+        links: [{ label: 'Mission & Vision', to: '/about/mission-and-vision' }],
       },
       {
         type: 'stats',
@@ -147,7 +221,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'features',
         items: [
-          { title: 'Head of Academy', text: 'To be announced. Overall leadership, culture, and standards.' },
+          { title: 'Head of School', text: 'Jonathan Reyes. Overall leadership, culture, and standards.' },
           { title: 'Director of Athletics', text: 'To be announced. Coaching staffs, competition, and program standards.' },
           { title: 'Director of Performance', text: 'To be announced. Strength, conditioning, nutrition, and recovery.' },
           { title: 'Dean of Academics', text: 'To be announced. Curriculum, teaching, and academic eligibility.' },
@@ -745,10 +819,12 @@ export const pageContent: Record<string, PageContent> = {
     intro: 'Grades 9–12: a college-preparatory program with honors, advanced, and AP coursework, scheduled around training.',
     blocks: [
       {
-        type: 'prose',
+        type: 'split',
+        heading: 'Rigor with a reason',
+        image: { placeholder: 'Upper School Seminar' },
         paragraphs: [
-          'Athletes take a full academic course load in small classes. The subject list is deliberately focused rather than sprawling: core academic subjects taught well, with electives that fit an athlete’s schedule and interests.',
-          'Course selection is planned with NCAA eligibility requirements in view from the first term, so no athlete arrives at their final year to discover a missing requirement.',
+          'By the time an athlete reaches Grade 9 at JMC, the habits are in place and the standard rises again. Upper School classes run like small seminars, not lectures: students are expected to arrive prepared, argue a position, and defend it in writing.',
+          'We would rather graduate an athlete who thinks clearly under pressure than one who simply accumulated credits. Course selection is planned with NCAA eligibility requirements in view from the first term, so no athlete arrives at their final year to discover a missing requirement.',
         ],
       },
       {
@@ -757,6 +833,15 @@ export const pageContent: Record<string, PageContent> = {
         paragraphs: [
           'Training moves. The standard does not. Class times, study hall, and tutoring flex around sessions, competition, and travel, but the work itself is held to a level that would be demanding at any strong school in the country.',
           'We are unapologetic about the scholar half of scholar-athlete. The discipline that gets an athlete to a 6 a.m. session is the same discipline that produces careful writing, finished problem sets, and serious test preparation — and we expect our athletes to outwork and outperform the expectations people usually attach to student-athletes.',
+        ],
+      },
+      {
+        type: 'split',
+        heading: 'Every athlete, known by name',
+        reverse: true,
+        image: { placeholder: 'Upper School Classroom' },
+        paragraphs: [
+          'A full course load stays manageable because no class is large enough to hide in. Teachers know which students are traveling for a tournament next Thursday, which ones are chasing an advanced science requirement, and which ones need a different kind of push entirely.',
         ],
       },
       {
@@ -840,11 +925,12 @@ export const pageContent: Record<string, PageContent> = {
       'Grades 6–8: building the habits, skills, and foundation that make demanding Upper School work possible.',
     blocks: [
       {
-        type: 'prose',
+        type: 'split',
         heading: 'Where the habits are built',
+        image: { placeholder: 'Middle School Classroom' },
         paragraphs: [
+          'Twelve and thirteen-year-olds are not small versions of eighteen-year-olds. They need more structure, not less — clear routines, direct instruction in how to study, and adults who notice quickly when something is off.',
           'Middle School athletes are training seriously for the first time, often while living away from home for the first time. Those years decide whether an athlete arrives in the Upper School able to carry a heavy course load, or spends four years catching up.',
-          'So the Middle School is deliberately structured. Classes are small, study time is supervised, and teachers, advisors, and coaches talk to each other about the same student. Organization, note-taking, and revision are taught directly rather than assumed.',
         ],
       },
       {
@@ -903,6 +989,15 @@ export const pageContent: Record<string, PageContent> = {
           { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
           { label: 'SSAT' },
           { label: 'ISEE', src: '/images/logos/isee.jpg', alt: 'ISEE' },
+        ],
+      },
+      {
+        type: 'split',
+        heading: 'Living and learning together',
+        reverse: true,
+        image: { placeholder: 'Middle School Study Hall' },
+        paragraphs: [
+          'Academics do not stop at the classroom door. Evening study hall runs in residence, supervised by the same staff who oversee training and daily life, so a Middle School student is never more than a few steps from someone who can help with a hard problem set.',
         ],
       },
       {
@@ -1332,13 +1427,57 @@ export const pageContent: Record<string, PageContent> = {
 
   // ADMISSION
   'admission/overview': {
-    intro: 'Rolling admission, with an athletic and academic review for every applicant — no ISEE or SSAT required.',
+    intro:
+      'Welcome to Admission at JMC. Rolling admission, with an athletic and academic review for every applicant — no ISEE or SSAT required.',
     blocks: [
+      {
+        type: 'statement',
+        text: 'We admit the whole student: the transcript, the character, and where they stand in their sport — never a single test score.',
+        attribution: 'Our Admission Philosophy',
+      },
       {
         type: 'prose',
         paragraphs: [
-          'We admit athletes throughout the year rather than against a single deadline, because athletic calendars do not line up with school ones. Spaces in each program are limited, so earlier applications have more options.',
-          'Our review looks at the whole athlete: academic record, character, and where they stand in their sport. We do not require the ISEE or SSAT that most independent schools ask for — a coach’s evaluation of film and, where possible, live play tells us more about a prospective JMC athlete than a standardized admission test does.',
+          'That philosophy follows directly from our mission. JMC exists so that grade 6–12 student-athletes never have to choose between a serious sport and a serious education, and admission is the first place we put that into practice. We admit athletes throughout the year rather than against a single deadline, because athletic calendars do not line up with school ones — but every application still gets the same close look, academic and athletic, before a decision is made.',
+          'We do not require the ISEE or SSAT that most independent schools ask for. A coach’s evaluation of film and, where possible, live play tells us more about a prospective JMC athlete than a standardized admission test does, and it sits alongside a genuine look at transcripts, teacher comments, and the family itself.',
+        ],
+      },
+      {
+        type: 'calendar',
+        heading: 'Admission Calendar',
+        items: [
+          { period: 'Fall', focus: 'Inquiries open, campus tours resume, and coaches begin reviewing fall film.' },
+          { period: 'Winter', focus: 'Application review, interviews, and early decisions for winter sport programs.' },
+          { period: 'Spring', focus: 'Peak visit season, decisions for fall enrollment, and spring tournament evaluations.' },
+          { period: 'Summer', focus: 'Enrollment, orientation planning, and late openings as space allows.' },
+        ],
+      },
+      {
+        // Placeholder team, invented for launch. Replace with real admission staff once hired.
+        type: 'people',
+        heading: 'Meet the Admission Team',
+        text: 'Four people, each responsible for a different part of your family’s application.',
+        items: [
+          {
+            name: 'Sarah Kim',
+            role: 'Director of Admission',
+            bio: 'Leads the admission process end to end — usually the first person a family talks to.',
+          },
+          {
+            name: 'Marcus Bellamy',
+            role: 'Athletic Recruiting Coordinator',
+            bio: 'Reviews game film and coordinates with our coaching staff on every prospective athlete.',
+          },
+          {
+            name: 'Elena Torres',
+            role: 'Admission & Family Counselor',
+            bio: 'Reviews transcripts and works directly with families through interviews and decisions.',
+          },
+          {
+            name: 'David Okafor',
+            role: 'International Admission Coordinator',
+            bio: 'Supports international families through visas, travel, and the move to campus.',
+          },
         ],
       },
       {
@@ -1391,7 +1530,15 @@ export const pageContent: Record<string, PageContent> = {
           },
         ],
       },
-      visitCta,
+      {
+        type: 'cta',
+        heading: 'Have a question first?',
+        text: `Email us at ${site.email} and a member of the admission team will get back to you, or submit an inquiry to start your application.`,
+        links: [
+          { label: 'Submit an Inquiry', to: '/contact' },
+          { label: 'Schedule a Visit', to: '/admission/visit' },
+        ],
+      },
     ],
   },
 

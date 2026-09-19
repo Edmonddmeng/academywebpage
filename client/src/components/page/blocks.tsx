@@ -1,9 +1,18 @@
-import { ButtonLink } from '../ui'
+import { ButtonLink, ImagePlaceholder } from '../ui'
 import type { Block } from '../../content/pages'
 
 function Heading({ children }: { children: string }) {
   return <h2 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">{children}</h2>
 }
+
+// "Jonathan Reyes" -> "JR", for the person-card avatar circle.
+const nameInitials = (name: string) =>
+  name
+    .split(' ')
+    .filter((word) => /^[A-Za-z]/.test(word))
+    .map((word) => word[0])
+    .join('')
+    .slice(0, 3)
 
 export function PageBlock({ block }: { block: Block }) {
   switch (block.type) {
@@ -267,6 +276,104 @@ export function PageBlock({ block }: { block: Block }) {
             </figcaption>
           )}
         </figure>
+      )
+
+    case 'statement':
+      return (
+        <section className="mx-auto max-w-3xl text-center">
+          <p className="font-serif text-3xl leading-snug text-ink sm:text-4xl">{block.text}</p>
+          <span aria-hidden="true" className="mx-auto mt-6 block h-px w-16 bg-brass" />
+          {block.attribution && (
+            <p className="mt-4 font-condensed text-[13px] font-semibold tracking-[0.18em] text-brass uppercase">
+              {block.attribution}
+            </p>
+          )}
+        </section>
+      )
+
+    case 'split':
+      return (
+        <section className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className={`aspect-[4/3] ${block.reverse ? 'lg:order-2' : ''}`}>
+            {'src' in block.image ? (
+              <img
+                src={block.image.src}
+                alt={block.image.alt}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <ImagePlaceholder label={block.image.placeholder} className="h-full w-full" />
+            )}
+          </div>
+          <div>
+            <h2 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
+              {block.heading}
+            </h2>
+            <div className="mt-5 space-y-4">
+              {block.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="text-lg leading-relaxed text-ink/75">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+
+    case 'people':
+      return (
+        <section>
+          {block.heading && <Heading>{block.heading}</Heading>}
+          {block.text && (
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink/75">{block.text}</p>
+          )}
+          <ul className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4 ${block.heading || block.text ? 'mt-8' : ''}`}>
+            {block.items.map((person) => (
+              <li key={person.name} className="border border-dotted border-ink/45 p-6">
+                <span className="grid h-16 w-16 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
+                  {nameInitials(person.name)}
+                </span>
+                <p className="mt-4 font-serif text-2xl leading-tight">{person.name}</p>
+                <p className="mt-1 text-xs font-semibold tracking-[0.2em] text-brass uppercase">
+                  {person.role}
+                </p>
+                {person.bio && (
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{person.bio}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+
+    case 'calendar':
+      return (
+        <section>
+          {block.heading && <Heading>{block.heading}</Heading>}
+          <ol className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4 ${block.heading ? 'mt-8' : ''}`}>
+            {block.items.map((item, i) => (
+              <li key={item.period} className="border border-dotted border-ink/45 p-6">
+                <span className="font-serif text-2xl text-brass">{String(i + 1).padStart(2, '0')}</span>
+                <p className="mt-3 font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
+                  {item.period}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink/70">{item.focus}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+
+    case 'signature':
+      return (
+        <div className="max-w-md border-t border-ink/15 pt-6">
+          <p className="font-serif text-2xl text-ink">{block.name}</p>
+          <p className="mt-1 text-sm font-semibold tracking-[0.1em] text-brass uppercase">
+            {block.role}
+          </p>
+          {block.extra && <p className="mt-1 text-sm text-ink/60">{block.extra}</p>}
+        </div>
       )
 
     case 'note':
