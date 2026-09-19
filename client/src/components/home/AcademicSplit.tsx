@@ -24,7 +24,7 @@ export default function AcademicSplit() {
       >
         <Eyebrow onDark>Academic</Eyebrow>
         <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
-          A diploma built on inquiry
+          A diploma with Ivy League rigor
         </h2>
         <p className="mt-5 max-w-md text-lg text-white/80">
           A fully rigorous college-preparatory curriculum — honors coursework in every
