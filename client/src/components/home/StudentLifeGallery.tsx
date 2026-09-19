@@ -5,12 +5,22 @@ import Reveal from '../Reveal'
 
 const slots = [
   { label: 'Residence Life', kind: 'image' as const, to: '/student-life/residence-life' },
-  { label: 'Campus Life', kind: 'video' as const, to: '/student-life/activities-and-service' },
-  { label: 'Dining & Nutrition', kind: 'image' as const, to: '/student-life/dining-and-nutrition' },
+  {
+    label: 'Campus Life',
+    kind: 'video' as const,
+    src: '/videos/academic-life.mp4',
+    to: '/student-life/activities-and-service',
+  },
+  {
+    label: 'Dining & Nutrition',
+    kind: 'video' as const,
+    src: '/videos/dining.mp4',
+    to: '/student-life/dining-and-nutrition',
+  },
 ]
 
-// A three-slot photo/video gallery — the middle slot plays real campus footage,
-// cropped to the vertical frame with object-cover rather than re-encoded.
+// A three-slot photo/video gallery — two slots play real campus footage, cropped
+// to the vertical frame with object-cover rather than re-encoded.
 export default function StudentLifeGallery() {
   return (
     <section className="bg-white px-6 py-20 sm:px-10 sm:py-28 lg:px-14">
@@ -28,7 +38,7 @@ export default function StudentLifeGallery() {
               {slot.kind === 'video' ? (
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <video
-                    src="/videos/academic-life.mp4"
+                    src={slot.src}
                     autoPlay
                     muted
                     loop

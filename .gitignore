@@ -12,5 +12,6 @@ client/dist/
 *.webp
 *.avif
 *.mp4
+*.mov
 !client/public/images/**
 !client/public/videos/**
