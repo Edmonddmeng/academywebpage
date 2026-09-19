@@ -14,9 +14,9 @@ export default function Campuses() {
             Two campuses. One standard.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/80">
-            JMC trains in Irvine and San Diego, each running its own college-preparatory academic
-            program on campus. Both campuses share the same daily structure and the same
-            performance standards — which campus an athlete joins depends mainly on their sport.
+            JMC trains in Irvine and San Diego, each paired with a day-school academic partner.
+            Both campuses share the same daily structure and the same performance standards —
+            which campus an athlete joins depends mainly on their sport.
           </p>
         </Reveal>
 
@@ -45,6 +45,12 @@ export default function Campuses() {
                 <dl className="mt-7 border-t border-white/20">
                   <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-white/20 py-4">
                     <dt className="w-36 font-condensed text-[14px] font-semibold tracking-[0.18em] text-gold uppercase">
+                      Academic partner
+                    </dt>
+                    <dd className="flex-1 text-white/85">{campus.partner}</dd>
+                  </div>
+                  <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-white/20 py-4">
+                    <dt className="w-36 font-condensed text-[14px] font-semibold tracking-[0.18em] text-gold uppercase">
                       Sports
                     </dt>
                     <dd className="flex-1 text-white/85">{campus.focus}</dd>
@@ -64,14 +70,14 @@ export default function Campuses() {
 
                 <div className="mt-7 overflow-hidden">
                   <img
-                    src="/images/academic-seminar.jpg"
-                    alt="Students and a teacher working closely in a seminar-style classroom"
+                    src={campus.partnerImage}
+                    alt={campus.partner}
                     loading="lazy"
                     className="aspect-[3/2] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
                 <p className="mt-3 font-condensed text-[13px] font-semibold tracking-[0.18em] text-white/50 uppercase">
-                  Academics at JMC
+                  {campus.partner}
                 </p>
               </div>
             </Reveal>

@@ -13,7 +13,7 @@ export const navSections: NavSection[] = [
     slug: 'about',
     blurb: 'Who we are, what we believe, and the two campuses we train on.',
     links: [
-      { label: 'Head of School', slug: 'head-of-school' },
+      { label: 'Head of Program', slug: 'head-of-program' },
       { label: 'Mission & Vision', slug: 'mission-and-vision' },
       { label: 'Academy Overview', slug: 'academy-overview' },
       { label: 'Campuses', slug: 'campuses' },

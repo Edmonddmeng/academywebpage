@@ -68,36 +68,37 @@ const visitCta: Block = {
 export const pageContent: Record<string, PageContent> = {
   // ABOUT
   // Jonathan Reyes is a placeholder person, invented for launch. Replace with the real
-  // Head of School's name, background, and photo once hired.
-  'about/head-of-school': {
-    intro: 'A letter from our founding Head of School.',
+  // Head of Program's name, background, and photo once hired.
+  'about/head-of-program': {
+    intro: 'A letter from our founding Head of Program.',
     blocks: [
       {
         type: 'split',
         heading: 'A letter before you apply',
-        image: { placeholder: 'Jonathan Reyes, Head of School' },
+        image: { placeholder: 'Jonathan Reyes, Head of Program' },
         paragraphs: [
           'I spent eleven seasons on the bench before I ever stood in front of a classroom, and both jobs taught me the same lesson: a kid who is only pushed in one direction eventually breaks in the other.',
         ],
       },
       {
         type: 'statement',
-        text: 'An athlete’s transcript should never be the reason a coach stops calling.',
+        text: 'The most competitive athletes I have ever coached were also the ones who felt safest off the field.',
       },
       {
         type: 'prose',
         paragraphs: [
-          'I still remember a Sunday afternoon, sitting across from a sixteen-year-old defenseman I had coached since he was thirteen, watching a college advisor tell him — gently, the way you deliver bad news to a kid you like — that his transcript did not match his talent. He had the skating, the shot, the hockey sense scouts write offers around. What he did not have was a single teacher who had noticed him falling behind in October, because nobody in that building was responsible for both halves of his life at once.',
-          'That conversation is the reason JMC exists. I built this academy for families who refuse to accept that trade — serious athlete or serious student, pick one — because I do not think it should be a trade at all. Every year it costs talented kids real opportunities they have actually earned, and it happens quietly enough that most families do not see it coming until the acceptance letters do not.',
-          'So we built the opposite kind of school. Classes are small enough that a teacher notices a slipping grade before it becomes a pattern. Every student has a team of five, not one overworked counselor, tracking their coursework, their film, and their college list at the same time. Training runs on the same calendar as the classroom, not against it, because I have watched too many programs treat academics as the thing that happens around practice instead of alongside it.',
-          'I will not pretend we have this fully figured out. We are a new school, building toward the standard we have set for ourselves, one class and one season at a time. What I can promise is that every decision here starts from the same question: does this serve the whole athlete, or just the part of them that shows up on a highlight reel?',
-          'If you are a family weighing that same trade-off I watched play out that Sunday afternoon, I would like to talk with you. Come watch a training session, sit in on a class, and judge for yourself whether we are building what we say we are.',
+          'A few years ago I sat across from a family who had flown in from overseas to see the campus before committing their son to us. The mother asked one question before anything else — not about ice time, not about our coaching staff, but whether he would be judged by how he played. She had heard the stories: American programs that treat a talented kid like an asset first and a teenager second, and quietly drop the second part the moment the first one stops being useful.',
+          'That is the question I want every international family to ask, because it is the right one. We work with day schools we would trust with our own children — traditional, warm places built around the same thing every good American school has always been built around: a community that knows a student by name before it knows their statistics. Our athletes are not evaluated by how they perform. They are simply welcomed, the way any new student should be.',
+          'For a family sending a child across an ocean especially, we are not only offering a training program. We are offering an actual American life — friends who stick around after the season ends, service trips and weekend outings that have nothing to do with a scoreboard, a dorm rector who lives and trains alongside our athletes rather than simply supervising them, and enough structure and discipline that a kid leaves us equipped to handle far more than a difficult opponent.',
+          'None of that happens by accident. It happens because we chose to build a school where competitive excellence and a genuinely happy childhood are not in tension — where an athlete can be pushed hard on the field and still come home, every day, to people who care about them regardless of how the day went.',
+          'I will not pretend we have this fully figured out. We are a new school, building toward the standard we have set for ourselves, one class and one season at a time. What I can promise is that every decision here starts from the same question: does this serve the whole person, or just the part of them that shows up on a highlight reel?',
+          'If you are a family — especially one weighing this decision from another country — asking whether an American sports academy can also be a genuine home, I would like to talk with you. Come watch a training session, sit in on a class, meet the dorm rector who will actually live alongside your child, and judge for yourself whether we are building what we say we are.',
         ],
       },
       {
         type: 'signature',
         name: 'Jonathan Reyes',
-        role: 'Founding Head of School',
+        role: 'Founding Head of Program',
       },
       visitCta,
     ],
@@ -221,7 +222,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'features',
         items: [
-          { title: 'Head of School', text: 'Jonathan Reyes. Overall leadership, culture, and standards.' },
+          { title: 'Head of Program', text: 'Jonathan Reyes. Overall leadership, culture, and standards.' },
           { title: 'Director of Athletics', text: 'To be announced. Coaching staffs, competition, and program standards.' },
           { title: 'Director of Performance', text: 'To be announced. Strength, conditioning, nutrition, and recovery.' },
           { title: 'Dean of Academics', text: 'To be announced. Curriculum, teaching, and academic eligibility.' },

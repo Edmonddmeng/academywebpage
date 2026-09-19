@@ -133,8 +133,8 @@ const kinds: Record<SportKind, KindDetails> = {
     scheduleTab: 'Tournaments',
     opponentColumn: 'Tournament',
     hero: {
-      src: '/images/location-regional.jpg',
-      alt: 'Southern California coastline at sunset near the academy courts',
+      src: '/images/tennis-court.jpg',
+      alt: 'A tennis court with palm trees and mountains in the background',
     },
     intro: (title) =>
       `${title} trains players for national junior competition and college tennis. Athletes work on court every day of the week on individual plans covering technique, patterns of play, movement, and match strategy.`,
@@ -143,7 +143,9 @@ const kinds: Record<SportKind, KindDetails> = {
     venue: {
       text: 'Players train on hard courts at both campuses, with ball machines, video capture, and a fitness area beside the courts. Southern California weather supports outdoor court time for most of the season.',
       features: ['Hard courts', 'Video capture', 'Ball machines & drilling', 'Court-side fitness'],
-      gallery: [],
+      gallery: [
+        { src: '/images/tennis-court.jpg', alt: 'A tennis court with palm trees and mountains in the background' },
+      ],
     },
     staff: [
       'Head Coach',

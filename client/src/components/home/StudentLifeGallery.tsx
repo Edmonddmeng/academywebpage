@@ -3,13 +3,14 @@ import { ArrowRight } from '../icons'
 import { Eyebrow, ImagePlaceholder } from '../ui'
 import Reveal from '../Reveal'
 
-const slots: { label: string; kind: 'image' | 'video'; to: string }[] = [
-  { label: 'Residence Life', kind: 'image', to: '/student-life/residence-life' },
-  { label: 'Campus Life — Video', kind: 'video', to: '/student-life/activities-and-service' },
-  { label: 'Dining & Nutrition', kind: 'image', to: '/student-life/dining-and-nutrition' },
+const slots = [
+  { label: 'Residence Life', kind: 'image' as const, to: '/student-life/residence-life' },
+  { label: 'Campus Life', kind: 'video' as const, to: '/student-life/activities-and-service' },
+  { label: 'Dining & Nutrition', kind: 'image' as const, to: '/student-life/dining-and-nutrition' },
 ]
 
-// A three-slot photo/video gallery — real footage drops straight into these frames later.
+// A three-slot photo/video gallery — the middle slot plays real campus footage,
+// cropped to the vertical frame with object-cover rather than re-encoded.
 export default function StudentLifeGallery() {
   return (
     <section className="bg-white px-6 py-20 sm:px-10 sm:py-28 lg:px-14">
@@ -24,11 +25,26 @@ export default function StudentLifeGallery() {
         {slots.map((slot, i) => (
           <Reveal as="li" key={slot.label} delay={i * 100}>
             <Link to={slot.to} className="group block">
-              <ImagePlaceholder
-                label={slot.label}
-                kind={slot.kind}
-                className="aspect-[3/4] transition-opacity group-hover:opacity-80"
-              />
+              {slot.kind === 'video' ? (
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <video
+                    src="/videos/academic-life.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover transition-opacity group-hover:opacity-80"
+                  />
+                  <span className="absolute bottom-3 left-4 font-condensed text-[11px] font-semibold tracking-[0.2em] text-white uppercase [text-shadow:0_1px_3px_rgb(0_0_0/0.6)]">
+                    {slot.label}
+                  </span>
+                </div>
+              ) : (
+                <ImagePlaceholder
+                  label={slot.label}
+                  className="aspect-[3/4] transition-opacity group-hover:opacity-80"
+                />
+              )}
             </Link>
           </Reveal>
         ))}
