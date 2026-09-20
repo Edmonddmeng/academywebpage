@@ -5,7 +5,7 @@ import { site } from './site'
 
 export type Block =
   | { type: 'prose'; heading?: string; paragraphs: string[] }
-  | { type: 'numbered'; heading?: string; items: { title: string; text: string }[] }
+  | { type: 'numbered'; heading?: string; text?: string; items: { title: string; text: string }[] }
   | { type: 'features'; heading?: string; text?: string; items: { title: string; text?: string }[] }
   | { type: 'stats'; items: { value: string; label: string }[] }
   | { type: 'table'; heading?: string; columns: string[]; rows: string[][]; note?: string }
@@ -1823,40 +1823,26 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'calendar',
-        heading: 'Admission Calendar',
-        items: [
-          { period: 'Fall', focus: 'Inquiries open, campus tours resume, and coaches begin reviewing fall film.' },
-          { period: 'Winter', focus: 'Application review, interviews, and early decisions for winter sport programs.' },
-          { period: 'Spring', focus: 'Peak visit season, decisions for fall enrollment, and spring tournament evaluations.' },
-          { period: 'Summer', focus: 'Enrollment, orientation planning, and late openings as space allows.' },
-        ],
-      },
-      {
         // Placeholder team, invented for launch. Replace with real admission staff once hired.
-        type: 'people',
-        heading: 'Meet the Admission Team',
+        type: 'numbered',
+        heading: 'Admission Team',
         text: 'Four people, each responsible for a different part of your family’s application.',
         items: [
           {
-            name: 'Sarah Kim',
-            role: 'Director of Admission',
-            bio: 'Leads the admission process end to end — usually the first person a family talks to.',
+            title: 'Sarah Kim',
+            text: 'Director of Admission. Leads the admission process end to end — usually the first person a family talks to.',
           },
           {
-            name: 'Marcus Bellamy',
-            role: 'Athletic Recruiting Coordinator',
-            bio: 'Reviews game film and coordinates with our coaching staff on every prospective athlete.',
+            title: 'Marcus Bellamy',
+            text: 'Athletic Recruiting Coordinator. Reviews game film and coordinates with our coaching staff on every prospective athlete.',
           },
           {
-            name: 'Elena Torres',
-            role: 'Admission & Family Counselor',
-            bio: 'Reviews transcripts and works directly with families through interviews and decisions.',
+            title: 'Elena Torres',
+            text: 'Admission & Family Counselor. Reviews transcripts and works directly with families through interviews and decisions.',
           },
           {
-            name: 'David Okafor',
-            role: 'International Admission Coordinator',
-            bio: 'Supports international families through visas, travel, and the move to campus.',
+            title: 'David Okafor',
+            text: 'International Admission Coordinator. Supports international families through visas, travel, and the move to campus.',
           },
         ],
       },
@@ -1868,12 +1854,13 @@ export const pageContent: Record<string, PageContent> = {
           { title: 'Visit or meet', text: 'Come to campus during training, or meet the staff online if travel is difficult.' },
           { title: 'Apply', text: 'Submit the application with school records, and athletic history and video.' },
           { title: 'Athletic evaluation', text: 'Coaches evaluate film and, where possible, see the athlete train or compete.' },
-          { title: 'Interview', text: 'A conversation with the athlete and family, in person or by video.' },
+          { title: 'Admission interview', text: 'A conversation with the athlete and family, in person or by video.' },
+          { title: 'Athletic interview', text: 'A separate conversation between the athlete and our Athletic Director about their sport, goals, and competitive level.' },
           { title: 'Decision & enrollment', text: 'Decisions are issued as reviews complete, followed by enrollment and arrival planning.' },
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: 'What the application includes',
         items: [
           { title: 'Application form', text: 'Athlete and family information, sport, position, and target grade year.' },
@@ -1932,7 +1919,7 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: 'What a visit includes',
         items: [
           { title: 'Campus tour', text: 'Residence, dining, classrooms, and the performance center.' },
@@ -1970,7 +1957,7 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: 'Support for international families',
         items: [
           { title: 'Student visa guidance', text: 'Help with documentation and the application process.' },
@@ -2013,15 +2000,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             q: 'Are payment plans available?',
-            a: 'Payment plan options will be published with the final fee schedule.',
-          },
-          {
-            q: 'Is financial aid or an athletic scholarship available?',
-            a: 'Aid policy is being finalized. Ask the admission office about current options before applying.',
-          },
-          {
-            q: 'What is not included?',
-            a: 'Personal travel home, personal equipment beyond team apparel, and optional private coaching outside the program.',
+            a: 'Payment plans are available only to domestic applicants — U.S. citizens and U.S. Green Card holders. International families are asked to pay in full.',
           },
         ],
       },

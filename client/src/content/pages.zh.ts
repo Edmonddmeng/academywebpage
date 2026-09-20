@@ -1767,39 +1767,25 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'calendar',
-        heading: '招生日历',
-        items: [
-          { period: '秋季', focus: '开放咨询、恢复校园参观,教练开始审阅秋季比赛录像。' },
-          { period: '冬季', focus: '审阅申请、进行面试,并为冬季项目发出早期录取决定。' },
-          { period: '春季', focus: '参观高峰期,发放秋季入学录取决定,并评估春季锦标赛表现。' },
-          { period: '夏季', focus: '办理入学、规划迎新活动,并视名额情况接受补录申请。' },
-        ],
-      },
-      {
-        type: 'people',
-        heading: '认识招生团队',
+        type: 'numbered',
+        heading: '招生团队',
         text: '四位团队成员,各自负责您家庭申请中的不同环节。',
         items: [
           {
-            name: 'Sarah Kim 萨拉·金',
-            role: '招生主任',
-            bio: '全程主导招生流程——通常是家庭最先联系到的人。',
+            title: 'Sarah Kim 萨拉·金',
+            text: '招生主任。全程主导招生流程——通常是家庭最先联系到的人。',
           },
           {
-            name: 'Marcus Bellamy 马库斯·贝拉米',
-            role: '体育招募协调员',
-            bio: '审阅比赛录像,并就每一位准运动员与教练团队协调沟通。',
+            title: 'Marcus Bellamy 马库斯·贝拉米',
+            text: '体育招募协调员。审阅比赛录像,并就每一位准运动员与教练团队协调沟通。',
           },
           {
-            name: 'Elena Torres 埃琳娜·托雷斯',
-            role: '招生与家庭顾问',
-            bio: '审核成绩单,并通过面试与决定环节直接与家庭沟通。',
+            title: 'Elena Torres 埃琳娜·托雷斯',
+            text: '招生与家庭顾问。审核成绩单,并通过面试与决定环节直接与家庭沟通。',
           },
           {
-            name: 'David Okafor 大卫·奥卡福',
-            role: '国际招生协调员',
-            bio: '协助国际家庭办理签证、出行安排,以及入校适应事宜。',
+            title: 'David Okafor 大卫·奥卡福',
+            text: '国际招生协调员。协助国际家庭办理签证、出行安排,以及入校适应事宜。',
           },
         ],
       },
@@ -1811,12 +1797,13 @@ export const pageContentZh: Record<string, PageContent> = {
           { title: '参观或线上会面', text: '在训练期间到校园参观,若出行不便,也可在线与教职员工会面。' },
           { title: '提交申请', text: '连同在校成绩、体育经历与录像一并提交申请。' },
           { title: '体育评估', text: '教练会评估录像,并在条件允许时亲自观看运动员训练或比赛。' },
-          { title: '面试', text: '与运动员及家庭进行一次面谈,可现场或视频进行。' },
+          { title: '招生面试', text: '与运动员及家庭进行一次面谈,可现场或视频进行。' },
+          { title: '体育面试', text: '运动员与体育总监(Athletic Director)进行的另一场面谈,聚焦其项目、目标与竞技水平。' },
           { title: '录取决定与入学', text: '审核完成后即发布录取决定,随后安排入学与到校事宜。' },
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: '申请材料包括',
         items: [
           { title: '申请表', text: '运动员与家庭信息、项目、位置与目标入学年级。' },
@@ -1875,7 +1862,7 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: '参观内容包括',
         items: [
           { title: '校园参观', text: '宿舍、餐厅、教室与体能中心。' },
@@ -1913,7 +1900,7 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: '为国际家庭提供的支持',
         items: [
           { title: '学生签证指导', text: '协助准备证件材料与办理申请流程。' },
@@ -1956,15 +1943,7 @@ export const pageContentZh: Record<string, PageContent> = {
         items: [
           {
             q: '是否提供分期付款方案?',
-            a: '分期付款方案将随最终费用清单一并公布。',
-          },
-          {
-            q: '是否提供助学金或体育奖学金?',
-            a: '资助政策正在制定中。申请前请向招生办公室咨询当前可提供的方案。',
-          },
-          {
-            q: '哪些费用不包含在内?',
-            a: '个人回程差旅费、团队服装以外的个人装备,以及项目之外自行聘请的私人教练费用。',
+            a: '分期付款方案仅面向美国国内申请者开放——美国公民与美国绿卡持有者。国际家庭需一次性缴清全额费用。',
           },
         ],
       },

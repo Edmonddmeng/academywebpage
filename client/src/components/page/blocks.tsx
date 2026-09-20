@@ -41,7 +41,12 @@ export function PageBlock({ block }: { block: Block }) {
       return (
         <section>
           {block.heading && <Heading>{block.heading}</Heading>}
-          <ol className={`border-t border-ink/15 ${block.heading ? 'mt-8' : ''}`}>
+          {block.text && (
+            <p className={`max-w-3xl text-lg leading-relaxed text-ink/75 ${block.heading ? 'mt-4' : ''}`}>
+              {block.text}
+            </p>
+          )}
+          <ol className={`border-t border-ink/15 ${block.heading || block.text ? 'mt-8' : ''}`}>
             {block.items.map((item, i) => (
               <li
                 key={item.title}
