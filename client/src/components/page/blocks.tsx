@@ -1,8 +1,14 @@
 import { ButtonLink, ImagePlaceholder } from '../ui'
 import type { Block } from '../../content/pages'
+import { useLocale } from '../../content/locale'
 
 function Heading({ children }: { children: string }) {
   return <h2 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">{children}</h2>
+}
+
+const copy = {
+  en: { nothingYet: 'Nothing to list yet.', department: 'Department', tbc: 'To be confirmed' },
+  zh: { nothingYet: '暂无内容。', department: '学科', tbc: '待确认' },
 }
 
 // "Jonathan Reyes" -> "JR", for the person-card avatar circle.
@@ -15,6 +21,7 @@ const nameInitials = (name: string) =>
     .slice(0, 3)
 
 export function PageBlock({ block }: { block: Block }) {
+  const t = copy[useLocale()]
   switch (block.type) {
     case 'prose':
       return (
@@ -119,7 +126,7 @@ export function PageBlock({ block }: { block: Block }) {
             </div>
             {block.rows.length === 0 && (
               <p className="border-b border-ink/10 px-4 py-12 text-center text-ink/60">
-                Nothing to list yet.
+                {t.nothingYet}
               </p>
             )}
             {block.note && <p className="mt-4 text-sm text-ink/55">{block.note}</p>}
@@ -136,7 +143,7 @@ export function PageBlock({ block }: { block: Block }) {
               <thead>
                 <tr className="border-b-2 border-ink">
                   <th scope="col" className="w-36 py-3 pr-4 font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
-                    Department
+                    {t.department}
                   </th>
                   {block.columns.map((column) => (
                     <th
@@ -380,7 +387,7 @@ export function PageBlock({ block }: { block: Block }) {
       return (
         <aside className="flex max-w-3xl gap-4 border border-dotted border-brass/70 bg-white p-6">
           <span className="font-condensed text-[13px] font-semibold tracking-wide text-brass uppercase">
-            To be confirmed
+            {t.tbc}
           </span>
           <p className="flex-1 leading-relaxed text-ink/70">{block.text}</p>
         </aside>

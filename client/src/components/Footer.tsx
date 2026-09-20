@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
-import { site } from '../content/site'
+import { useSite } from '../content/site'
+import { useLocale } from '../content/locale'
 
 const heading =
   'mb-5 font-condensed text-[15px] font-semibold tracking-[0.24em] text-gold uppercase'
 
+const copy = {
+  en: { campuses: 'Campuses', links: 'Helpful Links', follow: 'Follow Us', rights: 'All rights reserved.', top: 'Back to top ↑' },
+  zh: { campuses: '校区', links: '常用链接', follow: '关注我们', rights: '版权所有。', top: '返回顶部 ↑' },
+}
+
 export default function Footer() {
+  const site = useSite()
+  const t = copy[useLocale()]
   return (
     <footer className="bg-ink text-white/75">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-14">
@@ -18,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className={heading}>Campuses</h2>
+          <h2 className={heading}>{t.campuses}</h2>
           <ul className="space-y-4 text-sm leading-relaxed">
             {site.campuses.map((campus) => (
               <li key={campus.name}>
@@ -36,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className={heading}>Helpful Links</h2>
+          <h2 className={heading}>{t.links}</h2>
           <ul className="space-y-2 text-sm">
             {site.footerLinks.map((link) => (
               <li key={link.to}>
@@ -49,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className={heading}>Follow Us</h2>
+          <h2 className={heading}>{t.follow}</h2>
           <ul className="space-y-2 text-sm">
             {site.social.map((link) => (
               <li key={link.label}>
@@ -69,14 +77,14 @@ export default function Footer() {
           </p>
           <div className="mt-5 flex flex-col gap-4 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} {site.name}. All rights reserved.
+              © {new Date().getFullYear()} {site.name}. {t.rights}
             </p>
             <button
               type="button"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="self-start tracking-[0.2em] uppercase hover:text-white sm:self-auto"
             >
-              Back to top ↑
+              {t.top}
             </button>
           </div>
         </div>

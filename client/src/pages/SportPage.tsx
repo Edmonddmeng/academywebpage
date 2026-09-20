@@ -3,13 +3,56 @@ import { SportSymbol } from '../components/symbols'
 import { SportPanel } from '../components/sport/panels'
 import Reveal from '../components/Reveal'
 import CountUp from '../components/CountUp'
-import { sportTabs, tabLabel, type SportTab } from '../content/sportTabs'
+import { sportTabs, useTabLabel, type SportTab } from '../content/sportTabs'
 import type { Sport } from '../content/sports'
+import { useLocale } from '../content/locale'
+
+const copy = {
+  en: {
+    focusAreas: 'Training focus areas',
+    coaches: 'Coaches & specialists',
+    collegeModel: 'College support model',
+    info: (title: string) => `${title} information`,
+    interested: (title: string) => (
+      <>
+        Student-athletes interested in learning more about {title} should complete our{' '}
+        <Link
+          to="/contact"
+          className="font-semibold text-ink underline decoration-brass underline-offset-4 hover:text-brass"
+        >
+          inquiry form
+        </Link>
+        .
+      </>
+    ),
+  },
+  zh: {
+    focusAreas: '训练重点方向',
+    coaches: '教练与专项人员',
+    collegeModel: '大学升学支持模式',
+    info: (title: string) => `${title}信息`,
+    interested: (title: string) => (
+      <>
+        对{title}感兴趣的学生运动员,请填写我们的{' '}
+        <Link
+          to="/contact"
+          className="font-semibold text-ink underline decoration-brass underline-offset-4 hover:text-brass"
+        >
+          咨询表
+        </Link>
+        。
+      </>
+    ),
+  },
+}
 
 export default function SportPage({ sport }: { sport: Sport }) {
   const [params, setParams] = useSearchParams()
   const requested = params.get('tab')
   const active: SportTab = sportTabs.find((tab) => tab === requested) ?? 'schedule'
+  const locale = useLocale()
+  const t = copy[locale]
+  const tabLabel = useTabLabel()
 
   const selectTab = (tab: SportTab) =>
     setParams(tab === 'schedule' ? {} : { tab }, { replace: true, preventScrollReset: true })
@@ -48,9 +91,9 @@ export default function SportPage({ sport }: { sport: Sport }) {
             <SportSymbol kind={sport.kind} className="h-20 w-20 text-ink" />
           </Reveal>
           {[
-            { value: String(sport.focus.length), suffix: '', label: 'Training focus areas' },
-            { value: String(sport.staff.length), suffix: '', label: 'Coaches & specialists' },
-            { value: '5:1', suffix: '', label: 'College support model' },
+            { value: String(sport.focus.length), suffix: '', label: t.focusAreas },
+            { value: String(sport.staff.length), suffix: '', label: t.coaches },
+            { value: '5:1', suffix: '', label: t.collegeModel },
           ].map((fact, i) => (
             <Reveal
               key={fact.label}
@@ -68,16 +111,7 @@ export default function SportPage({ sport }: { sport: Sport }) {
         </div>
 
         <p className="mt-14 text-lg leading-relaxed text-ink/70">{sport.detail}</p>
-        <p className="mt-6 text-lg text-ink/70">
-          Student-athletes interested in learning more about {sport.title} should complete our{' '}
-          <Link
-            to="/contact"
-            className="font-semibold text-ink underline decoration-brass underline-offset-4 hover:text-brass"
-          >
-            inquiry form
-          </Link>
-          .
-        </p>
+        <p className="mt-6 text-lg text-ink/70">{t.interested(sport.title)}</p>
 
         <div className="relative mt-16">
           {/* Fade hints that the tab row scrolls sideways on narrow screens. */}
@@ -85,7 +119,7 @@ export default function SportPage({ sport }: { sport: Sport }) {
           <div className="overflow-x-auto">
           <div
             role="tablist"
-            aria-label={`${sport.title} information`}
+            aria-label={t.info(sport.title)}
             className="flex min-w-max gap-8 shadow-[inset_0_-1px_0_rgb(19_35_63/0.15)]"
           >
             {sportTabs.map((tab) => {

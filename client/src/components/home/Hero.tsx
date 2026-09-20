@@ -1,19 +1,62 @@
 import { useEffect, useRef } from 'react'
 import { ButtonLink } from '../ui'
 import CountUp from '../CountUp'
-import { site } from '../../content/site'
+import { useSite } from '../../content/site'
+import { useLocale } from '../../content/locale'
 
 // Structural facts only — true by design, not projected outcomes.
-const stats = [
-  { value: '4', label: 'Sports' },
-  { value: '8', label: 'Programs' },
-  { value: '2', label: 'Campuses' },
-  { value: '6-12', label: 'Grades served' },
-  { value: '5:1', label: 'Staff per athlete' },
-]
+const statsCopy = {
+  en: [
+    { value: '4', label: 'Sports' },
+    { value: '8', label: 'Programs' },
+    { value: '2', label: 'Campuses' },
+    { value: '6-12', label: 'Grades served' },
+    { value: '5:1', label: 'Staff per athlete' },
+  ],
+  zh: [
+    { value: '4', label: '项体育项目' },
+    { value: '8', label: '个整季项目' },
+    { value: '2', label: '个校区' },
+    { value: '6-12', label: '招生年级' },
+    { value: '5:1', label: '师生配比' },
+  ],
+}
+
+const copy = {
+  en: {
+    sports: 'Ice Hockey · Golf · Tennis · Lacrosse',
+    h1: (
+      <>
+        Student-athletes,
+        <br />
+        trained like professionals.
+      </>
+    ),
+    explore: 'Explore',
+    apply: 'Apply to JMC',
+    why: 'Why JMC',
+  },
+  zh: {
+    sports: '冰球 · 高尔夫 · 网球 · 长曲棍球',
+    h1: (
+      <>
+        学生运动员,
+        <br />
+        以职业标准训练。
+      </>
+    ),
+    explore: '了解更多',
+    apply: '申请 JMC',
+    why: '为什么选择 JMC',
+  },
+}
 
 export default function Hero() {
   const imgRef = useRef<HTMLImageElement>(null)
+  const site = useSite()
+  const locale = useLocale()
+  const t = copy[locale]
+  const stats = statsCopy[locale]
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -57,29 +100,27 @@ export default function Hero() {
         href="#at-a-glance"
         className="absolute right-10 bottom-10 z-10 hidden items-center gap-3 font-condensed text-[13px] font-semibold tracking-[0.3em] text-white/80 uppercase transition-colors hover:text-gold sm:flex lg:right-14"
       >
-        Explore
+        {t.explore}
         <span aria-hidden="true">↓</span>
       </a>
 
       <div className="relative flex flex-1 items-center px-6 pt-32 pb-16 sm:px-10 lg:px-14">
         <div className="mx-auto w-full max-w-7xl">
           <p className="font-condensed text-[15px] font-semibold tracking-[0.24em] text-gold uppercase">
-            Ice Hockey · Golf · Tennis · Lacrosse
+            {t.sports}
           </p>
           <h1 className="mt-6 max-w-4xl font-serif text-[2.7rem] leading-[1.03] font-normal sm:text-7xl lg:text-8xl">
-            Student-athletes,
-            <br />
-            trained like professionals.
+            {t.h1}
           </h1>
           <p className="mt-7 max-w-2xl text-lg text-balance text-white/85 sm:text-xl">
             {site.tagline}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <ButtonLink to="/admission/overview" variant="gold">
-              Apply to JMC
+              {t.apply}
             </ButtonLink>
             <ButtonLink to="/about/academy-overview" variant="outline-light">
-              Why JMC
+              {t.why}
             </ButtonLink>
           </div>
         </div>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Times New Roman", Times, serif;
-  --font-sans: "Times New Roman", Times, serif;
-  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-serif: "Times New Roman", Times, "Noto Serif SC", serif;
+  --font-sans: "Times New Roman", Times, "Noto Serif SC", serif;
+  --font-condensed: "Barlow Condensed", "Noto Sans SC", "Arial Narrow", sans-serif;
 
   /* California green + gold */
   --color-ink: #123d28;

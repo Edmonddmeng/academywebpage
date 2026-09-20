@@ -9,6 +9,16 @@
       content="JMC Sports Academy develops student-athletes in ice hockey, golf, tennis, and lacrosse across two Southern California campuses, combining elite training, college-preparatory academics, and a dedicated recruiting team."
     />
     <title>JMC Sports Academy</title>
+    <!-- CJK fallback for the Chinese (/zh) pages: Times New Roman and Barlow Condensed have no
+         Chinese glyphs, so the browser silently falls back per-character to whatever CJK font
+         it finds first. Loading these explicitly keeps that fallback intentional-looking rather
+         than left to each visitor's system default. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+    />
   </head>
   <body>
     <div id="root"></div>

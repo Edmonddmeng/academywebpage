@@ -1,8 +1,11 @@
+import { useLocale } from './locale'
+import { kinds as kindsZh } from './sports.zh'
+
 export type SportKind = 'ice-hockey' | 'golf' | 'tennis' | 'lacrosse'
 
 type Session = { day: string; morning: string; afternoon: string }
 
-type KindDetails = {
+export type KindDetails = {
   sport: string
   campus: string
   scheduleTab: string
@@ -26,7 +29,7 @@ export type Sport = KindDetails & {
   kind: SportKind
 }
 
-const kinds: Record<SportKind, KindDetails> = {
+export const kinds: Record<SportKind, KindDetails> = {
   'ice-hockey': {
     sport: 'Ice Hockey',
     campus: 'Irvine Campus',
@@ -228,14 +231,17 @@ const kinds: Record<SportKind, KindDetails> = {
   },
 }
 
-const makeSport = (team: Sport['team'], kind: SportKind): Sport => {
-  const details = kinds[kind]
-  const title = `${team}’ ${details.sport}`
+const teamLabelZh: Record<Sport['team'], string> = { Boys: '男子', Girls: '女子' }
+
+const makeSport = (team: Sport['team'], kind: SportKind, kindsSource: Record<SportKind, KindDetails>, locale: 'en' | 'zh'): Sport => {
+  const details = kindsSource[kind]
+  const title = locale === 'zh' ? `${teamLabelZh[team]}${details.sport}` : `${team}’ ${details.sport}`
   return {
     ...details,
     kind,
     team,
     title,
+    // Slug stays English-based regardless of locale, since it's the URL and must match between languages.
     slug: `${team.toLowerCase()}-${kind}`,
     intro: () => details.intro(title),
   }
@@ -243,10 +249,19 @@ const makeSport = (team: Sport['team'], kind: SportKind): Sport => {
 
 export const sportKinds: SportKind[] = ['ice-hockey', 'golf', 'tennis', 'lacrosse']
 
-export const sports: Sport[] = sportKinds.flatMap((kind) => [
-  makeSport('Boys', kind),
-  makeSport('Girls', kind),
-])
+const buildSports = (kindsSource: Record<SportKind, KindDetails>, locale: 'en' | 'zh'): Sport[] =>
+  sportKinds.flatMap((kind) => [
+    makeSport('Boys', kind, kindsSource, locale),
+    makeSport('Girls', kind, kindsSource, locale),
+  ])
+
+export const sports: Sport[] = buildSports(kinds, 'en')
 
 export const isSportPath = (pathname: string) =>
   sports.some((sport) => pathname === `/athletic/${sport.slug}`)
+
+const sportsZh: Sport[] = buildSports(kindsZh, 'zh')
+
+export function useSports(): Sport[] {
+  return useLocale() === 'zh' ? sportsZh : sports
+}

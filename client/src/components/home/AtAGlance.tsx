@@ -2,7 +2,29 @@ import type { ReactNode } from 'react'
 import { Eyebrow } from '../ui'
 import Reveal from '../Reveal'
 import { SportSymbol } from '../symbols'
-import { sports } from '../../content/sports'
+import { useSports } from '../../content/sports'
+import { useLocale } from '../../content/locale'
+
+const copy = {
+  en: {
+    eyebrow: 'At a Glance',
+    grades: 'Grades served',
+    fourSports: 'Four sports',
+    boysGirls: 'Boys & girls',
+    management: 'Student-athlete management',
+    integrated: 'Integrated',
+    performanceTeam: 'Performance team for every student-athlete',
+  },
+  zh: {
+    eyebrow: '学院概览',
+    grades: '招生年级',
+    fourSports: '四项体育项目',
+    boysGirls: '男女均设',
+    management: '学生运动员管理配比',
+    integrated: '一体化',
+    performanceTeam: '为每位学生运动员配备的综合体能团队',
+  },
+}
 
 function Cell({ className = '', children }: { className?: string; children: ReactNode }) {
   return (
@@ -99,21 +121,23 @@ function HandsIcon() {
 }
 
 export default function AtAGlance() {
+  const sports = useSports()
+  const t = copy[useLocale()]
   return (
     <section id="at-a-glance" className="scroll-mt-16 bg-white px-6 py-24 sm:px-10 sm:py-28 lg:px-14">
       <div className="mx-auto max-w-7xl">
-        <Eyebrow className="text-center">At a Glance</Eyebrow>
+        <Eyebrow className="text-center">{t.eyebrow}</Eyebrow>
 
         <Reveal as="div" className="mt-10 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
           <Cell>
             <GradesIcon />
             <Num>6–12</Num>
-            <Label>Grades served</Label>
+            <Label>{t.grades}</Label>
           </Cell>
 
           <Cell>
             <p className="font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
-              Four sports
+              {t.fourSports}
             </p>
             <div className="mt-4 flex items-end justify-center gap-4">
               {(['ice-hockey', 'golf', 'lacrosse', 'tennis'] as const).map((kind) => {
@@ -129,20 +153,20 @@ export default function AtAGlance() {
               })}
             </div>
             <p className="mt-4 font-condensed text-[13px] font-semibold tracking-wide text-ink/60 uppercase">
-              Boys &amp; girls
+              {t.boysGirls}
             </p>
           </Cell>
 
           <Cell>
             <FiveToOneRing />
             <Num>5:1</Num>
-            <Label>Student-athlete management</Label>
+            <Label>{t.management}</Label>
           </Cell>
 
           <Cell>
             <HandsIcon />
-            <p className="font-serif text-2xl leading-tight text-ink">Integrated</p>
-            <Label>Performance team for every student-athlete</Label>
+            <p className="font-serif text-2xl leading-tight text-ink">{t.integrated}</p>
+            <Label>{t.performanceTeam}</Label>
           </Cell>
         </Reveal>
       </div>

@@ -1,0 +1,1613 @@
+// Chinese (Simplified) translations, keyed the same way as pages.ts (`${section.slug}/${link.slug}`).
+// Course, test, and organization names (AP, SAT, NCAA, specific course titles like "Algebra 1A")
+// are left in English, matching how Chinese-language international-education sites conventionally
+// present U.S. academic terms families will later see on transcripts and in college applications.
+
+import { site } from './site'
+import type { Block, PageContent } from './pages'
+
+const visitCta: Block = {
+  type: 'cta',
+  heading: '亲自来看看',
+  text: '了解学院最快的方式,就是在训练日到校园待上一天。',
+  links: [
+    { label: '预约参观', to: '/admission/visit' },
+    { label: '咨询', to: '/contact' },
+  ],
+}
+
+export const pageContentZh: Record<string, PageContent> = {
+  // ABOUT
+  'about/head-of-program': {
+    intro: '创始项目总监的一封信。',
+    blocks: [
+      {
+        type: 'split',
+        heading: '申请之前,先读一封信',
+        image: { src: '/images/jonathan-reyes.jpg', alt: '乔纳森·雷耶斯(Jonathan Reyes),项目总监' },
+        paragraphs: [
+          '在站上讲台之前,我在场边度过了十一个赛季。这两份工作教会我同一个道理:一个孩子如果只被朝一个方向推,迟早会在另一个方向上出问题。',
+        ],
+      },
+      {
+        type: 'statement',
+        text: '我执教过的最具竞争力的运动员,往往也是场下最有安全感的孩子。',
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          '几年前,一个家庭专程从海外飞来,想在把儿子交给我们之前先看看校园。见面时,那位母亲问的第一个问题,不是关于上冰时间,也不是关于教练团队,而是——孩子会不会仅仅因为球打得好不好而被评判。她听过太多类似的故事:一些美国项目先把有天赋的孩子当作资产,其次才当作一个十几岁的少年;一旦这份天赋不再有用,后一半往往会被悄悄放下。',
+          '这正是我希望每一个国际家庭都会问的问题,因为这是对的问题。我们合作的走读学校,都是我们愿意托付自己孩子的地方——传统、温暖,建立在每一所优秀美国学校一直以来所依靠的同一件事之上:一个在了解学生的成绩之前,先记住他名字的社区。我们的运动员不会因表现而被评判,他们只是被真诚地接纳,就像任何一个新生应得的那样。',
+          '尤其是对于把孩子送到大洋彼岸的家庭而言,我们提供的不仅是一个训练项目,而是一段真实的美国生活——赛季结束后依然联系的朋友;与比分毫无关系的公益出行和周末活动;一位与运动员一起生活、一起训练,而不仅仅是负责看管的宿舍长;以及足够的结构与自律,让孩子离开我们时,能够从容应对远比一个难缠的对手更复杂的事情。',
+          '这一切都不是偶然发生的。是因为我们选择建立这样一所学校:让顶尖的竞技水平与真正快乐的童年不再彼此对立——一个运动员可以在场上被高标准要求,同时每天回到家时,身边都是无论这一天过得如何都在乎他的人。',
+          '我不会假装我们已经把一切都做到位。这是一所新学校,我们正朝着自己设立的标准前进,一个学期、一个赛季地累积。我能承诺的是,这里的每一个决定,出发点都是同一个问题:这样做是为了这个完整的人,还是只为了他在集锦视频里展现的那一部分?',
+          '如果你的家庭——尤其是正在从另一个国家权衡这个决定的家庭——想知道一所美国体育学院是否也能成为真正的家,我很乐意与你交流。欢迎来看一次训练课,旁听一堂课,见一见将会真正与你的孩子一起生活的宿舍长,然后由你自己来判断,我们是否真的在建立我们所说的那种学校。',
+        ],
+      },
+      {
+        type: 'signature',
+        name: 'Jonathan Reyes 乔纳森·雷耶斯',
+        role: '创始项目总监',
+      },
+      visitCta,
+    ],
+  },
+
+  'about/mission-and-vision': {
+    intro: '我们的使命,以及我们对培养学者型运动员的理念。',
+    blocks: [
+      {
+        type: 'statement',
+        text: 'JMC体育学院致力于培养6至12年级的学生运动员,让他们在体育项目中达到最高竞技水平的同时,不必牺牲学业的严谨性。',
+        attribution: '我们的使命',
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          '大多数学生运动员都被迫做出选择:要么认真训练、放松学业,要么保住成绩单、只用剩余的时间训练。我们认为这种取舍是设计上的失败,而不是必然的现实,因此JMC的建立就是为了让这种选择变得没有必要——同一份每日课表,同一个校区,同一支对学生全面负责的团队,从6年级一直到12年级。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '我们的理念',
+        items: [
+          {
+            title: '卓越是一种日常习惯',
+            text: '天赋决定上限,而每日的标准决定谁能达到这个上限。我们衡量的是努力的过程,而不是潜力本身。',
+          },
+          {
+            title: '首先是运动员,更始终是一个完整的人',
+            text: '职业生涯会结束,但品格、自律,以及与人协作的能力不会。',
+          },
+          {
+            title: '成长因人而异',
+            text: '每一位学生都按照适合自己年龄、能力与目标的计划进行训练与学习,而不是统一的进度。',
+          },
+          {
+            title: '诚实胜过夸大',
+            text: '我们如实告知运动员和家庭他们目前所处的位置,以及达成目标还需要付出什么。',
+          },
+          {
+            title: '与你朝夕相处的团队',
+            text: '共同生活培养出让艰苦训练得以持续的责任感与归属感。',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '我们的愿景',
+        paragraphs: [
+          '成为6至12年级学生运动员认真规划未来时的首选学校:在这里,训练、教练、学业与升学指导,都达到足以媲美全美任何顶尖项目的标准。',
+        ],
+      },
+      visitCta,
+    ],
+  },
+
+  'about/academy-overview': {
+    intro: '南加州两个校区的整季体育学院,专为有志于在大学及以后继续参赛的运动员而设。',
+    blocks: [
+      {
+        type: 'prose',
+        heading: '一份课表,一个标准。',
+        paragraphs: [
+          'JMC不是一所体育项目出色的学校,也不是一支顺带提供课程的俱乐部球队。学院围绕一份统一的每日课表建立,把顶尖训练、学业、恢复与招募整合在同一个地方,由同一支团队负责,朝着同一个目标努力。',
+          '运动员在赛季中持续训练冰球、高尔夫、网球或长曲棍球,与队友同住,由我们自己的教师教授大学预备课程,并与一支五人团队合作,帮助他们找到合适的大学项目。',
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '我们的使命与愿景',
+        text: '学院存在的原因,以及我们对培养学者型运动员的理念。',
+        links: [{ label: '使命与愿景', to: '/about/mission-and-vision' }],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '4', label: '项体育项目,男女皆设' },
+          { value: '8', label: '个整季项目' },
+          { value: '2', label: '个南加州校区' },
+          { value: '5:1', label: '每位运动员配备的专业人员' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '我们的与众不同之处',
+        items: [
+          {
+            title: '结构化训练阶段',
+            text: '训练按赛季划分为明确的阶段,而非随意安排。',
+          },
+          {
+            title: '所有人都住校',
+            text: '统一的寄宿社区意味着训练、用餐、学习与恢复都能按计划进行。',
+          },
+          {
+            title: '专业体能团队',
+            text: '力量、体能、营养与恢复专家团队,而非传统的体育课模式。',
+          },
+          {
+            title: '与训练契合的学业安排',
+            text: '小班教学与自习时间围绕每日训练、比赛与出行安排。',
+          },
+          {
+            title: '5比1招募模式',
+            text: '五位专业人员从第一份集锦视频到签约日全程指导每一位运动员。',
+          },
+          {
+            title: '刻意保持小规模',
+            text: '招生人数设有上限,确保每位运动员都被负责其成长的团队真正了解。',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '领导团队',
+        paragraphs: [
+          '学院由一支职责清晰的小型团队领导。以下每位负责人各自负责运动员日常生活的一部分,并共同评估每位运动员在训练、学业、健康与招募各方面的进展。',
+        ],
+      },
+      {
+        type: 'features',
+        items: [
+          { title: '项目总监', text: 'Jonathan Reyes 乔纳森·雷耶斯。负责整体领导、文化建设与标准把控。' },
+          { title: '体育项目总监', text: '待公布。负责教练团队、赛事与项目标准。' },
+          { title: '体能总监', text: '待公布。负责力量、体能、营养与恢复。' },
+          { title: '教务长', text: '待公布。负责课程设置、教学与学术资格审核。' },
+          { title: '招募总监', text: '待公布。负责5比1模式与大学升学安置。' },
+          { title: '宿舍生活总监', text: '待公布。负责宿舍管理、日常作息与学生福祉。' },
+        ],
+      },
+      visitCta,
+    ],
+  },
+
+  'about/campuses': {
+    intro: '南加州两个校区——尔湾与圣地亚哥——各自拥有独立的大学预备学术项目。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'JMC在两个校区训练,选址综合考虑了场地条件与气候。运动员在校园内生活、训练与恢复;课程由JMC教师授课,因此学生在接受专业级训练的同时,也能获得严谨的大学预备文凭。',
+          '两个校区遵循相同的每日结构、相同的体能团队标准,以及相同的5比1辅导模式。运动员加入哪个校区,主要取决于其所参与的项目。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '尔湾校区 — 橙县',
+        items: [
+          { title: '学术项目', text: '由JMC教师授课的小班研讨式课程。' },
+          { title: '主要项目', text: '冰球、长曲棍球与网球。' },
+          { title: '训练场地', text: '主场冰场、标准草坪场地与硬地网球场。' },
+          { title: '体能中心', text: '供日常使用的力量、体能与测试空间。' },
+          { title: '住宿', text: '每间宿舍两位运动员,每层楼均配有宿舍管理人员。' },
+          { title: '地理位置', text: '距橙县海岸仅数分钟车程,靠近约翰·韦恩机场(John Wayne Airport)。' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '圣地亚哥校区',
+        items: [
+          { title: '学术项目', text: '由JMC教师授课的小班研讨式课程。' },
+          { title: '主要项目', text: '高尔夫、网球与长曲棍球。' },
+          { title: '训练场地', text: '可使用高水准海岸球场、硬地网球场与草坪场地。' },
+          { title: '体能中心', text: '力量、体能与恢复训练,并配备运动医学支持。' },
+          { title: '住宿', text: '每间宿舍两位运动员,每层楼均配有宿舍管理人员。' },
+          { title: '地理位置', text: '位于圣地亚哥沿海地区,靠近圣地亚哥国际机场。' },
+        ],
+      },
+      {
+        type: 'image',
+        src: '/images/academic-seminar.jpg',
+        alt: '一位教师与学生在研讨式课堂上密切互动',
+        caption: '两个校区的学业——均由JMC教师授课的小班研讨式课程',
+      },
+      {
+        type: 'gallery',
+        heading: '我们训练的地方',
+        items: [
+          {
+            src: '/images/hockey-sticks.jpg',
+            alt: '靠在挡板上的冰球杆',
+            caption: '尔湾 — 主场冰场',
+          },
+          {
+            src: '/images/golf-course-aerial.jpg',
+            alt: '沿太平洋海岸线的高尔夫球场航拍',
+            caption: '圣地亚哥 — 高水准海岸高尔夫',
+          },
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '2', label: '校区' },
+          { value: '1', label: '两校区共用的学术项目' },
+          { value: '4', label: '两校区共有的体育项目' },
+        ],
+      },
+      visitCta,
+    ],
+  },
+
+  'academic/ncaa-eligibility': {
+    intro: '参赛资格从入学第一学期就开始追踪,而不是到最后一年才被发现问题。',
+    blocks: [
+      {
+        type: 'prose',
+        heading: '为什么会有这个页面',
+        paragraphs: [
+          '每年都有天赋出众的运动员因为文书工作和课程选择的问题,而不是能力问题,失去大学机会。一门缺失的核心课程、一门从未获得认证的课程,或者一次延迟注册,都可能终结一段耗费多年才建立起来的招募关系。',
+          '在JMC,资格审核是专人专责的工作。每位运动员的课程计划、成绩与注册状态,都由学术顾问与招募团队每学期共同审核,家庭也能看到同一份记录。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '我们如何追踪',
+        items: [
+          {
+            title: '从入学第一天起规划核心课程',
+            text: '从运动员入学第一学期起,课程选择就按照NCAA核心课程规则来安排,而不是等到最后一年。',
+          },
+          {
+            title: '只教授经过认证的课程',
+            text: '我们会确认所教授的每一门课程都列在NCAA认证课程清单上。',
+          },
+          {
+            title: '每学期审核资格',
+            text: '每学期都会依据毕业要求与资格要求,审核成绩、学分与进度。',
+          },
+          {
+            title: 'Eligibility Center 注册',
+            text: '我们指导家庭完成注册,并确保成绩单与考试成绩按时寄送。',
+          },
+          {
+            title: '业余身份与招募规则',
+            text: '运动员与家长会被告知联系规则、正式校园访问,以及哪些因素会影响业余运动员身份。',
+          },
+          {
+            title: '一份共享记录',
+            text: '学术顾问、教练、招募人员与家庭都基于同一份实时更新的资格记录工作。',
+          },
+        ],
+      },
+      {
+        type: 'faq',
+        heading: '常见问题',
+        items: [
+          {
+            q: '谁来制定资格要求?',
+            a: '由NCAA制定,具体要求因组别而异,并会随时间调整。我们针对每位运动员的目标组别追踪当前规则,而不是套用一份固定的清单。',
+          },
+          {
+            q: 'JMC能保证资格吗?',
+            a: '没有任何学校能做到这一点。资格取决于运动员自身的成绩、课程与业余身份。我们能保证的是,没有人会在到了最后一年时才发现自己的处境。',
+          },
+          {
+            q: 'NAIA 或社区大学(junior college)呢?',
+            a: '它们各自有不同的要求,我们会根据适合每位运动员的路径分别规划。',
+          },
+          {
+            q: '我们应该从什么时候开始关注?',
+            a: '9年级。核心课程GPA从高中第一个学期就开始计算,之后无法弥补。',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '资格审核与招募同步进行',
+        links: [
+          { label: '大学招募', to: '/counseling/college-recruiting' },
+          { label: '学术支持', to: '/academic/academic-support' },
+        ],
+      },
+    ],
+  },
+
+  'student-life/competition-travel': {
+    intro: '运动员在全国乃至海外参赛,同时不落下学业。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '认真的比赛意味着出行。我们的球队与个人运动员全年都会前往各地参加锦标赛、公开赛与联赛,每一次出行都经过规划,确保学业、训练与恢复不受影响。',
+          '教职员工会随队出行。课业在出发前布置、返校后收齐,用餐与睡眠安排会围绕比赛时间进行,家长也会收到行程与实时动态。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '出行如何安排',
+        items: [
+          {
+            title: '围绕学术日历规划',
+            text: '比赛日程与校历同步制定,尽量避开考试周。',
+          },
+          {
+            title: '每次出行均有教职员工随队',
+            text: '运动员由教练随队出行,长途出行还会配备体能或医疗人员。',
+          },
+          {
+            title: '出发前完成作业安排',
+            text: '作业在出发前布置、返校后收齐,途中也提供辅导支持。',
+          },
+          {
+            title: '途中的营养与恢复',
+            text: '用餐时间、补水与睡眠都会为出行日专门安排,而非临时决定。',
+          },
+          {
+            title: '让家长随时掌握情况',
+            text: '行程、比赛结果与到达时间会通过家长门户与家长共享。',
+          },
+          {
+            title: '融入大学曝光机会',
+            text: '只要日程允许,校园参观与教练会面会与比赛出行一并安排。',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '了解曝光机会如何规划',
+        links: [
+          { label: '大学招募', to: '/counseling/college-recruiting' },
+          { label: '学术支持', to: '/academic/academic-support' },
+        ],
+      },
+    ],
+  },
+
+  'counseling/college-planning': {
+    intro: '一份从第一年开始、以合适录取结果收尾的规划。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '在JMC,大学规划不是高年级才开始的话题。从运动员入学的第一个学期起,升学辅导团队就会制定一份计划,将课程、成绩、考试、比赛曝光与教练联系,对照一组切合实际的目标院校来安排。',
+          '这份计划每学期都会审核并根据运动员的成长调整。家庭看到的计划与教职员工看到的完全一致,没有人需要去猜测目前的进展。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '规划涵盖的内容',
+        items: [
+          {
+            title: '学术规划',
+            text: '课程选择、GPA目标与考试时间的安排,都会配合招募日程进行。',
+          },
+          {
+            title: '体育曝光',
+            text: '哪些锦标赛、公开赛与赛事真正对运动员的水平与位置有意义。',
+          },
+          {
+            title: '目标院校清单',
+            text: '基于体育与学术双重契合度,列出一份涵盖冲刺、匹配与保底院校的诚实清单。',
+          },
+          {
+            title: '与教练的沟通',
+            text: '由谁在什么时候、以怎样的方式联系——包括集锦视频、比赛成绩、成绩单与学业记录。',
+          },
+          {
+            title: '申请与文书',
+            text: '申请策略、文书写作与截止日期,与体育相关事宜同步处理。',
+          },
+          {
+            title: '录取通知与最终决定',
+            text: '从上场时间、学术水平、费用与契合度多方面比较录取通知,并在过渡阶段提供支持。',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '团队如何协作',
+        links: [
+          { label: '5比1辅导模式', to: '/counseling/5-to-1-model' },
+          { label: '大学招募', to: '/counseling/college-recruiting' },
+        ],
+      },
+    ],
+  },
+
+  'parent-support/parent-resources': {
+    intro: 'JMC家庭所需的一切,尽在一处。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '把孩子送到离家训练,是一个重大决定,而且不会在入学那一刻就结束。JMC让家庭能够持续贴近运动员在训练、学业、健康与招募方面的真实进展。',
+          '作为5比1团队的一部分,每位家长都有一位专属家庭顾问,全年设有固定的沟通安排,并可通过家长门户查看与教职员工同样的记录。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '家庭支持',
+        items: [
+          { title: '家庭顾问', text: '运动员5比1团队中的专属成员,专门负责与家长沟通。' },
+          { title: '定期沟通', text: '定期进行涵盖学业、训练、健康与招募的综合沟通。' },
+          { title: '进展报告', text: '每学期的学业报告,连同训练与体能方面的最新情况。' },
+          { title: '招募进展更新', text: '以通俗易懂的语言说明运动员目前与大学教练的沟通进展。' },
+          { title: '出行通知', text: '每次比赛出行的行程、出发与到达时间。' },
+          { title: '兼顾时差的沟通安排', text: '沟通时间的安排会照顾到国际家庭所在的时区。' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '家庭工具',
+        links: [
+          { label: '家长门户', to: '/parent-support/parent-portal' },
+          { label: '学院日历', to: '/parent-support/academy-calendar' },
+        ],
+      },
+    ],
+  },
+
+  'parent-support/parent-portal': {
+    intro: '学业、训练、健康、出行与招募,一个账号全部掌握。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '家长门户将运动员在JMC生活的每一个部分整合到一个界面中,家庭无需再向四个不同的人分别询问答案。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '门户中包含',
+        items: [
+          { title: '课程表与成绩', text: '当前课程、作业与每学期报告。' },
+          { title: '训练日程', text: '每日训练、力量训练与恢复安排。' },
+          { title: '比赛日历', text: '赛事、锦标赛与出行行程。' },
+          { title: '出勤情况', text: '课堂、训练与自习厅的出勤记录。' },
+          { title: '健康与医疗', text: '伤病状态、治疗方案与训练许可。' },
+          { title: '招募进展', text: '目标院校清单、教练联系情况与下一步安排。' },
+          { title: '账单与表格', text: '账单、付款计划与待完成的文书工作。' },
+          { title: '消息', text: '与家庭顾问及教练团队的直接联系渠道。' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '尚未入学?',
+        text: '门户账号在入学后开通。招生办公室可以为您展示家庭实际看到的内容。',
+        links: [{ label: '联系招生办公室', to: '/contact' }],
+      },
+    ],
+  },
+
+  'parent-support/academy-calendar': {
+    intro: '学期、训练阶段、比赛窗口与家庭活动。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'JMC采用十二个月的日历。学期、训练阶段、比赛窗口与假期会统一公布,方便家庭提前安排出行。',
+        ],
+      },
+      {
+        type: 'table',
+        heading: '学院年度概览',
+        columns: ['时段', '学业', '训练与比赛'],
+        rows: [
+          ['夏末', '迎新与分班测试', '强化阶段:全年训练量最高'],
+          ['秋季学期', '第一学期课程', '提升阶段,赛季初期比赛'],
+          ['冬季', '第二学期课程', '冰球与室内网球的比赛高峰期'],
+          ['春季学期', '第三学期课程', '高尔夫、长曲棍球与网球的比赛高峰期'],
+          ['初夏', '学期报告与选课规划', '公开赛、大学参访与训练营'],
+          ['仲夏', '假期与自选课程', '恢复阶段与个人训练计划'],
+        ],
+        note: '学院年度的整体结构安排。次年度的具体日期将通过家长门户发布给各家庭。',
+      },
+      {
+        type: 'cta',
+        heading: '计划来访?',
+        links: [
+          { label: '预约参观', to: '/admission/visit' },
+          { label: '家长门户', to: '/parent-support/parent-portal' },
+        ],
+      },
+    ],
+  },
+
+  'parent-support/forms-and-health': {
+    intro: '运动员开始训练前必须完成的文书工作。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '在完成医疗与知情同意文书之前,运动员无法上冰、上课程、上球场或上场地训练。我们会明确告知家庭需要提供哪些材料及时间,并通过门户进行追踪,确保不会临时才发现遗漏。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '入学前',
+        items: [
+          { title: '体检', text: '在训练年度要求的时间窗口内完成的运动体检。' },
+          { title: '病史', text: '供医疗团队参考的伤病史、健康状况与既往手术记录。' },
+          { title: '疫苗接种记录', text: '符合州及学校健康规定要求的接种记录。' },
+          { title: '治疗同意书', text: '治疗与紧急护理的授权文件。' },
+          { title: '保险信息', text: '保险覆盖信息,包括国际保单。' },
+          { title: '紧急联系人', text: '家长、监护人,以及适用情况下的当地联系人。' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '学年期间',
+        items: [
+          { title: '脑震荡处理流程', text: '基线测试与分阶段的复训流程。' },
+          { title: '伤病记录', text: '伤病情况会被记录并在门户中对家长可见。' },
+          { title: '出行同意书', text: '比赛出行的授权文件,每年更新。' },
+          { title: '用药记录', text: '处方药由宿舍管理人员保管与发放。' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '有关于健康保障的问题?',
+        links: [
+          { label: '恢复与医疗', to: '/student-life/recovery-and-medical' },
+          { label: '联系招生办公室', to: '/contact' },
+        ],
+      },
+    ],
+  },
+
+  // ATHLETICS
+  'athletic/coaching-staff': {
+    intro: '每个项目都由一整支教练团队带领,而不是一位教练单打独斗。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '主教练为每个项目设定标准,但培养工作由多位专项教练共同分担:位置与技术教练、守门员或短杆教练、录像分析人员,以及体能团队。这样的结构意味着运动员能在决定其未来水平的具体环节上,获得专业的针对性指导。',
+          '教练的聘用标准是其在我们运动员目标水平上的比赛与执教经验,每位教练所带的团队规模都足够小,能够详细掌握每位运动员的成长计划。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '各项目中的角色分工',
+        items: [
+          { title: '主教练', text: '负责项目标准、比赛计划与运动员发展。' },
+          { title: '助理教练', text: '负责日常训练、位置分组与个人指导。' },
+          { title: '技术专项教练', text: '滑行、短杆、杆法与位置技术。' },
+          { title: '守门员与位置教练', text: '针对最专业化位置的专属指导。' },
+          { title: '录像分析团队', text: '比赛录像拍摄、分析与招募视频制作。' },
+          { title: '体能教练', text: '力量、体能与恢复训练贯穿每个项目。' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '了解各项目',
+        links: [
+          { label: '体育项目', to: '/athletic' },
+          { label: '体能训练', to: '/athletic' },
+        ],
+      },
+    ],
+  },
+
+  'athletic/facilities': {
+    intro: '训练场地、体能空间与恢复设施,一应俱全。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '运动员就在生活的地方训练。日常训练、力量训练、治疗与录像分析都在同一套日常流程中完成,省去了通常会限制年轻运动员训练质量的往返时间。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '运动员的训练场地',
+        items: [
+          { title: '冰场', text: '配备制冷系统的冰场,用于训练、技术课与比赛。' },
+          { title: '高尔夫练习场与球场使用权', text: '练习场、短杆区域,以及常态化的球场实战。' },
+          { title: '草坪场地', text: '标准尺寸场地,用于长曲棍球训练与比赛。' },
+          { title: '体能中心', text: '力量训练设备、测试与速度敏捷训练空间。' },
+          { title: '运动医学与恢复', text: '治疗床、康复空间与恢复设备。' },
+          { title: '录像分析室', text: '供团队与个人运动员使用的录像回顾空间。' },
+        ],
+      },
+    ],
+  },
+
+  // PERFORMANCE
+  'athletic/training-model': {
+    intro: '训练按照赛季划分为明确的阶段进行安排。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '大多数年轻运动员在赛季中拼命训练,赛季外却止步不前。我们的日历借鉴了职业项目的规划方式:不同阶段各有不同目标,让运动员在比赛时状态正佳,并在赛季结束时比开始时更健康。',
+          '每位运动员都有一份《运动员表现档案》,记录其体能测试、训练历史、伤病史、位置需求与目标。这份档案决定训练计划,并随着运动员的成长不断调整。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '训练年度阶段',
+        items: [
+          {
+            title: '强化阶段',
+            text: '全年训练量最高的阶段:在比赛压力最小时打好力量、体能与技术基础。',
+          },
+          {
+            title: '提升阶段',
+            text: '训练量下降,强度上升。专项速度、爆发力与实战情境成为重点。',
+          },
+          {
+            title: '比赛阶段',
+            text: '训练用于维持已建立的能力。训练课安排会围绕比赛、出行与恢复进行。',
+          },
+          {
+            title: '恢复阶段',
+            text: '计划中的减量周,用于组织恢复、灵活性训练、康复与心理调整。',
+          },
+        ],
+      },
+      {
+        type: 'table',
+        heading: '典型训练日安排',
+        columns: ['时间', '阶段', '重点'],
+        rows: [
+          ['清晨', '力量或灵活性训练', '课前在体能中心进行的训练'],
+          ['中午', '学业', '课程、辅导与学术支持'],
+          ['下午', '专项训练', '冰上、球场或场地训练'],
+          ['傍晚', '恢复', '治疗、灵活性训练与营养补给'],
+          ['晚上', '自习与录像分析', '监督自习,随后进行录像回顾'],
+        ],
+        note: '示例日程。具体时间因项目与比赛安排而异。',
+      },
+      {
+        type: 'cta',
+        heading: '深入了解',
+        links: [
+          { label: '体能与力量训练', to: '/athletic/strength-and-conditioning' },
+          { label: '营养与恢复', to: '/student-life/recovery-and-medical' },
+        ],
+      },
+    ],
+  },
+
+  'athletic/strength-and-conditioning': {
+    intro: '每一位运动员背后,都有一支专业体能团队。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '这里的力量与体能训练,不是课表上的一节健身房课。运动员会先接受测试,获得个人化训练计划,在教练指导下完成训练,再进行复测,所有数据都记录在其《运动员表现档案》中。',
+          '训练计划首先会考虑年龄与身体成熟度。一名十三岁的运动员与一名毕业后运动员的训练方式不同,两者也都不同于成年职业运动员。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '训练重点',
+        items: [
+          { title: '力量与爆发力', text: '先打好基础力量,再发展每项运动所需的爆发力。' },
+          { title: '速度与体能', text: '加速、变向能力,以及该项运动所需的能量系统。' },
+          { title: '灵活性与动作质量', text: '保护身体免受伤病的活动范围与动作质量训练。' },
+          { title: '伤病预防', text: '针对各项目与各位置最常见伤病进行的筛查与专项训练。' },
+          { title: '体能测试', text: '定期测试,让进步有据可依,而非凭感觉判断。' },
+          { title: '复训流程', text: '在恢复全面训练前,与运动医学团队合作完成结构化康复。' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '团队成员',
+        items: [
+          { title: '力量教练', text: '待公布。' },
+          { title: '体能教练', text: '待公布。' },
+          { title: '运动表现教练', text: '待公布。' },
+          { title: '运动防护师', text: '待公布。' },
+        ],
+      },
+    ],
+  },
+
+  'student-life/recovery-and-medical': {
+    intro: '恢复被纳入日程安排,医疗护理与负责训练运动员的团队协同进行。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '训练只有被身体真正吸收,才算有效。在JMC,恢复是每日课表中固定安排的一个环节,而不是有空才做的事情,并由熟悉运动员整体训练负荷的团队负责管理。',
+          '运动员受伤时,由一支团队统一处理。运动医学、教练、体能团队与家庭顾问基于同一份方案协作,不会出现一方已允许其上场、另一方却仍在治疗的情况。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '日常恢复',
+        items: [
+          { title: '灵活性与软组织放松', text: '针对紧张或负荷过重部位的日常灵活性训练与处理。' },
+          { title: '受保护的睡眠时间', text: '宿舍内固定的熄灯时间,被视为训练的一部分。' },
+          { title: '训练负荷监测', text: '追踪训练负荷,在疲劳演变为伤病之前加以管理。' },
+          { title: '恢复期营养', text: '训练后与晚间的营养补给,与餐饮项目协同规划。' },
+          { title: '计划中的减量周', text: '恢复阶段被纳入训练年度规划,而非在身体出问题后临时安排。' },
+          { title: '动作筛查', text: '通过动作筛查及早发现可能演变为伤病的模式。' },
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '医疗协同',
+        items: [
+          { title: '校内运动医学', text: '与体能中心相邻的治疗与康复空间。' },
+          { title: '统一的伤病处理方案', text: '医疗团队、教练与体能团队基于同一份记录协作。' },
+          { title: '分阶段复训', text: '每个阶段回归全面训练与比赛都有明确标准。' },
+          { title: '脑震荡处理流程', text: '基线测试与有记录的分阶段复训流程。' },
+          { title: '专科转诊', text: '在伤情需要进一步处理时,与医生及专科医生协调。' },
+          { title: '让家长了解情况', text: '伤病状态、治疗与许可情况均在门户中对家长可见。' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '相关内容',
+        links: [
+          { label: '餐饮与营养', to: '/student-life/dining-and-nutrition' },
+          { label: '表格与健康', to: '/parent-support/forms-and-health' },
+        ],
+      },
+    ],
+  },
+
+  // ACADEMICS
+  'academic/upper-school': {
+    intro: '9至12年级:荣誉课程、进阶课程与AP课程齐备的大学预备项目,围绕训练安排。',
+    blocks: [
+      {
+        type: 'split',
+        heading: '有理由的严谨',
+        image: { src: '/images/upper-school-classroom.jpg', alt: '高中部课堂' },
+        paragraphs: [
+          '当一名运动员在JMC升入9年级时,好习惯已经养成,标准也会再次提高。高中部的课堂更像小型研讨课,而非讲座:学生需要有准备地到场、提出自己的观点,并用书面形式为其辩护。',
+          '比起只是修满学分毕业的运动员,我们更希望培养出能在压力下清晰思考的运动员。从第一学期起,选课就会参照NCAA参赛资格要求进行规划,确保没有运动员会在最后一年才发现自己缺少某项要求。',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '课表灵活,标准严格',
+        paragraphs: [
+          '训练会变动,标准不会。上课时间、自习与辅导会围绕训练课、比赛与出行灵活调整,但学业本身的要求,放在全美任何一所优秀学校都毫不逊色。',
+          '我们从不为“学者型运动员”中的“学者”二字感到抱歉。能让运动员六点起床训练的自律,同样也能造就严谨的写作、完成的习题与认真的考试准备——我们期望我们的运动员在努力程度与表现上,都超越人们通常对学生运动员的预期。',
+        ],
+      },
+      {
+        type: 'split',
+        heading: '每一位运动员,都被记住名字',
+        reverse: true,
+        image: { src: '/images/upper-school-classroom.jpg', alt: '高中部课堂' },
+        paragraphs: [
+          '满课量之所以能够承受,是因为没有一个班大到可以让人隐身其中。老师清楚哪些学生下周四要出行参加锦标赛,哪些学生正在冲刺高阶理科要求,哪些学生则需要完全不同方式的督促。',
+        ],
+      },
+      {
+        type: 'logos',
+        heading: '为真正重要的考核做好准备',
+        text: '课业与备考内容,紧扣学校与大学招生办真正关注的项目与考试。',
+        items: [
+          { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
+          { label: 'SSAT' },
+          { label: 'ISEE', src: '/images/logos/isee.jpg', alt: 'ISEE' },
+          { label: 'SAT', src: '/images/logos/sat.png', alt: 'SAT' },
+          { label: 'AP', src: '/images/logos/ap.png', alt: 'AP' },
+          { label: 'College Board', src: '/images/logos/college-board.png', alt: 'College Board' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '学科设置',
+        items: [
+          { title: '英语', text: '每一年都包含阅读、分析性写作与课堂讨论。' },
+          { title: '数学', text: '从代数循序渐进至高阶课程。' },
+          { title: '科学', text: '实验科学课程,包含与人体运动表现相关的选修方向。' },
+          { title: '历史与社会科学', text: '写作密集型的历史与公民课程。' },
+          { title: '外语', text: '符合大学招生要求的语言学习。' },
+          { title: '选修课', text: '专项选修课程,包括运动科学与媒体制作。' },
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '荣誉课程、AP与高阶学习',
+        items: [
+          {
+            title: '凭实力晋级荣誉课程',
+            text: '进入荣誉班需要通过前一门课程中的表现来赢得,而非主动申请。学生达到条件后可在学期中途升入更高阶课程。',
+          },
+          {
+            title: '在真正重要的科目开设AP课程',
+            text: 'AP课程开设在对大学录取有实际分量的学科上,并会安排时间,避免比赛出行影响考试备考。',
+          },
+          {
+            title: 'AP之后的高阶学习',
+            text: '修完某一学科序列的高年级学生,会继续修读数据科学、软件工程、研究方法、高阶作品集等高阶课程,而不是重复已学内容。',
+          },
+          {
+            title: '每一年都有写作训练',
+            text: '高中部每一年都包含持续的分析性写作训练,因为这是大学最先注意到、而运动员练习最少的能力。',
+          },
+        ],
+      },
+      {
+        type: 'table',
+        heading: '毕业要求',
+        columns: ['学科', '要求'],
+        rows: [
+          ['英语', '4年'],
+          ['数学', '4年,至少修至微积分先修课(Precalculus)'],
+          ['科学', '3年,其中包含两门实验科学'],
+          ['历史与社会科学', '3年'],
+          ['外语', '同一门语言修满3年'],
+          ['视觉与表演艺术', '1年'],
+          ['计算机科学', '1年'],
+          ['健康与人体发展', '1学期'],
+          ['体育与项目训练', '每学期'],
+          ['大学升学研讨课', '11、12年级'],
+        ],
+        note: '课程设置旨在符合NCAA Eligibility Center核心课程要求。每位运动员的计划都会每学期对照毕业要求与资格要求进行审核。',
+      },
+      {
+        type: 'cta',
+        heading: '在需要时提供支持',
+        links: [
+          { label: '学术支持', to: '/academic/academic-support' },
+          { label: '学术进阶路径', to: '/academic/academic-progression' },
+        ],
+      },
+    ],
+  },
+
+  'academic/middle-school': {
+    intro: '6至8年级:培养习惯、技能与基础,为高中部高强度的学业做好准备。',
+    blocks: [
+      {
+        type: 'split',
+        heading: '习惯养成之地',
+        image: { src: '/images/middle-school-classroom.jpg', alt: '初中部学生在课堂上学习' },
+        paragraphs: [
+          '十二三岁的孩子不是缩小版的十八岁少年。他们需要的是更多而非更少的结构——清晰的日常安排、关于如何学习的直接指导,以及能够及时察觉异常的成年人。',
+          '初中部的运动员往往是第一次认真投入训练,也常常是第一次离家生活。这几年将决定一名运动员升入高中部时,是能够胜任繁重课业,还是要花四年时间追赶。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '初中部的运作方式',
+        items: [
+          {
+            title: '五门核心课程',
+            text: '英语、数学、科学、历史与一门外语,构成每个年级的课程主干。',
+          },
+          {
+            title: '按能力分班,而非统一进度',
+            text: '数学与外语的分班依据测评结果,因此表现出色的6年级学生可以提前学习Algebra 1A,需要打基础的学生也能得到相应支持。',
+          },
+          {
+            title: '明确教授学习方法,而非默认已掌握',
+            text: '规划、笔记整理、复习与考试准备,都是6、7年级课程中明确设置的教学内容。',
+          },
+          {
+            title: '全面了解每位运动员的导师',
+            text: '每位学生都有一位导师,同时追踪其学业、训练负荷与宿舍生活。',
+          },
+          {
+            title: '拓展课程与选修课',
+            text: '艺术、科技、音乐与公益服务在全年轮流开设,与核心课程并行。',
+          },
+          {
+            title: '训练纳入课表',
+            text: '项目训练是校历的一部分,而不是挤在作业之余的课后活动。',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '分年级课程',
+        items: [
+          {
+            title: '6年级',
+            text: 'Reading 6、Writing 6、Pre-Algebra(或依分班测评加速修读)、地球与环境科学、世界历史,另设艺术设计、科技、健康与体育,以及音乐轮修课程。',
+          },
+          {
+            title: '7年级',
+            text: 'English 7、Algebra 1A(或依分班测评加速修读)、生命科学、世界历史,以及一门外语——西班牙语或中文——另设学期选修课与公益服务学习。',
+          },
+          {
+            title: '8年级',
+            text: 'English 8、Algebra 1B(或依分班测评加速修读)、物理科学、美国历史,以及延续的外语课程,另设学期选修课与年鉴制作课。',
+          },
+        ],
+      },
+      {
+        type: 'logos',
+        heading: '课堂之外',
+        text: '初中部学生在我们教师的指导下备考升学考试,并在课外项目中挑战自我。',
+        items: [
+          { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
+          { label: 'SSAT' },
+          { label: 'ISEE', src: '/images/logos/isee.jpg', alt: 'ISEE' },
+        ],
+      },
+      {
+        type: 'split',
+        heading: '同吃同住,共同学习',
+        reverse: true,
+        image: { src: '/images/middle-school-classroom.jpg', alt: '初中部学生在课堂上学习' },
+        paragraphs: [
+          '学业不会止步于教室门口。晚间自习厅设在宿舍内,由负责训练与日常生活的同一批教职员工监督,因此初中部学生遇到难题时,身边随时都有人可以帮忙。',
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '查看完整学术路径',
+        text: '从6年级到12年级,每个学科逐一呈现的完整课程。',
+        links: [
+          { label: '学术进阶路径', to: '/academic/academic-progression' },
+          { label: '高中部', to: '/academic/upper-school' },
+        ],
+      },
+    ],
+  },
+
+  'academic/academic-progression': {
+    intro: '从6年级到12年级,每个学科的设置,以及学生在其中的路径。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '下方的矩阵展示了初中部与高中部的课程进阶规划。大多数学生遵循主干路径;分班测评、既往课程与个人兴趣会让部分运动员在其中提前或横向调整。',
+          '数学与外语根据测评结果分班,而非按年龄统一安排,因此同一个年级的学生分布在三门不同课程中是很正常的情况。',
+        ],
+      },
+      {
+        type: 'matrix',
+        heading: '6至12年级学术进阶路径',
+        columns: ['6年级', '7年级', '8年级', '9年级', '10年级', '11年级', '12年级'],
+        rows: [
+          {
+            label: '英语',
+            cells: [
+              ['Reading 6', 'Writing 6'],
+              ['English 7', 'Creative Writing 7'],
+              ['English 8', 'Creative Writing 8'],
+              ['English I'],
+              ['English II / Honors'],
+              ['English III / Honors', 'AP English Language & Composition'],
+              ['Senior Seminars in Literature & Writing', 'AP English Literature & Composition'],
+            ],
+          },
+          {
+            label: '数学',
+            cells: [
+              ['Pre-Algebra', 'Algebra 1A (by placement)'],
+              ['Algebra 1A', 'Algebra 1B (by placement)'],
+              ['Algebra 1B', 'Algebra I', 'Geometry / Honors (by placement)'],
+              ['Algebra I', 'Geometry / Honors', 'Algebra II / Honors'],
+              ['Geometry / Honors', 'Algebra II / Honors', 'Precalculus'],
+              ['Precalculus / Honors', 'Calculus I', 'AP Calculus AB', 'AP Statistics'],
+              ['AP Calculus AB', 'AP Calculus BC', 'AP Statistics', 'Introduction to Data Science'],
+            ],
+          },
+          {
+            label: '科学',
+            cells: [
+              ['Earth & Environmental Science'],
+              ['Life Science'],
+              ['Physical Science'],
+              ['Conceptual Physics', 'Physics'],
+              ['Biology', 'Chemistry / Honors'],
+              ['Chemistry / Honors', 'Physiology', 'AP Biology'],
+              ['AP Biology', 'AP Chemistry', 'AP Physics 1', 'Sports Science & Human Performance'],
+            ],
+          },
+          {
+            label: '历史与社会科学',
+            cells: [
+              ['World History (8000 BCE–600 CE)'],
+              ['World History (600–1450)'],
+              ['United States History 8'],
+              ['World History & Geography (1450–1914)'],
+              ['U.S. History', 'AP U.S. History'],
+              ['American Government', 'Economics', 'AP World History'],
+              ['AP U.S. Government & Politics', 'AP Macroeconomics', 'AP Psychology', 'Historical Research Methods'],
+            ],
+          },
+          {
+            label: '外语',
+            cells: [
+              ['Spanish 1A', 'Chinese 1A'],
+              ['Spanish 1B', 'Chinese 1B'],
+              ['Spanish I', 'Chinese I'],
+              ['Spanish I / II', 'Chinese I / II'],
+              ['Spanish II / III', 'Chinese II / III'],
+              ['Spanish III Honors / IV', 'Chinese III / IV', 'AP Spanish Language & Culture'],
+              ['AP Spanish Language & Culture', 'AP Chinese Language & Culture', 'Advanced Conversation & Culture'],
+            ],
+          },
+          {
+            label: '计算机科学',
+            cells: [
+              ['Technology & Design 6'],
+              ['Creative Coding 7'],
+              ['Emerging Technologies 8'],
+              ['Introduction to Programming'],
+              ['Web Design & Development', 'AI in a Digital World'],
+              ['AP Computer Science Principles', 'AP Computer Science A'],
+              ['AP Computer Science A', 'Introduction to Software Engineering'],
+            ],
+          },
+          {
+            label: '视觉与表演艺术',
+            cells: [
+              ['Art & Design 6', 'Music 6'],
+              ['Studio Art 7', 'Digital Media 7'],
+              ['Studio Art 8', 'Film & Photography 8'],
+              ['Studio Art', 'Photography'],
+              ['Studio Art: Intermediate', 'Photography: Intermediate', 'Film Production'],
+              ['Studio Art: Advanced', 'AP Art History'],
+              ['AP 2-D Art & Design', 'AP Drawing', 'Advanced Portfolio'],
+            ],
+          },
+          {
+            label: '体育与体能',
+            cells: [
+              ['Health & Wellness 6', 'Program training'],
+              ['Personal Fitness & Wellness', 'Program training'],
+              ['Personal Fitness & Wellness', 'Program training'],
+              ['Health & Human Development', 'Program training'],
+              ['Strength & Conditioning', 'Program training'],
+              ['Sports Medicine', 'Program training'],
+              ['Sports Medicine', 'Program training'],
+            ],
+          },
+          {
+            label: '其他选修课',
+            cells: [
+              ['Study Skills 6'],
+              ['Service Learning 7'],
+              ['Service Learning 8', 'Yearbook 8'],
+              ['Leadership'],
+              ['Leadership'],
+              ['Leadership', 'College Seminar'],
+              ['Leadership', 'College Seminar'],
+            ],
+          },
+        ],
+        note: '计划中的课程路径。每年具体开设情况取决于招生人数与师资配置,个人课表也会因分班与既往课程而有所不同。',
+      },
+      {
+        type: 'cta',
+        heading: '关于分班有疑问?',
+        text: '招生办公室可以说明运动员在每个学科可能对应的具体课程。',
+        links: [
+          { label: '联系招生办公室', to: '/contact' },
+          { label: '学术支持', to: '/academic/academic-support' },
+        ],
+      },
+    ],
+  },
+
+  'academic/academic-support': {
+    intro: '结构化安排、辅导与追踪机制,确保训练不会以牺牲参赛资格为代价。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '出行与高强度训练很容易让学业落后。我们的支持体系旨在及早发现这种情况:监督自习、按需辅导,以及运动员出行期间老师与教练之间的协同配合。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '支持体系如何运作',
+        items: [
+          { title: '监督自习厅', text: '每个上学日晚间,在宿舍内设有受保护的自习时间。' },
+          { title: '课业辅导', text: '学科辅导安排在训练之外的时间,而非取代训练。' },
+          { title: '出行学习安排', text: '每次比赛出行前布置作业,返校后收齐。' },
+          { title: '进度追踪', text: '定期向运动员、家庭与教练共享的报告。' },
+          { title: '资格追踪', text: '每学期审核课程、成绩与NCAA要求。' },
+          { title: '考试支持', text: '为大学入学考试提供备考与报名安排支持。' },
+        ],
+      },
+    ],
+  },
+
+  // ACADEMY LIFE
+  'student-life/residence-life': {
+    intro: '每位运动员都住校,遵循专为训练与恢复设计的日常作息。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '宿舍生活决定了训练计划究竟能否落实。用餐、学习、睡眠与恢复都按照可预期的日程,在这里由与运动员同住的教职员工监督完成。',
+          '运动员与队友合住双人间。与追求同一个目标的人一起生活,是让高标准迅速变得理所当然的最快方式。',
+        ],
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '2', label: '每间宿舍的运动员人数' },
+          { value: '100%', label: '的运动员住校' },
+          { value: '每晚', label: '均有的监督自习时间' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '宿舍生活',
+        items: [
+          { title: '宿舍管理人员', text: '每层楼均配有工作人员,负责日常作息与学生福祉。' },
+          { title: '晚间自习', text: '熄灯前安静、受监督的自习时间。' },
+          { title: '受保护的睡眠时间', text: '固定的熄灯时间,确保恢复真正发生。' },
+          { title: '公共空间', text: '供与队友放松相处的休息室与共享空间。' },
+          { title: '洗衣与生活必需', text: '校内洗衣服务,包括训练装备的清洗周转。' },
+          { title: '健康与安全', text: '可及时获得运动医学支持,遇到疾病或受伤有明确处理流程。' },
+        ],
+      },
+    ],
+  },
+
+  'student-life/dining-and-nutrition': {
+    intro: '这是一套运动员营养项目,而不是普通学校食堂。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '每天训练两次的运动员无法按普通学校的用餐时间进食,还指望能顺利恢复。菜单围绕蛋白质、碳水化合物、蔬菜、水果与补水设计,并在训练日所需的时间供应。',
+          '除了三餐之外,高强度训练还要求额外的能量补给:训练前的加餐、训练后立即补充的食物,以及睡前的高蛋白加餐。',
+        ],
+      },
+      {
+        type: 'table',
+        heading: '训练日的营养安排',
+        columns: ['时间', '餐次', '重点'],
+        rows: [
+          ['清晨', '训练前加餐', '第一节训练前的轻碳水补给'],
+          ['上午', '早餐', '蛋白质与碳水化合物,启动恢复'],
+          ['中午', '午餐', '均衡搭配:蛋白质、碳水化合物与蔬菜'],
+          ['下午', '训练前加餐', '专项训练前的碳水补给'],
+          ['晚上', '晚餐', '以恢复为导向:蛋白质、碳水化合物与丰富蔬果'],
+          ['睡前', '夜间加餐', '支持夜间恢复的蛋白质补给'],
+        ],
+        note: '示例日程。具体菜单与用餐时间因项目与比赛安排而异。',
+      },
+      {
+        type: 'features',
+        heading: '菜单规划方式',
+        items: [
+          { title: '围绕训练负荷设计', text: '训练量大的日子加大补给,恢复日则相应减少。' },
+          { title: '比赛日', text: '赛前餐与出行补给由营养团队与教练共同规划。' },
+          { title: '饮食需求', text: '充分考虑过敏、饮食限制与个人偏好。' },
+          { title: '营养教育', text: '让运动员在升入大学前,就学会自主安排营养补给。' },
+        ],
+      },
+    ],
+  },
+
+  'student-life/activities-and-service': {
+    intro: '训练之外的时间,以及回馈社区的习惯。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '从不放松的运动员迟早会垮掉。周末安排有计划中的休息时间、外出活动,以及将学院与周边社区连接起来的公益服务。',
+          '公益服务也是为运动生涯之后的生活做出的真诚准备,同时也能让大学申请在体育成绩之外更有分量。',
+        ],
+      },
+      {
+        type: 'image',
+        src: '/images/coast-beach.jpg',
+        alt: '南加州海岸边冲浪与休闲的人们,夕阳下',
+        caption: '海岸距校园车程不远——是常见的周末去处。',
+      },
+      {
+        type: 'features',
+        heading: '训练之外',
+        items: [
+          { title: '周末出行', text: '校园附近的海滩、公园与南加州各处目的地。' },
+          { title: '社区服务', text: '与本地机构合作的常态化公益项目。' },
+          { title: '青少年训练营指导', text: '由运动员指导本项目的低龄小球员。' },
+          { title: '团队活动', text: '凝聚团队的聚餐、观影之夜与传统活动。' },
+          { title: '大学参访', text: '配合比赛出行安排的校园参访。' },
+          { title: '自由时间', text: '受保护的非结构化自由时间,因为恢复不仅仅是身体上的。' },
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: '周末去处',
+        items: [
+          {
+            src: '/images/orange-county-coast.jpg',
+            alt: '黄昏时分,橙县海岸线上方的山坡小镇',
+            caption: '橙县海岸,距校园仅数分钟车程',
+          },
+          {
+            src: '/images/la-jolla-mall.jpg',
+            alt: '夜晚的露天购物中心',
+            caption: '校外的购物、美食与休闲时光',
+          },
+        ],
+      },
+    ],
+  },
+
+  // RECRUITING
+  'counseling/5-to-1-model': {
+    intro: '五位专业人员,专注服务一位运动员。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '在普通高中,一位升学顾问要负责数百名学生,根本没有时间处理体育招募。我们反其道而行:每位运动员都配有一支五人团队,每个人职责明确,定期专门为这位运动员开会讨论。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '五位团队成员',
+        items: [
+          {
+            title: '运动员招募专员',
+            text: '负责招募策略:目标院校清单、时间节点与联系大学教练。',
+          },
+          {
+            title: '教练',
+            text: '培养运动员,并直接向大学教练介绍其球风与品格。',
+          },
+          {
+            title: '学术顾问',
+            text: '从第一学期起,把关课程、成绩、考试与NCAA参赛资格。',
+          },
+          {
+            title: '学生事务助理',
+            text: '逐周跟进截止日期、录像、表格与申请材料。',
+          },
+          {
+            title: '家庭顾问',
+            text: '让家长随时了解情况,并指导家庭做出录取与决定。',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '团队共同负责的事项',
+        items: [
+          { title: '课程与GPA规划' },
+          { title: '比赛与曝光规划' },
+          { title: '集锦视频与体育履历' },
+          { title: '院校清单与目标项目' },
+          { title: '教练联系与校园参访' },
+          { title: 'NCAA注册与合规' },
+          { title: '申请与文书' },
+          { title: '录取比较与最终承诺' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '招募工作逐年如何推进',
+        links: [{ label: '大学招募', to: '/counseling/college-recruiting' }],
+      },
+    ],
+  },
+
+  'counseling/college-recruiting': {
+    intro: '一份在签约日之前多年就已启动的招募规划。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '招募回报的是提前准备。等到最后一年才开始考虑大学的运动员,谈判时已处于劣势。我们的运动员用数年时间,逐步建立起自己的成绩、口碑,以及与教练之间的关系。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '招募时间线',
+        items: [
+          {
+            title: '早期阶段 — 打基础',
+            text: '培养运动员能力,建立成绩,了解招募工作的真实运作方式。不走捷径,不过早联系教练。',
+          },
+          {
+            title: '中期阶段 — 曝光',
+            text: '有针对性地参加锦标赛与公开赛,制作第一份集锦视频,如实评估现实水平,并建立一份可操作的院校清单。',
+          },
+          {
+            title: '后期阶段 — 主动联系',
+            text: '与教练直接沟通、校园参访、获得正式关注并提交申请,团队全程协助准备每一份材料。',
+          },
+          {
+            title: '决定阶段 — 做出承诺',
+            text: '从契合度、上场时间、学术水平与费用等方面比较录取通知,并在过渡到大学阶段提供支持。',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '我们提供的支持',
+        items: [
+          { title: '集锦与比赛录像', text: '由我们的录像团队拍摄、剪辑并分发。' },
+          { title: '体育履历', text: '将测试数据、比赛成绩与学业记录整合在同一份档案中。' },
+          { title: '教练联系', text: '由熟悉大学格局的教练牵线引荐。' },
+          { title: 'NCAA合规', text: 'Eligibility Center注册与规则指导。' },
+          { title: '校园参访', text: '配合比赛出行统一安排的参访行程。' },
+          { title: '家庭指导', text: '就奖学金、费用以及录取通知的实际含义给出直白的解答。' },
+        ],
+      },
+      visitCta,
+    ],
+  },
+
+  'counseling/commitments': {
+    intro: '我们的运动员未来将前往的地方。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '随着运动员陆续与大学项目签约,他们的项目、院校与组别信息将在此更新,并附上他们的升学故事。',
+        ],
+      },
+      {
+        type: 'table',
+        heading: '大学签约录取',
+        columns: ['运动员', '项目', '大学', '组别', '年份'],
+        rows: [],
+        note: '我们的第一届学生尚未签约。随着运动员陆续签约,这份名单会不断更新。',
+      },
+      {
+        type: 'cta',
+        heading: '我们如何帮助运动员实现目标',
+        links: [
+          { label: '5比1辅导模式', to: '/counseling/5-to-1-model' },
+          { label: '大学招募', to: '/counseling/college-recruiting' },
+        ],
+      },
+    ],
+  },
+
+  // ADMISSION
+  'admission/overview': {
+    intro: '欢迎了解JMC的招生流程。滚动招生,每位申请者都会接受学术与体育双重评估——无需ISEE或SSAT成绩。',
+    blocks: [
+      {
+        type: 'statement',
+        text: '我们录取的是一个完整的学生:成绩单、品格,以及他在其项目中的水平——而绝不仅仅是一个考试分数。',
+        attribution: '我们的招生理念',
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          '这一理念直接源自我们的使命。JMC的存在,就是为了让6至12年级的学生运动员不必在认真的体育与认真的学业之间做出取舍,招生正是我们最先将这一理念付诸实践的地方。我们全年滚动招生,而非设定单一截止日期,因为体育赛季与学年日历本就无法完全对齐——但每一份申请仍会经过同样细致的审阅,兼顾学业与体育两方面,才会做出最终决定。',
+          '我们不要求大多数私立学校所要求的ISEE或SSAT成绩。相比标准化招生考试,教练对比赛录像的评估,以及在条件允许的情况下亲自观看比赛,能让我们更全面地了解一位准JMC运动员——这些评估会与成绩单、教师评语以及对家庭本身的真实了解一并纳入考量。',
+        ],
+      },
+      {
+        type: 'calendar',
+        heading: '招生日历',
+        items: [
+          { period: '秋季', focus: '开放咨询、恢复校园参观,教练开始审阅秋季比赛录像。' },
+          { period: '冬季', focus: '审阅申请、进行面试,并为冬季项目发出早期录取决定。' },
+          { period: '春季', focus: '参观高峰期,发放秋季入学录取决定,并评估春季锦标赛表现。' },
+          { period: '夏季', focus: '办理入学、规划迎新活动,并视名额情况接受补录申请。' },
+        ],
+      },
+      {
+        type: 'people',
+        heading: '认识招生团队',
+        text: '四位团队成员,各自负责您家庭申请中的不同环节。',
+        items: [
+          {
+            name: 'Sarah Kim 萨拉·金',
+            role: '招生主任',
+            bio: '全程主导招生流程——通常是家庭最先联系到的人。',
+          },
+          {
+            name: 'Marcus Bellamy 马库斯·贝拉米',
+            role: '体育招募协调员',
+            bio: '审阅比赛录像,并就每一位准运动员与教练团队协调沟通。',
+          },
+          {
+            name: 'Elena Torres 埃琳娜·托雷斯',
+            role: '招生与家庭顾问',
+            bio: '审核成绩单,并通过面试与决定环节直接与家庭沟通。',
+          },
+          {
+            name: 'David Okafor 大卫·奥卡福',
+            role: '国际招生协调员',
+            bio: '协助国际家庭办理签证、出行安排,以及入校适应事宜。',
+          },
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '申请流程',
+        items: [
+          { title: '咨询', text: '向我们提供运动员的项目、位置、当前水平与目标年级。' },
+          { title: '参观或线上会面', text: '在训练期间到校园参观,若出行不便,也可在线与教职员工会面。' },
+          { title: '提交申请', text: '连同在校成绩、体育经历与录像一并提交申请。' },
+          { title: '体育评估', text: '教练会评估录像,并在条件允许时亲自观看运动员训练或比赛。' },
+          { title: '面试', text: '与运动员及家庭进行一次面谈,可现场或视频进行。' },
+          { title: '录取决定与入学', text: '审核完成后即发布录取决定,随后安排入学与到校事宜。' },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '申请材料包括',
+        items: [
+          { title: '申请表', text: '运动员与家庭信息、项目、位置与目标入学年级。' },
+          { title: '家长陈述', text: '家庭就运动员在学业与体育方面目标的简短陈述。' },
+          { title: '学生陈述', text: '以运动员自己的语言,讲述其项目、目标,以及选择JMC的原因。' },
+          { title: '成绩单调取', text: '由运动员目前就读的学校直接寄送学业记录。' },
+          { title: '教师评语', text: '来自现任教师或升学顾问的简短评语。' },
+          { title: '体育经历与录像', text: '比赛记录、当前所属球队或俱乐部,以及近期录像——教练会告知具体需要提供的内容。' },
+        ],
+      },
+      {
+        type: 'faq',
+        heading: '常见问题',
+        items: [
+          {
+            q: '是否需要ISEE或SSAT成绩?',
+            a: '不需要。与大多数私立学校不同,JMC不要求标准化招生考试。学术评估基于成绩单、教师评语与面试表现。',
+          },
+          {
+            q: '我们应该什么时候申请?',
+            a: '随时都可以。由于采用滚动招生,实际的截止时间取决于该项目当年名额何时招满。',
+          },
+          {
+            q: '是否接受毕业后运动员?',
+            a: '接受,只要多读一年有助于该运动员的发展与招募时间线。',
+          },
+          {
+            q: '是否需要提供录像?',
+            a: '近期的比赛或训练录像会有很大帮助,教练会具体告知需要提供的内容。',
+          },
+          {
+            q: '运动员可以在学年中途入学吗?',
+            a: '在某些情况下可以,具体取决于该项目的名额与学期安排是否吻合。',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '还有问题想先了解?',
+        text: `发送邮件至 ${site.email},招生团队成员会尽快回复您,或直接提交咨询以开始您的申请。`,
+        links: [
+          { label: '提交咨询', to: '/contact' },
+          { label: '预约参观', to: '/admission/visit' },
+        ],
+      },
+    ],
+  },
+
+  'admission/visit': {
+    intro: '选一个训练日到校参观,亲自感受我们的标准。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '最理想的参观时间是训练正在进行的时候。家庭可以看到真实的训练课,认识可能与自己孩子共事的教练,并体验运动员们的日常餐食。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '参观内容包括',
+        items: [
+          { title: '校园参观', text: '宿舍、餐厅、教室与体能中心。' },
+          { title: '观摩训练', text: '现场观看该运动员项目的实际训练课。' },
+          { title: '会见教练', text: '与该项目的教练团队交流。' },
+          { title: '学业沟通', text: '了解课程分班与学术支持安排。' },
+          { title: '招募情况介绍', text: '由招募团队成员讲解5比1模式。' },
+          { title: '家庭会谈', text: '专门留出时间解答家长最关心的问题。' },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '路途遥远,如何参观',
+        paragraphs: [
+          '对于出行不便的家庭,我们提供视频会面,内容涵盖与现场参观相同的环节,包括实时的校园直播参观与教练交流时间。',
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '安排参观',
+        text: '告诉我们运动员的项目以及您方便出行的时间,我们会围绕训练日为您安排。',
+        links: [{ label: '联系招生办公室', to: '/contact' }],
+      },
+    ],
+  },
+
+  'admission/international-athletes': {
+    intro: '来自世界各地的运动员,从抵达到毕业全程获得支持。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '寄宿制学院让国际学生的入学变得简单直接:运动员从第一周起就住校、与团队一起用餐,并遵循与其他所有人相同的日常课表。',
+          '我们的团队在实际事务上为家庭提供支持,从证件材料到机场接机,再到跨时区的沟通协调。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '为国际家庭提供的支持',
+        items: [
+          { title: '学生签证指导', text: '协助准备证件材料与办理申请流程。' },
+          { title: '英语语言支持', text: '为非母语学生提供额外的学业支持。' },
+          { title: '机场接送', text: '每学期开学与结束时提供接送服务。' },
+          { title: '假期安排', text: '为短假期留校的运动员提供支持。' },
+          { title: '家庭沟通', text: '按跨时区安排的定期沟通更新。' },
+          { title: '本地监护安排', text: '在需要时提供监护相关要求的指导。' },
+        ],
+      },
+      visitCta,
+    ],
+  },
+
+  'admission/tuition-and-fees': {
+    intro: '入学费用,以及其中包含的内容。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '学费涵盖完整的寄宿项目:训练、教练指导、体能支持、学业、食宿与招募指导。我们公开发布费用清单,方便家庭将我们与俱乐部项目、预备学校以及单独聘请的私人教练进行如实比较。',
+        ],
+      },
+      {
+        type: 'table',
+        heading: '费用清单',
+        columns: ['项目', '金额'],
+        rows: [
+          ['寄宿学费(每年)', '待确认'],
+          ['申请费', '待确认'],
+          ['入学押金', '待确认'],
+          ['团队出行与比赛', '待确认'],
+          ['装备与团队服装', '待确认'],
+          ['国际学生服务', '待确认'],
+        ],
+        note: '次年度的最终金额将在此公布。当前费用清单可向招生办公室索取。',
+      },
+      {
+        type: 'features',
+        heading: '学费包含',
+        items: [
+          { title: '教练指导与训练', text: '由完整教练团队提供的全部专项训练课。' },
+          { title: '体能项目', text: '力量、体能、测试与恢复支持。' },
+          { title: '学业', text: '课程、自习厅、辅导与学术指导。' },
+          { title: '食宿', text: '住宿与运动员营养餐饮项目。' },
+          { title: '招募支持', text: '完整的5比1团队、录像制作与教练联系。' },
+          { title: '校园活动', text: '周末活动与公益服务项目。' },
+        ],
+      },
+      {
+        type: 'faq',
+        heading: '常见问题',
+        items: [
+          {
+            q: '是否提供分期付款方案?',
+            a: '分期付款方案将随最终费用清单一并公布。',
+          },
+          {
+            q: '是否提供助学金或体育奖学金?',
+            a: '资助政策正在制定中。申请前请向招生办公室咨询当前可提供的方案。',
+          },
+          {
+            q: '哪些费用不包含在内?',
+            a: '个人回程差旅费、团队服装以外的个人装备,以及项目之外自行聘请的私人教练费用。',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '关于费用有疑问?',
+        text: '招生办公室可以为您详细说明完整费用清单以及一年的实际安排。',
+        links: [{ label: '联系招生办公室', to: '/contact' }],
+      },
+    ],
+  },
+}

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Logo from './Logo'
 import { MenuIcon, SearchIcon } from './icons'
-import { site } from '../content/site'
+import { useSite } from '../content/site'
+import { useLocale, otherLocalePath } from '../content/locale'
 
 type Props = {
   onOpenMenu: () => void
@@ -13,6 +14,9 @@ type Props = {
 
 export default function SiteHeader({ onOpenMenu, onOpenSearch, pageTone = 'dark' }: Props) {
   const [scrolled, setScrolled] = useState(false)
+  const site = useSite()
+  const locale = useLocale()
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80)
@@ -45,11 +49,18 @@ export default function SiteHeader({ onOpenMenu, onOpenSearch, pageTone = 'dark'
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-5">
+          <a
+            href={otherLocalePath(pathname, locale)}
+            className="p-2 text-sm font-semibold tracking-[0.14em] uppercase opacity-90 transition-opacity hover:opacity-100"
+            aria-label={locale === 'en' ? 'Switch to Chinese' : '切换为英文'}
+          >
+            {locale === 'en' ? '中文' : 'EN'}
+          </a>
           <button
             type="button"
             onClick={onOpenSearch}
             className="p-2 opacity-90 transition-opacity hover:opacity-100"
-            aria-label="Open search"
+            aria-label={locale === 'en' ? 'Open search' : '打开搜索'}
           >
             <SearchIcon className="h-5 w-5" />
           </button>
@@ -57,9 +68,9 @@ export default function SiteHeader({ onOpenMenu, onOpenSearch, pageTone = 'dark'
             type="button"
             onClick={onOpenMenu}
             className="flex items-center gap-3 p-2 text-sm font-semibold tracking-[0.22em] uppercase"
-            aria-label="Open menu"
+            aria-label={locale === 'en' ? 'Open menu' : '打开菜单'}
           >
-            <span className="hidden sm:inline">Menu</span>
+            <span className="hidden sm:inline">{locale === 'en' ? 'Menu' : '菜单'}</span>
             <MenuIcon className="h-4 w-6" />
           </button>
         </div>

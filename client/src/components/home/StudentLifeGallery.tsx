@@ -2,37 +2,58 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from '../icons'
 import { Eyebrow, ImagePlaceholder } from '../ui'
 import Reveal from '../Reveal'
+import { useLocale } from '../../content/locale'
 
-const slots = [
-  {
-    label: 'Residence Life',
-    kind: 'video' as const,
-    src: '/videos/residence-life.mp4',
-    to: '/student-life/residence-life',
+const slotsCopy = {
+  en: {
+    residence: 'Residence Life',
+    campus: 'Campus Life',
+    dining: 'Dining & Nutrition',
   },
-  {
-    label: 'Campus Life',
-    kind: 'video' as const,
-    src: '/videos/academic-life.mp4',
-    to: '/student-life/activities-and-service',
+  zh: {
+    residence: '住宿生活',
+    campus: '校园生活',
+    dining: '餐饮与营养',
   },
-  {
-    label: 'Dining & Nutrition',
-    kind: 'video' as const,
-    src: '/videos/dining.mp4',
-    to: '/student-life/dining-and-nutrition',
-  },
-]
+}
+
+const copy = {
+  en: { eyebrow: 'Student Life', heading: 'Life outside of training', explore: 'Explore Student Life' },
+  zh: { eyebrow: '学生生活', heading: '训练之外的生活', explore: '了解学生生活' },
+}
 
 // A three-slot photo/video gallery — two slots play real campus footage, cropped
 // to the vertical frame with object-cover rather than re-encoded.
 export default function StudentLifeGallery() {
+  const locale = useLocale()
+  const t = copy[locale]
+  const labels = slotsCopy[locale]
+  const slots = [
+    {
+      label: labels.residence,
+      kind: 'video' as const,
+      src: '/videos/residence-life.mp4',
+      to: '/student-life/residence-life',
+    },
+    {
+      label: labels.campus,
+      kind: 'video' as const,
+      src: '/videos/academic-life.mp4',
+      to: '/student-life/activities-and-service',
+    },
+    {
+      label: labels.dining,
+      kind: 'video' as const,
+      src: '/videos/dining.mp4',
+      to: '/student-life/dining-and-nutrition',
+    },
+  ]
   return (
     <section className="bg-white px-6 py-20 sm:px-10 sm:py-28 lg:px-14">
       <Reveal as="div" className="mx-auto max-w-7xl text-center">
-        <Eyebrow className="justify-center">Student Life</Eyebrow>
+        <Eyebrow className="justify-center">{t.eyebrow}</Eyebrow>
         <h2 className="mt-4 font-serif text-4xl leading-tight text-ink sm:text-5xl">
-          Life outside of training
+          {t.heading}
         </h2>
       </Reveal>
 
@@ -70,7 +91,7 @@ export default function StudentLifeGallery() {
           to="/student-life"
           className="inline-flex items-center gap-3 font-condensed text-[17px] font-semibold tracking-[0.18em] text-brass uppercase transition-colors hover:text-ink"
         >
-          Explore Student Life
+          {t.explore}
           <ArrowRight className="h-5 w-5" />
         </Link>
       </div>

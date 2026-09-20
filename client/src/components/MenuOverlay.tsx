@@ -2,18 +2,37 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { ChevronRight, CloseIcon } from './icons'
-import {
-  linkPath,
-  navSections,
-  quickLinks,
-  sectionPath,
-  utilityLinks,
-} from '../content/navigation'
-import { site } from '../content/site'
+import { linkPath, sectionPath, useNavSections, useQuickLinks, useUtilityLinks } from '../content/navigation'
+import { useSite } from '../content/site'
+import { useLocale } from '../content/locale'
+
+const copy = {
+  en: {
+    overview: 'Overview',
+    quickLinks: 'Quick Links',
+    siteMenu: 'Site menu',
+    utility: 'Utility',
+    closeMenu: 'Close menu',
+    main: 'Main',
+  },
+  zh: {
+    overview: '概览',
+    quickLinks: '常用链接',
+    siteMenu: '网站菜单',
+    utility: '快捷导航',
+    closeMenu: '关闭菜单',
+    main: '主导航',
+  },
+}
 
 export default function MenuOverlay({ onClose }: { onClose: () => void }) {
   const [active, setActive] = useState(0)
   const panelRef = useRef<HTMLDivElement>(null)
+  const site = useSite()
+  const navSections = useNavSections()
+  const quickLinks = useQuickLinks()
+  const utilityLinks = useUtilityLinks()
+  const t = copy[useLocale()]
   const current = navSections[active]
 
   useEffect(() => {
@@ -28,7 +47,7 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
           onClick={onClose}
           className="text-lg font-medium text-brass hover:text-ink"
         >
-          {current.label} Overview
+          {current.label} {t.overview}
         </Link>
       </li>
       {current.links.map((link) => (
@@ -63,7 +82,7 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
   )
 
   return (
-    <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={t.siteMenu}>
       <div className="absolute inset-0 animate-fade-in bg-ink/45 backdrop-blur-[2px]" onClick={onClose} />
 
       <div
@@ -75,7 +94,7 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
           <Link to="/" onClick={onClose} aria-label={`${site.name} home`}>
             <Logo className="h-14 w-auto text-ink lg:h-16" />
           </Link>
-          <nav aria-label="Utility" className="hidden flex-wrap gap-x-8 gap-y-2 sm:flex">
+          <nav aria-label={t.utility} className="hidden flex-wrap gap-x-8 gap-y-2 sm:flex">
             {utilityLinks.map((link) => (
               <Link
                 key={link.to}
@@ -91,14 +110,14 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
             type="button"
             onClick={onClose}
             className="ml-auto grid h-12 w-12 shrink-0 place-items-center rounded-full bg-ink text-white lg:hidden"
-            aria-label="Close menu"
+            aria-label={t.closeMenu}
           >
             <CloseIcon className="h-5 w-5" />
           </button>
         </div>
 
         <nav
-          aria-label="Main"
+          aria-label={t.main}
           className="grid flex-1 gap-10 px-6 py-10 sm:px-12 lg:grid-cols-2 lg:px-16 lg:py-14"
         >
           <ul>
@@ -129,7 +148,7 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
         </nav>
 
         <div className="px-6 pb-10 sm:px-12 lg:hidden">
-          <h2 className="mb-5 font-serif text-2xl text-ink">Quick Links</h2>
+          <h2 className="mb-5 font-serif text-2xl text-ink">{t.quickLinks}</h2>
           {quickLinkList}
         </div>
 
@@ -143,12 +162,12 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
           type="button"
           onClick={onClose}
           className="mt-10 mr-10 grid h-16 w-16 place-items-center self-end rounded-full bg-ink text-white transition-colors hover:bg-brass"
-          aria-label="Close menu"
+          aria-label={t.closeMenu}
         >
           <CloseIcon className="h-6 w-6" />
         </button>
         <div className="mt-auto px-10 pb-14">
-          <h2 className="mb-6 font-serif text-3xl text-ink">Quick Links</h2>
+          <h2 className="mb-6 font-serif text-3xl text-ink">{t.quickLinks}</h2>
           {quickLinkList}
         </div>
       </aside>
