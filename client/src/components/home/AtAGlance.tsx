@@ -9,7 +9,7 @@ const copy = {
   en: {
     eyebrow: 'At a Glance',
     grades: 'Grades served',
-    fourSports: 'Four sports',
+    fiveSports: 'Five sports',
     boysGirls: 'Boys & girls',
     management: 'Student-athlete management',
     integrated: 'Integrated',
@@ -18,7 +18,7 @@ const copy = {
   zh: {
     eyebrow: '学院概览',
     grades: '招生年级',
-    fourSports: '四项体育项目',
+    fiveSports: '五项体育项目',
     boysGirls: '男女均设',
     management: '学生运动员管理配比',
     integrated: '一体化',
@@ -137,10 +137,10 @@ export default function AtAGlance() {
 
           <Cell>
             <p className="font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
-              {t.fourSports}
+              {t.fiveSports}
             </p>
-            <div className="mt-4 flex items-end justify-center gap-4">
-              {(['ice-hockey', 'golf', 'lacrosse', 'tennis'] as const).map((kind) => {
+            <div className="mt-4 flex flex-wrap items-end justify-center gap-3">
+              {(['ice-hockey', 'golf', 'lacrosse', 'tennis', 'fencing'] as const).map((kind) => {
                 const sport = sports.find((s) => s.kind === kind)!
                 return (
                   <div key={kind} className="flex flex-col items-center">

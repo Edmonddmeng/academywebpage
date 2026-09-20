@@ -127,11 +127,24 @@ function TennisSymbol({ className }: SymbolProps) {
   )
 }
 
+function FencingSymbol({ className }: SymbolProps) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} aria-hidden="true" {...line}>
+      <path d="M9 7 34 37" />
+      <path d="M39 7 14 37" />
+      <circle cx="34" cy="37" r="3" />
+      <circle cx="14" cy="37" r="3" />
+      <path d="M31.5 35 37 41M16.5 35 11 41" strokeWidth="1" />
+    </svg>
+  )
+}
+
 const sportGlyphs = {
   golf: GolfSymbol,
   'ice-hockey': HockeySymbol,
   tennis: TennisSymbol,
   lacrosse: LacrosseSymbol,
+  fencing: FencingSymbol,
 }
 
 export function SportSymbol({ kind, className }: { kind: SportKind; className?: string }) {

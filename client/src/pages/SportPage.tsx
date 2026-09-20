@@ -3,6 +3,7 @@ import { SportSymbol } from '../components/symbols'
 import { SportPanel } from '../components/sport/panels'
 import Reveal from '../components/Reveal'
 import CountUp from '../components/CountUp'
+import { ImagePlaceholder } from '../components/ui'
 import { sportTabs, useTabLabel, type SportTab } from '../content/sportTabs'
 import type { Sport } from '../content/sports'
 import { useLocale } from '../content/locale'
@@ -76,11 +77,18 @@ export default function SportPage({ sport }: { sport: Sport }) {
         </p>
 
         <Reveal>
-          <img
-            src={sport.hero.src}
-            alt={sport.hero.alt}
-            className="mt-14 aspect-[16/9] w-full object-cover"
-          />
+          {'src' in sport.hero ? (
+            <img
+              src={sport.hero.src}
+              alt={sport.hero.alt}
+              className="mt-14 aspect-[16/9] w-full object-cover"
+            />
+          ) : (
+            <ImagePlaceholder
+              label={sport.hero.placeholder}
+              className="mt-14 aspect-[16/9] w-full"
+            />
+          )}
         </Reveal>
 
         <div className="mt-6 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">

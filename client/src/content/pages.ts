@@ -68,14 +68,14 @@ const visitCta: Block = {
 export const pageContent: Record<string, PageContent> = {
   // ABOUT
   // Jonathan Reyes is a placeholder person, invented for launch. Replace with the real
-  // Head of Program's name, background, and photo once hired.
-  'about/head-of-program': {
-    intro: 'A letter from our founding Head of Program.',
+  // Head of Academy's name, background, and photo once hired.
+  'about/head-of-academy': {
+    intro: 'A letter from our founding Head of Academy.',
     blocks: [
       {
         type: 'split',
         heading: 'A letter before you apply',
-        image: { src: '/images/jonathan-reyes.jpg', alt: 'Jonathan Reyes, Head of Program' },
+        image: { src: '/images/jonathan-reyes.jpg', alt: 'Jonathan Reyes, Head of Academy' },
         paragraphs: [
           'I spent eleven seasons on the bench before I ever stood in front of a classroom, and both jobs taught me the same lesson: a kid who is only pushed in one direction eventually breaks in the other.',
         ],
@@ -98,24 +98,25 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'signature',
         name: 'Jonathan Reyes',
-        role: 'Founding Head of Program',
+        role: 'Founding Head of Academy',
       },
       visitCta,
     ],
   },
 
   'about/mission-and-vision': {
-    intro: 'Our mission and what we believe about developing a scholar-athlete.',
+    intro: 'Academic Excellence · Elite Competition · All-Round Growth · Long-Term Development.',
     blocks: [
       {
         type: 'statement',
-        text: 'JMC Sports Academy exists to develop grade 6–12 student-athletes who compete at the highest level of their sport without sacrificing the rigor of their education.',
+        text: 'JMC exists to build a professional, systematic, and enduring development path for grade 6–12 student-athletes serious about competing at the highest level of their sport — without ever trading away the rigor of their education.',
         attribution: 'Our Mission',
       },
       {
         type: 'prose',
         paragraphs: [
-          'Most student-athletes are pushed to choose: train seriously and let school slip, or protect the transcript and train around whatever time is left. We think that choice is a failure of design, not a fact of life, so JMC is built to make it unnecessary — one daily schedule, one campus, one staff accountable for the whole student, from Grade 6 through Grade 12.',
+          'Most student-athletes are pushed to choose: train seriously and let school slip, or protect the transcript and train around whatever time is left. We think that choice is a failure of design, not a fact of life. So every student who joins JMC is issued a personal Student-Athlete Development Plan — built around their age, academic background, competitive level, physical development, and long-term goals — and a dedicated Student-Athlete Manager who coordinates their academics, training, competition, and college pathway as one continuous plan, not four separate conversations.',
+          'That plan follows a student from their first term through college placement: academic planning and NCAA eligibility, competitive development and event scheduling, physical training and recovery, residential life, and — when the time comes — college athletic recruiting and admission support. One student. One plan. One team accountable for all of it.',
         ],
       },
       {
@@ -123,8 +124,8 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'What we believe',
         items: [
           {
-            title: 'Excellence is a daily habit',
-            text: 'Talent sets the ceiling; daily standards decide who reaches it. We measure the work, not the potential.',
+            title: 'Excellence without trade-offs',
+            text: 'Competitive excellence should never come at the cost of academic ability, personal growth, or a student’s future options. We built JMC to make that trade-off unnecessary, not to manage it.',
           },
           {
             title: 'Athlete first, person always',
@@ -132,15 +133,15 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Development is individual',
-            text: 'Every student trains and studies on a plan built for their age, ability, and goals — not a fixed pace.',
+            text: 'Every student trains and studies on a plan built for their age, academic background, competitive level, and goals — not a fixed pace.',
           },
           {
             title: 'Honesty over hype',
-            text: 'Athletes and families get a straight assessment of where they stand and what it will take.',
+            text: 'We do not promise admission to any specific school, university, or professional program. What we promise is a professional plan, continuous follow-up, and a student who arrives at that decision genuinely prepared.',
           },
           {
-            title: 'A team you live with',
-            text: 'Living together builds the accountability and belonging that make hard training sustainable.',
+            title: 'Attention, not scale',
+            text: 'Small cohorts and a named Student-Athlete Manager exist so that no student’s development depends on being remembered in a crowd.',
           },
         ],
       },
@@ -148,7 +149,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'prose',
         heading: 'Our vision',
         paragraphs: [
-          'To become the school families choose when a Grade 6–12 student is serious about both sides of their future: a campus where the training, the coaching, the academics, and the college guidance all meet a standard that holds up next to any program in the country.',
+          'To become the Academy families choose when a Grade 6–12 student-athlete is serious about both sides of their future: where the training, the coaching, the academics, and the college guidance all meet a standard that holds up next to any program in the country.',
         ],
       },
       visitCta,
@@ -157,14 +158,14 @@ export const pageContent: Record<string, PageContent> = {
 
   'about/academy-overview': {
     intro:
-      'A season-long sports academy across two Southern California campuses, built for athletes who intend to play in college and beyond.',
+      'A private, integrated student-development and athletic-management academy across two Southern California campuses, built for athletes who intend to play in college and beyond.',
     blocks: [
       {
         type: 'prose',
-        heading: 'One schedule. One standard.',
+        heading: 'A private, integrated student-development and athletic-management academy',
         paragraphs: [
-          'JMC is not a school with a strong athletic program, and not a club team that happens to offer classes. The academy is built around a single daily schedule that puts elite training, school, recovery, and recruiting in the same place, run by the same staff, toward the same goal.',
-          'Athletes train through the season in ice hockey, golf, tennis, or lacrosse, live with their teammates, take college-preparatory classes taught by our own faculty, and work with a five-person team that guides them to the right college program.',
+          'JMC Academy is not a school with a strong athletic program, and not a club team that happens to offer classes. We are the system that sits underneath both: academics, elite training, competition, physical development, residential life, and college athletic recruiting, coordinated as one continuous plan by one team, for grade 6–12 student-athletes.',
+          'Athletes pursue a rigorous, college-preparatory course load — including Advanced Placement coursework where it fits — at value-aligned partner day schools, then move directly into JMC’s own training, tutoring, and development program every afternoon and evening. One student. One plan. One team accountable for all of it.',
         ],
       },
       {
@@ -176,11 +177,103 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'stats',
         items: [
-          { value: '4', label: 'Sports, boys and girls' },
-          { value: '8', label: 'Season-long programs' },
+          { value: '5', label: 'Sports, boys and girls' },
+          { value: '10', label: 'Season-long programs' },
           { value: '2', label: 'Southern California campuses' },
           { value: '5:1', label: 'Professionals per athlete' },
         ],
+      },
+      {
+        type: 'numbered',
+        heading: 'Academic rigor, by design',
+        items: [
+          {
+            title: 'Partner day schools, not a watered-down curriculum',
+            text: 'Students attend rigorous, value-aligned American private day schools for their formal academic education — real classrooms, real teachers, real transcripts — with course pacing planned against each student’s age, academic background, and long-term goals, including AP coursework where the school’s schedule and the student’s readiness support it.',
+          },
+          {
+            title: 'Daily small-group coaching',
+            text: 'Every student trains in small, personalized groups every single day — never lost in a crowd, never coasting.',
+          },
+          {
+            title: 'Nightly private tutoring, every subject',
+            text: 'Every evening, students receive private or small-group academic tutoring across every subject on their course load, tracked and adjusted as grades come in.',
+          },
+          {
+            title: 'A private, full-time counselor',
+            text: 'Each student has a dedicated academic counselor available throughout the week to guide course selection, monitor progress, and plan the path ahead — not a shared office visited once a term.',
+          },
+          {
+            title: 'Small, bespoke cohorts',
+            text: 'Class groups and training groups stay small and closely watched, by design, so no student’s time — or potential — goes to waste.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'A day in the life',
+        paragraphs: [
+          'Illustrated below through the day of a JMC ice hockey player — the same structure, adjusted by sport and training location, holds across every program.',
+        ],
+      },
+      {
+        type: 'table',
+        heading: 'A typical student-athlete day',
+        columns: ['Time', 'Block', 'Focus'],
+        rows: [
+          ['7:00 AM', 'Wake up', 'Morning routine'],
+          ['7:30 AM', 'Breakfast', 'A nutritious buffet — fresh fruit, protein, and complex carbohydrates'],
+          ['Morning', 'Academics', 'A full course load at the partner day school, including AP coursework'],
+          ['2:30 PM', 'Dismissal', 'Bussed directly from school to the training facility'],
+          ['2:30–4:00 PM', 'Club training', 'Club team practice, about 1.5 hours'],
+          ['4:00–5:00 PM', 'JMC training', 'Private small-group session with JMC coaching staff, about 1 hour'],
+          ['~6:00 PM', 'Return home', 'Back to residence'],
+          ['6:00–7:00 PM', 'Dinner & wind-down', 'Shower, relaxation, and a home-cooked dinner'],
+          ['7:00–9:00 PM', 'Tutoring', 'Private academic tutoring, about 2 hours'],
+          ['9:00–10:30 PM', 'Free time', 'Unstructured personal time'],
+          ['10:30 PM', 'Lights out', 'Protected sleep'],
+        ],
+        note: 'A sample day for an ice hockey player, not a fixed schedule. Timing shifts by sport, training location, student age, and the partner school’s calendar — and adequate rest is always preserved between training and academics.',
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          'Dinner is home-cooked American cuisine, prepared by our chefs using fresh, locally sourced ingredients whenever possible — because a student’s development depends as much on recovery and nutrition as it does on repetitions.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Professional coaching & athlete counseling',
+        paragraphs: [
+          'Every head coach at JMC is directly involved in the prep-school and college recruiting process — not just training. Coaches travel regularly to accompany athletes to elite tryouts, handle communication with school and college coaches, and work alongside each student’s Student-Athlete Manager to keep training, competition, and the path ahead moving together, not treated as separate conversations.',
+        ],
+      },
+      {
+        type: 'features',
+        items: [
+          {
+            title: 'Head coaches in recruiting',
+            text: 'Involved in every athlete’s tryout, showcase, and recruiting calendar — not a separate office down the hall.',
+          },
+          {
+            title: 'Coaches travel with athletes',
+            text: 'Our staff accompanies students to elite tryouts and competitions in person, handling logistics and communication.',
+          },
+          {
+            title: 'A dedicated Student-Athlete Manager',
+            text: 'One coordinator, available all week, responsible for the whole picture — academics, training, competition, and family communication.',
+          },
+          {
+            title: 'Extreme attention, by design',
+            text: 'Small, bespoke cohorts mean nothing falls through the cracks and no time is wasted. We do not promise a specific school, university, or professional outcome — we promise a professional plan, continuous follow-up, and a student who is genuinely ready to compete for it.',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: 'Value-aligned partner day schools',
+        text: 'We partner with prestigious American private day schools that share our educational philosophy — immersing students in American culture, English, and a genuine, traditional school life, while preparing them seriously, academically and personally.',
+        links: [{ label: 'Our Campuses', to: '/about/campuses' }],
       },
       {
         type: 'features',
@@ -200,7 +293,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Academics that fit training',
-            text: 'Small classes and study hours scheduled around daily sessions, competition, and travel.',
+            text: 'Small classes and nightly tutoring scheduled around daily sessions, competition, and travel.',
           },
           {
             title: '5-to-1 recruiting',
@@ -222,12 +315,16 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'features',
         items: [
-          { title: 'Head of Program', text: 'Jonathan Reyes. Overall leadership, culture, and standards.' },
+          { title: 'Head of Academy', text: 'Jonathan Reyes. Overall leadership, culture, and standards.' },
+          { title: 'Director of Student Life', text: 'To be announced. Residential life, daily routine, and student wellbeing.' },
           { title: 'Director of Athletics', text: 'To be announced. Coaching staffs, competition, and program standards.' },
-          { title: 'Director of Performance', text: 'To be announced. Strength, conditioning, nutrition, and recovery.' },
-          { title: 'Dean of Academics', text: 'To be announced. Curriculum, teaching, and academic eligibility.' },
-          { title: 'Director of Recruiting', text: 'To be announced. The 5-to-1 model and college placement.' },
-          { title: 'Director of Residential Life', text: 'To be announced. Residence halls, daily routine, and student wellbeing.' },
+          { title: 'Head Coach, Ice Hockey', text: 'To be announced. Program standards, recruiting, and athlete development for boys’ and girls’ ice hockey.' },
+          { title: 'Head Coach, Golf', text: 'To be announced. Program standards, recruiting, and athlete development for boys’ and girls’ golf.' },
+          { title: 'Head Coach, Tennis', text: 'To be announced. Program standards, recruiting, and athlete development for boys’ and girls’ tennis.' },
+          { title: 'Head Coach, Fencing', text: 'To be announced. Program standards, recruiting, and athlete development for boys’ and girls’ fencing.' },
+          { title: 'Head Coach, Lacrosse', text: 'To be announced. Program standards, recruiting, and athlete development for boys’ and girls’ lacrosse.' },
+          { title: 'Director of Admissions', text: 'To be announced. Applications, athletic evaluation, and enrollment.' },
+          { title: 'Director of Finance & Operations', text: 'To be announced. Tuition, facilities, and day-to-day operations.' },
         ],
       },
       visitCta,
@@ -240,7 +337,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'prose',
         paragraphs: [
-          'JMC trains on two campuses, chosen for their venues and their climate. Athletes live, train, and recover on campus; classes are taught by JMC faculty, so students earn a rigorous college-preparatory diploma while training at a professional standard.',
+          'JMC trains on two campuses, chosen for their venues and their climate. Athletes live, train, and recover on campus; classes are taken at our value-aligned partner day schools, so students earn a rigorous college-preparatory diploma while training at a professional standard.',
           'Both campuses share the same daily structure, the same performance staff standards, and the same 5-to-1 counseling model. Which campus an athlete joins depends mainly on their sport.',
         ],
       },
@@ -248,8 +345,8 @@ export const pageContent: Record<string, PageContent> = {
         type: 'features',
         heading: 'Irvine Campus — Orange County',
         items: [
-          { title: 'Academic program', text: 'Small, discussion-based classes taught by JMC faculty.' },
-          { title: 'Primary sports', text: 'Ice hockey, lacrosse, and tennis.' },
+          { title: 'Academic program', text: 'A rigorous, college-preparatory course load at Capistrano Valley Christian School.' },
+          { title: 'Primary sports', text: 'Ice hockey, lacrosse, tennis, and fencing.' },
           { title: 'Training venues', text: 'Home rink, full-size turf field, and hard courts.' },
           { title: 'Performance center', text: 'Strength, conditioning, and testing space for daily use.' },
           { title: 'Residence', text: 'Two athletes per room, with residential staff on every floor.' },
@@ -260,7 +357,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'features',
         heading: 'San Diego Campus',
         items: [
-          { title: 'Academic program', text: 'Small, discussion-based classes taught by JMC faculty.' },
+          { title: 'Academic program', text: 'A rigorous, college-preparatory course load at Maranatha Christian School.' },
           { title: 'Primary sports', text: 'Golf, tennis, and lacrosse.' },
           { title: 'Training venues', text: 'Championship coastal course access, hard courts, and turf field.' },
           { title: 'Performance center', text: 'Strength, conditioning, and recovery alongside sports medicine.' },
@@ -272,7 +369,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'image',
         src: '/images/academic-seminar.jpg',
         alt: 'A teacher and students working closely in a seminar-style classroom',
-        caption: 'Academics on both campuses — small, discussion-based classes taught by JMC faculty',
+        caption: 'Academics on both campuses — a rigorous, college-preparatory course load at our partner day schools',
       },
       {
         type: 'gallery',
@@ -295,7 +392,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           { value: '2', label: 'Campuses' },
           { value: '1', label: 'Academic program across both campuses' },
-          { value: '4', label: 'Sports across both campuses' },
+          { value: '5', label: 'Sports across both campuses' },
         ],
       },
       visitCta,

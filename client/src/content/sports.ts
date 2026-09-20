@@ -1,20 +1,24 @@
 import { useLocale } from './locale'
 import { kinds as kindsZh } from './sports.zh'
 
-export type SportKind = 'ice-hockey' | 'golf' | 'tennis' | 'lacrosse'
+export type SportKind = 'ice-hockey' | 'golf' | 'tennis' | 'lacrosse' | 'fencing'
 
 type Session = { day: string; morning: string; afternoon: string }
+
+// A real photo when we have one; a placeholder label when we don't yet (e.g. a newly
+// announced program with no venue photography shot).
+type SportImage = { src: string; alt: string } | { placeholder: string }
 
 export type KindDetails = {
   sport: string
   campus: string
   scheduleTab: string
   opponentColumn: string
-  hero: { src: string; alt: string }
+  hero: SportImage
   intro: (title: string) => string
   detail: string
   // PLACEHOLDER venue copy: confirm facility details once partner venues are final.
-  venue: { text: string; features: string[]; gallery: { src: string; alt: string }[] }
+  venue: { text: string; features: string[]; gallery: SportImage[] }
   staff: string[]
   rosterColumns: string[]
   focus: string[]
@@ -229,6 +233,44 @@ export const kinds: Record<SportKind, KindDetails> = {
     recruiting:
       'Every player is supported by an athlete recruiter, coach, academic advisor, student assistant, and family advisor who together plan showcase exposure, prepare highlight film, lead outreach to college coaches, and guide families through NCAA rules and offers.',
   },
+
+  fencing: {
+    sport: 'Fencing',
+    campus: 'Irvine Campus',
+    scheduleTab: 'Competitions',
+    opponentColumn: 'Competition',
+    hero: { placeholder: 'Fencing at JMC' },
+    intro: (title) =>
+      `${title} is our newest program, built for fencers competing toward national qualifiers and college recruitment. Fencers train daily under a dedicated coaching staff, with individual plans by weapon, covering footwork, blade work, tactics, and bout strategy.`,
+    detail:
+      'Daily bouting and drill work are paired with footwork and conditioning sessions, video review, and recovery support from our performance team. A regional and national competition schedule, combined with our 5-to-1 counseling model, gives every fencer a clear route to college fencing.',
+    venue: {
+      text: 'Fencers train in a dedicated indoor strip space at the Irvine campus, with direct access to strength training and sports medicine. As our newest program, we are continuing to build out dedicated venue photography.',
+      features: ['Indoor fencing strips', 'Electric scoring equipment', 'Video review', 'Strength & sports medicine'],
+      gallery: [],
+    },
+    staff: ['Head Coach', 'Assistant Coach', 'Footwork & Conditioning Coach', 'Strength & Conditioning Coach'],
+    rosterColumns: ['Name', 'Weapon', 'Grade', 'Hometown'],
+    focus: [
+      'Footwork & distance',
+      'Blade work by weapon',
+      'Bout tactics & strategy',
+      'Video analysis',
+      'Strength & power',
+      'Mobility & recovery',
+    ],
+    week: [
+      { day: 'Monday', morning: 'Strength training', afternoon: 'Footwork & blade work' },
+      { day: 'Tuesday', morning: 'Footwork & conditioning', afternoon: 'Bouting practice' },
+      { day: 'Wednesday', morning: 'Strength training', afternoon: 'Footwork & blade work' },
+      { day: 'Thursday', morning: 'Mobility & recovery', afternoon: 'Bouting practice' },
+      { day: 'Friday', morning: 'Pre-competition activation', afternoon: 'Competition or practice' },
+      { day: 'Saturday', morning: 'Competition day', afternoon: 'Recovery' },
+      { day: 'Sunday', morning: 'Rest', afternoon: 'Rest' },
+    ],
+    recruiting:
+      'Every fencer is supported by an athlete recruiter, coach, academic advisor, student assistant, and family advisor who together build a recruiting plan, prepare bout footage, lead outreach to college coaches, and guide families through NCAA rules and offers.',
+  },
 }
 
 const teamLabelZh: Record<Sport['team'], string> = { Boys: '男子', Girls: '女子' }
@@ -247,7 +289,7 @@ const makeSport = (team: Sport['team'], kind: SportKind, kindsSource: Record<Spo
   }
 }
 
-export const sportKinds: SportKind[] = ['ice-hockey', 'golf', 'tennis', 'lacrosse']
+export const sportKinds: SportKind[] = ['ice-hockey', 'golf', 'tennis', 'lacrosse', 'fencing']
 
 const buildSports = (kindsSource: Record<SportKind, KindDetails>, locale: 'en' | 'zh'): Sport[] =>
   sportKinds.flatMap((kind) => [

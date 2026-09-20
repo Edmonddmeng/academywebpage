@@ -25,7 +25,7 @@ export const navSections: NavSection[] = [
       zh: '我们是谁,我们的理念,以及我们训练所在的两个校区。',
     },
     links: [
-      { label: { en: 'Head of Program', zh: '项目总监寄语' }, slug: 'head-of-program' },
+      { label: { en: 'Head of Academy', zh: '院长寄语' }, slug: 'head-of-academy' },
       { label: { en: 'Mission & Vision', zh: '使命与愿景' }, slug: 'mission-and-vision' },
       { label: { en: 'Academy Overview', zh: '学院概览' }, slug: 'academy-overview' },
       { label: { en: 'Campuses', zh: '校区' }, slug: 'campuses' },
@@ -64,8 +64,8 @@ export const navSections: NavSection[] = [
     label: { en: 'Athletic', zh: '体育' },
     slug: 'athletic',
     blurb: {
-      en: 'Eight season-long programs in ice hockey, golf, tennis, and lacrosse.',
-      zh: '冰球、高尔夫、网球与长曲棍球,共八个整季项目。',
+      en: 'Ten season-long programs in ice hockey, golf, tennis, fencing, and lacrosse.',
+      zh: '冰球、高尔夫、网球、击剑与长曲棍球,共十个整季项目。',
     },
     links: [
       { label: { en: 'Boys Ice Hockey', zh: '男子冰球' }, slug: 'boys-ice-hockey' },
@@ -74,6 +74,8 @@ export const navSections: NavSection[] = [
       { label: { en: 'Girls Golf', zh: '女子高尔夫' }, slug: 'girls-golf' },
       { label: { en: 'Boys Tennis', zh: '男子网球' }, slug: 'boys-tennis' },
       { label: { en: 'Girls Tennis', zh: '女子网球' }, slug: 'girls-tennis' },
+      { label: { en: 'Boys Fencing', zh: '男子击剑' }, slug: 'boys-fencing' },
+      { label: { en: 'Girls Fencing', zh: '女子击剑' }, slug: 'girls-fencing' },
       { label: { en: 'Boys Lacrosse', zh: '男子长曲棍球' }, slug: 'boys-lacrosse' },
       { label: { en: 'Girls Lacrosse', zh: '女子长曲棍球' }, slug: 'girls-lacrosse' },
       { label: { en: 'Coaching Staff', zh: '教练团队' }, slug: 'coaching-staff' },

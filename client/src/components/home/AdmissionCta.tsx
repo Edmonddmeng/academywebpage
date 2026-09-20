@@ -21,13 +21,13 @@ const actionsCopy = {
 const copy = {
   en: {
     eyebrow: 'Admission',
-    heading: 'Rolling admission for ice hockey, golf, tennis, and lacrosse athletes',
+    heading: 'Rolling admission for ice hockey, golf, tennis, fencing, and lacrosse athletes',
     intro:
       'We welcome athletes from across the country and around the world throughout the year, at both the Irvine and San Diego campuses.',
   },
   zh: {
     eyebrow: '招生',
-    heading: '面向冰球、高尔夫、网球与长曲棍球运动员的滚动招生',
+    heading: '面向冰球、高尔夫、网球、击剑与长曲棍球运动员的滚动招生',
     intro: '我们全年欢迎来自全国及世界各地的运动员申请尔湾与圣地亚哥两个校区。',
   },
 }

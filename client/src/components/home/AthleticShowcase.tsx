@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from '../icons'
-import { Eyebrow } from '../ui'
+import { Eyebrow, ImagePlaceholder } from '../ui'
 import Reveal from '../Reveal'
 import { sportKinds, useSports } from '../../content/sports'
 import { useLocale } from '../../content/locale'
 
 const copy = {
-  en: { eyebrow: 'Athletic', heading: 'Season-long, four sports', explore: 'Explore Athletics', boysGirls: 'Boys · Girls' },
-  zh: { eyebrow: '体育', heading: '整季训练,四项体育项目', explore: '了解体育项目', boysGirls: '男子 · 女子' },
+  en: { eyebrow: 'Athletic', heading: 'Season-long, five sports', explore: 'Explore Athletics', boysGirls: 'Boys · Girls' },
+  zh: { eyebrow: '体育', heading: '整季训练,五项体育项目', explore: '了解体育项目', boysGirls: '男子 · 女子' },
 }
 
 // A photo-card row — each sport's own hero image standing in for the section's copy.
@@ -32,7 +32,7 @@ export default function AthleticShowcase() {
         </Link>
       </Reveal>
 
-      <ul className="mx-auto mt-10 grid max-w-7xl gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mx-auto mt-10 grid max-w-7xl gap-1.5 sm:grid-cols-2 lg:grid-cols-5">
         {sportKinds.map((kind, i) => {
           const sport = sports.find((s) => s.kind === kind)!
           return (
@@ -41,12 +41,19 @@ export default function AthleticShowcase() {
                 to={`/athletic/boys-${kind}`}
                 className="group relative block aspect-[3/4] overflow-hidden"
               >
-                <img
-                  src={sport.hero.src}
-                  alt={sport.hero.alt}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                />
+                {'src' in sport.hero ? (
+                  <img
+                    src={sport.hero.src}
+                    alt={sport.hero.alt}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                ) : (
+                  <ImagePlaceholder
+                    label={sport.hero.placeholder}
+                    className="absolute inset-0 h-full w-full"
+                  />
+                )}
                 <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
                   <div>

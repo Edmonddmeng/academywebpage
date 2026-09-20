@@ -7,15 +7,15 @@ import { useLocale } from '../../content/locale'
 // Structural facts only — true by design, not projected outcomes.
 const statsCopy = {
   en: [
-    { value: '4', label: 'Sports' },
-    { value: '8', label: 'Programs' },
+    { value: '5', label: 'Sports' },
+    { value: '10', label: 'Programs' },
     { value: '2', label: 'Campuses' },
     { value: '6-12', label: 'Grades served' },
     { value: '5:1', label: 'Staff per athlete' },
   ],
   zh: [
-    { value: '4', label: '项体育项目' },
-    { value: '8', label: '个整季项目' },
+    { value: '5', label: '项体育项目' },
+    { value: '10', label: '个整季项目' },
     { value: '2', label: '个校区' },
     { value: '6-12', label: '招生年级' },
     { value: '5:1', label: '师生配比' },
@@ -24,7 +24,7 @@ const statsCopy = {
 
 const copy = {
   en: {
-    sports: 'Ice Hockey · Golf · Tennis · Lacrosse',
+    sports: 'Ice Hockey · Golf · Tennis · Fencing · Lacrosse',
     h1: (
       <>
         Student-athletes,
@@ -37,7 +37,7 @@ const copy = {
     why: 'Why JMC',
   },
   zh: {
-    sports: '冰球 · 高尔夫 · 网球 · 长曲棍球',
+    sports: '冰球 · 高尔夫 · 网球 · 击剑 · 长曲棍球',
     h1: (
       <>
         学生运动员,

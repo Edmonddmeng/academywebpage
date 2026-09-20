@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ButtonLink } from '../ui'
+import { ButtonLink, ImagePlaceholder } from '../ui'
 import type { Sport } from '../../content/sports'
 import type { SportTab } from '../../content/sportTabs'
 import { useLocale } from '../../content/locale'
@@ -105,6 +105,7 @@ const copy = {
     seasonArchives: 'Season archives',
     seasonArchivesText:
       'Results, rosters, and highlights from each season will be archived here, beginning with our inaugural season.',
+    venuePhotos: 'Venue photography coming soon',
   },
   zh: {
     date: '日期',
@@ -137,6 +138,7 @@ const copy = {
     alumni: (title: string) => `随着我们首届学生毕业,在大学及以后继续参赛的${title}校友将在此展示。`,
     seasonArchives: '历史赛季存档',
     seasonArchivesText: '每个赛季的比赛结果、球员名单与精彩集锦都将在此存档,从我们的首个赛季开始。',
+    venuePhotos: '场地实景照片拍摄中,敬请期待',
   },
 }
 
@@ -228,19 +230,25 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
               </li>
             ))}
           </ul>
-          <div
-            className={`grid gap-8 md:gap-12 ${sport.venue.gallery.length > 1 ? 'md:grid-cols-2' : ''}`}
-          >
-            {sport.venue.gallery.map((photo) => (
-              <img
-                key={photo.src}
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                className="aspect-[3/2] w-full object-cover"
-              />
-            ))}
-          </div>
+          {sport.venue.gallery.length > 0 ? (
+            <div className={`grid gap-8 md:gap-12 ${sport.venue.gallery.length > 1 ? 'md:grid-cols-2' : ''}`}>
+              {sport.venue.gallery.map((photo, i) =>
+                'src' in photo ? (
+                  <img
+                    key={photo.src}
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    className="aspect-[3/2] w-full object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder key={i} label={photo.placeholder} className="aspect-[3/2] w-full" />
+                ),
+              )}
+            </div>
+          ) : (
+            <ImagePlaceholder label={t.venuePhotos} className="aspect-[21/9] w-full" />
+          )}
         </div>
       )
 
