@@ -48,9 +48,10 @@ export const kinds: Record<SportKind, KindDetails> = {
     detail:
       'Daily ice sessions are paired with strength and conditioning, video analysis, and recovery work led by our performance team. A high-tier club and showcase schedule, combined with our 5-to-1 counseling model, gives every player a clear route to the next level.',
     venue: {
-      text: 'Players train and compete at a dedicated home rink with team locker rooms, a video room, and direct access to strength training and sports medicine.',
-      features: ['Home rink', 'Team locker rooms', 'Video room', 'Strength & sports medicine'],
+      text: 'Players train and compete at Great Park Ice Arena in Irvine, with team locker rooms, a video room, and direct access to strength training and sports medicine.',
+      features: ['Great Park Ice Arena', 'Team locker rooms', 'Video room', 'Strength & sports medicine'],
       gallery: [
+        { src: '/images/great-park-ice-arena.jpg', alt: 'Aerial view of Great Park Ice Arena in Irvine' },
         { src: '/images/hockey-sticks.jpg', alt: 'Sticks resting against the boards at the rink' },
       ],
     },
@@ -98,10 +99,11 @@ export const kinds: Record<SportKind, KindDetails> = {
     detail:
       'Practice combines technology-assisted swing analysis, on-course play, and dedicated short-game work, supported by strength, mobility, and nutrition programs designed for golfers. A competitive tournament schedule and our 5-to-1 counseling model help each player build a college golf résumé.',
     venue: {
-      text: 'Golfers practice and play at championship courses near campus, with full practice ranges, short-game areas, and indoor swing analysis. Southern California weather supports outdoor training for most of the season.',
-      features: ['Practice range', 'Short-game areas', 'Indoor swing analysis', 'On-course play'],
+      text: 'Golfers train and play at Strawberry Farms Golf Course, an elite SCPGA Junior development course, with regular access to Torrey Pines Golf Course in San Diego for tournament-caliber rounds. Southern California weather supports outdoor training for most of the season.',
+      features: ['Strawberry Farms Golf Course', 'Torrey Pines Golf Course', 'Indoor swing analysis', 'On-course play'],
       gallery: [
-        { src: '/images/golf-course-hole.jpg', alt: 'A green on a clifftop course above the ocean at sunset' },
+        { src: '/images/strawberry-farms-golf.jpg', alt: 'A lakeside green at Strawberry Farms Golf Course' },
+        { src: '/images/torrey-pines-golf.jpg', alt: 'A cliffside green above the Pacific at Torrey Pines Golf Course at sunset' },
       ],
     },
     staff: [
@@ -239,15 +241,18 @@ export const kinds: Record<SportKind, KindDetails> = {
     campus: 'Irvine Campus',
     scheduleTab: 'Competitions',
     opponentColumn: 'Competition',
-    hero: { placeholder: 'Fencing at JMC' },
+    hero: {
+      src: '/images/irvine-fencing-center.jpg',
+      alt: 'The indoor fencing strips at the Irvine Fencing Center',
+    },
     intro: (title) =>
       `${title} is our newest program, built for fencers competing toward national qualifiers and college recruitment. Fencers train daily under a dedicated coaching staff, with individual plans by weapon, covering footwork, blade work, tactics, and bout strategy.`,
     detail:
       'Daily bouting and drill work are paired with footwork and conditioning sessions, video review, and recovery support from our performance team. A regional and national competition schedule, combined with our 5-to-1 counseling model, gives every fencer a clear route to college fencing.',
     venue: {
-      text: 'Fencers train in a dedicated indoor strip space at the Irvine campus, with direct access to strength training and sports medicine. As our newest program, we are continuing to build out dedicated venue photography.',
-      features: ['Indoor fencing strips', 'Electric scoring equipment', 'Video review', 'Strength & sports medicine'],
-      gallery: [],
+      text: 'Fencers train at the Irvine Fencing Center, with direct access to strength training and sports medicine at the Irvine campus.',
+      features: ['Irvine Fencing Center', 'Electric scoring equipment', 'Video review', 'Strength & sports medicine'],
+      gallery: [{ src: '/images/irvine-fencing-center.jpg', alt: 'The indoor fencing strips at the Irvine Fencing Center' }],
     },
     staff: ['Head Coach', 'Assistant Coach', 'Footwork & Conditioning Coach', 'Strength & Conditioning Coach'],
     rosterColumns: ['Name', 'Weapon', 'Grade', 'Hometown'],

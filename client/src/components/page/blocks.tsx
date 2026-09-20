@@ -60,7 +60,12 @@ export function PageBlock({ block }: { block: Block }) {
       return (
         <section>
           {block.heading && <Heading>{block.heading}</Heading>}
-          <ul className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3 ${block.heading ? 'mt-8' : ''}`}>
+          {block.text && (
+            <p className={`max-w-3xl text-lg leading-relaxed text-ink/75 ${block.heading ? 'mt-4' : ''}`}>
+              {block.text}
+            </p>
+          )}
+          <ul className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3 ${block.heading || block.text ? 'mt-8' : ''}`}>
             {block.items.map((item) => (
               <li key={item.title} className="border border-dotted border-ink/45 p-6">
                 <h3 className="font-serif text-2xl">{item.title}</h3>

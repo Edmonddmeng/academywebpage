@@ -16,9 +16,12 @@ export const kinds: Record<SportKind, KindDetails> = {
     detail:
       '每日冰上训练课与体能团队主导的力量体能训练、录像分析和恢复训练相结合。高水平的俱乐部与公开赛赛程,加上我们的5比1辅导模式,为每一位球员通向更高水平提供清晰的路径。',
     venue: {
-      text: '球员在专属主场冰场训练与比赛,配备球队更衣室、录像分析室,并可直接使用力量训练与运动医学设施。',
-      features: ['主场冰场', '球队更衣室', '录像分析室', '力量训练与运动医学'],
-      gallery: [{ src: '/images/hockey-sticks.jpg', alt: '靠在挡板上的冰球杆' }],
+      text: '球员在尔湾的 Great Park Ice Arena 训练与比赛,配备球队更衣室、录像分析室,并可直接使用力量训练与运动医学设施。',
+      features: ['Great Park Ice Arena', '球队更衣室', '录像分析室', '力量训练与运动医学'],
+      gallery: [
+        { src: '/images/great-park-ice-arena.jpg', alt: '尔湾 Great Park Ice Arena 训练场地航拍' },
+        { src: '/images/hockey-sticks.jpg', alt: '靠在挡板上的冰球杆' },
+      ],
     },
     staff: ['主教练', '助理教练', '守门员教练', '技术与滑行教练', '录像分析师', '体能教练'],
     rosterColumns: ['号码', '姓名', '位置', '年级', '家乡'],
@@ -50,9 +53,12 @@ export const kinds: Record<SportKind, KindDetails> = {
     detail:
       '训练结合科技辅助挥杆分析、实战打球与专项短杆训练,并配有为高尔夫球员设计的力量、灵活性与营养项目。具有竞争力的赛事日程,加上我们的5比1辅导模式,帮助每位球员建立起大学高尔夫履历。',
     venue: {
-      text: '球员在校园附近的高水准球场训练与比赛,配备完整练习场、短杆区域与室内挥杆分析设备。南加州的天气让大部分赛季都能进行户外训练。',
-      features: ['练习场', '短杆区域', '室内挥杆分析', '实战打球'],
-      gallery: [{ src: '/images/golf-course-hole.jpg', alt: '夕阳下悬崖球场旁海边的果岭' }],
+      text: '球员在 Strawberry Farms Golf Course——一座高水准的 SCPGA 青少年发展球场——训练与比赛,并可定期前往圣地亚哥的 Torrey Pines Golf Course 进行赛事级别的实战打球。南加州的天气让大部分赛季都能进行户外训练。',
+      features: ['Strawberry Farms Golf Course', 'Torrey Pines Golf Course', '室内挥杆分析', '实战打球'],
+      gallery: [
+        { src: '/images/strawberry-farms-golf.jpg', alt: 'Strawberry Farms 高尔夫球场湖畔果岭' },
+        { src: '/images/torrey-pines-golf.jpg', alt: '夕阳下 Torrey Pines 高尔夫球场悬崖果岭俯瞰太平洋' },
+      ],
     },
     staff: ['主教练', '助理教练', '短杆教练', '挥杆分析教练', '心理表现教练', '体能教练'],
     rosterColumns: ['姓名', '年级', '差点', '家乡'],
@@ -146,15 +152,18 @@ export const kinds: Record<SportKind, KindDetails> = {
     campus: '尔湾校区',
     scheduleTab: '赛事',
     opponentColumn: '赛事',
-    hero: { placeholder: 'JMC 击剑项目' },
+    hero: {
+      src: '/images/irvine-fencing-center.jpg',
+      alt: 'Irvine Fencing Center 室内剑道',
+    },
     intro: (title) =>
       `${title}是我们最新设立的项目,专为冲击全国资格赛与大学招募而打造。击剑运动员在专属教练团队带领下每日训练,并按所选剑种制定个人计划,涵盖步伐、剑法、战术与比赛策略。`,
     detail:
       '每日实战对抗与技术训练,结合步伐与体能训练、录像回顾及体能团队提供的恢复支持。具有竞争力的地区与全国赛事日程,加上我们的5比1辅导模式,为每位击剑运动员通向大学击剑铺就清晰的道路。',
     venue: {
-      text: '击剑运动员在尔湾校区的专属室内剑道训练,可直接使用力量训练与运动医学设施。作为我们最新设立的项目,场地实景照片仍在拍摄完善中。',
-      features: ['室内剑道', '电子计分设备', '录像回顾', '力量训练与运动医学'],
-      gallery: [],
+      text: '击剑运动员在 Irvine Fencing Center 训练,并可直接使用尔湾校区的力量训练与运动医学设施。',
+      features: ['Irvine Fencing Center', '电子计分设备', '录像回顾', '力量训练与运动医学'],
+      gallery: [{ src: '/images/irvine-fencing-center.jpg', alt: 'Irvine Fencing Center 室内剑道' }],
     },
     staff: ['主教练', '助理教练', '步伐与体能教练', '体能教练'],
     rosterColumns: ['姓名', '剑种', '年级', '家乡'],

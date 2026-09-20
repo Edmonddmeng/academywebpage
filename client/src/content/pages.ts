@@ -6,7 +6,7 @@ import { site } from './site'
 export type Block =
   | { type: 'prose'; heading?: string; paragraphs: string[] }
   | { type: 'numbered'; heading?: string; items: { title: string; text: string }[] }
-  | { type: 'features'; heading?: string; items: { title: string; text?: string }[] }
+  | { type: 'features'; heading?: string; text?: string; items: { title: string; text?: string }[] }
   | { type: 'stats'; items: { value: string; label: string }[] }
   | { type: 'table'; heading?: string; columns: string[]; rows: string[][]; note?: string }
   | {
@@ -109,14 +109,131 @@ export const pageContent: Record<string, PageContent> = {
     blocks: [
       {
         type: 'statement',
-        text: 'JMC exists to build a professional, systematic, and enduring development path for grade 6–12 student-athletes serious about competing at the highest level of their sport — without ever trading away the rigor of their education.',
+        text: 'JMC exists to build a professional, systematic, and sustainable development system for youth student-athletes with athletic potential and long-term goals — one that grows academic ability, competitive ability, physical fitness, self-management, and character together.',
         attribution: 'Our Mission',
       },
       {
         type: 'prose',
         paragraphs: [
-          'Most student-athletes are pushed to choose: train seriously and let school slip, or protect the transcript and train around whatever time is left. We think that choice is a failure of design, not a fact of life. So every student who joins JMC is issued a personal Student-Athlete Development Plan — built around their age, academic background, competitive level, physical development, and long-term goals — and a dedicated Student-Athlete Manager who coordinates their academics, training, competition, and college pathway as one continuous plan, not four separate conversations.',
-          'That plan follows a student from their first term through college placement: academic planning and NCAA eligibility, competitive development and event scheduling, physical training and recovery, residential life, and — when the time comes — college athletic recruiting and admission support. One student. One plan. One team accountable for all of it.',
+          'JMC Academy is a comprehensive education and athletic-development academy focused on the long-term growth of youth student-athletes. Working with private U.S. day schools that share our educational philosophy, we give students a rigorous academic education alongside high-level competitive training, event planning, physical development, health and wellbeing support, residential management, academic tutoring, college and school planning, and athlete career development.',
+          'We care about a student’s results and performance today, but we care more about the long road ahead: the strong boarding schools, universities, college athletic programs, and higher-level competitive platforms they hope to reach. A truly excellent student-athlete has to grow in academics, athletic ability, physical condition, character, self-management, and planning for the future — all at the same time.',
+          'Most student-athletes are pushed to choose: train seriously and let school slip, or protect the transcript and train around whatever time is left. We think that choice is a failure of design, not a fact of life. So every JMC student has a personalized Student-Athlete Development Plan and a dedicated Student-Athlete Manager who coordinates the whole of it, so that at each stage of growth they receive the education, training, and support that fit their own goals.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Our educational philosophy',
+        paragraphs: [
+          'JMC’s model rests on one core belief: outstanding athletic performance should never come at the expense of academic ability, personal growth, or future options. Students grow into better athletes and more mature people inside a demanding academic environment.',
+          'We partner with private U.S. day schools that value traditional education and the all-round development of students. There, students take academically challenging courses, live a real American campus experience, and immerse themselves in an English-speaking environment and American school culture. Course progression is planned around each student’s age, academic foundation, and long-term goals, including Advanced Placement (AP) courses where the school’s schedule and the student’s ability allow.',
+          'Through daily academic tutoring, study plans, grade tracking, and a dedicated advisor, JMC helps students build a solid academic foundation, good study habits, and the ability to solve problems on their own. The goal is not simply harder courses. It is steady progress along the academic path that suits each student, in preparation for applying to strong boarding schools, universities, and college athletic programs.',
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'A complete student-athlete development system',
+        items: [
+          {
+            title: 'Academic education and tutoring',
+            text: 'Partnership with value-aligned private U.S. day schools. Rigorous, challenging coursework. Personalized study planning and progress tracking. Private or small-group tutoring every evening. Subject-by-subject support and grade-improvement plans.',
+          },
+          {
+            title: 'Elite athletic development',
+            text: 'Daily small-group and individualized professional training, matched to each student’s level and age. Club team training and competition. Strength, conditioning, performance, and recovery support. Performance records and periodic development reviews. Coaching teams planned around ice hockey, lacrosse, tennis, and fencing.',
+          },
+          {
+            title: 'Residential and daily-life management',
+            text: 'Housing and day-to-day life management. Nutritionally balanced meals. Daily routine and time management. Supervision, student support, and school–family communication. Coordinated support for health, safety, and personal wellbeing.',
+          },
+          {
+            title: 'College pathway and athlete development',
+            text: 'Planning for U.S. private middle and high schools. College applications and long-term academic planning. College athletic development and recruiting support. NCAA eligibility planning. Competition planning, tryout preparation, and coach communication.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'One student, one plan, one manager',
+        paragraphs: [
+          'JMC treats a student’s daily life and long-term growth as one complete system. Each student receives a personalized Student-Athlete Development Plan, built around age and stage of growth, academic background, competitive level and potential, physical development and training needs, the family’s educational philosophy and long-term goals, and the direction of their school, college, and athletic path.',
+          'A dedicated Student-Athlete Manager coordinates the student’s overall development and keeps every specialist team working toward the same goals, so academics, training, competition, and college planning are one continuous plan, not four separate conversations. Families always know how their child is progressing, and can spend their energy supporting their child and their relationship with them.',
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'What the Student-Athlete Manager coordinates',
+        items: [
+          { title: 'Academics', text: 'Course planning, study progress, grade tracking, and tutoring coordination.' },
+          { title: 'Competition', text: 'Training schedules, event planning, performance records, and coaching-team coordination.' },
+          { title: 'College pathway', text: 'School selection, college development planning, application preparation, and communication.' },
+          { title: 'Daily life', text: 'Daily schedules, residence coordination, family communication, and student support.' },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Coaches and advisors, planning for the long term',
+        paragraphs: [
+          'One of JMC’s core strengths is joining athletic training to academic and future planning. Our team watches how a student performs on the field, and also where they hope to go: which schools, which college programs, and which higher levels of competition.',
+          'Each sport’s Head Coach takes part in a student’s competitive development plan and, within the scope of their role and expertise, supports training, competition, and the competitive pathway. For students with college or athletic goals, coaches work with academic advisors and the student-athlete management team to help students:',
+        ],
+      },
+      {
+        type: 'features',
+        items: [
+          { title: 'Understand their path', text: 'See the competitive development route that fits their level and goals.' },
+          { title: 'Prepare for key moments', text: 'Get ready for important tryouts, selections, and competition opportunities.' },
+          { title: 'Document performance', text: 'Record and organize the performance materials that matter.' },
+          { title: 'Communicate with coaches', text: 'With appropriate authorization, talk with school and college coaches.' },
+          { title: 'Coordinate the calendar', text: 'Balance training, competition, and college planning.' },
+        ],
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          'Where a student’s development calls for it, the JMC team accompanies them to suitable high-level tryouts, events, and selection activities, and helps with the communication and travel that come with them. We value long-term, continuous professional involvement, not temporary help that appears only in application season or before a big game.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Small by design, with close attention',
+        paragraphs: [
+          'Real student development needs sustained attention and individualized management. JMC works with a small cohort so that every student gets substantial professional attention. Small does not mean simply adding more classes or more training hours. It means clearer responsibilities, continuous professional involvement, and personalized planning that raise a student’s chances of getting support that works.',
+        ],
+      },
+      {
+        type: 'features',
+        items: [
+          { title: 'Know each student', text: 'Understand every student’s background and development goals.' },
+          { title: 'Plan for the individual', text: 'Build academic and athletic plans that fit their circumstances.' },
+          { title: 'Track growth', text: 'Follow each student’s progress continuously.' },
+          { title: 'Catch problems early', text: 'Spot issues in learning, training, and daily life quickly.' },
+          { title: 'Keep teams talking', text: 'Communicate effectively across every professional team.' },
+          { title: 'Save time', text: 'Cut the wasted time that comes from a lack of planning.' },
+        ],
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          'Our aim is for every student to grow up with a team that truly knows them, stays involved, and can offer real help.',
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'Value-aligned U.S. private day-school partners',
+        items: [
+          { title: 'Academic quality', text: 'The quality and challenge of the curriculum.' },
+          { title: 'Values', text: 'The school’s educational philosophy and values.' },
+          { title: 'Character and culture', text: 'How it develops student character and shapes campus culture.' },
+          { title: 'English immersion', text: 'An English-language environment and a genuine American campus experience.' },
+          { title: 'International support', text: 'Its ability to support international students.' },
+          { title: 'The right fit', text: 'A match to the student’s age and individual development needs.' },
+        ],
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          'Students attend the partner school for formal academic education, joining classroom learning, campus activities, and school life that suit them. Outside class, JMC provides professional athletic training, academic tutoring, daily-life management, and long-term development support.',
+          'We want students to keep improving as athletes, and also to build English communication, independent living, a sense of responsibility, and the ability to work with others in a real American school setting. The aim of education is not only to help students reach the next school. It is to prepare them for future study, life, and participation in society.',
         ],
       },
       {
@@ -129,7 +246,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Athlete first, person always',
-            text: 'Careers end. Character, discipline, and the ability to work with others do not.',
+            text: 'Careers end. Character, discipline, and the ability to work with others do not. We want every student to become someone with a solid academic foundation, steady competitive ability, mature personal character, and the capacity to develop independently.',
           },
           {
             title: 'Development is individual',
@@ -137,12 +254,31 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Honesty over hype',
-            text: 'We do not promise admission to any specific school, university, or professional program. What we promise is a professional plan, continuous follow-up, and a student who arrives at that decision genuinely prepared.',
+            text: 'JMC does not promise that any student will be admitted to a particular school, university, or professional team. What we promise is professional planning, continuous follow-up, and targeted coordination of resources, so students are better prepared for the competition and choices ahead.',
           },
           {
             title: 'Attention, not scale',
             text: 'Small cohorts and a named Student-Athlete Manager exist so that no student’s development depends on being remembered in a crowd.',
           },
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'Our long-term mission',
+        items: [
+          { title: 'Academic ability' },
+          { title: 'Athletic ability' },
+          { title: 'Physical fitness and recovery' },
+          { title: 'Self-management' },
+          { title: 'Character and responsibility' },
+          { title: 'College and future competitiveness' },
+        ],
+      },
+      {
+        type: 'prose',
+        paragraphs: [
+          'Through school education, professional training, a competition system, academic tutoring, daily-life management, college planning, and continuous student management, JMC hopes to help every student build a clear direction and receive the right support at each stage of growth.',
+          'We believe a student’s long-term success is not decided by a single game, a single admission result, or a single short-term achievement. What has real value is a student who gradually becomes someone with a solid academic foundation, steady competitive ability, mature personal character, and the ability to develop independently.',
         ],
       },
       {
@@ -347,9 +483,9 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           { title: 'Academic program', text: 'A rigorous, college-preparatory course load at Capistrano Valley Christian School.' },
           { title: 'Primary sports', text: 'Ice hockey, lacrosse, tennis, and fencing.' },
-          { title: 'Training venues', text: 'Home rink, full-size turf field, and hard courts.' },
+          { title: 'Training venues', text: 'Great Park Ice Arena, Irvine Fencing Center, Great Park Sports Park turf fields, and hard courts.' },
           { title: 'Performance center', text: 'Strength, conditioning, and testing space for daily use.' },
-          { title: 'Residence', text: 'Two athletes per room, with residential staff on every floor.' },
+          { title: 'Residence', text: 'Student-athletes live together in nearby Irvine Company apartment communities, with on-site pools, a fitness center, and residential staff.' },
           { title: 'Location', text: 'Minutes from the Orange County coast, close to John Wayne Airport.' },
         ],
       },
@@ -359,10 +495,37 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           { title: 'Academic program', text: 'A rigorous, college-preparatory course load at Maranatha Christian School.' },
           { title: 'Primary sports', text: 'Golf, tennis, and lacrosse.' },
-          { title: 'Training venues', text: 'Championship coastal course access, hard courts, and turf field.' },
+          { title: 'Training venues', text: 'Torrey Pines Golf Course, hard courts, and turf field.' },
           { title: 'Performance center', text: 'Strength, conditioning, and recovery alongside sports medicine.' },
           { title: 'Residence', text: 'Two athletes per room, with residential staff on every floor.' },
           { title: 'Location', text: 'Coastal San Diego, close to San Diego International Airport.' },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Where students live',
+        paragraphs: [
+          'Near the Irvine campus, student-athletes live together in Irvine Company apartment communities — a short drive from training and from Capistrano Valley Christian School, with resort-style pools, a full fitness center, landscaped courtyards, and on-site residential staff.',
+        ],
+      },
+      {
+        type: 'gallery',
+        items: [
+          {
+            src: '/images/irvine-apartments-pool.jpg',
+            alt: 'A resort-style pool at dusk in an Irvine Company apartment community',
+            caption: 'On-site pool and courtyard',
+          },
+          {
+            src: '/images/irvine-apartments-interior.jpg',
+            alt: 'A furnished living room in an Irvine Company apartment',
+            caption: 'A shared living space',
+          },
+          {
+            src: '/images/irvine-apartments-gym.jpg',
+            alt: 'A fitness center with cardio and strength equipment',
+            caption: 'On-site fitness center',
+          },
         ],
       },
       {
@@ -376,14 +539,29 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'Where we train',
         items: [
           {
-            src: '/images/hockey-sticks.jpg',
-            alt: 'Sticks resting against the boards at the rink',
-            caption: 'Irvine — the home rink',
+            src: '/images/great-park-ice-arena.jpg',
+            alt: 'Aerial view of the Great Park Ice Arena training facility in Irvine',
+            caption: 'Irvine — Great Park Ice Arena, home ice for our hockey program',
           },
           {
-            src: '/images/golf-course-aerial.jpg',
-            alt: 'Aerial view of a coastal golf course along the Pacific',
-            caption: 'San Diego — championship coastal golf',
+            src: '/images/great-park-sports-park.jpg',
+            alt: 'Aerial view of turf fields and courts at the Orange County Great Park Sports Park',
+            caption: 'Irvine — Great Park Sports Park, turf fields for lacrosse',
+          },
+          {
+            src: '/images/irvine-fencing-center.jpg',
+            alt: 'The indoor fencing strips at the Irvine Fencing Center',
+            caption: 'Irvine — Irvine Fencing Center, home strips for our fencing program',
+          },
+          {
+            src: '/images/strawberry-farms-golf.jpg',
+            alt: 'A lakeside green at Strawberry Farms Golf Course',
+            caption: 'Strawberry Farms Golf Course, an elite SCPGA Junior development course',
+          },
+          {
+            src: '/images/torrey-pines-golf.jpg',
+            alt: 'A cliffside green above the Pacific at Torrey Pines Golf Course at sunset',
+            caption: 'San Diego — Torrey Pines Golf Course',
           },
         ],
       },
@@ -394,6 +572,110 @@ export const pageContent: Record<string, PageContent> = {
           { value: '1', label: 'Academic program across both campuses' },
           { value: '5', label: 'Sports across both campuses' },
         ],
+      },
+      {
+        type: 'prose',
+        heading: 'Our partner day schools',
+        paragraphs: [
+          'JMC does not run its own accredited day school. Instead, we partner with established American private day schools that share our values — real classrooms, real teachers, real transcripts, and a genuine American campus community — while JMC handles everything around the school day: tutoring, athletic training, residential life, and long-term development.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Capistrano Valley Christian Schools (CVCS)',
+        paragraphs: [
+          'Capistrano Valley Christian Schools, in San Juan Capistrano in Orange County, is a Christian, college-preparatory day school serving students from kindergarten through twelfth grade. Its education is built on Christian faith alongside academic rigor, character, athletics, the arts, and leadership — CVCS cares as much about integrity, responsibility, self-discipline, respect, and service as it does about grades.',
+          'Because CVCS is a genuine American private-school community — not a program built around international students — our students build friendships across backgrounds, develop their spoken English, and live real American campus life: daily classes, school traditions, athletics, the arts, and everyday community. For families who want their child to do more than take American classes — to actually experience an American school — that distinction matters.',
+          'We partnered with CVCS because we believe a student’s growth comes from more than the classroom — it comes from the campus they spend their days in, the relationships they build, and the responsibility they carry in school, sport, and daily life. CVCS is responsible for formal schooling and the campus experience; JMC Academy provides everything around it — personalized academic tutoring, competitive athletic training, residential life, family communication, and long-term development planning.',
+        ],
+      },
+      {
+        type: 'gallery',
+        items: [
+          {
+            src: '/images/cvcs-cheer.jpg',
+            alt: 'A CVCS cheerleader high-fiving younger fans at a football game',
+            caption: 'School spirit at a CVCS home game',
+          },
+          {
+            src: '/images/cvcs-student-activities.jpg',
+            alt: 'CVCS cheerleaders and young fans posing together at a track and field event',
+            caption: 'Campus and community life at CVCS',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'Beyond the classroom at CVCS',
+        text: 'Depending on grade, interest, and the school’s offerings in a given year, CVCS students may take part in:',
+        items: [
+          { title: 'Musical theater & drama', text: 'Fall drama, spring musical, and other stage productions, on stage or behind it in sets, lighting, sound, and costuming.' },
+          { title: 'Music & choir', text: 'Choir, vocal performance, and campus music activities.' },
+          { title: 'Dance & performing arts', text: 'Dance and stage training that builds expression, confidence, and creativity.' },
+          { title: 'Visual arts & design', text: 'Painting, visual art, graphic and digital design, and yearbook design.' },
+          { title: 'Photography & film', text: 'Photography and film clubs exploring visual storytelling and creative expression.' },
+          { title: 'Robotics & technology', text: 'Robotics design, programming, and innovation projects.' },
+          { title: 'Debate & public speaking', text: 'Debate, speech, and discussion that build critical thinking and communication.' },
+          { title: 'Medicine & science exploration', text: 'Medical-interest clubs, science activities, and guest lectures.' },
+          { title: 'Entrepreneurship & business', text: 'Business clubs and student projects in innovation and planning.' },
+          { title: 'Culture & community', text: 'Cultural clubs and community events that build open communication across backgrounds.' },
+          { title: 'Student leadership & service', text: 'Student organizations, service activities, and campus leadership programs.' },
+          { title: 'Athletics & sports clubs', text: 'Basketball, soccer, volleyball, tennis, track, golf, baseball, softball, surfing, and more — JMC can help coordinate more specialized club and private training alongside school athletics.' },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Campus security at CVCS',
+        paragraphs: [
+          'CVCS keeps uniformed, armed security personnel on campus throughout the school day, alongside video surveillance and a staffed front-desk check-in for every visitor — real, visible measures, not just a policy on paper.',
+        ],
+      },
+      {
+        type: 'image',
+        src: '/images/cvcs-security.jpg',
+        alt: 'Four uniformed security officers standing at the entrance of Capistrano Valley Christian Schools',
+        caption: 'CVCS campus security, on-site throughout the school day',
+      },
+      {
+        type: 'prose',
+        heading: 'Maranatha Christian Schools (MCS)',
+        paragraphs: [
+          'Maranatha Christian Schools, in San Diego, is a private school that brings Christian faith together with academics, the arts, athletics, and personal development. MCS builds a learning community with a clear educational philosophy — helping students build a strong academic foundation, explore their interests, and prepare for college and life beyond it — while holding to integrity, respect, responsibility, service, and care for others.',
+          'MCS offers a genuine American private-school campus: beyond the classroom, students take part in athletics, the arts, student organizations, and campus life, and gradually grow familiar with American coursework, school culture, and community. Its diverse student body gives students real relationships across backgrounds — for international students especially, that builds English fluency, adaptability, independence, and cultural understanding, inside a complete American school community, not one built around international students alone.',
+          'Our partnership with MCS is built on the same commitment to a student’s complete development. MCS is responsible for formal academics and campus life; JMC Academy provides after-school academic support, competitive athletic training, residential life, family communication, and long-term student-athlete development planning built around each student’s own goals.',
+        ],
+      },
+      {
+        type: 'image',
+        src: '/images/maranatha-exterior.jpg',
+        alt: 'The Maranatha Christian Schools campus buildings with mountains in the background',
+        caption: 'The Maranatha Christian Schools campus, San Diego',
+      },
+      {
+        type: 'features',
+        heading: 'Beyond the classroom at MCS',
+        text: 'Depending on grade, interest, and ability, MCS students may take part in:',
+        items: [
+          { title: 'Musical theater & drama', text: 'Fall and spring musicals, drama productions, and stage performance.' },
+          { title: 'Stagecraft & production', text: 'Set building, lighting, sound, and production, for students drawn to behind-the-scenes work.' },
+          { title: 'Broadcast, acting & media', text: 'On-camera performance, broadcasting, and video and media production.' },
+          { title: 'Choir & vocal music', text: 'Middle and upper school choir, vocal performance, and campus music activities.' },
+          { title: 'Instrumental music & band', text: 'Band, jazz band, wind ensemble, and drumline.' },
+          { title: 'Visual arts', text: 'Painting, visual art, and other creative-arts projects.' },
+          { title: 'STEAM', text: 'Science, technology, engineering, art, and math activities that build hands-on, cross-disciplinary skills.' },
+          { title: 'Robotics & math club', text: 'Robotics and math enrichment that build logic, reasoning, and teamwork.' },
+          { title: 'Student government & leadership', text: 'Student government and campus organizations that plan events and represent the student body.' },
+          { title: 'Community service', text: 'Service opportunities that build responsibility and care for others.' },
+          { title: 'Cultural & educational travel', text: 'Cultural trips, museum visits, and history- and arts-related educational travel.' },
+          { title: 'Athletics', text: 'Soccer, volleyball, basketball, cross country, baseball, softball, golf, track, and competitive cheer.' },
+          { title: 'Campus events & traditions', text: 'Seasonal events, music performances, and campus gatherings that build friendships and school spirit.' },
+        ],
+      },
+      {
+        type: 'image',
+        src: '/images/theater-production.jpg',
+        alt: 'Students in costume performing a musical theater production on stage',
+        caption: 'Musical theater — one of many performing-arts opportunities at our partner schools',
       },
       visitCta,
     ],
