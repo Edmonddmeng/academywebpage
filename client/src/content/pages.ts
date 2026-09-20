@@ -2004,9 +2004,8 @@ export const pageContent: Record<string, PageContent> = {
           ['Room & Board (per year)', '$28,000'],
           ['Total (per year)', '$95,000'],
           ['Application fee', '$75'],
-          ['Enrollment deposit', 'To be confirmed'],
         ],
-        note: 'Tuition, Athletics, Room & Board, and the application fee are confirmed for the 2026–2027 school year. The enrollment deposit will be published here once finalized.',
+        note: 'Figures confirmed for the 2026–2027 school year.',
       },
       {
         type: 'faq',
