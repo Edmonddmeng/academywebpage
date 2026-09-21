@@ -1733,14 +1733,38 @@ export const pageContent: Record<string, PageContent> = {
         type: 'features',
         heading: 'What the team handles together',
         items: [
-          { title: 'Course & GPA planning' },
-          { title: 'Competition & exposure planning' },
-          { title: 'Highlight film & athletic résumé' },
-          { title: 'College list & target programs' },
-          { title: 'Coach outreach & campus visits' },
-          { title: 'NCAA registration & compliance' },
-          { title: 'Applications & essays' },
-          { title: 'Offer comparison & commitment' },
+          {
+            title: 'Course & GPA planning',
+            text: 'Every course choice mapped against NCAA core-course rules and college admission expectations, with GPA targets set and tracked from the first term — not discovered senior year.',
+          },
+          {
+            title: 'Competition & exposure planning',
+            text: 'Deciding which tournaments, showcases, and events are actually worth an athlete’s time and travel, based on their level and who will be watching.',
+          },
+          {
+            title: 'Highlight film & athletic résumé',
+            text: 'Filming, editing, and packaging game footage alongside a clean athletic résumé that puts an athlete’s best material in front of a coach in the first thirty seconds.',
+          },
+          {
+            title: 'College list & target programs',
+            text: 'An honest list across reach, match, and likely programs, built on athletic level, academic fit, and what the family actually wants out of the next four years.',
+          },
+          {
+            title: 'Coach outreach & campus visits',
+            text: 'Direct, professional communication with college coaches, timed correctly under NCAA recruiting rules, with campus visits arranged around competition travel.',
+          },
+          {
+            title: 'NCAA registration & compliance',
+            text: 'Eligibility Center registration, amateurism certification, and staying inside NCAA recruiting rules at every stage, so a signature is never put at risk by a paperwork mistake.',
+          },
+          {
+            title: 'Applications & essays',
+            text: 'Application strategy, deadlines, and essays handled alongside the athletic side, so neither one gets rushed in the final months.',
+          },
+          {
+            title: 'Offer comparison & commitment',
+            text: 'Comparing offers side by side on playing time, academics, cost, and fit, then supporting the athlete and family through the actual decision.',
+          },
         ],
       },
       {
