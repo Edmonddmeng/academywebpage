@@ -1634,6 +1634,29 @@ export const pageContent: Record<string, PageContent> = {
         note: 'Sample day. Menus and timing vary by program and competition schedule.',
       },
       {
+        type: 'numbered',
+        heading: 'What’s actually on the menu',
+        text: 'Fueling only works if athletes actually want to eat it. Meals are cooked fresh on campus and rotate through real variety, not the same three dishes on repeat.',
+        items: [
+          {
+            title: 'Breakfast',
+            text: 'A hot, made-to-order spread — fresh fruit, whole-wheat toast, fried eggs, low-fat chicken sausage, milk, juice, and oatmeal.',
+          },
+          {
+            title: 'Lunch',
+            text: 'A boxed lunch built for a training day: rice, grilled chicken, and vegetables, ready to eat between class and the first session.',
+          },
+          {
+            title: 'Dinner',
+            text: 'The reward at the end of a long day of training and school. The menu rotates through real variety — Korean army stew (budae jjigae) one night, Chinese hongshaorou (braised pork belly) or tomato and egg stir-fry the next, alongside American favorites like herb-roasted chicken, grilled salmon, and steak night.',
+          },
+          {
+            title: 'Snacks & fueling',
+            text: 'Bananas and toast before the first session, rice cakes or a granola bar before the afternoon block, and Greek yogurt or a protein shake before lights out.',
+          },
+        ],
+      },
+      {
         type: 'features',
         heading: 'How we plan menus',
         items: [
