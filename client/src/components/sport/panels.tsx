@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { ButtonLink, ImagePlaceholder } from '../ui'
+import { EvenGrid } from '../EvenGrid'
 import type { Sport } from '../../content/sports'
 import type { SportTab } from '../../content/sportTabs'
 import { useLocale } from '../../content/locale'
@@ -52,14 +53,14 @@ function DataTable({ columns, empty }: { columns: string[]; empty: string }) {
 
 function NumberedList({ items }: { items: string[] }) {
   return (
-    <ol className="grid gap-x-10 sm:grid-cols-2">
-      {items.map((item, i) => (
+    <EvenGrid items={items} maxCols={2} gap="gap-x-10" as="ol">
+      {(item, i) => (
         <li key={item} className="flex items-baseline gap-4 border-b border-ink/10 py-4">
           <span className="text-sm font-semibold text-brass">{String(i + 1).padStart(2, '0')}</span>
           <span className="text-lg">{item}</span>
         </li>
-      ))}
-    </ol>
+      )}
+    </EvenGrid>
   )
 }
 
@@ -142,8 +143,8 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
       return (
         <div className="space-y-10">
           <Lead>{t.coachesLead(sport.title)}</Lead>
-          <ul className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-1.5">
-            {sport.staff.map((role) => (
+          <EvenGrid items={sport.staff} maxCols={3}>
+            {(role) => (
               <li key={role} className="flex items-center gap-5 border border-dotted border-ink/45 p-6">
                 <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
                   {roleInitials(role)}
@@ -153,8 +154,8 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
                   <p className="mt-1 text-xs font-semibold tracking-[0.2em] text-brass uppercase">{role}</p>
                 </div>
               </li>
-            ))}
-          </ul>
+            )}
+          </EvenGrid>
         </div>
       )
 
@@ -204,32 +205,33 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
       return (
         <div className="space-y-12">
           <Lead>{sport.venue.text}</Lead>
-          <ul className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-1.5">
-            {sport.venue.features.map((feature, i) => (
+          <EvenGrid items={sport.venue.features} maxCols={3}>
+            {(feature, i) => (
               <li key={feature} className="border border-dotted border-ink/45 px-6 py-8">
                 <span className="font-serif text-3xl text-brass">{String(i + 1).padStart(2, '0')}</span>
                 <p className="mt-4 font-condensed text-[17px] font-semibold tracking-wide text-ink uppercase">
                   {feature}
                 </p>
               </li>
-            ))}
-          </ul>
+            )}
+          </EvenGrid>
           {sport.venue.gallery.length > 0 ? (
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 md:gap-12">
-              {sport.venue.gallery.map((photo, i) =>
-                'src' in photo ? (
-                  <img
-                    key={photo.src}
-                    src={photo.src}
-                    alt={photo.alt}
-                    loading="lazy"
-                    className="aspect-[3/2] w-full object-cover"
-                  />
-                ) : (
-                  <ImagePlaceholder key={i} label={photo.placeholder} className="aspect-[3/2] w-full" />
-                ),
+            <EvenGrid items={sport.venue.gallery} maxCols={3} gap="gap-8 md:gap-12">
+              {(photo, i) => (
+                <li key={'src' in photo ? photo.src : i}>
+                  {'src' in photo ? (
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className="aspect-[3/2] w-full object-cover"
+                    />
+                  ) : (
+                    <ImagePlaceholder label={photo.placeholder} className="aspect-[3/2] w-full" />
+                  )}
+                </li>
               )}
-            </div>
+            </EvenGrid>
           ) : (
             <ImagePlaceholder label={t.venuePhotos} className="aspect-[21/9] w-full" />
           )}

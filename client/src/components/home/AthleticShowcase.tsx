@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from '../icons'
 import { Eyebrow, ImagePlaceholder } from '../ui'
 import Reveal from '../Reveal'
+import { EvenGrid } from '../EvenGrid'
 import { sportKinds, useSports } from '../../content/sports'
 import { useLocale } from '../../content/locale'
 
@@ -32,43 +33,45 @@ export default function AthleticShowcase() {
         </Link>
       </Reveal>
 
-      <ul className="mx-auto mt-10 grid max-w-7xl grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-1.5">
-        {sportKinds.map((kind, i) => {
-          const sport = sports.find((s) => s.kind === kind)!
-          return (
-            <Reveal as="li" key={kind} delay={i * 90}>
-              <Link
-                to={`/athletic/boys-${kind}`}
-                className="group relative block aspect-[3/4] overflow-hidden"
-              >
-                {'src' in sport.hero ? (
-                  <img
-                    src={sport.hero.src}
-                    alt={sport.hero.alt}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                  />
-                ) : (
-                  <ImagePlaceholder
-                    label={sport.hero.placeholder}
-                    className="absolute inset-0 h-full w-full"
-                  />
-                )}
-                <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
-                  <div>
-                    <p className="font-serif text-2xl text-white">{sport.sport}</p>
-                    <p className="mt-1 font-condensed text-[12px] font-semibold tracking-[0.16em] text-white/70 uppercase">
-                      {t.boysGirls}
-                    </p>
+      <div className="mx-auto mt-10 max-w-7xl">
+        <EvenGrid items={sportKinds} maxCols={5}>
+          {(kind, i) => {
+            const sport = sports.find((s) => s.kind === kind)!
+            return (
+              <Reveal as="li" key={kind} delay={i * 90}>
+                <Link
+                  to={`/athletic/boys-${kind}`}
+                  className="group relative block aspect-[3/4] overflow-hidden"
+                >
+                  {'src' in sport.hero ? (
+                    <img
+                      src={sport.hero.src}
+                      alt={sport.hero.alt}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    />
+                  ) : (
+                    <ImagePlaceholder
+                      label={sport.hero.placeholder}
+                      className="absolute inset-0 h-full w-full"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/10 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
+                    <div>
+                      <p className="font-serif text-2xl text-white">{sport.sport}</p>
+                      <p className="mt-1 font-condensed text-[12px] font-semibold tracking-[0.16em] text-white/70 uppercase">
+                        {t.boysGirls}
+                      </p>
+                    </div>
+                    <ArrowRight className="h-5 w-5 shrink-0 text-white/70 transition-transform group-hover:translate-x-1 group-hover:text-gold" />
                   </div>
-                  <ArrowRight className="h-5 w-5 shrink-0 text-white/70 transition-transform group-hover:translate-x-1 group-hover:text-gold" />
-                </div>
-              </Link>
-            </Reveal>
-          )
-        })}
-      </ul>
+                </Link>
+              </Reveal>
+            )
+          }}
+        </EvenGrid>
+      </div>
     </section>
   )
 }
