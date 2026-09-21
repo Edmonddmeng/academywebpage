@@ -1035,24 +1035,86 @@ export const pageContent: Record<string, PageContent> = {
   },
 
   'athletic/facilities': {
-    intro: 'Training venues, performance space, and recovery in one place.',
+    intro: 'Real, named training venues across both campuses — not a shared gym and a hope.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          'Athletes train where they live. Daily sessions, strength work, treatment, and video review happen within the same routine, which removes the travel time that usually limits how much quality training a young athlete can absorb.',
+          'Athletes train where they live. Daily sessions, strength work, treatment, and video review happen within the same routine, which removes the travel time that usually limits how much quality training a young athlete can absorb. Every venue below is a real, named facility our athletes actually use — not a placeholder.',
         ],
       },
       {
-        type: 'features',
+        type: 'numbered',
         heading: 'Where our athletes train',
         items: [
-          { title: 'Ice rink', text: 'Refrigerated ice for practices, skills sessions, and games.' },
-          { title: 'Golf practice & course access', text: 'Range, short-game areas, and regular on-course play.' },
-          { title: 'Turf field', text: 'Full-size field for lacrosse training and competition.' },
-          { title: 'Performance center', text: 'Strength equipment, testing, and speed and agility space.' },
-          { title: 'Sports medicine & recovery', text: 'Treatment tables, rehabilitation space, and recovery tools.' },
-          { title: 'Video rooms', text: 'Film review for teams and individual athletes.' },
+          {
+            title: 'Great Park Ice Arena — ice hockey',
+            text: 'Refrigerated ice in Irvine for daily practices, skills sessions, and games.',
+          },
+          {
+            title: 'Irvine Fencing Center — fencing',
+            text: 'Dedicated indoor strips in Irvine for daily bouting, drills, and competition.',
+          },
+          {
+            title: 'Great Park Sports Park — lacrosse',
+            text: 'Full-size turf fields in Irvine for training and competition.',
+          },
+          {
+            title: 'Strawberry Farms & Torrey Pines Golf Courses — golf',
+            text: 'An elite SCPGA Junior development course in Irvine, with regular access to Torrey Pines in San Diego for tournament-caliber rounds.',
+          },
+          {
+            title: 'Hard courts — tennis',
+            text: 'Hard courts at both campuses for daily training and match play.',
+          },
+          {
+            title: 'Performance center',
+            text: 'Strength equipment, testing, and speed and agility space at both campuses.',
+          },
+          {
+            title: 'Sports medicine & recovery',
+            text: 'Treatment tables, rehabilitation space, and recovery tools alongside the performance center.',
+          },
+          {
+            title: 'Video rooms',
+            text: 'Film review for teams and individual athletes.',
+          },
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: 'A look at our training venues',
+        items: [
+          {
+            src: '/images/great-park-ice-arena.jpg',
+            alt: 'Aerial view of Great Park Ice Arena in Irvine',
+            caption: 'Great Park Ice Arena — home ice for our hockey program',
+          },
+          {
+            src: '/images/irvine-fencing-center.jpg',
+            alt: 'The indoor fencing strips at the Irvine Fencing Center',
+            caption: 'Irvine Fencing Center — home strips for our fencing program',
+          },
+          {
+            src: '/images/great-park-sports-park.jpg',
+            alt: 'Aerial view of turf fields and courts at the Orange County Great Park Sports Park',
+            caption: 'Great Park Sports Park — turf fields for lacrosse',
+          },
+          {
+            src: '/images/strawberry-farms-golf.jpg',
+            alt: 'A lakeside green at Strawberry Farms Golf Course',
+            caption: 'Strawberry Farms Golf Course, an elite SCPGA Junior development course',
+          },
+          {
+            src: '/images/torrey-pines-golf.jpg',
+            alt: 'A cliffside green above the Pacific at Torrey Pines Golf Course at sunset',
+            caption: 'Torrey Pines Golf Course, San Diego',
+          },
+          {
+            src: '/images/tennis-court.jpg',
+            alt: 'A tennis court with palm trees and mountains in the background',
+            caption: 'Hard courts for daily training and match play',
+          },
         ],
       },
     ],
