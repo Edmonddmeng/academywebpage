@@ -649,8 +649,8 @@ export const pageContentZh: Record<string, PageContent> = {
             text: '从运动员入学第一学期起,课程选择就按照NCAA核心课程规则来安排,而不是等到最后一年。',
           },
           {
-            title: '只教授经过认证的课程',
-            text: '我们会确认所教授的每一门课程都列在NCAA认证课程清单上。',
+            title: '只修读经过认证的课程',
+            text: '我们会确认学生在合作日校所修读的每一门课程,都列在NCAA认证课程清单上。',
           },
           {
             title: '每学期审核资格',
@@ -697,7 +697,7 @@ export const pageContentZh: Record<string, PageContent> = {
         heading: '资格审核与招募同步进行',
         links: [
           { label: '大学招募', to: '/counseling/college-recruiting' },
-          { label: '学术支持', to: '/academic/academic-support' },
+          { label: '课堂之外', to: '/academic/academic-support' },
         ],
       },
     ],
@@ -748,7 +748,7 @@ export const pageContentZh: Record<string, PageContent> = {
         heading: '了解曝光机会如何规划',
         links: [
           { label: '大学招募', to: '/counseling/college-recruiting' },
-          { label: '学术支持', to: '/academic/academic-support' },
+          { label: '课堂之外', to: '/academic/academic-support' },
         ],
       },
     ],
@@ -1143,23 +1143,23 @@ export const pageContentZh: Record<string, PageContent> = {
 
   // ACADEMICS
   'academic/upper-school': {
-    intro: '9至12年级:荣誉课程、进阶课程与AP课程齐备的大学预备项目,围绕训练安排。',
+    intro: '9至12年级:在合作私立日校修读荣誉课程、进阶课程与AP课程齐备的大学预备学业——放学铃声之后,是JMC自己那套以结果为导向的学术项目。',
     blocks: [
       {
         type: 'split',
         heading: '有理由的严谨',
         image: { src: '/images/upper-school-classroom.jpg', alt: '高中部课堂' },
         paragraphs: [
-          '当一名运动员在JMC升入9年级时,好习惯已经养成,标准也会再次提高。高中部的课堂更像小型研讨课,而非讲座:学生需要有准备地到场、提出自己的观点,并用书面形式为其辩护。',
-          '比起只是修满学分毕业的运动员,我们更希望培养出能在压力下清晰思考的运动员。从第一学期起,选课就会参照NCAA参赛资格要求进行规划,确保没有运动员会在最后一年才发现自己缺少某项要求。',
+          '当一名运动员升入9年级时,好习惯已经养成,标准也会再次提高。我们的高中部学生在合作私立日校修读包含荣誉课程与AP课程的完整课业——真实的课堂、真实的教师、真实的成绩。放学铃声响起的那一刻,才是JMC工作的开始。',
+          '比起只是修满学分毕业的运动员,我们更希望培养出能在压力下清晰思考、考试成绩也更出色的运动员。从第一学期起,每一份学业规划都会参照NCAA参赛资格与真实的大学录取要求来制定,确保没有运动员会在最后一年才发现自己缺少某项要求——或者一份配不上他实力的成绩单。',
         ],
       },
       {
         type: 'prose',
         heading: '课表灵活,标准严格',
         paragraphs: [
-          '训练会变动,标准不会。上课时间、自习与辅导会围绕训练课、比赛与出行灵活调整,但学业本身的要求,放在全美任何一所优秀学校都毫不逊色。',
-          '我们从不为“学者型运动员”中的“学者”二字感到抱歉。能让运动员六点起床训练的自律,同样也能造就严谨的写作、完成的习题与认真的考试准备——我们期望我们的运动员在努力程度与表现上,都超越人们通常对学生运动员的预期。',
+          '训练会变动,标准不会。辅导、自习与备考会围绕训练课、比赛与出行灵活调整,但学业本身的要求,放在全美任何一所顶尖学术项目面前都毫不逊色。',
+          '我们从不为“学者型运动员”中的“学者”二字感到抱歉。能让运动员六点起床训练的自律,同样也是我们对每晚书桌前的要求——我们期望我们的运动员在努力程度与表现上,都超越人们通常对学生运动员的预期。',
         ],
       },
       {
@@ -1168,13 +1168,13 @@ export const pageContentZh: Record<string, PageContent> = {
         reverse: true,
         image: { src: '/images/upper-school-classroom.jpg', alt: '高中部课堂' },
         paragraphs: [
-          '满课量之所以能够承受,是因为没有一个班大到可以让人隐身其中。老师清楚哪些学生下周四要出行参加锦标赛,哪些学生正在冲刺高阶理科要求,哪些学生则需要完全不同方式的督促。',
+          '辅导小组刻意保持小规模——没有学生会是阶梯教室里的一张陌生面孔。我们的学术团队清楚哪些学生下周四要出行参加锦标赛,哪些学生正在冲刺某个AP科目的高分,哪些学生则需要完全不同方式的督促。',
         ],
       },
       {
         type: 'logos',
         heading: '为真正重要的考核做好准备',
-        text: '课业与备考内容,紧扣学校与大学招生办真正关注的项目与考试。',
+        text: '以结果为导向的备考,紧扣真正决定大学录取与NCAA参赛资格的考试——而不是流于形式的功课。',
         items: [
           { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
           { label: 'SSAT' },
@@ -1185,62 +1185,45 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'features',
-        heading: '学科设置',
-        items: [
-          { title: '英语', text: '每一年都包含阅读、分析性写作与课堂讨论。' },
-          { title: '数学', text: '从代数循序渐进至高阶课程。' },
-          { title: '科学', text: '实验科学课程,包含与人体运动表现相关的选修方向。' },
-          { title: '历史与社会科学', text: '写作密集型的历史与公民课程。' },
-          { title: '外语', text: '符合大学招生要求的语言学习。' },
-          { title: '选修课', text: '专项选修课程,包括运动科学与媒体制作。' },
-        ],
-      },
-      {
         type: 'numbered',
-        heading: '荣誉课程、AP与高阶学习',
+        heading: '真正的功课,在放学铃声之后',
         items: [
           {
-            title: '凭实力晋级荣誉课程',
-            text: '进入荣誉班需要通过前一门课程中的表现来赢得,而非主动申请。学生达到条件后可在学期中途升入更高阶课程。',
+            title: '每一门学科,每一晚',
+            text: '私人与小组辅导覆盖学生课表上的每一门学科——英语、数学、科学、历史、外语与选修课——而不只是这周感觉紧急的那一门。',
           },
           {
-            title: '在真正重要的科目开设AP课程',
-            text: 'AP课程开设在对大学录取有实际分量的学科上,并会安排时间,避免比赛出行影响考试备考。',
-          },
-          {
-            title: 'AP之后的高阶学习',
-            text: '修完某一学科序列的高年级学生,会继续修读数据科学、软件工程、研究方法、高阶作品集等高阶课程,而不是重复已学内容。',
+            title: '围绕荣誉课程与AP量身定制',
+            text: '当学生在合作学校修读荣誉课程或AP课程时,辅导会完全围绕那门课的真实教学大纲展开——同样的内容,同样的进度,反复巩固直至真正掌握。',
           },
           {
             title: '每一年都有写作训练',
-            text: '高中部每一年都包含持续的分析性写作训练,因为这是大学最先注意到、而运动员练习最少的能力。',
+            text: '每一年都包含持续的分析性写作训练,因为这是大学最先注意到、而运动员练习最少的能力。',
+          },
+          {
+            title: '高阶学习,而非重复',
+            text: '修完某一学科序列的高年级学生,会转向研究、数据分析、独立课题等高阶学习,而不是原地打转。',
           },
         ],
       },
       {
         type: 'table',
-        heading: '毕业要求',
-        columns: ['学科', '要求'],
+        heading: '我们如何驱动结果',
+        columns: ['阶段', '具体安排'],
         rows: [
-          ['英语', '4年'],
-          ['数学', '4年,至少修至微积分先修课(Precalculus)'],
-          ['科学', '3年,其中包含两门实验科学'],
-          ['历史与社会科学', '3年'],
-          ['外语', '同一门语言修满3年'],
-          ['视觉与表演艺术', '1年'],
-          ['计算机科学', '1年'],
-          ['健康与人体发展', '1学期'],
-          ['体育与项目训练', '每学期'],
-          ['大学升学研讨课', '11、12年级'],
+          ['基线测评', '在每个核心学科以及PSAT/SAT上进行基线测试,让计划从真实数据出发,而非凭空猜测。'],
+          ['学期计划', '一份书面的、个性化的计划,包含具体的成绩与分数目标,并与学生及家庭共同确认。'],
+          ['每周辅导', '每门学科的私人或小组辅导,围绕训练与出行安排时间。'],
+          ['模拟测试', 'PSAT、SAT、ACT及每一门AP考试前的定期全真模拟测试。'],
+          ['复盘与调整', '每学期都会将结果与目标对照评估,并据此调整计划——而不是原样重复。'],
         ],
-        note: '课程设置旨在符合NCAA Eligibility Center核心课程要求。每位运动员的计划都会每学期对照毕业要求与资格要求进行审核。',
+        note: '这套流程每学期、为每一位学生持续运行——这是一项长期机制,而不是一次性的临时介入。',
       },
       {
         type: 'cta',
         heading: '在需要时提供支持',
         links: [
-          { label: '学术支持', to: '/academic/academic-support' },
+          { label: '课堂之外', to: '/academic/academic-support' },
           { label: '学术进阶路径', to: '/academic/academic-progression' },
         ],
       },
@@ -1248,7 +1231,7 @@ export const pageContentZh: Record<string, PageContent> = {
   },
 
   'academic/middle-school': {
-    intro: '6至8年级:培养习惯、技能与基础,为高中部高强度的学业做好准备。',
+    intro: '6至8年级:在合作私立日校修读真实课程,并通过JMC自己的课后项目培养习惯、备考能力与学术基础,为高中部高强度的学业做好准备。',
     blocks: [
       {
         type: 'split',
@@ -1264,12 +1247,12 @@ export const pageContentZh: Record<string, PageContent> = {
         heading: '初中部的运作方式',
         items: [
           {
-            title: '五门核心课程',
-            text: '英语、数学、科学、历史与一门外语,构成每个年级的课程主干。',
+            title: '每一门核心学科,都有针对性辅导',
+            text: '英语、数学、科学、历史与外语——无论学生在合作学校修读什么课程,JMC的辅导都会每周跟进,而不只是在考试前临时抱佛脚。',
           },
           {
-            title: '按能力分班,而非统一进度',
-            text: '数学与外语的分班依据测评结果,因此表现出色的6年级学生可以提前学习Algebra 1A,需要打基础的学生也能得到相应支持。',
+            title: '我们追踪分班,而不只是出勤',
+            text: '数学与外语的分班由合作学校决定;我们会准确掌握每位学生所处的具体课程,并据此安排辅导,而不是按统一年级假设。',
           },
           {
             title: '明确教授学习方法,而非默认已掌握',
@@ -1280,37 +1263,19 @@ export const pageContentZh: Record<string, PageContent> = {
             text: '每位学生都有一位导师,同时追踪其学业、训练负荷与宿舍生活。',
           },
           {
-            title: '拓展课程与选修课',
-            text: '艺术、科技、音乐与公益服务在全年轮流开设,与核心课程并行。',
+            title: '备考从初中就开始',
+            text: '我们从初中阶段就开始为SSAT、ISEE乃至日后的PSAT与SAT打基础——提前布局,而不是到10年级才仓促应对。',
           },
           {
-            title: '训练纳入课表',
-            text: '项目训练是校历的一部分,而不是挤在作业之余的课后活动。',
-          },
-        ],
-      },
-      {
-        type: 'features',
-        heading: '分年级课程',
-        items: [
-          {
-            title: '6年级',
-            text: 'Reading 6、Writing 6、Pre-Algebra(或依分班测评加速修读)、地球与环境科学、世界历史,另设艺术设计、科技、健康与体育,以及音乐轮修课程。',
-          },
-          {
-            title: '7年级',
-            text: 'English 7、Algebra 1A(或依分班测评加速修读)、生命科学、世界历史,以及一门外语——西班牙语或中文——另设学期选修课与公益服务学习。',
-          },
-          {
-            title: '8年级',
-            text: 'English 8、Algebra 1B(或依分班测评加速修读)、物理科学、美国历史,以及延续的外语课程,另设学期选修课与年鉴制作课。',
+            title: '每晚都有自习厅',
+            text: '训练安排在放学之后;每天晚上仍会以宿舍内的监督自习厅收尾,而不是把作业挤在零碎时间里完成。',
           },
         ],
       },
       {
         type: 'logos',
-        heading: '课堂之外',
-        text: '初中部学生在我们教师的指导下备考升学考试,并在课外项目中挑战自我。',
+        heading: '备考项目',
+        text: '我们从早期就开始备考,让初中部学生进入中学乃至未来大学的各项考试时,是真正准备好了,而不是临时突击。',
         items: [
           { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
           { label: 'SSAT' },
@@ -1339,13 +1304,13 @@ export const pageContentZh: Record<string, PageContent> = {
   },
 
   'academic/academic-progression': {
-    intro: '从6年级到12年级,每个学科的设置,以及学生在其中的路径。',
+    intro: '我们学生在合作私立日校修读的典型严谨课程路径,逐个学科呈现——JMC的课后辅导,围绕其中每一门课程展开,年复一年。',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          '下方的矩阵展示了初中部与高中部的课程进阶规划。大多数学生遵循主干路径;分班测评、既往课程与个人兴趣会让部分运动员在其中提前或横向调整。',
-          '数学与外语根据测评结果分班,而非按年龄统一安排,因此同一个年级的学生分布在三门不同课程中是很正常的情况。',
+          '下方的矩阵展示了我们合作私立日校在初中部与高中部阶段典型的课程进阶规划。大多数学生遵循主干路径;分班测评、既往课程与个人兴趣会让部分学生在其中提前或横向调整。',
+          '数学与外语根据测评结果分班,而非按年龄统一安排,因此同一个年级的学生分布在三门不同课程中是很正常的情况。无论学生实际的分班结果如何,JMC的课后辅导都会围绕这门具体课程展开,而不是按统一年级假设。',
         ],
       },
       {
@@ -1462,7 +1427,7 @@ export const pageContentZh: Record<string, PageContent> = {
             ],
           },
         ],
-        note: '计划中的课程路径。每年具体开设情况取决于招生人数与师资配置,个人课表也会因分班与既往课程而有所不同。',
+        note: '此为合作私立日校课程路径的示意,具体开设情况因学校而异,个人课表也会因分班与既往课程而有所不同。JMC为以上每一门学科都提供课后辅导,年复一年。',
       },
       {
         type: 'cta',
@@ -1470,31 +1435,67 @@ export const pageContentZh: Record<string, PageContent> = {
         text: '招生办公室可以说明运动员在每个学科可能对应的具体课程。',
         links: [
           { label: '联系招生办公室', to: '/contact' },
-          { label: '学术支持', to: '/academic/academic-support' },
+          { label: '课堂之外', to: '/academic/academic-support' },
         ],
       },
     ],
   },
 
   'academic/academic-support': {
-    intro: '结构化安排、辅导与追踪机制,确保训练不会以牺牲参赛资格为代价。',
+    intro: '放学铃声响起之后,真正的学术工作才刚刚开始。JMC自己的学术项目——每晚辅导、标准化考试备考,以及不留情面的进度追踪——旨在带来卓越的结果,而不仅仅是看管作业。',
     blocks: [
       {
         type: 'prose',
+        heading: '为什么要“课堂之外”',
         paragraphs: [
-          '出行与高强度训练很容易让学业落后。我们的支持体系旨在及早发现这种情况:监督自习、按需辅导,以及运动员出行期间老师与教练之间的协同配合。',
+          '合作私立日校为每一位JMC学生提供真实的课堂、真实的教师与真实的成绩。但对一个还要每天训练的学生而言,单靠六七个小时的课堂时间,从来不足以造就真正顶尖的学术成绩。因此,JMC把放学后的时间当作核心学术时间——有结构、有监督,并且只对一件事负责:结果。',
         ],
       },
       {
         type: 'numbered',
         heading: '支持体系如何运作',
         items: [
-          { title: '监督自习厅', text: '每个上学日晚间,在宿舍内设有受保护的自习时间。' },
-          { title: '课业辅导', text: '学科辅导安排在训练之外的时间,而非取代训练。' },
+          { title: '监督自习厅', text: '每个上学日晚间,在宿舍内设有受保护的自习时间——不是可选项,不能跳过。' },
+          { title: '私人辅导,覆盖每一门学科', text: '针对学生正在修读的每一门课程提供专项辅导,时间围绕训练安排,而不是与训练争抢。' },
           { title: '出行学习安排', text: '每次比赛出行前布置作业,返校后收齐。' },
-          { title: '进度追踪', text: '定期向运动员、家庭与教练共享的报告。' },
+          { title: '以结果为导向的进度追踪', text: '每学期都会将成绩与考试分数对照书面目标进行追踪,并如实向运动员、家庭与教练同步——而不只是一句“还不错”。' },
           { title: '资格追踪', text: '每学期审核课程、成绩与NCAA要求。' },
-          { title: '考试支持', text: '为大学入学考试提供备考与报名安排支持。' },
+          { title: '标准化考试备考', text: '围绕PSAT、SAT、ACT、AP考试以及ISEE/SSAT建立的结构化项目,针对每位学生的目标分数量身定制,而非泛泛的大班课。' },
+        ],
+      },
+      {
+        type: 'statement',
+        text: '我们衡量辅导成效的标准,从来不是学生是否到场,而是成绩、考试分数或成绩单是否真正发生了改变。',
+        attribution: '我们的标准',
+      },
+      {
+        type: 'numbered',
+        heading: '标准化考试,按计划进行',
+        items: [
+          {
+            title: 'PSAT基线测试(9至10年级)',
+            text: '及早建立基线,在大学申请真正到来的前几年就发现优势与短板。',
+          },
+          {
+            title: 'SAT与ACT备考(10至12年级)',
+            text: '围绕具体目标分数展开的结构化、个性化备考,并配合定期的全真模拟考试。',
+          },
+          {
+            title: 'AP考前强化(每年春季)',
+            text: '在每一门AP考试前的几周内,进行有针对性的复习与模拟考试。',
+          },
+          {
+            title: 'ISEE与SSAT备考(按需)',
+            text: '为需要通过入学测试进入或转入学校的学生,提供同样严格的备考。',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '深入了解',
+        links: [
+          { label: 'NCAA 参赛资格', to: '/academic/ncaa-eligibility' },
+          { label: '学术进阶路径', to: '/academic/academic-progression' },
         ],
       },
     ],
@@ -1727,17 +1728,28 @@ export const pageContentZh: Record<string, PageContent> = {
     intro: '我们的运动员未来将前往的地方。',
     blocks: [
       {
-        type: 'prose',
-        paragraphs: [
-          '随着运动员陆续与大学项目签约,他们的项目、院校与组别信息将在此更新,并附上他们的升学故事。',
+        type: 'collage',
+        heading: '我们曾帮助学生进入的院校',
+        text: '过去，我们的团队曾协助学生进入这些大学与预备学校。这支完整的升学咨询团队及其积累的经验，现已传承至JMC。',
+        items: [
+          { src: '/images/commitments/harvard.png', alt: 'Harvard University' },
+          { src: '/images/commitments/harvard-westlake.png', alt: 'Harvard-Westlake School' },
+          { src: '/images/commitments/yale.png', alt: 'Yale University' },
+          { src: '/images/commitments/notre-dame.png', alt: 'University of Notre Dame' },
+          { src: '/images/commitments/crest-1798.png', alt: 'School crest, Dare to be True, 1798' },
+          { src: '/images/commitments/penn.png', alt: 'University of Pennsylvania' },
+          { src: '/images/commitments/northwestern.png', alt: 'Northwestern University' },
+          { src: '/images/commitments/usc.png', alt: 'University of Southern California' },
+          { src: '/images/commitments/crest-lion.png', alt: 'School crest, rampant lion' },
+          { src: '/images/commitments/unc.png', alt: 'University of North Carolina' },
+          { src: '/images/commitments/sage-hill.png', alt: 'Sage Hill School' },
         ],
       },
       {
-        type: 'table',
-        heading: '大学签约录取',
-        columns: ['运动员', '项目', '大学', '组别', '年份'],
-        rows: [],
-        note: '我们的第一届学生尚未签约。随着运动员陆续签约,这份名单会不断更新。',
+        type: 'prose',
+        paragraphs: [
+          '每位运动员的具体录取情况，将按项目、院校与组别在此列出，并附上他们的升学故事。',
+        ],
       },
       {
         type: 'cta',

@@ -31,6 +31,7 @@ export type Block =
       // Entries without `src` render as a typographic tile.
       items: { label: string; src?: string; alt?: string }[]
     }
+  | { type: 'collage'; heading?: string; text?: string; items: { src: string; alt: string }[] }
   | { type: 'note'; text: string }
   | { type: 'statement'; text: string; attribution?: string }
   | {
@@ -703,7 +704,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Approved courses only',
-            text: 'We confirm every course we teach appears on the NCAA-approved course list.',
+            text: 'We confirm every course a student takes at their partner day school appears on the NCAA-approved course list.',
           },
           {
             title: 'Termly eligibility review',
@@ -750,7 +751,7 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'Eligibility and recruiting run together',
         links: [
           { label: 'College Recruiting', to: '/counseling/college-recruiting' },
-          { label: 'Academic Support', to: '/academic/academic-support' },
+          { label: 'Beyond the Classroom', to: '/academic/academic-support' },
         ],
       },
     ],
@@ -801,7 +802,7 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'See how exposure is planned',
         links: [
           { label: 'College Recruiting', to: '/counseling/college-recruiting' },
-          { label: 'Academic Support', to: '/academic/academic-support' },
+          { label: 'Beyond the Classroom', to: '/academic/academic-support' },
         ],
       },
     ],
@@ -1196,23 +1197,23 @@ export const pageContent: Record<string, PageContent> = {
 
   // ACADEMICS
   'academic/upper-school': {
-    intro: 'Grades 9–12: a college-preparatory program with honors, advanced, and AP coursework, scheduled around training.',
+    intro: 'Grades 9–12: a full, AP-inclusive course load at our partner day schools — and JMC’s own results-driven academic program every day after the final bell.',
     blocks: [
       {
         type: 'split',
         heading: 'Rigor with a reason',
         image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
         paragraphs: [
-          'By the time an athlete reaches Grade 9 at JMC, the habits are in place and the standard rises again. Upper School classes run like small seminars, not lectures: students are expected to arrive prepared, argue a position, and defend it in writing.',
-          'We would rather graduate an athlete who thinks clearly under pressure than one who simply accumulated credits. Course selection is planned with NCAA eligibility requirements in view from the first term, so no athlete arrives at their final year to discover a missing requirement.',
+          'By the time an athlete reaches Grade 9, the habits are in place and the standard rises again. Our Upper School students carry a full, honors- and AP-inclusive course load at their partner day school — real classrooms, real teachers, real grades. JMC’s job starts the moment that class ends.',
+          'We would rather graduate an athlete who thinks clearly under pressure and tests better than his peers than one who simply accumulated credits. Every academic plan is built with NCAA eligibility and real college admission in view from the first term, so no athlete arrives at their final year to discover a missing requirement — or a transcript that undersells them.',
         ],
       },
       {
         type: 'prose',
         heading: 'Flexible in schedule. Rigorous in standard.',
         paragraphs: [
-          'Training moves. The standard does not. Class times, study hall, and tutoring flex around sessions, competition, and travel, but the work itself is held to a level that would be demanding at any strong school in the country.',
-          'We are unapologetic about the scholar half of scholar-athlete. The discipline that gets an athlete to a 6 a.m. session is the same discipline that produces careful writing, finished problem sets, and serious test preparation — and we expect our athletes to outwork and outperform the expectations people usually attach to student-athletes.',
+          'Training moves. The standard does not. Tutoring, study hall, and test preparation flex around sessions, competition, and travel, but the work itself is held to a level that matches any top academic program in the country.',
+          'We are unapologetic about the scholar half of scholar-athlete. The discipline that gets an athlete to a 6 a.m. session is the same discipline we expect at the desk every evening — and we hold our athletes to outwork and outperform the academic expectations people usually attach to student-athletes.',
         ],
       },
       {
@@ -1221,13 +1222,13 @@ export const pageContent: Record<string, PageContent> = {
         reverse: true,
         image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
         paragraphs: [
-          'A full course load stays manageable because no class is large enough to hide in. Teachers know which students are traveling for a tournament next Thursday, which ones are chasing an advanced science requirement, and which ones need a different kind of push entirely.',
+          'Tutoring groups stay small on purpose — no student is one face in a lecture hall. Our academic staff knows which students are traveling for a tournament next Thursday, which ones are chasing an AP score, and which ones need a different kind of push entirely.',
         ],
       },
       {
         type: 'logos',
         heading: 'Prepared for the work that counts',
-        text: 'Coursework and preparation aligned to the programs and exams that schools and college admission offices actually look at.',
+        text: 'Results-driven preparation aligned to the exams that actually decide college admission and NCAA eligibility — not busywork.',
         items: [
           { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
           { label: 'SSAT' },
@@ -1238,62 +1239,45 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
-        type: 'features',
-        heading: 'Subjects',
-        items: [
-          { title: 'English', text: 'Reading, analytical writing, and discussion in every year.' },
-          { title: 'Mathematics', text: 'Sequenced from algebra through advanced coursework.' },
-          { title: 'Science', text: 'Laboratory science, including options connected to human performance.' },
-          { title: 'History & Social Science', text: 'Writing-intensive courses in history and civics.' },
-          { title: 'World Languages', text: 'Language study that meets college admission expectations.' },
-          { title: 'Electives', text: 'Focused options, including sport science and media.' },
-        ],
-      },
-      {
         type: 'numbered',
-        heading: 'Honors, AP, and advanced study',
+        heading: 'Where the real work happens: after the bell',
         items: [
           {
-            title: 'Honors by demonstration',
-            text: 'Placement into honors sections is earned through work in the previous course, not requested. Students move up mid-year when they are ready.',
+            title: 'Every subject, every night',
+            text: 'Private and small-group tutoring covers every subject on a student’s course load — English, math, science, history, world language, and electives — not just the ones that feel urgent this week.',
           },
           {
-            title: 'AP where it counts',
-            text: 'Advanced Placement courses are offered in the subjects that carry weight in college admission, and are scheduled so competition travel does not derail exam preparation.',
+            title: 'Built around Honors and AP',
+            text: 'When a student is carrying Honors or AP coursework at their partner school, tutoring is built around that exact syllabus — same material, same pace, reinforced until it holds.',
           },
           {
-            title: 'Advanced study after AP',
-            text: 'Seniors who exhaust a sequence continue with advanced study courses — data science, software engineering, research methods, advanced portfolio — rather than repeating.',
+            title: 'Writing, every year',
+            text: 'Sustained analytical writing practice every year, because it is the skill colleges notice first and athletes practice least on their own.',
           },
           {
-            title: 'Writing in every year',
-            text: 'Every Upper School year includes sustained analytical writing, because it is the skill colleges notice first and athletes practise least.',
+            title: 'Advanced study, not repetition',
+            text: 'Students who exhaust a subject sequence move into focused advanced work — research, data analysis, independent study — instead of coasting.',
           },
         ],
       },
       {
         type: 'table',
-        heading: 'Graduation requirements',
-        columns: ['Subject', 'Required'],
+        heading: 'How we drive results',
+        columns: ['Stage', 'What happens'],
         rows: [
-          ['English', '4 years'],
-          ['Mathematics', '4 years, through Precalculus'],
-          ['Science', '3 years, including two laboratory sciences'],
-          ['History & Social Science', '3 years'],
-          ['World Language', '3 years in the same language'],
-          ['Visual & Performing Arts', '1 year'],
-          ['Computer Science', '1 year'],
-          ['Health & Human Development', '1 semester'],
-          ['Athletics & program training', 'Every term'],
-          ['College Seminar', 'Grades 11 and 12'],
+          ['Diagnostic', 'Baseline testing in every core subject and on the PSAT/SAT, so a plan starts from real data, not a guess.'],
+          ['Term plan', 'A written, individualized plan with specific grade and score targets, reviewed with the student and family.'],
+          ['Weekly tutoring', 'Private or small-group sessions in every subject, scheduled around training and travel.'],
+          ['Practice testing', 'Regular full-length practice tests ahead of the PSAT, SAT, ACT, and each AP exam.'],
+          ['Review & adjust', 'Every term, results are measured against the target and the plan is adjusted — not just repeated.'],
         ],
-        note: 'Designed to meet NCAA Eligibility Center core-course requirements. Each athlete’s plan is reviewed every term against both graduation and eligibility rules.',
+        note: 'The same cycle runs every term for every student. This is a standing program, not a one-time intervention.',
       },
       {
         type: 'cta',
         heading: 'Support when it is needed',
         links: [
-          { label: 'Academic Support', to: '/academic/academic-support' },
+          { label: 'Beyond the Classroom', to: '/academic/academic-support' },
           { label: 'Academic Progression', to: '/academic/academic-progression' },
         ],
       },
@@ -1302,7 +1286,7 @@ export const pageContent: Record<string, PageContent> = {
 
   'academic/middle-school': {
     intro:
-      'Grades 6–8: building the habits, skills, and foundation that make demanding Upper School work possible.',
+      'Grades 6–8: real classes at our partner day schools, and JMC’s own after-school program building the habits, testing readiness, and academic foundation that make a demanding Upper School possible.',
     blocks: [
       {
         type: 'split',
@@ -1318,12 +1302,12 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'How Middle School works',
         items: [
           {
-            title: 'Five core courses',
-            text: 'English, mathematics, science, history, and a world language form the spine of every grade.',
+            title: 'Every core subject, reinforced',
+            text: 'English, mathematics, science, history, and world language — whatever a student is taking at their partner school, JMC tutoring covers it every week, not just before a test.',
           },
           {
-            title: 'Placement, not lockstep',
-            text: 'Mathematics and world language placement is by assessment, so a strong Grade 6 student can begin Algebra 1A early and a student who needs ground work gets it.',
+            title: 'We track placement, not just attendance',
+            text: 'Math and language placement happens at the partner school; we track exactly where each student sits and tailor tutoring to that specific course, not a generic grade level.',
           },
           {
             title: 'Study skills taught, not assumed',
@@ -1334,37 +1318,19 @@ export const pageContent: Record<string, PageContent> = {
             text: 'Every student has an advisor tracking academics, training load, and life in residence together.',
           },
           {
-            title: 'Enrichment and electives',
-            text: 'Art, technology, music, and service rotate through the year alongside the core.',
+            title: 'Testing readiness starts early',
+            text: 'Middle School is when we start building toward strong SSAT, ISEE, and eventually PSAT and SAT performance — early, not as a scramble in Grade 10.',
           },
           {
-            title: 'Training in the schedule',
-            text: 'Program training is part of the school day, not an after-school add-on squeezed around homework.',
-          },
-        ],
-      },
-      {
-        type: 'features',
-        heading: 'Grade by grade',
-        items: [
-          {
-            title: 'Grade 6',
-            text: 'Reading 6, Writing 6, Pre-Algebra (or accelerated by placement), Earth & Environmental Science, World History, plus Art & Design, Technology, Health & Wellness, and a music rotation.',
-          },
-          {
-            title: 'Grade 7',
-            text: 'English 7, Algebra 1A (or accelerated by placement), Life Science, World History, and a world language — Spanish or Chinese — plus semester electives and service learning.',
-          },
-          {
-            title: 'Grade 8',
-            text: 'English 8, Algebra 1B (or accelerated by placement), Physical Science, United States History, and a continuing world language, plus semester electives and yearbook.',
+            title: 'Evening study hall, every night',
+            text: 'Training happens after the school day; every evening still ends with supervised study hall in residence, not homework squeezed in wherever it fits.',
           },
         ],
       },
       {
         type: 'logos',
-        heading: 'Beyond the classroom',
-        text: 'Middle School students prepare for secondary-school testing and stretch themselves in outside programs, with coaching from our faculty.',
+        heading: 'Test preparation',
+        text: 'We start test preparation early, so Middle School students walk into secondary and eventual college testing prepared, not cramming.',
         items: [
           { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
           { label: 'SSAT' },
@@ -1394,13 +1360,13 @@ export const pageContent: Record<string, PageContent> = {
 
   'academic/academic-progression': {
     intro:
-      'Every department, Grade 6 through Grade 12, and the routes students take through them.',
+      'The kind of rigorous course sequence our students carry at their partner day schools, department by department — with JMC tutoring built around every one of them, every year.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          'The matrix below shows the planned course progression across the Middle School and Upper School. Most students follow the central path; placement assessments, prior coursework, and individual interests move athletes ahead or sideways within it.',
-          'Mathematics and world languages are placed by assessment rather than by age, so it is normal for a single grade to be spread across three different courses.',
+          'The matrix below illustrates the course progression typical of our partner day schools across the Middle School and Upper School years. Most students follow a central path; placement assessments, prior coursework, and individual interests move students ahead or sideways within it.',
+          'Mathematics and world languages are placed by assessment rather than by age, so it is normal for a single grade to be spread across three different courses. Whatever a student’s actual placement, JMC’s after-school tutoring is built around that specific course — not a generic grade-level assumption.',
         ],
       },
       {
@@ -1517,7 +1483,7 @@ export const pageContent: Record<string, PageContent> = {
             ],
           },
         ],
-        note: 'Planned progression. Offerings each year depend on enrollment and staffing, and individual schedules vary with placement and prior coursework.',
+        note: 'Illustrative of the course progression at our partner day schools; exact offerings vary by school and individual schedules vary with placement and prior coursework. JMC provides after-school tutoring across every one of these subjects, every year.',
       },
       {
         type: 'cta',
@@ -1525,31 +1491,67 @@ export const pageContent: Record<string, PageContent> = {
         text: 'Admission can walk through where an athlete would land in each subject.',
         links: [
           { label: 'Contact Admission', to: '/contact' },
-          { label: 'Academic Support', to: '/academic/academic-support' },
+          { label: 'Beyond the Classroom', to: '/academic/academic-support' },
         ],
       },
     ],
   },
 
   'academic/academic-support': {
-    intro: 'Structure, tutoring, and tracking so training never costs an athlete their eligibility.',
+    intro: 'When the school day ends, the real academic work begins. JMC’s own academic program — nightly tutoring, standardized test preparation, and relentless progress tracking — is built to produce superior results, not just supervise homework.',
     blocks: [
       {
         type: 'prose',
+        heading: 'Why beyond the classroom',
         paragraphs: [
-          'Travel and heavy training make it easy to fall behind. Our support system is built to catch that early: supervised study, tutoring on demand, and coordination between teachers and coaches whenever an athlete is away.',
+          'A partner day school gives every JMC student a real classroom, a real teacher, and a real grade. But six or seven hours in a classroom, on top of daily training, was never going to be enough on its own to produce a genuinely elite academic record. So JMC treats the hours after school as core academic time — structured, supervised, and accountable to one thing: results.',
         ],
       },
       {
         type: 'numbered',
-        heading: 'How support works',
+        heading: 'How it works',
         items: [
-          { title: 'Supervised study hall', text: 'Protected evening study hours in residence, every school night.' },
-          { title: 'Tutoring', text: 'Subject tutoring scheduled around training, not instead of it.' },
+          { title: 'Supervised study hall', text: 'Protected, supervised study hours in residence every school night — not optional, not skippable.' },
+          { title: 'Private tutoring, every subject', text: 'Subject-specific tutoring in every course a student is taking, scheduled around training rather than competing with it.' },
           { title: 'Travel plans', text: 'Work assigned before departure and collected on return for every competition trip.' },
-          { title: 'Progress checks', text: 'Regular reports shared with athletes, families, and coaches.' },
+          { title: 'Results-driven progress checks', text: 'Grades and test scores are tracked against a written target every term, shared plainly with athletes, families, and coaches — not just “doing fine.”' },
           { title: 'Eligibility tracking', text: 'Courses, grades, and NCAA requirements reviewed every term.' },
-          { title: 'Testing support', text: 'Preparation and scheduling for college entrance testing.' },
+          { title: 'Standardized test preparation', text: 'A structured program for the PSAT, SAT, ACT, AP exams, and ISEE/SSAT, built around each student’s target scores, not a generic class.' },
+        ],
+      },
+      {
+        type: 'statement',
+        text: 'We do not measure tutoring by whether a student showed up. We measure it by whether the grade, the test score, or the transcript actually changed.',
+        attribution: 'Our Standard',
+      },
+      {
+        type: 'numbered',
+        heading: 'Standardized testing, on a schedule',
+        items: [
+          {
+            title: 'PSAT diagnostic (Grades 9–10)',
+            text: 'An early baseline that flags strengths and gaps years before they matter for college admission.',
+          },
+          {
+            title: 'SAT & ACT preparation (Grades 10–12)',
+            text: 'Structured, individualized prep building toward a specific target score, with regular full-length practice tests.',
+          },
+          {
+            title: 'AP exam intensives (every spring)',
+            text: 'Focused review and practice exams in the weeks before each AP exam a student is sitting.',
+          },
+          {
+            title: 'ISEE & SSAT preparation (as needed)',
+            text: 'For students testing into or between schools, prepared with the same rigor as everything else.',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: 'Go further',
+        links: [
+          { label: 'NCAA Eligibility', to: '/academic/ncaa-eligibility' },
+          { label: 'Academic Progression', to: '/academic/academic-progression' },
         ],
       },
     ],
@@ -1782,17 +1784,28 @@ export const pageContent: Record<string, PageContent> = {
     intro: 'Where our athletes go next.',
     blocks: [
       {
-        type: 'prose',
-        paragraphs: [
-          'As athletes commit to college programs, they will be listed here by sport, program, and division, alongside the story of how they got there.',
+        type: 'collage',
+        heading: 'Where we have helped students go',
+        text: 'In the past, our team has helped students earn places at these colleges and prep schools. That full counseling department, and the experience behind it, now carries over to JMC.',
+        items: [
+          { src: '/images/commitments/harvard.png', alt: 'Harvard University' },
+          { src: '/images/commitments/harvard-westlake.png', alt: 'Harvard-Westlake School' },
+          { src: '/images/commitments/yale.png', alt: 'Yale University' },
+          { src: '/images/commitments/notre-dame.png', alt: 'University of Notre Dame' },
+          { src: '/images/commitments/crest-1798.png', alt: 'School crest, Dare to be True, 1798' },
+          { src: '/images/commitments/penn.png', alt: 'University of Pennsylvania' },
+          { src: '/images/commitments/northwestern.png', alt: 'Northwestern University' },
+          { src: '/images/commitments/usc.png', alt: 'University of Southern California' },
+          { src: '/images/commitments/crest-lion.png', alt: 'School crest, rampant lion' },
+          { src: '/images/commitments/unc.png', alt: 'University of North Carolina' },
+          { src: '/images/commitments/sage-hill.png', alt: 'Sage Hill School' },
         ],
       },
       {
-        type: 'table',
-        heading: 'College commitments',
-        columns: ['Athlete', 'Sport', 'College', 'Division', 'Year'],
-        rows: [],
-        note: 'Our first class has not yet committed. This list will grow as athletes sign.',
+        type: 'prose',
+        paragraphs: [
+          'Individual commitments will be listed here by sport, program, and division, alongside the story of how each athlete got there.',
+        ],
       },
       {
         type: 'cta',

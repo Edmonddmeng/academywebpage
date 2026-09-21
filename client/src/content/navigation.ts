@@ -57,7 +57,7 @@ export const navSections: NavSection[] = [
       { label: { en: 'Upper School', zh: '高中部' }, slug: 'upper-school' },
       { label: { en: 'Academic Progression', zh: '学术进阶路径' }, slug: 'academic-progression' },
       { label: { en: 'NCAA Eligibility', zh: 'NCAA 参赛资格' }, slug: 'ncaa-eligibility' },
-      { label: { en: 'Academic Support', zh: '学术支持' }, slug: 'academic-support' },
+      { label: { en: 'Beyond the Classroom', zh: '课堂之外' }, slug: 'academic-support' },
     ],
   },
   {
