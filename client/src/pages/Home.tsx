@@ -1,6 +1,7 @@
 import Hero from '../components/home/Hero'
 import AtAGlance from '../components/home/AtAGlance'
 import MissionBand from '../components/home/MissionBand'
+import OurStandard from '../components/home/OurStandard'
 import AcademicSplit from '../components/home/AcademicSplit'
 import AthleticShowcase from '../components/home/AthleticShowcase'
 import RecruitingStat from '../components/home/RecruitingStat'
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <AtAGlance />
       <MissionBand />
+      <OurStandard />
       <AcademicSplit />
       <AthleticShowcase />
       <RecruitingStat />
