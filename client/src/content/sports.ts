@@ -87,7 +87,7 @@ export const kinds: Record<SportKind, KindDetails> = {
 
   golf: {
     sport: 'Golf',
-    campus: 'San Diego Campus',
+    campus: 'Both campuses',
     scheduleTab: 'Tournaments',
     opponentColumn: 'Tournament',
     hero: {

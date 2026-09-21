@@ -1,21 +1,19 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CloseIcon } from './icons'
-import { linkPath, sectionPath, useNavSections } from '../content/navigation'
+import { linkPath, useNavSections } from '../content/navigation'
 import { useLocale } from '../content/locale'
 
 const copy = {
   en: {
-    mainSection: 'Main section',
     search: 'Search',
     placeholder: 'What are you looking for?',
     closeSearch: 'Close search',
     noMatch: (q: string) => `No pages match “${q}”.`,
   },
   zh: {
-    mainSection: '主分类',
     search: '搜索',
-    placeholder: '您在寻找什么?',
+    placeholder: '您在寻找什么？',
     closeSearch: '关闭搜索',
     noMatch: (q: string) => `没有找到与“${q}”匹配的页面。`,
   },
@@ -26,14 +24,13 @@ export default function SearchOverlay({ onClose }: { onClose: () => void }) {
   const locale = useLocale()
   const t = copy[locale]
   const navSections = useNavSections()
-  const pages = navSections.flatMap((section) => [
-    { label: section.label, group: t.mainSection, to: sectionPath(section) },
-    ...section.links.map((link) => ({
+  const pages = navSections.flatMap((section) =>
+    section.links.map((link) => ({
       label: link.label,
       group: section.label,
       to: linkPath(section, link),
     })),
-  ])
+  )
   const q = query.trim().toLowerCase()
   const results = q
     ? pages.filter((p) => `${p.label} ${p.group}`.toLowerCase().includes(q)).slice(0, 12)

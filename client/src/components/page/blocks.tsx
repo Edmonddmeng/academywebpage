@@ -70,7 +70,9 @@ export function PageBlock({ block }: { block: Block }) {
               {block.text}
             </p>
           )}
-          <ul className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3 ${block.heading || block.text ? 'mt-8' : ''}`}>
+          <ul
+            className={`grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-1.5 ${block.heading || block.text ? 'mt-8' : ''}`}
+          >
             {block.items.map((item) => (
               <li key={item.title} className="border border-dotted border-ink/45 p-6">
                 <h3 className="font-serif text-2xl">{item.title}</h3>
@@ -83,7 +85,7 @@ export function PageBlock({ block }: { block: Block }) {
 
     case 'stats':
       return (
-        <section className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
+        <section className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-1.5">
           {block.items.map((item) => (
             <div
               key={item.label}
@@ -232,7 +234,9 @@ export function PageBlock({ block }: { block: Block }) {
       return (
         <section>
           {block.heading && <Heading>{block.heading}</Heading>}
-          <ul className={`grid gap-8 md:grid-cols-2 ${block.heading ? 'mt-8' : ''}`}>
+          <ul
+            className={`grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 ${block.heading ? 'mt-8' : ''}`}
+          >
             {block.items.map((item) => (
               <li key={item.src}>
                 <img
@@ -259,7 +263,7 @@ export function PageBlock({ block }: { block: Block }) {
           {block.text && (
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink/75">{block.text}</p>
           )}
-          <ul className="mt-8 grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-6">
+          <ul className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-1.5">
             {block.items.map((item) => (
               <li key={item.label} className="flex h-24 items-center justify-center px-4">
                 {item.src ? (
@@ -370,7 +374,9 @@ export function PageBlock({ block }: { block: Block }) {
           {block.text && (
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink/75">{block.text}</p>
           )}
-          <ul className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4 ${block.heading || block.text ? 'mt-8' : ''}`}>
+          <ul
+            className={`grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-1.5 ${block.heading || block.text ? 'mt-8' : ''}`}
+          >
             {block.items.map((person) => (
               <li key={person.name} className="border border-dotted border-ink/45 p-6">
                 <span className="grid h-16 w-16 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
@@ -393,7 +399,9 @@ export function PageBlock({ block }: { block: Block }) {
       return (
         <section>
           {block.heading && <Heading>{block.heading}</Heading>}
-          <ol className={`grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4 ${block.heading ? 'mt-8' : ''}`}>
+          <ol
+            className={`grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-1.5 ${block.heading ? 'mt-8' : ''}`}
+          >
             {block.items.map((item, i) => (
               <li key={item.period} className="border border-dotted border-ink/45 p-6">
                 <span className="font-serif text-2xl text-brass">{String(i + 1).padStart(2, '0')}</span>

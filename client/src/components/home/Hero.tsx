@@ -127,7 +127,7 @@ export default function Hero() {
       </div>
 
       <div className="relative border-t border-white/20 bg-ink/45 backdrop-blur-sm">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 divide-white/15 px-6 sm:grid-cols-3 sm:px-10 lg:grid-cols-5 lg:divide-x lg:px-14">
+        <dl className="mx-auto grid max-w-7xl grid-cols-1 divide-white/15 px-6 sm:grid-cols-5 sm:divide-x sm:px-10 lg:px-14">
           {stats.map((stat) => (
             <div key={stat.label} className="px-2 py-6 text-center lg:py-8">
               <dt className="sr-only">{stat.label}</dt>

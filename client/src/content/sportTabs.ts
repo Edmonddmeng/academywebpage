@@ -9,8 +9,6 @@ export const sportTabs = [
   'venue',
   'performance',
   'recruiting',
-  'alumni',
-  'seasons',
 ] as const
 
 export type SportTab = (typeof sportTabs)[number]
@@ -22,8 +20,6 @@ const labelsEn = {
   venue: 'Where We Play',
   performance: 'Performance',
   recruiting: 'Recruiting',
-  alumni: 'Alumni',
-  seasons: 'Past Seasons',
 }
 
 const labelsZh = {
@@ -33,8 +29,6 @@ const labelsZh = {
   venue: '训练场地',
   performance: '体能表现',
   recruiting: '招募',
-  alumni: '校友',
-  seasons: '历史赛季',
 }
 
 export const tabLabel = (sport: Sport, tab: SportTab) =>

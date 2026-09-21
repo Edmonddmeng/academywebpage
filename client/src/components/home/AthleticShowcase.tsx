@@ -7,7 +7,7 @@ import { useLocale } from '../../content/locale'
 
 const copy = {
   en: { eyebrow: 'Athletic', heading: 'Season-long, five sports', explore: 'Explore Athletics', boysGirls: 'Boys · Girls' },
-  zh: { eyebrow: '体育', heading: '整季训练,五项体育项目', explore: '了解体育项目', boysGirls: '男子 · 女子' },
+  zh: { eyebrow: '体育', heading: '整季训练，五项体育项目', explore: '了解体育项目', boysGirls: '男子 · 女子' },
 }
 
 // A photo-card row — each sport's own hero image standing in for the section's copy.
@@ -32,7 +32,7 @@ export default function AthleticShowcase() {
         </Link>
       </Reveal>
 
-      <ul className="mx-auto mt-10 grid max-w-7xl gap-1.5 sm:grid-cols-2 lg:grid-cols-5">
+      <ul className="mx-auto mt-10 grid max-w-7xl grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-1.5">
         {sportKinds.map((kind, i) => {
           const sport = sports.find((s) => s.kind === kind)!
           return (

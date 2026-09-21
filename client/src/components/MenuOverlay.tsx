@@ -2,13 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { ChevronRight, CloseIcon } from './icons'
-import { linkPath, sectionPath, useNavSections, useQuickLinks, useUtilityLinks } from '../content/navigation'
+import { linkPath, useNavSections, useQuickLinks, useUtilityLinks } from '../content/navigation'
 import { useSite } from '../content/site'
 import { useLocale } from '../content/locale'
 
 const copy = {
   en: {
-    overview: 'Overview',
     quickLinks: 'Quick Links',
     siteMenu: 'Site menu',
     utility: 'Utility',
@@ -16,7 +15,6 @@ const copy = {
     main: 'Main',
   },
   zh: {
-    overview: '概览',
     quickLinks: '常用链接',
     siteMenu: '网站菜单',
     utility: '快捷导航',
@@ -41,15 +39,6 @@ export default function MenuOverlay({ onClose }: { onClose: () => void }) {
 
   const subLinks = (className: string) => (
     <ul key={current.slug} className={`animate-fade-in space-y-4 ${className}`}>
-      <li>
-        <Link
-          to={sectionPath(current)}
-          onClick={onClose}
-          className="text-lg font-medium text-brass hover:text-ink"
-        >
-          {current.label} {t.overview}
-        </Link>
-      </li>
       {current.links.map((link) => (
         <li key={link.slug}>
           <Link

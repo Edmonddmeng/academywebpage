@@ -50,14 +50,6 @@ function DataTable({ columns, empty }: { columns: string[]; empty: string }) {
   )
 }
 
-function EmptyState({ children }: { children: ReactNode }) {
-  return (
-    <div className="border border-dotted border-ink/40 px-6 py-14 text-center text-lg text-ink/65">
-      {children}
-    </div>
-  )
-}
-
 function NumberedList({ items }: { items: string[] }) {
   return (
     <ol className="grid gap-x-10 sm:grid-cols-2">
@@ -100,11 +92,6 @@ const copy = {
     ],
     strengthConditioning: 'Strength & Conditioning',
     collegeRecruiting: 'College Recruiting',
-    alumni: (title: string) =>
-      `As our first classes graduate, ${title} alumni competing in college and beyond will be featured here.`,
-    seasonArchives: 'Season archives',
-    seasonArchivesText:
-      'Results, rosters, and highlights from each season will be archived here, beginning with our inaugural season.',
     venuePhotos: 'Venue photography coming soon',
   },
   zh: {
@@ -114,17 +101,17 @@ const copy = {
     scheduleEmpty: '本赛季的赛程即将发布。',
     rosterEmpty: '本赛季的球员名单将在赛季开始前公布。',
     coachesLead: (title: string) =>
-      `每一位${title}运动员都由一整支教练团队共同培养,而非单独一位教练。教练团队人选公布后,将在此发布个人简介。`,
+      `每一位${title}运动员都由一整支教练团队共同培养，而非单独一位教练。教练团队人选公布后，将在此发布个人简介。`,
     tba: '待公布',
     trainingPhilosophy: '训练理念',
     trainingLead:
-      '训练贯穿整个赛季进行规划,兼顾技术发展、比赛、力量训练与恢复,并围绕每位运动员的学业安排与《运动员表现档案》制定。',
+      '训练贯穿整个赛季进行规划，兼顾技术发展、比赛、力量训练与恢复，并围绕每位运动员的学业安排与《运动员表现档案》制定。',
     sampleWeek: '典型训练周示例',
     day: '星期',
     morning: '上午',
     afternoon: '下午',
     performanceLead: (title: string) =>
-      `${title}运动员与力量教练、体能教练及运动表现团队合作,依据其年龄、身体发育阶段、位置与目标,制定个人化训练计划。`,
+      `${title}运动员与力量教练、体能教练及运动表现团队合作，依据其年龄、身体发育阶段、位置与目标，制定个人化训练计划。`,
     performanceItems: [
       '运动员表现档案',
       '力量与爆发力',
@@ -134,11 +121,8 @@ const copy = {
       '营养支持',
     ],
     strengthConditioning: '体能与力量训练',
-    collegeRecruiting: '大学招募',
-    alumni: (title: string) => `随着我们首届学生毕业,在大学及以后继续参赛的${title}校友将在此展示。`,
-    seasonArchives: '历史赛季存档',
-    seasonArchivesText: '每个赛季的比赛结果、球员名单与精彩集锦都将在此存档,从我们的首个赛季开始。',
-    venuePhotos: '场地实景照片拍摄中,敬请期待',
+    collegeRecruiting: '大学体育特招',
+    venuePhotos: '场地实景照片拍摄中，敬请期待',
   },
 }
 
@@ -158,7 +142,7 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
       return (
         <div className="space-y-10">
           <Lead>{t.coachesLead(sport.title)}</Lead>
-          <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-1.5">
             {sport.staff.map((role) => (
               <li key={role} className="flex items-center gap-5 border border-dotted border-ink/45 p-6">
                 <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
@@ -220,7 +204,7 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
       return (
         <div className="space-y-12">
           <Lead>{sport.venue.text}</Lead>
-          <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-1.5">
             {sport.venue.features.map((feature, i) => (
               <li key={feature} className="border border-dotted border-ink/45 px-6 py-8">
                 <span className="font-serif text-3xl text-brass">{String(i + 1).padStart(2, '0')}</span>
@@ -231,7 +215,7 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
             ))}
           </ul>
           {sport.venue.gallery.length > 0 ? (
-            <div className={`grid gap-8 md:gap-12 ${sport.venue.gallery.length > 1 ? 'md:grid-cols-2' : ''}`}>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 md:gap-12">
               {sport.venue.gallery.map((photo, i) =>
                 'src' in photo ? (
                   <img
@@ -271,20 +255,6 @@ export function SportPanel({ sport, tab }: { sport: Sport; tab: SportTab }) {
             {t.collegeRecruiting}
           </ButtonLink>
         </div>
-      )
-
-    case 'alumni':
-      return <EmptyState>{t.alumni(sport.title)}</EmptyState>
-
-    case 'seasons':
-      return (
-        <details className="group border-t border-b border-ink/15">
-          <summary className="flex cursor-pointer list-none items-center justify-between py-5 font-serif text-2xl">
-            {t.seasonArchives}
-            <span className="text-3xl leading-none text-brass transition-transform group-open:rotate-45">+</span>
-          </summary>
-          <p className="pb-6 text-ink/70">{t.seasonArchivesText}</p>
-        </details>
       )
   }
 }

@@ -5,7 +5,7 @@ const siteBase = {
   shortName: 'JMC',
   // PLACEHOLDER: street address still needed before launch.
   phone: '(949) 678-1320',
-  email: 'admission@jmcsportsacademy.com',
+  email: 'admission@jmcsports.org',
   social: [
     { label: 'Instagram', href: '#' },
     { label: 'Facebook', href: '#' },
@@ -46,7 +46,7 @@ const localized: Record<Locale, {
         imageAlt: 'JMC Irvine campus, Orange County',
         partner: 'Capistrano Valley Christian School',
         partnerImage: '/images/capistrano-valley-christian.jpg',
-        focus: 'Ice hockey, lacrosse, tennis, and fencing',
+        focus: 'Ice hockey, golf, lacrosse, tennis, and fencing',
         points: [
           'Season-long ice and turf training',
           'Day-school academics at Capistrano Valley Christian School',
@@ -88,10 +88,10 @@ const localized: Record<Locale, {
         city: '加州尔湾',
         region: '橙县',
         image: '/images/campus-irvine.jpg',
-        imageAlt: 'JMC 尔湾校区,位于橙县',
-        partner: 'Capistrano Valley Christian School(卡皮斯特拉诺谷基督学校)',
+        imageAlt: 'JMC 尔湾校区，位于橙县',
+        partner: 'Capistrano Valley Christian School（卡皮斯特拉诺谷基督学校）',
         partnerImage: '/images/capistrano-valley-christian.jpg',
-        focus: '冰球、长曲棍球、网球与击剑',
+        focus: '冰球、高尔夫、长曲棍球、网球与击剑',
         points: [
           '整季冰上与草坪训练',
           '在 Capistrano Valley Christian School 走读完成学业',

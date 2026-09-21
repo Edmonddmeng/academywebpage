@@ -175,7 +175,5 @@ export function useQuickLinks() {
   return resolveLocalizedList(quickLinks, useLocale())
 }
 
-export const sectionPath = (section: { slug: string }) => `/${section.slug}`
-
 export const linkPath = (section: { slug: string }, link: { slug: string }) =>
   `/${section.slug}/${link.slug}`
