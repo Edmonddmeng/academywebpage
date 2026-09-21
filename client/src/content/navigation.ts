@@ -110,7 +110,7 @@ export const navSections: NavSection[] = [
       { label: { en: 'College Planning', zh: '大学规划' }, slug: 'college-planning' },
       { label: { en: '5-to-1 Model', zh: '5比1辅导模式' }, slug: '5-to-1-model' },
       { label: { en: 'College Recruiting', zh: '大学招募' }, slug: 'college-recruiting' },
-      { label: { en: 'Commitments', zh: '录取承诺' }, slug: 'commitments' },
+      { label: { en: 'Commitments', zh: '录取去向' }, slug: 'commitments' },
     ],
   },
   {
