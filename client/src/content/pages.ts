@@ -1258,7 +1258,16 @@ export const pageContent: Record<string, PageContent> = {
             title: 'Advanced study, not repetition',
             text: 'Students who exhaust a subject sequence move into focused advanced work — research, data analysis, independent study — instead of coasting.',
           },
+          {
+            title: 'Grades checked weekly, not termly',
+            text: 'We do not wait for a report card. Grades and assignment status are checked weekly, so a slipping average gets caught while there is still time to fix it — not discovered three months later.',
+          },
         ],
+      },
+      {
+        type: 'statement',
+        text: 'We do not let a single bad grade happen without a response. The moment a grade starts to slip — not after the report card arrives — tutoring intensifies immediately.',
+        attribution: 'Our Standard',
       },
       {
         type: 'table',
@@ -1286,7 +1295,7 @@ export const pageContent: Record<string, PageContent> = {
 
   'academic/middle-school': {
     intro:
-      'Grades 6–8: real classes at our partner day schools, and JMC’s own after-school program building the habits, testing readiness, and academic foundation that make a demanding Upper School possible.',
+      'Grades 6–8: real classes at our partner day schools, and JMC’s own after-school program of daily tutoring and academic advising built to keep every student ahead — not just caught up — as the foundation for a demanding Upper School.',
     blocks: [
       {
         type: 'split',
@@ -1298,12 +1307,21 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'statement',
+        text: 'We are not trying to help student-athletes keep pace with their non-athlete classmates. Daily tutoring and a dedicated academic advisor exist to keep every student ahead — building scholars whose classroom work would challenge students with twice the free time.',
+        attribution: 'Our Standard',
+      },
+      {
         type: 'numbered',
         heading: 'How Middle School works',
         items: [
           {
             title: 'Every core subject, reinforced',
             text: 'English, mathematics, science, history, and world language — whatever a student is taking at their partner school, JMC tutoring covers it every week, not just before a test.',
+          },
+          {
+            title: 'Pushed toward advanced work, not just competence',
+            text: 'Where a student has earned it, their academic advisor actively pushes for an accelerated math, science, or language placement at their partner school — a term early, a level up — rather than settling for “on track.”',
           },
           {
             title: 'We track placement, not just attendance',

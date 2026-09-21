@@ -329,7 +329,7 @@ export const pageContentZh: Record<string, PageContent> = {
         type: 'prose',
         heading: '专业教练与运动员升学咨询',
         paragraphs: [
-          'JMC的每一位主教练都会直接参与学生的预备学校与大学招募流程,而不仅仅是负责训练。教练会定期陪同运动员前往顶尖试训现场,负责与学校及大学教练的沟通,并与每位学生的 Student-Athlete Manager 紧密协作,让训练、比赛与未来发展路径保持同步推进,而不是彼此割裂的独立环节。',
+          'JMC的每一位主教练都会直接参与学生的预备学校与大学体育特招流程,而不仅仅是负责训练。教练会定期陪同运动员前往顶尖试训现场,负责与学校及大学教练的沟通,并与每位学生的 Student-Athlete Manager 紧密协作,让训练、比赛与未来发展路径保持同步推进,而不是彼此割裂的独立环节。',
         ],
       },
       {
@@ -696,7 +696,7 @@ export const pageContentZh: Record<string, PageContent> = {
         type: 'cta',
         heading: '资格审核与招募同步进行',
         links: [
-          { label: '大学招募', to: '/counseling/college-recruiting' },
+          { label: '大学体育特招', to: '/counseling/college-recruiting' },
           { label: '课堂之外', to: '/academic/academic-support' },
         ],
       },
@@ -747,7 +747,7 @@ export const pageContentZh: Record<string, PageContent> = {
         type: 'cta',
         heading: '了解曝光机会如何规划',
         links: [
-          { label: '大学招募', to: '/counseling/college-recruiting' },
+          { label: '大学体育特招', to: '/counseling/college-recruiting' },
           { label: '课堂之外', to: '/academic/academic-support' },
         ],
       },
@@ -799,7 +799,7 @@ export const pageContentZh: Record<string, PageContent> = {
         heading: '团队如何协作',
         links: [
           { label: '5比1辅导模式', to: '/counseling/5-to-1-model' },
-          { label: '大学招募', to: '/counseling/college-recruiting' },
+          { label: '大学体育特招', to: '/counseling/college-recruiting' },
         ],
       },
     ],
@@ -1204,7 +1204,16 @@ export const pageContentZh: Record<string, PageContent> = {
             title: '高阶学习,而非重复',
             text: '修完某一学科序列的高年级学生,会转向研究、数据分析、独立课题等高阶学习,而不是原地打转。',
           },
+          {
+            title: '每周检查成绩,而非等到学期末',
+            text: '我们不会等成绩单出来才发现问题。成绩与作业情况每周检查,一旦出现下滑趋势就能及时补救——而不是三个月后才被发现。',
+          },
         ],
+      },
+      {
+        type: 'statement',
+        text: '我们不允许任何一个差成绩在没有应对的情况下发生。一旦成绩出现下滑迹象——而不是等成绩单寄到之后——辅导强度会立刻提升。',
+        attribution: '我们的标准',
       },
       {
         type: 'table',
@@ -1231,7 +1240,7 @@ export const pageContentZh: Record<string, PageContent> = {
   },
 
   'academic/middle-school': {
-    intro: '6至8年级:在合作私立日校修读真实课程,并通过JMC自己的课后项目培养习惯、备考能力与学术基础,为高中部高强度的学业做好准备。',
+    intro: '6至8年级:在合作私立日校修读真实课程,并通过JMC自己每日辅导与学术顾问的课后项目,确保每一位学生始终保持领先——而不只是跟上,为高中部高强度的学业打下基础。',
     blocks: [
       {
         type: 'split',
@@ -1243,12 +1252,21 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'statement',
+        text: '我们的目标,不是帮助学生运动员勉强跟上非运动员同学的步伐。每日辅导与专属学术顾问的存在,是为了让每一位学生始终保持领先——培养出的学者,其课堂表现足以让拥有两倍自由时间的学生也自愧不如。',
+        attribution: '我们的标准',
+      },
+      {
         type: 'numbered',
         heading: '初中部的运作方式',
         items: [
           {
             title: '每一门核心学科,都有针对性辅导',
             text: '英语、数学、科学、历史与外语——无论学生在合作学校修读什么课程,JMC的辅导都会每周跟进,而不只是在考试前临时抱佛脚。',
+          },
+          {
+            title: '推动学生冲刺更高阶的学习,而不满足于“达标”',
+            text: '只要学生的能力达到,学术顾问会主动向合作学校争取更高阶的数学、科学或外语分班——提前一个学期,或直接跳级——而不是止步于“跟上进度”。',
           },
           {
             title: '我们追踪分班,而不只是出勤',
@@ -1672,7 +1690,7 @@ export const pageContentZh: Record<string, PageContent> = {
       {
         type: 'cta',
         heading: '招募工作逐年如何推进',
-        links: [{ label: '大学招募', to: '/counseling/college-recruiting' }],
+        links: [{ label: '大学体育特招', to: '/counseling/college-recruiting' }],
       },
     ],
   },
@@ -1756,7 +1774,7 @@ export const pageContentZh: Record<string, PageContent> = {
         heading: '我们如何帮助运动员实现目标',
         links: [
           { label: '5比1辅导模式', to: '/counseling/5-to-1-model' },
-          { label: '大学招募', to: '/counseling/college-recruiting' },
+          { label: '大学体育特招', to: '/counseling/college-recruiting' },
         ],
       },
     ],
