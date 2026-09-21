@@ -22,7 +22,7 @@ export const navSections: NavSection[] = [
     slug: 'about',
     blurb: {
       en: 'Who we are, what we believe, and the two campuses we train on.',
-      zh: '我们是谁,我们的理念,以及我们训练所在的两个校区。',
+      zh: '我们是谁，我们的理念，以及我们训练所在的两个校区。',
     },
     links: [
       { label: { en: 'Head of Academy', zh: '院长寄语' }, slug: 'head-of-academy' },
@@ -65,7 +65,7 @@ export const navSections: NavSection[] = [
     slug: 'athletic',
     blurb: {
       en: 'Ten season-long programs in ice hockey, golf, tennis, fencing, and lacrosse.',
-      zh: '冰球、高尔夫、网球、击剑与长曲棍球,共十个整季项目。',
+      zh: '冰球、高尔夫、网球、击剑与长曲棍球，共十个整季项目。',
     },
     links: [
       { label: { en: 'Boys Ice Hockey', zh: '男子冰球' }, slug: 'boys-ice-hockey' },
@@ -89,7 +89,7 @@ export const navSections: NavSection[] = [
     slug: 'student-life',
     blurb: {
       en: 'Residence, dining, recovery, travel, and life beyond training.',
-      zh: '住宿、餐饮、恢复、赛事出行,以及训练之外的校园生活。',
+      zh: '住宿、餐饮、恢复、赛事出行，以及训练之外的校园生活。',
     },
     links: [
       { label: { en: 'Residence Life', zh: '住宿生活' }, slug: 'residence-life' },
@@ -104,7 +104,7 @@ export const navSections: NavSection[] = [
     slug: 'counseling',
     blurb: {
       en: 'Five professionals guiding every athlete to the right college program.',
-      zh: '五位专业顾问,协助每一位运动员找到合适的大学项目。',
+      zh: '五位专业顾问，协助每一位运动员找到合适的大学项目。',
     },
     links: [
       { label: { en: 'College Planning', zh: '大学规划' }, slug: 'college-planning' },

@@ -78,9 +78,9 @@ const localized: Record<Locale, {
     ],
   },
   zh: {
-    tagline: '为南加州认真投入的学生运动员提供整季训练、学业与大学招募服务。',
+    tagline: '为南加州认真投入的学生运动员提供整季训练、学业与大学体育特招服务。',
     description:
-      'JMC 体育学院在南加州两个校区培养冰球、高尔夫、网球、击剑与长曲棍球学生运动员,将顶尖训练、大学预备学业与专属招募团队融为一体。',
+      'JMC 体育学院在南加州两个校区培养冰球、高尔夫、网球、击剑与长曲棍球学生运动员，将顶尖训练、大学预备学业与专属招募团队融为一体。',
     identity: '南加州一所面向 6 至 12 年级的大学预备寄宿体育学院',
     campuses: [
       {
@@ -104,7 +104,7 @@ const localized: Record<Locale, {
         region: '圣地亚哥县',
         image: '/images/campus-san-diego.jpg',
         imageAlt: 'JMC 圣地亚哥校区',
-        partner: 'Maranatha Christian School(马拉纳沙基督学校)',
+        partner: 'Maranatha Christian School（马拉纳沙基督学校）',
         partnerImage: '/images/maranatha-christian.jpg',
         focus: '高尔夫、网球与长曲棍球',
         points: [
