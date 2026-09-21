@@ -1,11 +1,9 @@
-import { Eyebrow } from '../ui'
 import Reveal from '../Reveal'
 import { useLocale } from '../../content/locale'
 
 const copy = {
   en: {
-    eyebrow: 'Our Standard',
-    resultsWords: ['Results.', 'Results.', 'Results.'],
+    heading: 'Our Standard Is Results.',
     push: 'We push every student to become someone they never thought they could become.',
     ask: 'We ask for the best — as a person, as a scholar, and as an athlete. Nothing less.',
     teamHeading: 'Built by people who have done this before',
@@ -14,13 +12,12 @@ const copy = {
     team: ['Former Admission Officers', 'Educators & K–12 Teachers', 'Elite Professional Coaches', 'University Professors'],
   },
   zh: {
-    eyebrow: '我们的标准',
-    resultsWords: ['结果,', '结果,', '还是结果。'],
-    push: '我们推动每一位学生,成长为连他们自己都未曾想过能够成为的人。',
-    ask: '我们对学生只有一个要求——做到最好:作为一个人,作为一名学者,也作为一名运动员。没有例外。',
+    heading: '我们的标准是结果。',
+    push: '我们推动每一位学生，成长为连他们自己都未曾想过能够成为的人。',
+    ask: '我们对学生只有一个要求——做到最好：作为一个人，作为一名学者，也作为一名运动员。没有例外。',
     teamHeading: '由真正做过这件事的人搭建',
     teamText:
-      '我们的团队由前大学招生官、资深教育工作者、K-12教师、顶尖职业球员与教练,以及大学教授组成——共同为每一位学生打造最好的成长体验。',
+      '我们的团队由前大学招生官、资深教育工作者、K-12教师、顶尖职业球员与教练，以及大学教授组成——共同为每一位学生打造最好的成长体验。',
     team: ['前大学招生官', 'K-12教育工作者', '顶尖职业教练', '大学教授'],
   },
 }
@@ -33,14 +30,7 @@ export default function OurStandard() {
     <section className="bg-ink px-6 py-24 text-white sm:px-10 sm:py-28 lg:px-14">
       <div className="mx-auto max-w-4xl text-center">
         <Reveal as="div">
-          <Eyebrow onDark className="justify-center">
-            {t.eyebrow}
-          </Eyebrow>
-          <p className="mt-6 font-serif text-5xl leading-none sm:text-7xl lg:text-8xl">
-            <span className="text-gold">{t.resultsWords[0]}</span>{' '}
-            <span className="text-gold/65">{t.resultsWords[1]}</span>{' '}
-            <span className="text-gold/35">{t.resultsWords[2]}</span>
-          </p>
+          <p className="font-serif text-4xl leading-tight text-gold sm:text-6xl lg:text-7xl">{t.heading}</p>
           <p className="mx-auto mt-9 max-w-2xl font-serif text-2xl leading-snug sm:text-3xl">{t.push}</p>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">{t.ask}</p>
         </Reveal>
