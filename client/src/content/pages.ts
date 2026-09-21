@@ -68,38 +68,95 @@ const visitCta: Block = {
 
 export const pageContent: Record<string, PageContent> = {
   // ABOUT
-  // Jonathan Reyes is a placeholder person, invented for launch. Replace with the real
-  // Head of Academy's name, background, and photo once hired.
   'about/head-of-academy': {
-    intro: 'A letter from our founding Head of Academy.',
+    intro: 'A letter from our Head of Academy to every family considering JMC.',
     blocks: [
       {
         type: 'split',
         heading: 'A letter before you apply',
-        image: { src: '/images/jonathan-reyes.jpg', alt: 'Jonathan Reyes, Head of Academy' },
+        image: { src: '/images/kirk-wheeler.jpg', alt: 'Kirk Wheeler, Head of Academy' },
         paragraphs: [
-          'I spent eleven seasons on the bench before I ever stood in front of a classroom, and both jobs taught me the same lesson: a kid who is only pushed in one direction eventually breaks in the other.',
+          'Nearly every family who writes to us is asking some version of the same question: how do I give my child a serious future in sport without giving up their education, or my own peace of mind? This letter is our answer.',
         ],
       },
       {
         type: 'statement',
-        text: 'The most competitive athletes I have ever coached were also the ones who felt safest off the field.',
+        text: 'A child should never have to choose between serious training, a serious education, and a safe place to grow up.',
+      },
+      {
+        type: 'prose',
+        heading: 'Why we built JMC',
+        paragraphs: [
+          'The biggest need we saw came from busy parents. They want their children to study, play, and grow up somewhere safe and reassuring, yet those children still need extensive academic and athletic development. Few parents can provide all of that alone, and few children can carry it alone.',
+          'This is where many families end up compromising. Families who want an American college athletic path for their child often worry the child cannot keep up academically, so they settle for an average school and an uneven homestay: good athletics, but academic potential quietly reduced and a childhood made smaller. At the other end are the traditional New England boarding schools, intense and unforgiving, where a child can easily become one more number in the machine.',
+          'We wanted to offer a third choice: a Southern California solution, tailored to each child, with a second parent and a team built around what that child needs.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'What actually works is simple',
+        paragraphs: [
+          'We believe the answer is hands-on guidance: hands-on academic tutoring, paired with equally hands-on athletic guidance. Families fear two things above all, a child who is quietly left behind and a decision they later regret. With someone watching closely every day, problems are caught early and time is not wasted.',
+          'That level of care costs about the same as a typical private boarding school.',
+          'Our students are also asked to step out of their comfort zone and into experiences that help them mature away from the rink, the court, or the field. The positive feedback they earn there feeds directly into their growth in sport, whether that sport is hockey, lacrosse, tennis, or anything else.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'How we look after every student',
+        paragraphs: [
+          'Our support has three parts, all working around the same child and the same plan.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '1. Individualized academic guidance',
+        paragraphs: [
+          'Our college counseling acts like a second parent, involved from course selection through applications. We check grades, homework, and progress regularly so problems never wait for a report card to surface, and we match one-on-one or small-group tutoring to each child’s foundation and subjects.',
+          'For students new to the U.S., we help them keep up with English-language classes and school expectations as quickly as possible. We stay in close contact with families, so parents never have to guess how their child is doing: we tell them, and we answer when they ask. When difficulties appear, we step in while a small problem is still small.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '2. Coordinated athletic development',
+        paragraphs: [
+          'We offer more than a place on a team. The quality of training, competition, and pathway matters more than a spot on a roster. Professional coaches lead consistent, high-quality training on a steady rhythm, and every athlete has an individual development plan built around their own level and goals.',
+          'Coaches, school, and family stay aligned, so training, coursework, and family expectations all pull in the same direction. We track each athlete’s progress with records and periodic reviews, because progress that can be seen is the only kind that counts, and we plan from today’s training all the way to a future college program.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '3. Comprehensive student care',
+        paragraphs: [
+          'A child far from home needs a trusted adult close by. Our students live in high-end apartment communities with a dorm parent who lives alongside them, a steady routine, clear rules, and someone paying attention to their day, every day.',
+          'We help students through the hardest stretch, the first months in a new country, help them understand school and community life and make real friends, and keep family across the ocean informed about how their child is. All of it is the responsibility of one team: not one person, but a whole team accountable for a student’s health and growth.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Who we are',
+        paragraphs: [
+          'We ask one thing of our students: the best of themselves, as a person, as a scholar, and as an athlete.',
+          'To make that possible, we have brought together a team of former admission officers, educators, K-12 teachers, elite professional players and coaches, professors, and others, united by one goal: the best possible experience for each student.',
+        ],
+      },
+      {
+        type: 'statement',
+        text: 'Results, results, results.',
+        attribution: 'Our philosophy',
       },
       {
         type: 'prose',
         paragraphs: [
-          'A few years ago I sat across from a family who had flown in from overseas to see the campus before committing their son to us. The mother asked one question before anything else — not about ice time, not about our coaching staff, but whether he would be judged by how he played. She had heard the stories: American programs that treat a talented kid like an asset first and a teenager second, and quietly drop the second part the moment the first one stops being useful.',
-          'That is the question I want every international family to ask, because it is the right one. We work with day schools we would trust with our own children — traditional, warm places built around the same thing every good American school has always been built around: a community that knows a student by name before it knows their statistics. Our athletes are not evaluated by how they perform. They are simply welcomed, the way any new student should be.',
-          'For a family sending a child across an ocean especially, we are not only offering a training program. We are offering an actual American life — friends who stick around after the season ends, service trips and weekend outings that have nothing to do with a scoreboard, a dorm rector who lives and trains alongside our athletes rather than simply supervising them, and enough structure and discipline that a kid leaves us equipped to handle far more than a difficult opponent.',
-          'None of that happens by accident. It happens because we chose to build a school where competitive excellence and a genuinely happy childhood are not in tension — where an athlete can be pushed hard on the field and still come home, every day, to people who care about them regardless of how the day went.',
-          'I will not pretend we have this fully figured out. We are a new school, building toward the standard we have set for ourselves, one class and one season at a time. What I can promise is that every decision here starts from the same question: does this serve the whole person, or just the part of them that shows up on a highlight reel?',
-          'If you are a family — especially one weighing this decision from another country — asking whether an American sports academy can also be a genuine home, I would like to talk with you. Come watch a training session, sit in on a class, meet the dorm rector who will actually live alongside your child, and judge for yourself whether we are building what we say we are.',
+          'Our philosophy is simple: we look at results. We are confident in it because, to us, good results mean a student who is healthy, happy, kind, and responsible, and much more.',
+          'JMC is a new school, but the team behind it is not. We do not promise that any student will be admitted to a particular school, university, or team. What we promise is careful planning, close follow-up, and a student who is genuinely prepared.',
+          'If you are weighing this decision for your child, especially from far away, I would like to talk with you. Come watch a training session, sit in on a class, meet the team, and judge for yourself whether we are doing what we say.',
         ],
       },
       {
         type: 'signature',
-        name: 'Jonathan Reyes',
-        role: 'Founding Head of Academy',
+        name: 'Kirk Wheeler',
+        role: 'Head of Academy',
       },
       visitCta,
     ],
@@ -110,14 +167,14 @@ export const pageContent: Record<string, PageContent> = {
     blocks: [
       {
         type: 'statement',
-        text: 'JMC exists to build a professional, systematic, and sustainable development system for youth student-athletes with athletic potential and long-term goals — one that grows academic ability, competitive ability, physical fitness, self-management, and character together.',
+        text: 'JMC exists to build a professional, systematic, and sustainable development system for youth student-athletes with athletic potential and long-term goals: one that grows academic ability, competitive ability, physical fitness, self-management, and character together.',
         attribution: 'Our Mission',
       },
       {
         type: 'prose',
         paragraphs: [
           'JMC Academy is a comprehensive education and athletic-development academy focused on the long-term growth of youth student-athletes. Working with private U.S. day schools that share our educational philosophy, we give students a rigorous academic education alongside high-level competitive training, event planning, physical development, health and wellbeing support, residential management, academic tutoring, college and school planning, and athlete career development.',
-          'We care about a student’s results and performance today, but we care more about the long road ahead: the strong boarding schools, universities, college athletic programs, and higher-level competitive platforms they hope to reach. A truly excellent student-athlete has to grow in academics, athletic ability, physical condition, character, self-management, and planning for the future — all at the same time.',
+          'We care about a student’s results and performance today, but we care more about the long road ahead: the strong boarding schools, universities, college athletic programs, and higher-level competitive platforms they hope to reach. A truly excellent student-athlete has to grow in academics, athletic ability, physical condition, character, self-management, and planning for the future, all at the same time.',
           'Most student-athletes are pushed to choose: train seriously and let school slip, or protect the transcript and train around whatever time is left. We think that choice is a failure of design, not a fact of life. So every JMC student has a personalized Student-Athlete Development Plan and a dedicated Student-Athlete Manager who coordinates the whole of it, so that at each stage of growth they receive the education, training, and support that fit their own goals.',
         ],
       },
@@ -251,7 +308,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Development is individual',
-            text: 'Every student trains and studies on a plan built for their age, academic background, competitive level, and goals — not a fixed pace.',
+            text: 'Every student trains and studies on a plan built for their age, academic background, competitive level, and goals, not a fixed pace.',
           },
           {
             title: 'Honesty over hype',
@@ -302,7 +359,7 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'A private, integrated student-development and athletic-management academy',
         paragraphs: [
           'JMC Academy is not a school with a strong athletic program, and not a club team that happens to offer classes. We are the system that sits underneath both: academics, elite training, competition, physical development, residential life, and college athletic recruiting, coordinated as one continuous plan by one team, for grade 6–12 student-athletes.',
-          'Athletes pursue a rigorous, college-preparatory course load — including Advanced Placement coursework where it fits — at value-aligned partner day schools, then move directly into JMC’s own training, tutoring, and development program every afternoon and evening. One student. One plan. One team accountable for all of it.',
+          'Athletes pursue a rigorous, college-preparatory course load, including Advanced Placement coursework where it fits, at value-aligned partner day schools, then move directly into JMC’s own training, tutoring, and development program every afternoon and evening. One student. One plan. One team accountable for all of it.',
         ],
       },
       {
@@ -326,11 +383,11 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             title: 'Partner day schools, not a watered-down curriculum',
-            text: 'Students attend rigorous, value-aligned American private day schools for their formal academic education — real classrooms, real teachers, real transcripts — with course pacing planned against each student’s age, academic background, and long-term goals, including AP coursework where the school’s schedule and the student’s readiness support it.',
+            text: 'Students attend rigorous, value-aligned American private day schools for their formal academic education: real classrooms, real teachers, real transcripts, with course pacing planned against each student’s age, academic background, and long-term goals, including AP coursework where the school’s schedule and the student’s readiness support it.',
           },
           {
             title: 'Daily small-group coaching',
-            text: 'Every student trains in small, personalized groups every single day — never lost in a crowd, never coasting.',
+            text: 'Every student trains in small, personalized groups every single day, never lost in a crowd, never coasting.',
           },
           {
             title: 'Nightly private tutoring, every subject',
@@ -338,11 +395,11 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'A private, full-time counselor',
-            text: 'Each student has a dedicated academic counselor available throughout the week to guide course selection, monitor progress, and plan the path ahead — not a shared office visited once a term.',
+            text: 'Each student has a dedicated academic counselor available throughout the week to guide course selection, monitor progress, and plan the path ahead, not a shared office visited once a term.',
           },
           {
             title: 'Small, bespoke cohorts',
-            text: 'Class groups and training groups stay small and closely watched, by design, so no student’s time — or potential — goes to waste.',
+            text: 'Class groups and training groups stay small and closely watched, by design, so no student’s time, or potential, goes to waste.',
           },
         ],
       },
@@ -350,7 +407,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'prose',
         heading: 'A day in the life',
         paragraphs: [
-          'Illustrated below through the day of a JMC ice hockey player — the same structure, adjusted by sport and training location, holds across every program.',
+          'Illustrated below through the day of a JMC ice hockey player: the same structure, adjusted by sport and training location, holds across every program.',
         ],
       },
       {
@@ -359,7 +416,7 @@ export const pageContent: Record<string, PageContent> = {
         columns: ['Time', 'Block', 'Focus'],
         rows: [
           ['7:00 AM', 'Wake up', 'Morning routine'],
-          ['7:30 AM', 'Breakfast', 'A nutritious buffet — fresh fruit, protein, and complex carbohydrates'],
+          ['7:30 AM', 'Breakfast', 'A nutritious buffet: fresh fruit, protein, and complex carbohydrates'],
           ['Morning', 'Academics', 'A full course load at the partner day school, including AP coursework'],
           ['2:30 PM', 'Dismissal', 'Bussed directly from school to the training facility'],
           ['2:30–4:00 PM', 'Club training', 'Club team practice, about 1.5 hours'],
@@ -370,19 +427,19 @@ export const pageContent: Record<string, PageContent> = {
           ['9:00–10:30 PM', 'Free time', 'Unstructured personal time'],
           ['10:30 PM', 'Lights out', 'Protected sleep'],
         ],
-        note: 'A sample day for an ice hockey player, not a fixed schedule. Timing shifts by sport, training location, student age, and the partner school’s calendar — and adequate rest is always preserved between training and academics.',
+        note: 'A sample day for an ice hockey player, not a fixed schedule. Timing shifts by sport, training location, student age, and the partner school’s calendar, and adequate rest is always preserved between training and academics.',
       },
       {
         type: 'prose',
         paragraphs: [
-          'Dinner is home-cooked American cuisine, prepared by our chefs using fresh, locally sourced ingredients whenever possible — because a student’s development depends as much on recovery and nutrition as it does on repetitions.',
+          'Dinner is home-cooked American cuisine, prepared by our chefs using fresh, locally sourced ingredients whenever possible, because a student’s development depends as much on recovery and nutrition as it does on repetitions.',
         ],
       },
       {
         type: 'prose',
         heading: 'Professional coaching & athlete counseling',
         paragraphs: [
-          'Every head coach at JMC is directly involved in the prep-school and college recruiting process — not just training. Coaches travel regularly to accompany athletes to elite tryouts, handle communication with school and college coaches, and work alongside each student’s Student-Athlete Manager to keep training, competition, and the path ahead moving together, not treated as separate conversations.',
+          'Every head coach at JMC is directly involved in the prep-school and college recruiting process, not just training. Coaches travel regularly to accompany athletes to elite tryouts, handle communication with school and college coaches, and work alongside each student’s Student-Athlete Manager to keep training, competition, and the path ahead moving together, not treated as separate conversations.',
         ],
       },
       {
@@ -390,7 +447,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             title: 'Head coaches in recruiting',
-            text: 'Involved in every athlete’s tryout, showcase, and recruiting calendar — not a separate office down the hall.',
+            text: 'Involved in every athlete’s tryout, showcase, and recruiting calendar, not a separate office down the hall.',
           },
           {
             title: 'Coaches travel with athletes',
@@ -398,18 +455,18 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'A dedicated Student-Athlete Manager',
-            text: 'One coordinator, available all week, responsible for the whole picture — academics, training, competition, and family communication.',
+            text: 'One coordinator, available all week, responsible for the whole picture: academics, training, competition, and family communication.',
           },
           {
             title: 'Extreme attention, by design',
-            text: 'Small, bespoke cohorts mean nothing falls through the cracks and no time is wasted. We do not promise a specific school, university, or professional outcome — we promise a professional plan, continuous follow-up, and a student who is genuinely ready to compete for it.',
+            text: 'Small, bespoke cohorts mean nothing falls through the cracks and no time is wasted. We do not promise a specific school, university, or professional outcome; we promise a professional plan, continuous follow-up, and a student who is genuinely ready to compete for it.',
           },
         ],
       },
       {
         type: 'cta',
         heading: 'Value-aligned partner day schools',
-        text: 'We partner with prestigious American private day schools that share our educational philosophy — immersing students in American culture, English, and a genuine, traditional school life, while preparing them seriously, academically and personally.',
+        text: 'We partner with prestigious American private day schools that share our educational philosophy: immersing students in American culture, English, and a genuine, traditional school life, while preparing them seriously, academically and personally.',
         links: [{ label: 'Our Campuses', to: '/about/campuses' }],
       },
       {
@@ -421,8 +478,8 @@ export const pageContent: Record<string, PageContent> = {
             text: 'Training is planned in deliberate phases across the season, not left to chance.',
           },
           {
-            title: 'Everyone lives here',
-            text: 'A single residential community means training, meals, study, and recovery all happen on schedule.',
+            title: 'Secure, supervised housing',
+            text: 'Every student lives in a high-end apartment community with a dorm parent, so training, meals, study, and recovery all happen on schedule.',
           },
           {
             title: 'Professional performance staff',
@@ -452,7 +509,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'features',
         items: [
-          { title: 'Head of Academy', text: 'Jonathan Reyes. Overall leadership, culture, and standards.' },
+          { title: 'Head of Academy', text: 'Kirk Wheeler. Overall leadership, culture, and standards.' },
           { title: 'Director of Student Life', text: 'To be announced. Residential life, daily routine, and student wellbeing.' },
           { title: 'Director of Athletics', text: 'To be announced. Coaching staffs, competition, and program standards.' },
           { title: 'Head Coach, Ice Hockey', text: 'To be announced. Program standards, recruiting, and athlete development for boys’ and girls’ ice hockey.' },
@@ -469,7 +526,7 @@ export const pageContent: Record<string, PageContent> = {
   },
 
   'about/campuses': {
-    intro: 'Two Southern California campuses — Irvine and San Diego — each with its own college-preparatory academic program.',
+    intro: 'Two Southern California campuses, Irvine and San Diego, each with its own college-preparatory academic program.',
     blocks: [
       {
         type: 'prose',
@@ -480,13 +537,13 @@ export const pageContent: Record<string, PageContent> = {
       },
       {
         type: 'features',
-        heading: 'Irvine Campus — Orange County',
+        heading: 'Irvine Campus, Orange County',
         items: [
           { title: 'Academic program', text: 'A rigorous, college-preparatory course load at Capistrano Valley Christian School.' },
-          { title: 'Primary sports', text: 'Ice hockey, lacrosse, tennis, and fencing.' },
+          { title: 'Primary sports', text: 'Ice hockey, golf, lacrosse, tennis, and fencing.' },
           { title: 'Training venues', text: 'Great Park Ice Arena, Irvine Fencing Center, Great Park Sports Park turf fields, and hard courts.' },
           { title: 'Performance center', text: 'Strength, conditioning, and testing space for daily use.' },
-          { title: 'Residence', text: 'Student-athletes live together in nearby Irvine Company apartment communities, with on-site pools, a fitness center, and residential staff.' },
+          { title: 'Residence', text: 'Student-athletes live in nearby high-end Irvine Company apartment communities: controlled entry, a dorm parent on site, and community pools and a fitness center.' },
           { title: 'Location', text: 'Minutes from the Orange County coast, close to John Wayne Airport.' },
         ],
       },
@@ -506,7 +563,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'prose',
         heading: 'Where students live',
         paragraphs: [
-          'Near the Irvine campus, student-athletes live together in Irvine Company apartment communities — a short drive from training and from Capistrano Valley Christian School, with resort-style pools, a full fitness center, landscaped courtyards, and on-site residential staff.',
+          'Near the Irvine campus, student-athletes live in high-end Irvine Company apartment communities, a short drive from training and from Capistrano Valley Christian School. The communities have controlled entry, a dorm parent who lives with the students, resort-style pools, a full fitness center, and landscaped courtyards.',
         ],
       },
       {
@@ -533,7 +590,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'image',
         src: '/images/academic-seminar.jpg',
         alt: 'A teacher and students working closely in a seminar-style classroom',
-        caption: 'Academics on both campuses — a rigorous, college-preparatory course load at our partner day schools',
+        caption: 'Academics on both campuses: a rigorous, college-preparatory course load at our partner day schools',
       },
       {
         type: 'gallery',
@@ -542,17 +599,17 @@ export const pageContent: Record<string, PageContent> = {
           {
             src: '/images/great-park-ice-arena.jpg',
             alt: 'Aerial view of the Great Park Ice Arena training facility in Irvine',
-            caption: 'Irvine — Great Park Ice Arena, home ice for our hockey program',
+            caption: 'Irvine: Great Park Ice Arena, home ice for our hockey program',
           },
           {
             src: '/images/great-park-sports-park.jpg',
             alt: 'Aerial view of turf fields and courts at the Orange County Great Park Sports Park',
-            caption: 'Irvine — Great Park Sports Park, turf fields for lacrosse',
+            caption: 'Irvine: Great Park Sports Park, turf fields for lacrosse',
           },
           {
             src: '/images/irvine-fencing-center.jpg',
             alt: 'The indoor fencing strips at the Irvine Fencing Center',
-            caption: 'Irvine — Irvine Fencing Center, home strips for our fencing program',
+            caption: 'Irvine: Irvine Fencing Center, home strips for our fencing program',
           },
           {
             src: '/images/strawberry-farms-golf.jpg',
@@ -562,7 +619,7 @@ export const pageContent: Record<string, PageContent> = {
           {
             src: '/images/torrey-pines-golf.jpg',
             alt: 'A cliffside green above the Pacific at Torrey Pines Golf Course at sunset',
-            caption: 'San Diego — Torrey Pines Golf Course',
+            caption: 'San Diego: Torrey Pines Golf Course',
           },
         ],
       },
@@ -578,16 +635,16 @@ export const pageContent: Record<string, PageContent> = {
         type: 'prose',
         heading: 'Our partner day schools',
         paragraphs: [
-          'JMC does not run its own accredited day school. Instead, we partner with established American private day schools that share our values — real classrooms, real teachers, real transcripts, and a genuine American campus community — while JMC handles everything around the school day: tutoring, athletic training, residential life, and long-term development.',
+          'JMC does not run its own accredited day school. Instead, we partner with established American private day schools that share our values: real classrooms, real teachers, real transcripts, and a genuine American campus community, while JMC handles everything around the school day: tutoring, athletic training, residential life, and long-term development.',
         ],
       },
       {
         type: 'prose',
         heading: 'Capistrano Valley Christian Schools (CVCS)',
         paragraphs: [
-          'Capistrano Valley Christian Schools, in San Juan Capistrano in Orange County, is a Christian, college-preparatory day school serving students from kindergarten through twelfth grade. Academics come first: small class sizes, Honors and Advanced Placement coursework, and a faculty that holds every student to a genuinely demanding standard. Character, athletics, the arts, and leadership are built on top of that academic foundation, not instead of it — CVCS cares as much about integrity, responsibility, self-discipline, respect, and service as it does about grades, but it never treats rigor as optional.',
-          'Because CVCS is a genuine American private-school community — not a program built around international students — our students build friendships across backgrounds, develop their spoken English, and live real American campus life: daily classes, school traditions, athletics, the arts, and everyday community. For families who want their child to do more than take American classes — to actually experience an American school, at full academic strength — that distinction matters.',
-          'We partnered with CVCS because we believe a student’s growth comes from more than the classroom — it comes from the campus they spend their days in, the relationships they build, and the responsibility they carry in school, sport, and daily life. CVCS is responsible for formal schooling and the campus experience; JMC Academy provides everything around it — personalized academic tutoring that keeps pace with CVCS’s coursework, competitive athletic training, residential life, family communication, and long-term development planning.',
+          'Capistrano Valley Christian Schools, in San Juan Capistrano in Orange County, is a Christian, college-preparatory day school serving students from kindergarten through twelfth grade. Academics come first: small class sizes, Honors and Advanced Placement coursework, and a faculty that holds every student to a genuinely demanding standard. Character, athletics, the arts, and leadership are built on top of that academic foundation, not instead of it. CVCS cares as much about integrity, responsibility, self-discipline, respect, and service as it does about grades, but it never treats rigor as optional.',
+          'Because CVCS is a genuine American private-school community, not a program built around international students, our students build friendships across backgrounds, develop their spoken English, and live real American campus life: daily classes, school traditions, athletics, the arts, and everyday community. For families who want their child to do more than take American classes, to actually experience an American school at full academic strength, that distinction matters.',
+          'We partnered with CVCS because we believe a student’s growth comes from more than the classroom: it comes from the campus they spend their days in, the relationships they build, and the responsibility they carry in school, sport, and daily life. CVCS is responsible for formal schooling and the campus experience; JMC Academy provides everything around it: personalized academic tutoring that keeps pace with CVCS’s coursework, competitive athletic training, residential life, family communication, and long-term development planning.',
         ],
       },
       {
@@ -621,14 +678,14 @@ export const pageContent: Record<string, PageContent> = {
           { title: 'Entrepreneurship & business', text: 'Business clubs and student projects in innovation and planning.' },
           { title: 'Culture & community', text: 'Cultural clubs and community events that build open communication across backgrounds.' },
           { title: 'Student leadership & service', text: 'Student organizations, service activities, and campus leadership programs.' },
-          { title: 'Athletics & sports clubs', text: 'Basketball, soccer, volleyball, tennis, track, golf, baseball, softball, surfing, and more — JMC can help coordinate more specialized club and private training alongside school athletics.' },
+          { title: 'Athletics & sports clubs', text: 'Basketball, soccer, volleyball, tennis, track, golf, baseball, softball, surfing, and more. JMC can help coordinate more specialized club and private training alongside school athletics.' },
         ],
       },
       {
         type: 'prose',
         heading: 'Campus security at CVCS',
         paragraphs: [
-          'CVCS keeps uniformed, armed security personnel on campus throughout the school day, alongside video surveillance and a staffed front-desk check-in for every visitor — real, visible measures, not just a policy on paper.',
+          'CVCS keeps uniformed, armed security personnel on campus throughout the school day, alongside video surveillance and a staffed front-desk check-in for every visitor: real, visible measures, not just a policy on paper.',
         ],
       },
       {
@@ -641,8 +698,8 @@ export const pageContent: Record<string, PageContent> = {
         type: 'prose',
         heading: 'Maranatha Christian Schools (MCS)',
         paragraphs: [
-          'Maranatha Christian Schools, in San Diego, puts a rigorous, college-preparatory academic program at the center of a Christian education — small classes, Honors and Advanced Placement coursework, and a faculty focused on real college readiness, alongside the arts, athletics, and personal development. MCS builds a learning community with a clear educational philosophy — helping students build a strong academic foundation, explore their interests, and prepare for college and life beyond it — while holding to integrity, respect, responsibility, service, and care for others.',
-          'MCS offers a genuine American private-school campus: beyond the classroom, students take part in athletics, the arts, student organizations, and campus life, and gradually grow familiar with American coursework, school culture, and community. Its diverse student body gives students real relationships across backgrounds — for international students especially, that builds English fluency, adaptability, independence, and cultural understanding, inside a complete American school community, not one built around international students alone.',
+          'Maranatha Christian Schools, in San Diego, puts a rigorous, college-preparatory academic program at the center of a Christian education: small classes, Honors and Advanced Placement coursework, and a faculty focused on real college readiness, alongside the arts, athletics, and personal development. MCS builds a learning community with a clear educational philosophy, helping students build a strong academic foundation, explore their interests, and prepare for college and life beyond it, while holding to integrity, respect, responsibility, service, and care for others.',
+          'MCS offers a genuine American private-school campus: beyond the classroom, students take part in athletics, the arts, student organizations, and campus life, and gradually grow familiar with American coursework, school culture, and community. Its diverse student body gives students real relationships across backgrounds; for international students especially, that builds English fluency, adaptability, independence, and cultural understanding, inside a complete American school community, not one built around international students alone.',
           'Our partnership with MCS is built on the same commitment to a student’s complete development. MCS is responsible for formal academics and campus life; JMC Academy provides after-school academic support that reinforces MCS’s coursework, competitive athletic training, residential life, family communication, and long-term student-athlete development planning built around each student’s own goals.',
         ],
       },
@@ -676,7 +733,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'image',
         src: '/images/theater-production.jpg',
         alt: 'Students in costume performing a musical theater production on stage',
-        caption: 'Musical theater — one of many performing-arts opportunities at our partner schools',
+        caption: 'Musical theater, one of many performing-arts opportunities at our partner schools',
       },
       visitCta,
     ],
@@ -836,7 +893,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Coach communication',
-            text: 'Who reaches out, when, and with what — film, results, transcript, and academic record.',
+            text: 'Who reaches out, when, and with what: film, results, transcript, and academic record.',
           },
           {
             title: 'Applications and essays',
@@ -1035,12 +1092,12 @@ export const pageContent: Record<string, PageContent> = {
   },
 
   'athletic/facilities': {
-    intro: 'Real, named training venues across both campuses — not a shared gym and a hope.',
+    intro: 'Real, named training venues across both campuses, not a shared gym and a hope.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          'Athletes train where they live. Daily sessions, strength work, treatment, and video review happen within the same routine, which removes the travel time that usually limits how much quality training a young athlete can absorb. Every venue below is a real, named facility our athletes actually use — not a placeholder.',
+          'Athletes train where they live. Daily sessions, strength work, treatment, and video review happen within the same routine, which removes the travel time that usually limits how much quality training a young athlete can absorb. Every venue below is a real, named facility our athletes actually use, not a placeholder.',
         ],
       },
       {
@@ -1048,23 +1105,23 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'Where our athletes train',
         items: [
           {
-            title: 'Great Park Ice Arena — ice hockey',
+            title: 'Great Park Ice Arena, ice hockey',
             text: 'Refrigerated ice in Irvine for daily practices, skills sessions, and games.',
           },
           {
-            title: 'Irvine Fencing Center — fencing',
+            title: 'Irvine Fencing Center, fencing',
             text: 'Dedicated indoor strips in Irvine for daily bouting, drills, and competition.',
           },
           {
-            title: 'Great Park Sports Park — lacrosse',
+            title: 'Great Park Sports Park, lacrosse',
             text: 'Full-size turf fields in Irvine for training and competition.',
           },
           {
-            title: 'Strawberry Farms & Torrey Pines Golf Courses — golf',
+            title: 'Strawberry Farms & Torrey Pines Golf Courses, golf',
             text: 'An elite SCPGA Junior development course in Irvine, with regular access to Torrey Pines in San Diego for tournament-caliber rounds.',
           },
           {
-            title: 'Hard courts — tennis',
+            title: 'Hard courts, tennis',
             text: 'Hard courts at both campuses for daily training and match play.',
           },
           {
@@ -1088,17 +1145,17 @@ export const pageContent: Record<string, PageContent> = {
           {
             src: '/images/great-park-ice-arena.jpg',
             alt: 'Aerial view of Great Park Ice Arena in Irvine',
-            caption: 'Great Park Ice Arena — home ice for our hockey program',
+            caption: 'Great Park Ice Arena, home ice for our hockey program',
           },
           {
             src: '/images/irvine-fencing-center.jpg',
             alt: 'The indoor fencing strips at the Irvine Fencing Center',
-            caption: 'Irvine Fencing Center — home strips for our fencing program',
+            caption: 'Irvine Fencing Center, home strips for our fencing program',
           },
           {
             src: '/images/great-park-sports-park.jpg',
             alt: 'Aerial view of turf fields and courts at the Orange County Great Park Sports Park',
-            caption: 'Great Park Sports Park — turf fields for lacrosse',
+            caption: 'Great Park Sports Park, turf fields for lacrosse',
           },
           {
             src: '/images/strawberry-farms-golf.jpg',
@@ -1259,15 +1316,15 @@ export const pageContent: Record<string, PageContent> = {
 
   // ACADEMICS
   'academic/upper-school': {
-    intro: 'Grades 9–12: a full, AP-inclusive course load at our partner day schools — and JMC’s own results-driven academic program every day after the final bell.',
+    intro: 'Grades 9–12: a full, AP-inclusive course load at our partner day schools, and JMC’s own results-driven academic program every day after the final bell.',
     blocks: [
       {
         type: 'split',
         heading: 'Rigor with a reason',
         image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
         paragraphs: [
-          'By the time an athlete reaches Grade 9, the habits are in place and the standard rises again. Our Upper School students carry a full, honors- and AP-inclusive course load at their partner day school — real classrooms, real teachers, real grades. JMC’s job starts the moment that class ends.',
-          'We would rather graduate an athlete who thinks clearly under pressure and tests better than his peers than one who simply accumulated credits. Every academic plan is built with NCAA eligibility and real college admission in view from the first term, so no athlete arrives at their final year to discover a missing requirement — or a transcript that undersells them.',
+          'By the time an athlete reaches Grade 9, the habits are in place and the standard rises again. Our Upper School students carry a full, honors- and AP-inclusive course load at their partner day school: real classrooms, real teachers, real grades. JMC’s job starts the moment that class ends.',
+          'We would rather graduate an athlete who thinks clearly under pressure and tests better than his peers than one who simply accumulated credits. Every academic plan is built with NCAA eligibility and real college admission in view from the first term, so no athlete arrives at their final year to discover a missing requirement, or a transcript that undersells them.',
         ],
       },
       {
@@ -1275,7 +1332,7 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'Flexible in schedule. Rigorous in standard.',
         paragraphs: [
           'Training moves. The standard does not. Tutoring, study hall, and test preparation flex around sessions, competition, and travel, but the work itself is held to a level that matches any top academic program in the country.',
-          'We are unapologetic about the scholar half of scholar-athlete. The discipline that gets an athlete to a 6 a.m. session is the same discipline we expect at the desk every evening — and we hold our athletes to outwork and outperform the academic expectations people usually attach to student-athletes.',
+          'We are unapologetic about the scholar half of scholar-athlete. The discipline that gets an athlete to a 6 a.m. session is the same discipline we expect at the desk every evening, and we hold our athletes to outwork and outperform the academic expectations people usually attach to student-athletes.',
         ],
       },
       {
@@ -1284,13 +1341,13 @@ export const pageContent: Record<string, PageContent> = {
         reverse: true,
         image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
         paragraphs: [
-          'Tutoring groups stay small on purpose — no student is one face in a lecture hall. Our academic staff knows which students are traveling for a tournament next Thursday, which ones are chasing an AP score, and which ones need a different kind of push entirely.',
+          'Tutoring groups stay small on purpose: no student is one face in a lecture hall. Our academic staff knows which students are traveling for a tournament next Thursday, which ones are chasing an AP score, and which ones need a different kind of push entirely.',
         ],
       },
       {
         type: 'logos',
         heading: 'Prepared for the work that counts',
-        text: 'Results-driven preparation aligned to the exams that actually decide college admission and NCAA eligibility — not busywork.',
+        text: 'Results-driven preparation aligned to the exams that actually decide college admission and NCAA eligibility, not busywork.',
         items: [
           { label: 'Art of Problem Solving', src: '/images/logos/aops.png', alt: 'Art of Problem Solving' },
           { label: 'SSAT' },
@@ -1306,11 +1363,11 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             title: 'Every subject, every night',
-            text: 'Private and small-group tutoring covers every subject on a student’s course load — English, math, science, history, world language, and electives — not just the ones that feel urgent this week.',
+            text: 'Private and small-group tutoring covers every subject on a student’s course load: English, math, science, history, world language, and electives, not just the ones that feel urgent this week.',
           },
           {
             title: 'Built around Honors and AP',
-            text: 'When a student is carrying Honors or AP coursework at their partner school, tutoring is built around that exact syllabus — same material, same pace, reinforced until it holds.',
+            text: 'When a student is carrying Honors or AP coursework at their partner school, tutoring is built around that exact syllabus: same material, same pace, reinforced until it holds.',
           },
           {
             title: 'Writing, every year',
@@ -1318,17 +1375,17 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Advanced study, not repetition',
-            text: 'Students who exhaust a subject sequence move into focused advanced work — research, data analysis, independent study — instead of coasting.',
+            text: 'Students who exhaust a subject sequence move into focused advanced work: research, data analysis, independent study, instead of coasting.',
           },
           {
             title: 'Grades checked weekly, not termly',
-            text: 'We do not wait for a report card. Grades and assignment status are checked weekly, so a slipping average gets caught while there is still time to fix it — not discovered three months later.',
+            text: 'We do not wait for a report card. Grades and assignment status are checked weekly, so a slipping average gets caught while there is still time to fix it, not discovered three months later.',
           },
         ],
       },
       {
         type: 'statement',
-        text: 'We do not let a single bad grade happen without a response. The moment a grade starts to slip — not after the report card arrives — tutoring intensifies immediately.',
+        text: 'We do not let a single bad grade happen without a response. The moment a grade starts to slip, not after the report card arrives, tutoring intensifies immediately.',
         attribution: 'Our Standard',
       },
       {
@@ -1340,7 +1397,7 @@ export const pageContent: Record<string, PageContent> = {
           ['Term plan', 'A written, individualized plan with specific grade and score targets, reviewed with the student and family.'],
           ['Weekly tutoring', 'Private or small-group sessions in every subject, scheduled around training and travel.'],
           ['Practice testing', 'Regular full-length practice tests ahead of the PSAT, SAT, ACT, and each AP exam.'],
-          ['Review & adjust', 'Every term, results are measured against the target and the plan is adjusted — not just repeated.'],
+          ['Review & adjust', 'Every term, results are measured against the target and the plan is adjusted, not just repeated.'],
         ],
         note: 'The same cycle runs every term for every student. This is a standing program, not a one-time intervention.',
       },
@@ -1357,20 +1414,20 @@ export const pageContent: Record<string, PageContent> = {
 
   'academic/middle-school': {
     intro:
-      'Grades 6–8: real classes at our partner day schools, and JMC’s own after-school program of daily tutoring and academic advising built to keep every student ahead — not just caught up — as the foundation for a demanding Upper School.',
+      'Grades 6–8: real classes at our partner day schools, and JMC’s own after-school program of daily tutoring and academic advising built to keep every student ahead, not just caught up, as the foundation for a demanding Upper School.',
     blocks: [
       {
         type: 'split',
         heading: 'Where the habits are built',
         image: { src: '/images/middle-school-classroom.jpg', alt: 'Middle School students working in class' },
         paragraphs: [
-          'Twelve and thirteen-year-olds are not small versions of eighteen-year-olds. They need more structure, not less — clear routines, direct instruction in how to study, and adults who notice quickly when something is off.',
+          'Twelve and thirteen-year-olds are not small versions of eighteen-year-olds. They need more structure, not less: clear routines, direct instruction in how to study, and adults who notice quickly when something is off.',
           'Middle School athletes are training seriously for the first time, often while living away from home for the first time. Those years decide whether an athlete arrives in the Upper School able to carry a heavy course load, or spends four years catching up.',
         ],
       },
       {
         type: 'statement',
-        text: 'We are not trying to help student-athletes keep pace with their non-athlete classmates. Daily tutoring and a dedicated academic advisor exist to keep every student ahead — building scholars whose classroom work would challenge students with twice the free time.',
+        text: 'We are not trying to help student-athletes keep pace with their non-athlete classmates. Daily tutoring and a dedicated academic advisor exist to keep every student ahead, building scholars whose classroom work would challenge students with twice the free time.',
         attribution: 'Our Standard',
       },
       {
@@ -1379,11 +1436,11 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             title: 'Every core subject, reinforced',
-            text: 'English, mathematics, science, history, and world language — whatever a student is taking at their partner school, JMC tutoring covers it every week, not just before a test.',
+            text: 'English, mathematics, science, history, and world language: whatever a student is taking at their partner school, JMC tutoring covers it every week, not just before a test.',
           },
           {
             title: 'Pushed toward advanced work, not just competence',
-            text: 'Where a student has earned it, their academic advisor actively pushes for an accelerated math, science, or language placement at their partner school — a term early, a level up — rather than settling for “on track.”',
+            text: 'Where a student has earned it, their academic advisor actively pushes for an accelerated math, science, or language placement at their partner school, a term early, a level up, rather than settling for “on track.”',
           },
           {
             title: 'We track placement, not just attendance',
@@ -1399,12 +1456,20 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Testing readiness starts early',
-            text: 'Middle School is when we start building toward strong SSAT, ISEE, and eventually PSAT and SAT performance — early, not as a scramble in Grade 10.',
+            text: 'Middle School is when we start building toward strong SSAT, ISEE, and eventually PSAT and SAT performance early, not as a scramble in Grade 10.',
           },
           {
             title: 'Evening study hall, every night',
             text: 'Training happens after the school day; every evening still ends with supervised study hall in residence, not homework squeezed in wherever it fits.',
           },
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'Held to the standard of the nation’s top prep schools',
+        paragraphs: [
+          'Our Middle School academic bar is not set by a typical local school; it is set by the schools that turn away the most talented applicants in the country: Choate Rosemary Hall, Phillips Academy Andover, The Hotchkiss School, Deerfield Academy, Groton, and the handful of others every serious family already has on their list. Whether or not a student ever applies to one of them, that is the level of academic preparation we build toward, starting in Grade 6.',
+          'That means real writing, real problem-solving, and a work ethic that would hold up in front of any admission committee in the country, not busywork, and not a curriculum built to make a twelve-year-old feel comfortable. SSAT and ISEE preparation is not an afterthought bolted on in Grade 8; it is the same standard we are already building toward every day, so a student is genuinely competitive if and when that door opens.',
         ],
       },
       {
@@ -1440,13 +1505,13 @@ export const pageContent: Record<string, PageContent> = {
 
   'academic/academic-progression': {
     intro:
-      'The kind of rigorous course sequence our students carry at their partner day schools, department by department — with JMC tutoring built around every one of them, every year.',
+      'The kind of rigorous course sequence our students carry at their partner day schools, department by department, with JMC tutoring built around every one of them, every year.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
           'The matrix below illustrates the course progression typical of our partner day schools across the Middle School and Upper School years. Most students follow a central path; placement assessments, prior coursework, and individual interests move students ahead or sideways within it.',
-          'Mathematics and world languages are placed by assessment rather than by age, so it is normal for a single grade to be spread across three different courses. Whatever a student’s actual placement, JMC’s after-school tutoring is built around that specific course — not a generic grade-level assumption.',
+          'Mathematics and world languages are placed by assessment rather than by age, so it is normal for a single grade to be spread across three different courses. Whatever a student’s actual placement, JMC’s after-school tutoring is built around that specific course, not a generic grade-level assumption.',
         ],
       },
       {
@@ -1578,23 +1643,23 @@ export const pageContent: Record<string, PageContent> = {
   },
 
   'academic/academic-support': {
-    intro: 'When the school day ends, the real academic work begins. JMC’s own academic program — nightly tutoring, standardized test preparation, and relentless progress tracking — is built to produce superior results, not just supervise homework.',
+    intro: 'When the school day ends, the real academic work begins. JMC’s own academic program, with nightly tutoring, standardized test preparation, and relentless progress tracking, is built to produce superior results, not just supervise homework.',
     blocks: [
       {
         type: 'prose',
         heading: 'Why beyond the classroom',
         paragraphs: [
-          'A partner day school gives every JMC student a real classroom, a real teacher, and a real grade. But six or seven hours in a classroom, on top of daily training, was never going to be enough on its own to produce a genuinely elite academic record. So JMC treats the hours after school as core academic time — structured, supervised, and accountable to one thing: results.',
+          'A partner day school gives every JMC student a real classroom, a real teacher, and a real grade. But six or seven hours in a classroom, on top of daily training, was never going to be enough on its own to produce a genuinely elite academic record. So JMC treats the hours after school as core academic time: structured, supervised, and accountable to one thing: results.',
         ],
       },
       {
         type: 'numbered',
         heading: 'How it works',
         items: [
-          { title: 'Supervised study hall', text: 'Protected, supervised study hours in residence every school night — not optional, not skippable.' },
+          { title: 'Supervised study hall', text: 'Protected, supervised study hours in residence every school night, not optional, not skippable.' },
           { title: 'Private tutoring, every subject', text: 'Subject-specific tutoring in every course a student is taking, scheduled around training rather than competing with it.' },
           { title: 'Travel plans', text: 'Work assigned before departure and collected on return for every competition trip.' },
-          { title: 'Results-driven progress checks', text: 'Grades and test scores are tracked against a written target every term, shared plainly with athletes, families, and coaches — not just “doing fine.”' },
+          { title: 'Results-driven progress checks', text: 'Grades and test scores are tracked against a written target every term, shared plainly with athletes, families, and coaches, not just “doing fine.”' },
           { title: 'Eligibility tracking', text: 'Courses, grades, and NCAA requirements reviewed every term.' },
           { title: 'Standardized test preparation', text: 'A structured program for the PSAT, SAT, ACT, AP exams, and ISEE/SSAT, built around each student’s target scores, not a generic class.' },
         ],
@@ -1639,35 +1704,89 @@ export const pageContent: Record<string, PageContent> = {
 
   // ACADEMY LIFE
   'student-life/residence-life': {
-    intro: 'Every athlete lives on campus, in a routine built for training and recovery.',
+    intro: 'Living in high-end Irvine apartment communities, with secured entry and a dorm parent on site.',
     blocks: [
       {
         type: 'prose',
         paragraphs: [
-          'Residence life is where the training plan either holds together or falls apart. Meals, study, sleep, and recovery all happen here on a predictable schedule, supervised by staff who live alongside the athletes.',
-          'Athletes share double rooms with teammates. Living with people chasing the same goal is the fastest way to make hard standards feel normal.',
-        ],
-      },
-      {
-        type: 'stats',
-        items: [
-          { value: '2', label: 'Athletes per room' },
-          { value: '100%', label: 'Of athletes live on campus' },
-          { value: 'Nightly', label: 'Supervised study hours' },
+          'When a child studies half a world away, what parents worry about most is whether they are safe where they sleep. So we do not compromise on housing: JMC students live only in high-end apartment communities in Irvine, every one with strictly controlled access and professional property management, and with a dorm parent who lives alongside the students and looks after their daily routine.',
+          'Training, class, meals, study, and sleep all rest on a stable, secure home. Students who live well and sleep well train and study better.',
         ],
       },
       {
         type: 'features',
-        heading: 'Life in residence',
+        heading: 'How we keep students safe',
         items: [
-          { title: 'Residential staff', text: 'Staff on every floor, responsible for daily routine and wellbeing.' },
-          { title: 'Evening study', text: 'Quiet, supervised study hours before lights out.' },
-          { title: 'Protected sleep', text: 'Consistent lights-out so recovery actually happens.' },
-          { title: 'Common areas', text: 'Lounge and shared space for downtime with teammates.' },
-          { title: 'Laundry & essentials', text: 'On-site laundry, including training gear turnaround.' },
-          { title: 'Health & safety', text: 'Sports medicine access and clear procedures for illness or injury.' },
+          {
+            title: 'High-end communities only',
+            text: 'We choose only well-managed, safe, first-class apartment communities. Students are never left to make do with uneven rentals or homestays.',
+          },
+          {
+            title: 'Controlled, locked-down entry',
+            text: 'Apartment entry doors are access-controlled, so only residents and approved visitors can get in. Strangers cannot simply walk in.',
+          },
+          {
+            title: 'A dorm parent who lives with them',
+            text: 'The dorm parent lives with the students and is responsible for daily routine and safety. Far from home, a student always has a trusted adult to turn to.',
+          },
+          {
+            title: 'Families kept informed',
+            text: 'The dorm parent and each student’s Student-Athlete Manager keep families up to date on how their child is living and doing.',
+          },
         ],
       },
+      {
+        type: 'split',
+        heading: 'An apartment that feels like home',
+        image: {
+          src: '/images/irvine-apartments-kitchen.jpg',
+          alt: 'A bright living room and open kitchen in a high-end Irvine apartment',
+        },
+        paragraphs: [
+          'Each residence is a complete apartment: a bright, spacious living room, an open kitchen, tidy bedrooms, and full furnishings and appliances. Students can truly unwind here and recover for the next day’s training and classes.',
+          'The communities are attractive and well run, set in quiet, clean Irvine neighborhoods a short distance from training venues and our partner schools.',
+        ],
+      },
+      {
+        type: 'split',
+        heading: 'Looked after, with room of their own',
+        reverse: true,
+        image: {
+          src: '/images/irvine-apartments-bedroom.jpg',
+          alt: 'A desk in an apartment bedroom where a student can study quietly',
+        },
+        paragraphs: [
+          'Every student has their own space to study and rest, with a quiet, comfortable place for evening tutoring, homework, and reading.',
+          'The dorm parent is not there to police students but to help them live well: reminding them about routine, noticing their mood, and reaching out first when something is wrong. At the same time, we want students to learn, within a safe frame, to keep their own room, manage their own time, and look after themselves.',
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: 'Community and shared facilities',
+        items: [
+          {
+            src: '/images/irvine-apartments-pool.jpg',
+            alt: 'A resort-style pool at dusk in a high-end Irvine apartment community',
+            caption: 'Resort-style pool and courtyard',
+          },
+          {
+            src: '/images/irvine-apartments-clubhouse.jpg',
+            alt: 'A high-ceilinged clubhouse lounge with a billiards table and seating areas',
+            caption: 'Clubhouse lounge',
+          },
+          {
+            src: '/images/irvine-apartments-gym.jpg',
+            alt: 'A fitness center with cardio and strength equipment',
+            caption: 'Community fitness center',
+          },
+          {
+            src: '/images/irvine-apartments-interior.jpg',
+            alt: 'A warmly furnished living room in an Irvine apartment',
+            caption: 'A comfortable living space',
+          },
+        ],
+      },
+      visitCta,
     ],
   },
 
@@ -1702,7 +1821,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             title: 'Breakfast',
-            text: 'A hot, made-to-order spread — fresh fruit, whole-wheat toast, fried eggs, low-fat chicken sausage, milk, juice, and oatmeal.',
+            text: 'A hot, made-to-order spread: fresh fruit, whole-wheat toast, fried eggs, low-fat chicken sausage, milk, juice, and oatmeal.',
           },
           {
             title: 'Lunch',
@@ -1710,7 +1829,7 @@ export const pageContent: Record<string, PageContent> = {
           },
           {
             title: 'Dinner',
-            text: 'The reward at the end of a long day of training and school. The menu rotates through real variety — Korean army stew (budae jjigae) one night, Chinese hongshaorou (braised pork belly) or tomato and egg stir-fry the next, alongside American favorites like herb-roasted chicken, grilled salmon, and steak night.',
+            text: 'The reward at the end of a long day of training and school. The menu rotates through real variety: Korean army stew (budae jjigae) one night, Chinese hongshaorou (braised pork belly) or tomato and egg stir-fry the next, alongside American favorites like herb-roasted chicken, grilled salmon, and steak night.',
           },
           {
             title: 'Snacks & fueling',
@@ -1745,7 +1864,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'image',
         src: '/images/coast-beach.jpg',
         alt: 'Surfers and beachgoers along the Southern California coast at sunset',
-        caption: 'The coast is a short drive from campus — a regular weekend destination.',
+        caption: 'The coast is a short drive from campus and a regular weekend destination.',
       },
       {
         type: 'features',
@@ -1820,7 +1939,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             title: 'Course & GPA planning',
-            text: 'Every course choice mapped against NCAA core-course rules and college admission expectations, with GPA targets set and tracked from the first term — not discovered senior year.',
+            text: 'Every course choice mapped against NCAA core-course rules and college admission expectations, with GPA targets set and tracked from the first term, not discovered senior year.',
           },
           {
             title: 'Competition & exposure planning',
@@ -1874,19 +1993,19 @@ export const pageContent: Record<string, PageContent> = {
         heading: 'The recruiting timeline',
         items: [
           {
-            title: 'Early years — build',
+            title: 'Early years: build',
             text: 'Develop the athlete, establish grades, and learn how recruiting actually works. No shortcuts, no premature outreach.',
           },
           {
-            title: 'Middle years — exposure',
+            title: 'Middle years: exposure',
             text: 'Targeted tournaments and showcases, first highlight film, an honest assessment of realistic levels, and a working college list.',
           },
           {
-            title: 'Final years — outreach',
+            title: 'Final years: outreach',
             text: 'Direct coach communication, campus visits, official interest, and applications, with the team preparing every piece.',
           },
           {
-            title: 'Decision — commit',
+            title: 'Decision: commit',
             text: 'Comparing offers on fit, playing time, academics, and cost, then supporting the transition to college.',
           },
         ],
@@ -1948,17 +2067,17 @@ export const pageContent: Record<string, PageContent> = {
   // ADMISSION
   'admission/overview': {
     intro:
-      'Welcome to Admission at JMC. Rolling admission, with an athletic and academic review for every applicant — no ISEE or SSAT required.',
+      'Welcome to Admission at JMC. Rolling admission, with an athletic and academic review for every applicant. No ISEE or SSAT required.',
     blocks: [
       {
         type: 'statement',
-        text: 'We admit the whole student: the transcript, the character, and where they stand in their sport — never a single test score.',
+        text: 'We admit the whole student: the transcript, the character, and where they stand in their sport, never a single test score.',
         attribution: 'Our Admission Philosophy',
       },
       {
         type: 'prose',
         paragraphs: [
-          'That philosophy follows directly from our mission. JMC exists so that grade 6–12 student-athletes never have to choose between a serious sport and a serious education, and admission is the first place we put that into practice. We admit athletes throughout the year rather than against a single deadline, because athletic calendars do not line up with school ones — but every application still gets the same close look, academic and athletic, before a decision is made.',
+          'That philosophy follows directly from our mission. JMC exists so that grade 6–12 student-athletes never have to choose between a serious sport and a serious education, and admission is the first place we put that into practice. We admit athletes throughout the year rather than against a single deadline, because athletic calendars do not line up with school ones, but every application still gets the same close look, academic and athletic, before a decision is made.',
           'We do not require the ISEE or SSAT that most independent schools ask for. A coach’s evaluation of film and, where possible, live play tells us more about a prospective JMC athlete than a standardized admission test does, and it sits alongside a genuine look at transcripts, teacher comments, and the family itself.',
         ],
       },
@@ -1969,20 +2088,20 @@ export const pageContent: Record<string, PageContent> = {
         text: 'Four people, each responsible for a different part of your family’s application.',
         items: [
           {
-            title: 'Sarah Kim',
-            text: 'Director of Admission. Leads the admission process end to end — usually the first person a family talks to.',
+            title: 'Director of Admission',
+            text: 'Sarah Kim. Owns the application from first inquiry to enrollment. Answers initial inquiries, schedules campus visits, keeps the review calendar on track, and issues admission decisions. Usually the first person a family talks to.',
           },
           {
-            title: 'Marcus Bellamy',
-            text: 'Athletic Recruiting Coordinator. Reviews game film and coordinates with our coaching staff on every prospective athlete.',
+            title: 'Athletic Recruiting Coordinator',
+            text: 'Marcus Bellamy. Leads the athletic evaluation. Reviews game film, arranges to see the athlete train or compete where possible, and works with the Head Coach in the athlete’s sport to confirm competitive level and fit.',
           },
           {
-            title: 'Elena Torres',
-            text: 'Admission & Family Counselor. Reviews transcripts and works directly with families through interviews and decisions.',
+            title: 'Admission & Family Counselor',
+            text: 'Elena Torres. Handles the academic side of the file. Reviews transcripts, school records, and teacher comments, conducts the admission interview with the athlete and family, and walks families through the decision and enrollment steps.',
           },
           {
-            title: 'David Okafor',
-            text: 'International Admission Coordinator. Supports international families through visas, travel, and the move to campus.',
+            title: 'International Admission Coordinator',
+            text: 'David Okafor. Supports international families end to end. Guides student-visa paperwork, plans travel and arrival, and helps the student settle into campus and residence life, including the move to an English-speaking school.',
           },
         ],
       },
@@ -2008,7 +2127,7 @@ export const pageContent: Record<string, PageContent> = {
           { title: 'Student statement', text: 'In the athlete’s own words: their sport, their goals, and why JMC.' },
           { title: 'Transcript request', text: 'Academic records sent directly from the athlete’s current school.' },
           { title: 'Teacher comment', text: 'A brief comment from a current teacher or counselor.' },
-          { title: 'Athletic history & video', text: 'Competition record, current team or club, and recent film — coaches will advise what to send.' },
+          { title: 'Athletic history & video', text: 'Competition record, current team or club, and recent film. Coaches will advise what to send.' },
         ],
       },
       {
@@ -2123,7 +2242,7 @@ export const pageContent: Record<string, PageContent> = {
       },
       {
         type: 'table',
-        heading: 'Fee schedule — 2026–2027 school year',
+        heading: 'Fee schedule, 2026–2027 school year',
         columns: ['Item', 'Amount'],
         rows: [
           ['Tuition (per year)', '$35,000'],
@@ -2140,7 +2259,7 @@ export const pageContent: Record<string, PageContent> = {
         items: [
           {
             q: 'Are payment plans available?',
-            a: 'Payment plans are available only to domestic applicants — U.S. citizens and U.S. Green Card holders. International families are asked to pay in full.',
+            a: 'Payment plans are available only to domestic applicants: U.S. citizens and U.S. Green Card holders. International families are asked to pay in full.',
           },
         ],
       },

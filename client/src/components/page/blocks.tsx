@@ -289,11 +289,11 @@ export function PageBlock({ block }: { block: Block }) {
           {block.text && (
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink/75">{block.text}</p>
           )}
-          <ul className="mt-8 flex flex-wrap justify-center gap-1.5">
+          <ul className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-1.5">
             {block.items.map((item) => (
               <li
                 key={item.src}
-                className="flex aspect-[4/3] w-[calc(50%-0.1875rem)] items-center justify-center border border-dotted border-ink/45 bg-white p-8 sm:w-[calc(33.333%-0.25rem)] lg:w-[calc(25%-0.28125rem)]"
+                className="flex aspect-[4/3] items-center justify-center border border-dotted border-ink/45 bg-white p-8"
               >
                 <img
                   src={item.src}
