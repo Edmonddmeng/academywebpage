@@ -73,7 +73,7 @@ const copy = {
   },
   zh: {
     upcoming: '近期活动',
-    exactDates: '学年日程确定后,具体日期将在此发布。',
+    exactDates: '学年日程确定后，具体日期将在此发布。',
     calendar: '学院日历',
     latestNews: '最新动态',
     comingSoon: '即将上线',

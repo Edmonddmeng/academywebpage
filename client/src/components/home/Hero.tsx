@@ -18,7 +18,7 @@ const statsCopy = {
     { value: '10', label: '个整季项目' },
     { value: '2', label: '个校区' },
     { value: '6-12', label: '招生年级' },
-    { value: '5:1', label: '师生配比' },
+    { value: '5:1', label: '专业人员配比' },
   ],
 }
 
@@ -91,8 +91,8 @@ export default function Hero() {
       />
       {/* Neutral (not brand-green) scrims keep the white header and headline legible
           without tinting the photo's true colors. */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/65 via-black/15 to-black/80" />
-      <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/25 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/30 via-transparent to-black/40" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/35 via-black/5 to-transparent" />
 
       {/* Thin inset frame around the photo, echoing a traditional campus-portrait treatment. */}
       <div className="pointer-events-none absolute inset-6 border border-white/25 sm:inset-10 lg:inset-14" />
@@ -109,14 +109,14 @@ export default function Hero() {
           <p className="font-condensed text-[15px] font-semibold tracking-[0.24em] text-gold uppercase">
             {t.sports}
           </p>
-          <h1 className="mt-6 max-w-4xl font-serif text-[2.7rem] leading-[1.03] font-normal sm:text-7xl lg:text-8xl">
+          <h1 className="mt-6 max-w-4xl font-serif drop-shadow-[0_2px_14px_rgba(0,0,0,0.35)] text-[2.7rem] leading-[1.03] font-normal sm:text-7xl lg:text-8xl">
             {t.h1}
           </h1>
-          <p className="mt-7 max-w-2xl text-lg text-balance text-white/85 sm:text-xl">
+          <p className="mt-7 max-w-2xl text-lg text-balance text-white/90 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] sm:text-xl">
             {site.tagline}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink to="/admission/overview" variant="gold">
+            <ButtonLink to="/portal" variant="gold">
               {t.apply}
             </ButtonLink>
             <ButtonLink to="/about/academy-overview" variant="outline-light">

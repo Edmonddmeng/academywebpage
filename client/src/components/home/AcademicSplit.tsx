@@ -13,13 +13,15 @@ const copy = {
   en: {
     eyebrow: 'Academic',
     heading: 'A diploma with Ivy League rigor',
-    text: 'A fully rigorous college-preparatory curriculum — honors coursework in every department, up to 20 Advanced Placement courses, and a workload that matches any top academic high school in the country — scheduled around training, not around it.',
+    lead: 'Build a profile that elite colleges can’t ignore. We prepare you for the nation’s top tiers with a fully rigorous prep curriculum, built completely around your training schedule, not against it.',
+    text: 'The best universities demand true scholar-athletes. That is why we deliver honors coursework in every department and up to 20 Advanced Placement (AP) courses, matching the academic workload of the country’s most prestigious prep schools. We ensure your GPA and transcript stand alone as elite, opening doors to the highest level of collegiate competition and education.',
     link: 'NCAA Eligibility',
   },
   zh: {
     eyebrow: '学术',
     heading: '媲美常春藤标准的严谨文凭',
-    text: '一套完全严谨的大学预备课程——每个学科都设有荣誉课程,最多可修读20门AP课程,课业强度不逊于全美任何一所顶尖学术高中——课表围绕训练安排,而非围绕课表安排训练。',
+    lead: '打造一份顶尖大学无法忽视的个人档案。我们以完全严谨的预备课程，帮助你迈向全美顶尖学府，课程完全围绕你的训练安排设计，而不是与训练相冲突。',
+    text: '顶尖大学需要真正的学者型运动员。因此，我们在每个学科都开设荣誉课程，并提供最多20门AP（Advanced Placement）课程，学术强度媲美全美最负盛名的预备学校。我们确保你的GPA与成绩单本身就足以脱颖而出，为你打开通往最高水平大学竞技与教育的大门。',
     link: 'NCAA 参赛资格',
   },
 }
@@ -48,7 +50,10 @@ export default function AcademicSplit() {
         <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
           {t.heading}
         </h2>
-        <p className="mt-5 max-w-md text-lg text-white/80">
+        <p className="mt-5 max-w-xl text-xl leading-snug text-white">
+          {t.lead}
+        </p>
+        <p className="mt-4 max-w-xl text-lg text-white/80">
           {t.text}
         </p>
 

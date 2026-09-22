@@ -5,13 +5,13 @@ import { useLocale } from '../../content/locale'
 
 const actionsCopy = {
   en: [
-    { label: 'Apply to JMC', to: '/admission/overview' },
+    { label: 'Apply to JMC', to: '/portal' },
     { label: 'Inquire', to: '/contact' },
     { label: 'Visit', to: '/admission/visit' },
     { label: 'Tuition & Fees', to: '/admission/tuition-and-fees' },
   ],
   zh: [
-    { label: '申请 JMC', to: '/admission/overview' },
+    { label: '申请 JMC', to: '/portal' },
     { label: '咨询', to: '/contact' },
     { label: '预约参观', to: '/admission/visit' },
     { label: '学费与费用', to: '/admission/tuition-and-fees' },

@@ -8,8 +8,8 @@ import type { PageContent } from '../content/pages'
 import { useLocale } from '../content/locale'
 
 const fallbackNotice = {
-  en: 'This page is not yet translated into Chinese — showing the English version below.',
-  zh: '该页面暂无中文翻译——以下显示英文原文。',
+  en: 'This page is not yet translated into Chinese. Showing the English version below.',
+  zh: '该页面暂无中文翻译，以下显示英文原文。',
 }
 
 export default function StandardPage({

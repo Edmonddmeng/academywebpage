@@ -6,7 +6,7 @@ import { useLocale } from '../../content/locale'
 
 const copy = {
   en: { eyebrow: 'Recruiting', heading: 'Five professionals. One athlete.', link: 'The 5-to-1 Model' },
-  zh: { eyebrow: '招募', heading: '五位专业人员,专注一位运动员。', link: '5比1辅导模式' },
+  zh: { eyebrow: '招募', heading: '五位专业人员，专注一位运动员。', link: '5比1辅导模式' },
 }
 
 // A pure typographic band — no photo, no grid — so it reads as a deliberately

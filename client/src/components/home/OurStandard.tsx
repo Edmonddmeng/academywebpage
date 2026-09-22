@@ -5,19 +5,19 @@ const copy = {
   en: {
     heading: 'Our Standard Is Results.',
     push: 'We push every student to become someone they never thought they could become.',
-    ask: 'We ask for the best — as a person, as a scholar, and as an athlete. Nothing less.',
+    ask: 'We ask for the best: as a person, as a scholar, and as an athlete. Nothing less.',
     teamHeading: 'Built by people who have done this before',
     teamText:
-      'We are a team of former admission officers, educators, K–12 teachers, elite professional players and coaches, and university professors — brought together to build the best experience possible.',
+      'We are a team of former admission officers, educators, K–12 teachers, elite professional players and coaches, and university professors, brought together to build the best experience possible.',
     team: ['Former Admission Officers', 'Educators & K–12 Teachers', 'Elite Professional Coaches', 'University Professors'],
   },
   zh: {
     heading: '我们的标准是结果。',
     push: '我们推动每一位学生，成长为连他们自己都未曾想过能够成为的人。',
-    ask: '我们对学生只有一个要求——做到最好：作为一个人，作为一名学者，也作为一名运动员。没有例外。',
+    ask: '我们对学生只有一个要求：做到最好，作为一个人，作为一名学者，也作为一名运动员。没有例外。',
     teamHeading: '由真正做过这件事的人搭建',
     teamText:
-      '我们的团队由前大学招生官、资深教育工作者、K-12教师、顶尖职业球员与教练，以及大学教授组成——共同为每一位学生打造最好的成长体验。',
+      '我们的团队由前大学招生官、资深教育工作者、K-12教师、顶尖职业球员与教练，以及大学教授组成，共同为每一位学生打造最好的成长体验。',
     team: ['前大学招生官', 'K-12教育工作者', '顶尖职业教练', '大学教授'],
   },
 }

@@ -34,7 +34,7 @@ const copy = {
     info: (title: string) => `${title}信息`,
     interested: (title: string) => (
       <>
-        对{title}感兴趣的学生运动员,请填写我们的{' '}
+        对{title}感兴趣的学生运动员，请填写我们的{' '}
         <Link
           to="/contact"
           className="font-semibold text-ink underline decoration-brass underline-offset-4 hover:text-brass"

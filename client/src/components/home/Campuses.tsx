@@ -10,16 +10,16 @@ const copy = {
     eyebrow: 'Our Campuses',
     heading: 'Two campuses. One standard.',
     intro:
-      'JMC trains in Irvine and San Diego, each paired with a day-school academic partner. Both campuses share the same daily structure and the same performance standards — which campus an athlete joins depends mainly on their sport.',
+      'JMC trains in Irvine and San Diego, each paired with a day-school academic partner. Both campuses share the same daily structure and the same performance standards, which campus an athlete joins depends mainly on their sport.',
     academicPartner: 'Academic partner',
     sports: 'Sports',
     explore: 'Explore both campuses',
   },
   zh: {
     eyebrow: '我们的校区',
-    heading: '两个校区,同一个标准。',
+    heading: '两个校区，同一个标准。',
     intro:
-      'JMC在尔湾与圣地亚哥两地训练,每个校区都有各自的走读学校学术合作伙伴。两个校区遵循相同的每日结构与相同的体能标准——运动员加入哪个校区主要取决于其所参与的项目。',
+      'JMC在尔湾与圣地亚哥两地训练，每个校区都有各自的走读学校学术合作伙伴。两个校区遵循相同的每日结构与相同的体能标准，运动员加入哪个校区主要取决于其所参与的项目。',
     academicPartner: '学术合作学校',
     sports: '体育项目',
     explore: '了解两个校区',
