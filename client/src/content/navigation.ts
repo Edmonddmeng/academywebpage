@@ -25,10 +25,11 @@ export const navSections: NavSection[] = [
       zh: '我们是谁，我们的理念，以及我们训练所在的两个校区。',
     },
     links: [
-      { label: { en: 'Head of Academy', zh: '院长寄语' }, slug: 'head-of-academy' },
+      { label: { en: 'Why JMC Academy', zh: '为什么选择JMC学院' }, slug: 'head-of-academy' },
       { label: { en: 'Mission & Vision', zh: '使命与愿景' }, slug: 'mission-and-vision' },
       { label: { en: 'Academy Overview', zh: '学院概览' }, slug: 'academy-overview' },
       { label: { en: 'Campuses', zh: '校区' }, slug: 'campuses' },
+      { label: { en: 'Our Coaches', zh: '教练团队风采' }, slug: 'our-coaches' },
     ],
   },
   {
@@ -111,6 +112,18 @@ export const navSections: NavSection[] = [
       { label: { en: '5-to-1 Model', zh: '5比1辅导模式' }, slug: '5-to-1-model' },
       { label: { en: 'College Recruiting', zh: '大学招募' }, slug: 'college-recruiting' },
       { label: { en: 'Commitments', zh: '录取去向' }, slug: 'commitments' },
+    ],
+  },
+  {
+    label: { en: 'Opportunities', zh: '加入我们' },
+    slug: 'opportunities',
+    blurb: {
+      en: 'Coach alongside a proven team already sending athletes to the Ivy League and beyond.',
+      zh: '与一支已助力运动员进入常春藤名校等顶尖院校的团队并肩执教。',
+    },
+    links: [
+      { label: { en: 'Coaching Careers', zh: '教练职业机会' }, slug: 'coaching-careers' },
+      { label: { en: 'Open Positions', zh: '招聘职位' }, slug: 'open-positions' },
     ],
   },
   {

@@ -48,3 +48,13 @@ export function ArrowRight({ className }: IconProps) {
     </svg>
   )
 }
+
+export function MedalIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" {...stroke}>
+      <path d="M8 3h8l-2.5 6.5M8 3l2.5 6.5M8 3 5.5 9.5m0 0L8 13" />
+      <circle cx="12" cy="16" r="5" />
+      <path d="M12 13.8v4.4M10 16h4" />
+    </svg>
+  )
+}

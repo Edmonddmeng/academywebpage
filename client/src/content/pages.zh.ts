@@ -19,11 +19,11 @@ const visitCta: Block = {
 export const pageContentZh: Record<string, PageContent> = {
   // ABOUT
   'about/head-of-academy': {
-    intro: '院长写给每一位家长的一封信。',
+    intro: '为什么选择JMC学院——院长写给每一位家长的一封信。',
     blocks: [
       {
         type: 'split',
-        heading: '申请之前，先读一封信',
+        heading: '为什么选择JMC学院',
         image: { src: '/images/kirk-wheeler.jpg', alt: '柯克·惠勒（Kirk Wheeler），院长' },
         imageCaption:
           '曾任华盛顿州梅迪纳（Medina）St. Thomas School院长20年。明尼苏达大学教育学博士（EdD）；哥伦比亚大学师范学院Klingenstein Fellow。',
@@ -33,7 +33,7 @@ export const pageContentZh: Record<string, PageContent> = {
       },
       {
         type: 'statement',
-        text: '孩子不该在认真训练、认真读书和住得安全之间，只能三选其一。',
+        text: '孩子不该在认真训练、认真读书和安全成长之间，只能三选其一。',
       },
       {
         type: 'prose',
@@ -695,6 +695,119 @@ export const pageContentZh: Record<string, PageContent> = {
         caption: '音乐剧演出，我们合作学校众多表演艺术项目之一',
       },
       visitCta,
+    ],
+  },
+
+  'about/our-coaches': {
+    intro: '奥运奖牌得主、斯坦利杯冠军、NCAA 全国冠军——我们的教练不只是研究过最高水平，而是真正站上过那个舞台。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          '每一位 JMC 教练都曾在我们运动员正努力达到的水平上竞技并获胜。这不是履历上的一行字，而是我们的运动员每天都能从中学习的真实职业生涯——在冰面上、在球场上、在剑道上，也在草坪上。',
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: '冰球',
+        items: [
+          {
+            name: 'C.J. Stretch',
+            sport: '冰球',
+            role: '冰球技术教练',
+            src: '/images/coaches/cj-stretch.jpg',
+            alt: '身着冰球球衣的 C.J. Stretch',
+            bio: 'C.J. 曾代表坎卢普斯闪电队征战加拿大西部青年联赛，随后转入职业赛场，先后效力于 ECHL、AHL 联赛，以及德国 DEL2 联赛的罗森海姆星际熊队。他目前担任卡罗来纳飓风队冰球运营总监。',
+            accolades: ['2013年 ECHL 全明星赛队长', '卡罗来纳飓风队冰球运营总监'],
+          },
+          {
+            name: 'Matthew Hellickson',
+            sport: '冰球',
+            role: '防守教练',
+            src: '/images/coaches/matthew-hellickson.jpg',
+            alt: '身着冰球球衣的 Matthew Hellickson',
+            bio: 'Matthew 是被新泽西魔鬼队选中的后卫，曾在圣母大学连续出战146场比赛，随后加入魔鬼队与多伦多马利斯队体系，并代表美国国家队出战2021年国际冰联世锦赛。',
+            accolades: ['2017年NHL选秀，新泽西魔鬼队', '2021年国际冰联世锦赛，美国国家队', '圣母大学连续出战146场比赛'],
+          },
+          {
+            name: 'Jeff Friesen',
+            sport: '冰球',
+            role: '冰球主教练',
+            src: '/images/coaches/jeff-friesen.jpg',
+            alt: '身着NHL球衣的 Jeff Friesen',
+            bio: 'Jeff 拥有14年NHL生涯，先后效力鲨鱼队、小鸭队、魔鬼队、首都人队与火焰队，出战893场比赛。他在2003年东部决赛抢七大战中打入系列赛制胜球，并随新泽西魔鬼队夺得斯坦利杯冠军。',
+            accolades: ['2003年斯坦利杯冠军，新泽西魔鬼队', 'NHL生涯出战893场', 'NHL生涯打入218球'],
+          },
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: '高尔夫',
+        items: [
+          {
+            name: 'Shelly Haywood',
+            sport: '高尔夫',
+            role: '高尔夫主教练',
+            src: '/images/coaches/shelly-haywood.jpg',
+            alt: '高尔夫教练 Shelly Haywood',
+            bio: 'Shelly 两次荣获LPGA年度全国最佳教练称号，曾一手建立亚利桑那大学女子高尔夫项目并担任主教练，拥有超过20年培养各级别球员的经验，学生涵盖青少年选手直至LPGA与PGA巡回赛球员。',
+            accolades: ['LPGA年度全国最佳教练，2005年及2025年', '亚利桑那大学女子高尔夫主教练', '首位同时持有加州老年女子三大冠军头衔的球员'],
+          },
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: '击剑',
+        items: [
+          {
+            name: 'Nick Itkin',
+            sport: '击剑',
+            role: '击剑主教练',
+            src: '/images/coaches/nick-itkin.jpg',
+            alt: '身披美国国旗、佩戴奥运奖牌的 Nick Itkin',
+            bio: 'Nick 毕业于圣母大学，是当今世界排名第一的男子花剑选手。他曾代表美国队征战奥运会最高舞台，并连续两届奥运会摘得奖牌。',
+            accolades: ['2024年巴黎奥运会个人铜牌', '2021年东京奥运会团体铜牌', '男子花剑世界排名第一'],
+          },
+          {
+            name: 'Maria Mozhaeva',
+            sport: '击剑',
+            role: '击剑助理教练',
+            src: '/images/coaches/maria-mozhaeva.jpg',
+            alt: '身着圣母大学击剑队服的 Maria Mozhaeva',
+            bio: 'Maria 是圣母大学击剑队的一员，为 JMC 的击剑运动员带来一级大学水准的训练标准与技术指导。',
+          },
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: '长曲棍球',
+        items: [
+          {
+            name: 'Jack Stahl',
+            sport: '长曲棍球',
+            role: '防守教练',
+            src: '/images/coaches/jack-stahl.jpg',
+            alt: '身着普林斯顿长曲棍球球衣的 Jack Stahl',
+            bio: 'Jack 是普林斯顿大学的全美第一阵容近距离防守球员，带领老虎队夺得2026年NCAA全国冠军，并入选长曲棍球最高个人荣誉——Tewaaraton奖的候选名单。',
+            accolades: ['2026年NCAA一级联赛冠军，普林斯顿大学', '全美第一阵容球员', 'Tewaaraton奖候选人'],
+          },
+          {
+            name: 'Justin Cheng',
+            sport: '长曲棍球',
+            role: '长曲棍球助理教练',
+            src: '/images/coaches/justin-cheng.jpg',
+            alt: '身着西装的 Justin Cheng',
+            bio: 'Justin 在圣母大学担任四年防守球员兼长杆中场，职业生涯共抢获411个地面球，同时在学业上也取得了同龄球员中罕见的优异成绩。',
+            accolades: ['美国长曲棍球协会学术全美明星', '在圣母大学生涯抢获411个地面球'],
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '想加入这支教练团队吗？',
+        text: 'JMC 正在为全部项目招募全职教练。',
+        links: [{ label: '教练职业机会', to: '/opportunities/coaching-careers' }],
+      },
     ],
   },
 
@@ -2068,6 +2181,169 @@ export const pageContentZh: Record<string, PageContent> = {
           { label: '5比1辅导模式', to: '/counseling/5-to-1-model' },
           { label: '大学体育特招', to: '/counseling/college-recruiting' },
         ],
+      },
+    ],
+  },
+
+  // OPPORTUNITIES
+  'opportunities/coaching-careers': {
+    intro: '与一支已经在赢的团队并肩执教：常春藤录取、NCAA一级院校特招，以及两个专为此而建的校区。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'JMC 体育学院不是一个仍在验证的想法。真实的冰面、真实的草坪、真实的球场，一支拥有实绩的五人升学辅导团队——已帮助运动员进入哈佛、耶鲁、普林斯顿、圣母大学等顶尖学府，以及两个专为培养下一代大学运动员而建的南加州校区。现在我们正在扩张，正在招募将带领全部五个项目迈入下一阶段的教练团队。',
+          '这不是在教学工作之外附加的一点津贴，也不是让你接手一个半成品项目。这是一份全职教练生涯，背后有真实的资源支撑，加入的是一支已经在赢的团队，你将拥有与运动员应得水准相匹配的权限与资源去执教。',
+        ],
+      },
+      {
+        type: 'features',
+        heading: '为什么选择在 JMC 执教',
+        items: [
+          {
+            title: '加入一支志在必胜的项目',
+            text: '真实的场地设施、五人升学辅导团队，以及一套只为一个目标而设计的训练体系：帮助运动员获得特招。你加入的是一支已经有实绩的团队。',
+          },
+          {
+            title: '一支选择追求卓越的队伍',
+            text: '规模精简、极具竞争力的运动员小组，他们专门选择了全职寄宿体育学院，只为专注训练你所执教的项目。没有分心，没有懈怠。',
+          },
+          {
+            title: '与雄心相匹配的薪酬',
+            text: '一份全职岗位，配以真正优厚的薪资与福利。我们要与全美最优秀的教练竞争，薪酬也理应如此。',
+          },
+          {
+            title: '提供住房',
+            text: '教练住房补贴是整体待遇的一部分，加入这支正在获胜的团队，不会让你多花一分钱搬迁成本。',
+          },
+          {
+            title: '与我们一同成长',
+            text: 'JMC 正在两个校区、五个项目上快速扩张。现在加入的教练，加入的是一支已经取得实绩、且有真实晋升空间的团队。',
+          },
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: '你将居住的地方',
+        items: [
+          {
+            src: '/images/irvine-apartments-bedroom.jpg',
+            alt: 'Irvine Company 公寓中配备家具的卧室',
+            caption: '尔湾校区附近配备家具的教练公寓',
+          },
+          {
+            src: '/images/irvine-apartments-kitchen.jpg',
+            alt: 'Irvine Company 公寓中的现代化厨房',
+            caption: '每个单元均配备齐全厨房',
+          },
+          {
+            src: '/images/irvine-apartments-clubhouse.jpg',
+            alt: 'Irvine Company 公寓社区的会所',
+            caption: '社区会所',
+          },
+          {
+            src: '/images/irvine-apartments-pool.jpg',
+            alt: 'Irvine Company 公寓社区傍晚的度假式泳池',
+            caption: '社区泳池与庭院',
+          },
+          {
+            src: '/images/irvine-apartments-gym.jpg',
+            alt: '配备有氧与力量器械的健身中心',
+            caption: '社区健身中心',
+          },
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: '你将执教的地方',
+        items: [
+          {
+            src: '/images/great-park-ice-arena.jpg',
+            alt: '尔湾大公园冰场的航拍图',
+            caption: '大公园冰场，我们冰球项目的主场',
+          },
+          {
+            src: '/images/great-park-sports-park.jpg',
+            alt: '橙县大公园体育公园的人工草坪场地与球场航拍图',
+            caption: '大公园体育公园，长曲棍球训练场地',
+          },
+          {
+            src: '/images/irvine-fencing-center.jpg',
+            alt: '尔湾击剑中心的室内击剑道',
+            caption: '尔湾击剑中心，我们击剑项目的主场',
+          },
+          {
+            src: '/images/strawberry-farms-golf.jpg',
+            alt: 'Strawberry Farms 高尔夫球场湖畔果岭',
+            caption: 'Strawberry Farms 高尔夫球场，顶尖的 SCPGA 青少年发展球场',
+          },
+          {
+            src: '/images/tennis-court.jpg',
+            alt: '棕榈树与群山映衬下的网球场',
+            caption: '日常训练与比赛用硬地球场',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '培养下一代冠军',
+        text: '告诉我们你的执教背景，以及你希望带领的项目。',
+        links: [{ label: '联系我们', to: '/contact' }],
+      },
+    ],
+  },
+
+  'opportunities/open-positions': {
+    intro: '一个已取得实绩的项目，正在两个校区全面招募全职教练。',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'JMC 正在五个项目、两个校区同步扩张，我们正在招募带领这一扩张的全职教练团队。以下每一个职位，加入的都是一支拥有真实资源、真实场地设施，以及实绩显著的升学辅导团队的队伍。',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: '目前招聘中的项目',
+        items: [
+          {
+            title: '冰球',
+            text: '尔湾校区的男子与女子项目，在大公园冰场的制冷冰面上训练。',
+          },
+          {
+            title: '高尔夫',
+            text: '男子与女子项目，训练场地涵盖 Strawberry Farms 与 Torrey Pines 高尔夫球场。',
+          },
+          {
+            title: '网球',
+            text: '两个校区的男子与女子项目，均在硬地球场训练。',
+          },
+          {
+            title: '击剑',
+            text: '在尔湾击剑中心开展的男子与女子项目。',
+          },
+          {
+            title: '长曲棍球',
+            text: '在大公园体育公园人工草坪场地开展的男子与女子项目。',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        heading: '正在招募的教练岗位',
+        items: [
+          { title: '主教练', text: '负责项目标准、比赛计划与运动员发展。' },
+          { title: '助理教练', text: '负责日常训练、分组训练与个人指导。' },
+          { title: '专项技术教练', text: '负责滑行、短杆、持杆技术与专项技能。' },
+          { title: '体能教练', text: '将体能训练融入每一个项目。' },
+          { title: '影像与招募协调员', text: '负责影像拍摄、剪辑分析与招募集锦制作。' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: '准备好以运动员应得的水准去执教了吗？',
+        text: '发送你的执教背景，以及你希望带领的项目。',
+        links: [{ label: '联系我们', to: '/contact' }],
       },
     ],
   },

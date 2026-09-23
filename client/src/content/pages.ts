@@ -54,6 +54,20 @@ export type Block =
       items: { period: string; focus: string }[]
     }
   | { type: 'signature'; name: string; role: string; extra?: string }
+  | {
+      type: 'coaches'
+      heading?: string
+      text?: string
+      items: {
+        name: string
+        sport: string
+        role: string
+        src: string
+        alt: string
+        bio: string
+        accolades?: string[]
+      }[]
+    }
 
 export type PageContent = { intro: string; blocks: Block[] }
 
@@ -70,11 +84,11 @@ const visitCta: Block = {
 export const pageContent: Record<string, PageContent> = {
   // ABOUT
   'about/head-of-academy': {
-    intro: 'A letter from our Head of Academy to every family considering JMC.',
+    intro: 'Why JMC Academy, in a letter from our Head of Academy to every family considering JMC.',
     blocks: [
       {
         type: 'split',
-        heading: 'A letter before you apply',
+        heading: 'Why JMC Academy',
         image: { src: '/images/kirk-wheeler.jpg', alt: 'Kirk Wheeler, Head of Academy' },
         imageCaption:
           'Head of School for 20 years at St. Thomas School in Medina, WA. EdD, University of Minnesota; Klingenstein Fellow, Teachers College, Columbia University.',
@@ -747,6 +761,142 @@ export const pageContent: Record<string, PageContent> = {
         caption: 'Musical theater, one of many performing-arts opportunities at our partner schools',
       },
       visitCta,
+    ],
+  },
+
+  'about/our-coaches': {
+    intro: 'Olympic medalists. A Stanley Cup champion. NCAA champions. Our coaches didn’t just study the highest level, they lived it.',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'Every JMC coach has competed, and won, at the level our athletes are training to reach. That’s not a line on a resume, it’s a career our athletes get to learn from every single day, on the ice, on the course, on the strip, and on the field.',
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: 'Ice Hockey',
+        items: [
+          {
+            name: 'C.J. Stretch',
+            sport: 'Ice Hockey',
+            role: 'Hockey Skills Coach',
+            src: '/images/coaches/cj-stretch.jpg',
+            alt: 'C.J. Stretch in a hockey jersey',
+            bio: 'A center who played major junior with the Kamloops Blazers before turning pro, C.J. spent his career across the ECHL, AHL, and Germany’s DEL2 with Starbulls Rosenheim. He now serves as Director of Hockey Operations for the Carolina Hurricanes.',
+            accolades: [
+              '2013 ECHL All-Star Game Captain',
+              'Director of Hockey Operations, Carolina Hurricanes',
+            ],
+          },
+          {
+            name: 'Matthew Hellickson',
+            sport: 'Ice Hockey',
+            role: 'Defense Coach',
+            src: '/images/coaches/matthew-hellickson.jpg',
+            alt: 'Matthew Hellickson in a hockey jersey',
+            bio: 'A defenseman drafted by the New Jersey Devils, Matthew skated in 146 consecutive games at Notre Dame before turning pro with the Devils and Toronto Marlies organizations, and represented Team USA at the 2021 IIHF World Championship.',
+            accolades: [
+              '2017 NHL Draft pick, New Jersey Devils',
+              '2021 IIHF World Championship, Team USA',
+              '146 consecutive games played at Notre Dame',
+            ],
+          },
+          {
+            name: 'Jeff Friesen',
+            sport: 'Ice Hockey',
+            role: 'Head Hockey Coach',
+            src: '/images/coaches/jeff-friesen.jpg',
+            alt: 'Jeff Friesen in an NHL jersey',
+            bio: 'A 14-year NHL veteran across 893 games with the Sharks, Mighty Ducks, Devils, Capitals, and Flames, Jeff scored the Game 7 series winner in the 2003 Eastern Conference Final on his way to a Stanley Cup championship with New Jersey.',
+            accolades: [
+              '2003 Stanley Cup Champion, New Jersey Devils',
+              '893 NHL games played',
+              '218 career NHL goals',
+            ],
+          },
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: 'Golf',
+        items: [
+          {
+            name: 'Shelly Haywood',
+            sport: 'Golf',
+            role: 'Head Golf Coach',
+            src: '/images/coaches/shelly-haywood.jpg',
+            alt: 'Shelly Haywood, golf coach',
+            bio: 'A two-time LPGA National Coach of the Year, Shelly built the University of Arizona women’s golf program as head coach and has spent over 20 years developing players at every level, from junior golf to the LPGA and PGA Tour.',
+            accolades: [
+              'LPGA National Coach of the Year, 2005 & 2025',
+              'Head Women’s Golf Coach, University of Arizona',
+              'First golfer to hold all three California Senior Women’s titles at once',
+            ],
+          },
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: 'Fencing',
+        items: [
+          {
+            name: 'Nick Itkin',
+            sport: 'Fencing',
+            role: 'Head Fencing Coach',
+            src: '/images/coaches/nick-itkin.jpg',
+            alt: 'Nick Itkin wrapped in an American flag with an Olympic medal',
+            bio: 'A Notre Dame alum and the top-ranked men’s foil fencer in the world, Nick has represented Team USA on the sport’s biggest stages, medaling at back-to-back Olympic Games.',
+            accolades: [
+              '2024 Paris Olympics, Individual Bronze Medal',
+              '2021 Tokyo Olympics, Team Bronze Medal',
+              'World No. 1, Men’s Foil',
+            ],
+          },
+          {
+            name: 'Maria Mozhaeva',
+            sport: 'Fencing',
+            role: 'Assistant Fencing Coach',
+            src: '/images/coaches/maria-mozhaeva.jpg',
+            alt: 'Maria Mozhaeva in Notre Dame fencing team apparel',
+            bio: 'A member of the Notre Dame Fighting Irish fencing program, Maria brings Division I training standards and technique to JMC’s fencing student-athletes.',
+          },
+        ],
+      },
+      {
+        type: 'coaches',
+        heading: 'Lacrosse',
+        items: [
+          {
+            name: 'Jack Stahl',
+            sport: 'Lacrosse',
+            role: 'Defense Coach',
+            src: '/images/coaches/jack-stahl.jpg',
+            alt: 'Jack Stahl in a Princeton lacrosse jersey',
+            bio: 'A First-Team All-American close defenseman at Princeton, Jack anchored the Tigers’ 2026 NCAA championship run and has been named to the Tewaaraton Award Watchlist, lacrosse’s highest individual honor.',
+            accolades: [
+              '2026 NCAA Division I Champion, Princeton',
+              'First-Team All-American',
+              'Tewaaraton Award Watchlist',
+            ],
+          },
+          {
+            name: 'Justin Cheng',
+            sport: 'Lacrosse',
+            role: 'Assistant Lacrosse Coach',
+            src: '/images/coaches/justin-cheng.jpg',
+            alt: 'Justin Cheng in a suit',
+            bio: 'A four-year defenseman and long-stick midfielder at Notre Dame, Justin racked up 411 career ground balls and paired his on-field production with academic honors that few players in the country can match.',
+            accolades: ['US Lacrosse Academic All-American', '411 career ground balls at Notre Dame'],
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: 'Want to coach alongside this staff?',
+        text: 'JMC is hiring full-time coaches across every program.',
+        links: [{ label: 'Coaching Careers', to: '/opportunities/coaching-careers' }],
+      },
     ],
   },
 
@@ -2123,6 +2273,169 @@ export const pageContent: Record<string, PageContent> = {
           { label: 'The 5-to-1 Model', to: '/counseling/5-to-1-model' },
           { label: 'College Recruiting', to: '/counseling/college-recruiting' },
         ],
+      },
+    ],
+  },
+
+  // OPPORTUNITIES
+  'opportunities/coaching-careers': {
+    intro: 'Coach alongside a team that already wins: Ivy League acceptances, Division I commitments, and two campuses built for one purpose.',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'JMC Sports Academy is not an idea we’re still testing. Real ice, real turf, real courts, a five-person recruiting department with a track record of placing athletes at Harvard, Yale, Princeton, Notre Dame, and beyond, and two Southern California campuses built for one purpose: producing the next generation of college athletes. Now we’re expanding, and we’re hiring the coaches who will lead all five programs into their next chapter.',
+          'This isn’t a stipend stacked on top of a teaching job, and it isn’t a program you inherit half-built. It’s a full-time coaching career, backed by real infrastructure and a team that is already winning, with the authority and resources to coach at the level your athletes deserve.',
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'Why coach at JMC',
+        items: [
+          {
+            title: 'Join a program built to win',
+            text: 'Real facilities, a five-person recruiting department, and a training model built around one goal: getting athletes recruited. You’re joining a team with results already on the board.',
+          },
+          {
+            title: 'A roster that chose to be elite',
+            text: 'Small, competitive cohorts of student-athletes who chose a full-time boarding sports academy specifically to train in your sport. No split attention, no coasting.',
+          },
+          {
+            title: 'Compensation that matches the ambition',
+            text: 'A full-time role with genuinely generous salary and benefits. We compete for the best coaches in the country, and we pay like it.',
+          },
+          {
+            title: 'Housing provided',
+            text: 'Coach housing compensation is part of the package, so joining a winning program costs you nothing extra.',
+          },
+          {
+            title: 'Room to grow with us',
+            text: 'JMC is expanding fast across two campuses and five sports. Coaches who join now step onto a team that’s already producing results, with real room to grow into a bigger role.',
+          },
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: 'Where you’ll live',
+        items: [
+          {
+            src: '/images/irvine-apartments-bedroom.jpg',
+            alt: 'A furnished bedroom in an Irvine Company apartment',
+            caption: 'Furnished coach housing near the Irvine campus',
+          },
+          {
+            src: '/images/irvine-apartments-kitchen.jpg',
+            alt: 'A modern kitchen in an Irvine Company apartment',
+            caption: 'A full kitchen in every unit',
+          },
+          {
+            src: '/images/irvine-apartments-clubhouse.jpg',
+            alt: 'The clubhouse at an Irvine Company apartment community',
+            caption: 'Community clubhouse',
+          },
+          {
+            src: '/images/irvine-apartments-pool.jpg',
+            alt: 'A resort-style pool at dusk in an Irvine Company apartment community',
+            caption: 'On-site pool and courtyard',
+          },
+          {
+            src: '/images/irvine-apartments-gym.jpg',
+            alt: 'A fitness center with cardio and strength equipment',
+            caption: 'On-site fitness center',
+          },
+        ],
+      },
+      {
+        type: 'gallery',
+        heading: 'Where you’ll coach',
+        items: [
+          {
+            src: '/images/great-park-ice-arena.jpg',
+            alt: 'Aerial view of Great Park Ice Arena in Irvine',
+            caption: 'Great Park Ice Arena, home ice for our hockey program',
+          },
+          {
+            src: '/images/great-park-sports-park.jpg',
+            alt: 'Aerial view of turf fields and courts at the Orange County Great Park Sports Park',
+            caption: 'Great Park Sports Park, turf fields for lacrosse',
+          },
+          {
+            src: '/images/irvine-fencing-center.jpg',
+            alt: 'The indoor fencing strips at the Irvine Fencing Center',
+            caption: 'Irvine Fencing Center, home strips for our fencing program',
+          },
+          {
+            src: '/images/strawberry-farms-golf.jpg',
+            alt: 'A lakeside green at Strawberry Farms Golf Course',
+            caption: 'Strawberry Farms Golf Course, an elite SCPGA Junior development course',
+          },
+          {
+            src: '/images/tennis-court.jpg',
+            alt: 'A tennis court with palm trees and mountains in the background',
+            caption: 'Hard courts for daily training and match play',
+          },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: 'Coach the next generation of champions',
+        text: 'Tell us about your background and the program you’d lead.',
+        links: [{ label: 'Contact Us', to: '/contact' }],
+      },
+    ],
+  },
+
+  'opportunities/open-positions': {
+    intro: 'Full-time coaching openings across a program already producing results.',
+    blocks: [
+      {
+        type: 'prose',
+        paragraphs: [
+          'JMC is expanding across five sports and two campuses, and we’re hiring the full-time coaching staff to lead that growth. Every opening below joins a team with real infrastructure, real facilities, and a recruiting department with a genuine track record already in place.',
+        ],
+      },
+      {
+        type: 'numbered',
+        heading: 'Programs hiring now',
+        items: [
+          {
+            title: 'Ice Hockey',
+            text: 'Boys and girls programs at the Irvine campus, training on refrigerated ice at Great Park Ice Arena.',
+          },
+          {
+            title: 'Golf',
+            text: 'Boys and girls programs across Strawberry Farms and Torrey Pines Golf Courses.',
+          },
+          {
+            title: 'Tennis',
+            text: 'Boys and girls programs on hard courts at both campuses.',
+          },
+          {
+            title: 'Fencing',
+            text: 'Boys and girls programs at the Irvine Fencing Center.',
+          },
+          {
+            title: 'Lacrosse',
+            text: 'Boys and girls programs on turf at Great Park Sports Park.',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        heading: 'Coaching roles we’re hiring',
+        items: [
+          { title: 'Head Coach', text: 'Program standards, competition plan, and athlete development.' },
+          { title: 'Assistant Coach', text: 'Daily sessions, position groups, and individual work.' },
+          { title: 'Skills Specialist', text: 'Skating, short game, stick skills, and position technique.' },
+          { title: 'Strength & Conditioning Coach', text: 'Performance training built into every program.' },
+          { title: 'Video & Recruiting Coordinator', text: 'Film capture, breakdown, and recruiting reels.' },
+        ],
+      },
+      {
+        type: 'cta',
+        heading: 'Ready to coach at the level your athletes deserve?',
+        text: 'Send your background and the program you’d lead.',
+        links: [{ label: 'Contact Us', to: '/contact' }],
       },
     ],
   },

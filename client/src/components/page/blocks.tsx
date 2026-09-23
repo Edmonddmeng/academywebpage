@@ -1,5 +1,6 @@
 import { ButtonLink, ImagePlaceholder } from '../ui'
 import { EvenGrid } from '../EvenGrid'
+import { MedalIcon } from '../icons'
 import type { Block } from '../../content/pages'
 import { useLocale } from '../../content/locale'
 
@@ -405,6 +406,53 @@ export function PageBlock({ block }: { block: Block }) {
                 {person.bio && <p className="text-sm leading-relaxed text-ink/70">{person.bio}</p>}
               </div>
             ))}
+          </div>
+        </section>
+      )
+
+    case 'coaches':
+      return (
+        <section>
+          {block.heading && <Heading>{block.heading}</Heading>}
+          {block.text && (
+            <p className={`max-w-3xl text-lg leading-relaxed text-ink/75 ${block.heading ? 'mt-4' : ''}`}>
+              {block.text}
+            </p>
+          )}
+          <div className={block.heading || block.text ? 'mt-8' : ''}>
+            <EvenGrid items={block.items} maxCols={3} gap="gap-8">
+              {(coach) => (
+                <li key={coach.name} className="border border-dotted border-ink/45">
+                  <img
+                    src={coach.src}
+                    alt={coach.alt}
+                    loading="lazy"
+                    className="aspect-[4/5] w-full object-cover"
+                  />
+                  <div className="p-6">
+                    <p className="font-condensed text-[13px] font-semibold tracking-[0.2em] text-brass uppercase">
+                      {coach.sport}
+                    </p>
+                    <p className="mt-2 font-serif text-2xl leading-tight">{coach.name}</p>
+                    <p className="mt-1 text-sm font-semibold text-ink/60">{coach.role}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-ink/70">{coach.bio}</p>
+                    {coach.accolades && coach.accolades.length > 0 && (
+                      <ul className="mt-4 space-y-2 border-t border-ink/15 pt-4">
+                        {coach.accolades.map((accolade) => (
+                          <li
+                            key={accolade}
+                            className="flex items-start gap-2 text-sm font-semibold text-ink"
+                          >
+                            <MedalIcon className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
+                            {accolade}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </li>
+              )}
+            </EvenGrid>
           </div>
         </section>
       )
