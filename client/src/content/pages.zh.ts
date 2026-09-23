@@ -25,6 +25,8 @@ export const pageContentZh: Record<string, PageContent> = {
         type: 'split',
         heading: '申请之前，先读一封信',
         image: { src: '/images/kirk-wheeler.jpg', alt: '柯克·惠勒（Kirk Wheeler），院长' },
+        imageCaption:
+          '曾任华盛顿州梅迪纳（Medina）St. Thomas School院长20年。明尼苏达大学教育学博士（EdD）；哥伦比亚大学师范学院Klingenstein Fellow。',
         paragraphs: [
           '每一位来信咨询的家长，心里几乎都装着同一个问题：怎样才能让孩子既有认真的体育前途，又不耽误学业，也让我自己放得下心？这封信，就是我们的回答。',
         ],
@@ -101,6 +103,14 @@ export const pageContentZh: Record<string, PageContent> = {
           '我们的理念很简单：看结果。我们对此有信心，因为在我们眼里，好的结果，意味着孩子健康、快乐、善良、有责任感，还有更多。',
           'JMC是一所新学校，但背后的团队并不新。我们也不会承诺任何学生一定进入某所学校、大学或球队。我们承诺的，是专业的规划、持续的跟进，以及一个真正准备好了的孩子。',
           '如果您正在为孩子的美国之路做决定，尤其是在远隔重洋的地方做这个决定，我很愿意和您聊一聊。欢迎来看一次训练、旁听一堂课、见一见我们的团队，然后由您自己判断，我们是不是真的在做我们所说的事。',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: '关于柯克·惠勒（Kirk Wheeler）',
+        paragraphs: [
+          '柯克·惠勒曾在华盛顿州梅迪纳（Medina）的St. Thomas School担任院长20年。在任期间，他创建了Center for Leadership and Innovation与Center for Personalized Learning，建成华盛顿州首个（全美第二个）LEED金级认证的学前至八年级校园，推动在校人数增长121%，并将学校财务储备从300万美元提升至3000万美元。他还曾任CustomED与Rubicon Educational Foundation董事会成员，并在西北独立学校协会（Northwest Association of Independent Schools）的董事会与认证委员会任职十余年，主导起草该协会的认证标准。',
+          '在此之前，他曾在里约热内卢美国学校（Escola Americana do Rio de Janeiro）工作14年，历任课程协调员、小学部主任及代理校长，主持开发了学校从学前班到12年级的美国、巴西及IB课程体系。他拥有明尼苏达大学教育政策与管理教育学博士（EdD）学位、Framingham State University国际教育硕士学位，以及北科罗拉多大学（University of Northern Colorado）学士学位，并曾获哥伦比亚大学师范学院Klingenstein Fellowship。',
         ],
       },
       {
@@ -1269,7 +1279,7 @@ export const pageContentZh: Record<string, PageContent> = {
       {
         type: 'split',
         heading: '有目的的严谨',
-        image: { src: '/images/upper-school-classroom.jpg', alt: '高中部课堂' },
+        image: { src: '/images/upper-school-hero.jpg', alt: '高中部学生' },
         paragraphs: [
           '当一名运动员升入9年级时，好习惯已经养成，标准也会再次提高。我们的高中部学生在合作私立日校修读包含荣誉课程与AP课程的完整课业：真实的课堂、真实的教师、真实的成绩。放学铃声响起的那一刻，才是JMC工作的开始。',
           '比起只是修满学分毕业的运动员，我们更希望培养出能在压力下清晰思考、考试成绩也更出色的运动员。从第一学期起，每一份学业规划都会参照NCAA参赛资格与真实的大学录取要求来制定，确保没有运动员会在最后一年才发现自己缺少某项要求，或者一份配不上他实力的成绩单。',
@@ -1287,10 +1297,16 @@ export const pageContentZh: Record<string, PageContent> = {
         type: 'split',
         heading: '每一位运动员，都被记住名字',
         reverse: true,
-        image: { src: '/images/upper-school-classroom.jpg', alt: '高中部课堂' },
+        image: { src: '/images/upper-school-campus.jpg', alt: '高中部学生在校园中' },
         paragraphs: [
           '辅导小组刻意保持小规模，没有学生会是阶梯教室里的一张陌生面孔。我们的学术团队清楚哪些学生下周四要出行参加锦标赛，哪些学生正在冲刺某个AP科目的高分，哪些学生则需要完全不同方式的督促。',
         ],
+      },
+      {
+        type: 'image',
+        src: '/images/maranatha-christian-upper-school.jpg',
+        alt: 'Maranatha Christian School，高中部学术合作走读学校',
+        caption: 'Maranatha Christian School，高中部学术合作走读学校',
       },
       {
         type: 'logos',
@@ -1373,6 +1389,12 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'image',
+        src: '/images/middle-school-retreat.jpg',
+        alt: '初中部学生参加静修活动',
+        caption: '初中部静修活动：在课堂之外建立集体归属感',
+      },
+      {
         type: 'statement',
         text: '我们的目标，不是帮助学生运动员勉强跟上非运动员同学的步伐。每日辅导与专属学术顾问的存在，是为了让每一位学生始终保持领先，培养出的学者，其课堂表现足以让拥有两倍自由时间的学生也自愧不如。',
         attribution: '我们的标准',
@@ -1433,7 +1455,7 @@ export const pageContentZh: Record<string, PageContent> = {
         type: 'split',
         heading: '同吃同住，共同学习',
         reverse: true,
-        image: { src: '/images/middle-school-classroom.jpg', alt: '初中部学生在课堂上学习' },
+        image: { src: '/images/middle-school-campus.jpg', alt: '初中部学生在校园中' },
         paragraphs: [
           '学业不会止步于教室门口。晚间自习厅设在宿舍内，由负责训练与日常生活的同一批教职员工监督，因此初中部学生遇到难题时，身边随时都有人可以帮忙。',
         ],
@@ -1784,6 +1806,42 @@ export const pageContentZh: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'gallery',
+        heading: '食堂实拍',
+        items: [
+          {
+            src: '/images/cafeteria/breakfast-spread.jpg',
+            alt: '丰盛的热早餐，包括煎蛋、培根、法式吐司与新鲜水果',
+            caption: '早餐',
+          },
+          {
+            src: '/images/cafeteria/salad-bar.jpg',
+            alt: '新鲜沙拉吧，配有烤鸡肉、蔬菜与各式配料',
+            caption: '每餐都有的沙拉吧',
+          },
+          {
+            src: '/images/cafeteria/korean-style-tray.webp',
+            alt: '餐盘中有泡菜、汤面、米饭与烤肉',
+            caption: '晚餐轮换：韩式之夜',
+          },
+          {
+            src: '/images/cafeteria/mac-and-cheese-tray.webp',
+            alt: '餐盘中有芝士通心粉、蒜香面包与蔬菜',
+            caption: '家常美味，现场烹制',
+          },
+          {
+            src: '/images/cafeteria/stir-fry-tray.webp',
+            alt: '晚餐餐盘中有炒饭、烤蔬菜、汤品与沙拉',
+            caption: '每晚均衡搭配',
+          },
+          {
+            src: '/images/cafeteria/sloppy-joe.jpg',
+            alt: '一份肉酱汉堡配沙拉',
+            caption: '轮换菜单中的美式家常菜',
+          },
+        ],
+      },
+      {
         type: 'features',
         heading: '菜单规划方式',
         items: [
@@ -1991,6 +2049,10 @@ export const pageContentZh: Record<string, PageContent> = {
           { src: '/images/commitments/crest-lion.png', alt: 'School crest, rampant lion' },
           { src: '/images/commitments/unc.png', alt: 'University of North Carolina' },
           { src: '/images/commitments/sage-hill.png', alt: 'Sage Hill School' },
+          { src: '/images/commitments/mit.png', alt: 'Massachusetts Institute of Technology' },
+          { src: '/images/commitments/princeton.png', alt: 'Princeton University' },
+          { src: '/images/commitments/lawrenceville.png', alt: 'The Lawrenceville School' },
+          { src: '/images/commitments/st-pauls.png', alt: "St. Paul's School, Concord" },
         ],
       },
       {

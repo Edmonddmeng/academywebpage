@@ -71,35 +71,34 @@ export function PageBlock({ block }: { block: Block }) {
               {block.text}
             </p>
           )}
-          <div className={block.heading || block.text ? 'mt-8' : ''}>
-            <EvenGrid items={block.items} maxCols={3}>
-              {(item) => (
-                <li key={item.title} className="border border-dotted border-ink/45 p-6">
-                  <h3 className="font-serif text-2xl">{item.title}</h3>
-                  {item.text && <p className="mt-2 leading-relaxed text-ink/70">{item.text}</p>}
-                </li>
-              )}
-            </EvenGrid>
+          <div className={`border-t border-ink/15 ${block.heading || block.text ? 'mt-8' : ''}`}>
+            {block.items.map((item) => (
+              <div
+                key={item.title}
+                className="grid gap-x-6 gap-y-2 border-b border-ink/15 py-6 sm:grid-cols-[18rem_1fr]"
+              >
+                <h3 className="font-serif text-2xl">{item.title}</h3>
+                {item.text && <p className="leading-relaxed text-ink/70">{item.text}</p>}
+              </div>
+            ))}
           </div>
         </section>
       )
 
     case 'stats':
       return (
-        <section>
-          <EvenGrid items={block.items} maxCols={4}>
-            {(item) => (
-              <li
-                key={item.label}
-                className="border border-dotted border-ink/45 px-6 py-10 text-center"
-              >
-                <p className="font-serif text-5xl leading-none text-ink">{item.value}</p>
-                <p className="mt-3 font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
-                  {item.label}
-                </p>
-              </li>
-            )}
-          </EvenGrid>
+        <section className="border-t border-ink/15">
+          {block.items.map((item) => (
+            <div
+              key={item.label}
+              className="grid gap-x-6 gap-y-1 border-b border-ink/15 py-6 sm:grid-cols-[12rem_1fr] sm:items-baseline"
+            >
+              <p className="font-serif text-4xl leading-none text-ink">{item.value}</p>
+              <p className="font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
+                {item.label}
+              </p>
+            </div>
+          ))}
         </section>
       )
 
@@ -347,18 +346,25 @@ export function PageBlock({ block }: { block: Block }) {
     case 'split':
       return (
         <section className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className={`aspect-[4/3] ${block.reverse ? 'lg:order-2' : ''}`}>
-            {'src' in block.image ? (
-              <img
-                src={block.image.src}
-                alt={block.image.alt}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            ) : (
-              <ImagePlaceholder label={block.image.placeholder} className="h-full w-full" />
+          <figure className={block.reverse ? 'lg:order-2' : ''}>
+            <div className="aspect-[4/3]">
+              {'src' in block.image ? (
+                <img
+                  src={block.image.src}
+                  alt={block.image.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <ImagePlaceholder label={block.image.placeholder} className="h-full w-full" />
+              )}
+            </div>
+            {block.imageCaption && (
+              <figcaption className="mt-4 text-base leading-relaxed text-ink/70">
+                {block.imageCaption}
+              </figcaption>
             )}
-          </div>
+          </figure>
           <div>
             <h2 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
               {block.heading}
@@ -381,23 +387,24 @@ export function PageBlock({ block }: { block: Block }) {
           {block.text && (
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink/75">{block.text}</p>
           )}
-          <div className={block.heading || block.text ? 'mt-8' : ''}>
-            <EvenGrid items={block.items} maxCols={3}>
-              {(person) => (
-                <li key={person.name} className="border border-dotted border-ink/45 p-6">
-                  <span className="grid h-16 w-16 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
-                    {nameInitials(person.name)}
-                  </span>
-                  <p className="mt-4 font-serif text-2xl leading-tight">{person.name}</p>
+          <div className={`border-t border-ink/15 ${block.heading || block.text ? 'mt-8' : ''}`}>
+            {block.items.map((person) => (
+              <div
+                key={person.name}
+                className="grid gap-x-6 gap-y-2 border-b border-ink/15 py-6 sm:grid-cols-[4rem_14rem_1fr] sm:items-start"
+              >
+                <span className="grid h-16 w-16 place-items-center rounded-full bg-ink font-condensed text-lg font-semibold tracking-wide text-white">
+                  {nameInitials(person.name)}
+                </span>
+                <div>
+                  <p className="font-serif text-2xl leading-tight">{person.name}</p>
                   <p className="mt-1 text-xs font-semibold tracking-[0.2em] text-brass uppercase">
                     {person.role}
                   </p>
-                  {person.bio && (
-                    <p className="mt-3 text-sm leading-relaxed text-ink/70">{person.bio}</p>
-                  )}
-                </li>
-              )}
-            </EvenGrid>
+                </div>
+                {person.bio && <p className="text-sm leading-relaxed text-ink/70">{person.bio}</p>}
+              </div>
+            ))}
           </div>
         </section>
       )
@@ -406,19 +413,20 @@ export function PageBlock({ block }: { block: Block }) {
       return (
         <section>
           {block.heading && <Heading>{block.heading}</Heading>}
-          <div className={block.heading ? 'mt-8' : ''}>
-            <EvenGrid items={block.items} maxCols={4} as="ol">
-              {(item, i) => (
-                <li key={item.period} className="border border-dotted border-ink/45 p-6">
-                  <span className="font-serif text-2xl text-brass">{String(i + 1).padStart(2, '0')}</span>
-                  <p className="mt-3 font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
-                    {item.period}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/70">{item.focus}</p>
-                </li>
-              )}
-            </EvenGrid>
-          </div>
+          <ol className={`border-t border-ink/15 ${block.heading ? 'mt-8' : ''}`}>
+            {block.items.map((item, i) => (
+              <li
+                key={item.period}
+                className="grid gap-x-6 gap-y-2 border-b border-ink/15 py-6 sm:grid-cols-[3rem_14rem_1fr]"
+              >
+                <span className="font-serif text-2xl text-brass">{String(i + 1).padStart(2, '0')}</span>
+                <p className="font-condensed text-[15px] font-semibold tracking-wide text-ink uppercase">
+                  {item.period}
+                </p>
+                <p className="text-sm leading-relaxed text-ink/70">{item.focus}</p>
+              </li>
+            ))}
+          </ol>
         </section>
       )
 

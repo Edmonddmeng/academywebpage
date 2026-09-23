@@ -52,7 +52,7 @@ const copy = {
 }
 
 export default function Hero() {
-  const imgRef = useRef<HTMLImageElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const site = useSite()
   const locale = useLocale()
   const t = copy[locale]
@@ -64,10 +64,10 @@ export default function Hero() {
     const onScroll = () => {
       cancelAnimationFrame(raf)
       raf = requestAnimationFrame(() => {
-        // Capped so the image never scrolls far enough to expose its scaled-up edge.
+        // Capped so the video never scrolls far enough to expose its scaled-up edge.
         const offset = Math.min(window.scrollY * 0.25, 80)
-        if (imgRef.current) {
-          imgRef.current.style.transform = `translateY(${offset}px) scale(1.08)`
+        if (videoRef.current) {
+          videoRef.current.style.transform = `translateY(${offset}px) scale(1.08)`
         }
       })
     }
@@ -80,14 +80,17 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-svh flex-col overflow-hidden bg-ink text-white">
-      <img
-        ref={imgRef}
-        src="/images/hero.avif"
-        alt=""
+      <video
+        ref={videoRef}
+        src="/videos/hero.mp4"
+        poster="/images/hero.avif"
+        autoPlay
+        muted
+        loop
+        playsInline
         aria-hidden="true"
         style={{ transform: 'translateY(0px) scale(1.08)' }}
         className="absolute inset-0 h-full w-full object-cover will-change-transform"
-        fetchPriority="high"
       />
       {/* Neutral (not brand-green) scrims keep the white header and headline legible
           without tinting the photo's true colors. */}

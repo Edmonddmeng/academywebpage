@@ -40,6 +40,7 @@ export type Block =
       paragraphs: string[]
       reverse?: boolean
       image: { src: string; alt: string } | { placeholder: string }
+      imageCaption?: string
     }
   | {
       type: 'people'
@@ -75,6 +76,8 @@ export const pageContent: Record<string, PageContent> = {
         type: 'split',
         heading: 'A letter before you apply',
         image: { src: '/images/kirk-wheeler.jpg', alt: 'Kirk Wheeler, Head of Academy' },
+        imageCaption:
+          'Head of School for 20 years at St. Thomas School in Medina, WA. EdD, University of Minnesota; Klingenstein Fellow, Teachers College, Columbia University.',
         paragraphs: [
           'Nearly every family who writes to us is asking some version of the same question: how do I give my child a serious future in sport without giving up their education, or my own peace of mind? This letter is our answer.',
         ],
@@ -151,6 +154,14 @@ export const pageContent: Record<string, PageContent> = {
           'Our philosophy is simple: we look at results. We are confident in it because, to us, good results mean a student who is healthy, happy, kind, and responsible, and much more.',
           'JMC is a new school, but the team behind it is not. We do not promise that any student will be admitted to a particular school, university, or team. What we promise is careful planning, close follow-up, and a student who is genuinely prepared.',
           'If you are weighing this decision for your child, especially from far away, I would like to talk with you. Come watch a training session, sit in on a class, meet the team, and judge for yourself whether we are doing what we say.',
+        ],
+      },
+      {
+        type: 'prose',
+        heading: 'About Kirk Wheeler',
+        paragraphs: [
+          'Kirk spent 20 years as Head of School at St. Thomas School in Medina, Washington, where he built the Center for Leadership and Innovation and the Center for Personalized Learning, opened the first LEED Gold preschool-through-grade-8 campus in Washington State (the second in the country), grew enrollment by 121%, and took the school’s financial reserves from $3 million to $30 million. He has served on the boards of CustomED and the Rubicon Educational Foundation, and spent over a decade on the Northwest Association of Independent Schools’ Board of Governors and Accreditation Committee, where he co-authored the association’s accreditation standards.',
+          'His path into school leadership started overseas: 14 years at the American School of Rio de Janeiro, first as Curriculum Coordinator, then Lower School Principal and Acting Headmaster, developing the school’s U.S., Brazilian, and IB programs from preschool through grade 12. He holds an EdD in Educational Policy and Administration from the University of Minnesota, an MA in International Education from Framingham State University, and a BA from the University of Northern Colorado, and is a Klingenstein Fellow through Teachers College, Columbia University.',
         ],
       },
       {
@@ -1321,7 +1332,7 @@ export const pageContent: Record<string, PageContent> = {
       {
         type: 'split',
         heading: 'Rigor with a reason',
-        image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
+        image: { src: '/images/upper-school-hero.jpg', alt: 'Upper School students' },
         paragraphs: [
           'By the time an athlete reaches Grade 9, the habits are in place and the standard rises again. Our Upper School students carry a full, honors- and AP-inclusive course load at their partner day school: real classrooms, real teachers, real grades. JMC’s job starts the moment that class ends.',
           'We would rather graduate an athlete who thinks clearly under pressure and tests better than his peers than one who simply accumulated credits. Every academic plan is built with NCAA eligibility and real college admission in view from the first term, so no athlete arrives at their final year to discover a missing requirement, or a transcript that undersells them.',
@@ -1339,10 +1350,16 @@ export const pageContent: Record<string, PageContent> = {
         type: 'split',
         heading: 'Every athlete, known by name',
         reverse: true,
-        image: { src: '/images/upper-school-classroom.jpg', alt: 'Upper School classroom' },
+        image: { src: '/images/upper-school-campus.jpg', alt: 'Upper School students on campus' },
         paragraphs: [
           'Tutoring groups stay small on purpose: no student is one face in a lecture hall. Our academic staff knows which students are traveling for a tournament next Thursday, which ones are chasing an AP score, and which ones need a different kind of push entirely.',
         ],
+      },
+      {
+        type: 'image',
+        src: '/images/maranatha-christian-upper-school.jpg',
+        alt: 'Maranatha Christian School, partner day school for Upper School academics',
+        caption: 'Maranatha Christian School, partner day school for Upper School academics',
       },
       {
         type: 'logos',
@@ -1426,6 +1443,12 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'image',
+        src: '/images/middle-school-retreat.jpg',
+        alt: 'Middle School students at a retreat',
+        caption: 'Middle School retreat: building community beyond the classroom',
+      },
+      {
         type: 'statement',
         text: 'We are not trying to help student-athletes keep pace with their non-athlete classmates. Daily tutoring and a dedicated academic advisor exist to keep every student ahead, building scholars whose classroom work would challenge students with twice the free time.',
         attribution: 'Our Standard',
@@ -1486,7 +1509,7 @@ export const pageContent: Record<string, PageContent> = {
         type: 'split',
         heading: 'Living and learning together',
         reverse: true,
-        image: { src: '/images/middle-school-classroom.jpg', alt: 'Middle School students working in class' },
+        image: { src: '/images/middle-school-campus.jpg', alt: 'Middle School students on campus' },
         paragraphs: [
           'Academics do not stop at the classroom door. Evening study hall runs in residence, supervised by the same staff who oversee training and daily life, so a Middle School student is never more than a few steps from someone who can help with a hard problem set.',
         ],
@@ -1838,6 +1861,42 @@ export const pageContent: Record<string, PageContent> = {
         ],
       },
       {
+        type: 'gallery',
+        heading: 'A look at the dining hall',
+        items: [
+          {
+            src: '/images/cafeteria/breakfast-spread.jpg',
+            alt: 'A hot breakfast spread with eggs, bacon, French toast, and fresh fruit',
+            caption: 'Breakfast',
+          },
+          {
+            src: '/images/cafeteria/salad-bar.jpg',
+            alt: 'A fresh salad bar with grilled chicken, greens, and toppings',
+            caption: 'Salad bar, every meal',
+          },
+          {
+            src: '/images/cafeteria/korean-style-tray.webp',
+            alt: 'A dinner tray with kimchi, noodle soup, rice, and grilled protein',
+            caption: 'Dinner rotation: Korean night',
+          },
+          {
+            src: '/images/cafeteria/mac-and-cheese-tray.webp',
+            alt: 'A tray with mac and cheese, garlic bread, and vegetables',
+            caption: 'Comfort food, made fresh',
+          },
+          {
+            src: '/images/cafeteria/stir-fry-tray.webp',
+            alt: 'A dinner tray with a stir-fry rice bowl, roasted vegetables, soup, and salad',
+            caption: 'Balanced plates, every night',
+          },
+          {
+            src: '/images/cafeteria/sloppy-joe.jpg',
+            alt: 'A sloppy joe sandwich served with a side salad',
+            caption: 'American favorites in the rotation',
+          },
+        ],
+      },
+      {
         type: 'features',
         heading: 'How we plan menus',
         items: [
@@ -2045,6 +2104,10 @@ export const pageContent: Record<string, PageContent> = {
           { src: '/images/commitments/crest-lion.png', alt: 'School crest, rampant lion' },
           { src: '/images/commitments/unc.png', alt: 'University of North Carolina' },
           { src: '/images/commitments/sage-hill.png', alt: 'Sage Hill School' },
+          { src: '/images/commitments/mit.png', alt: 'Massachusetts Institute of Technology' },
+          { src: '/images/commitments/princeton.png', alt: 'Princeton University' },
+          { src: '/images/commitments/lawrenceville.png', alt: 'The Lawrenceville School' },
+          { src: '/images/commitments/st-pauls.png', alt: "St. Paul's School, Concord" },
         ],
       },
       {
